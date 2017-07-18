@@ -1,0 +1,143 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.26. Version 2.0.8-release, 26 apr 2013
+`Prev <rel209.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel207.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.26. Version 2.0.8-release, 26 apr 2013
+   :name: a.26.version-2.0.8-release-26-apr-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1515 <http://sphinxsearch.com/bugs/view.php?id=1515>`__, log
+   strings over 2KB were clipped when
+   `query\_log\_format=plain <conf-query-log-format.html>`__
+
+-  fixed `#1514 <http://sphinxsearch.com/bugs/view.php?id=1514>`__, RT
+   index disk chunk lose attribute update on daemon restart
+
+-  fixed `#1512 <http://sphinxsearch.com/bugs/view.php?id=1512>`__,
+   crash while formatting log messages
+
+-  fixed `#1511 <http://sphinxsearch.com/bugs/view.php?id=1511>`__,
+   crash on indexing PostgreSQL data source with `MVA <mva.html>`__
+   attributes
+
+-  fixed `#1509 <http://sphinxsearch.com/bugs/view.php?id=1509>`__,
+   `blend\_chars <conf-blend-chars.html>`__ vs incomplete multi-form and
+   overshort
+
+-  fixed `#1504 <http://sphinxsearch.com/bugs/view.php?id=1504>`__, RT
+   binlog replay vs descending tid on update
+
+-  fixed `#1499 <http://sphinxsearch.com/bugs/view.php?id=1499>`__,
+   ``sql_field_str2wordcount`` actually is int, not string
+
+-  fixed `#1498 <http://sphinxsearch.com/bugs/view.php?id=1498>`__, now
+   working with exceptions starting with number too
+
+-  fixed `#1496 <http://sphinxsearch.com/bugs/view.php?id=1496>`__,
+   multiple destination keywords in wordform
+
+-  fixed `#1494 <http://sphinxsearch.com/bugs/view.php?id=1494>`__, lost
+   ‘mod’, ‘%’ operations in select list. Also corrected few typers in
+   the doc.
+
+-  fixed `#1490 <http://sphinxsearch.com/bugs/view.php?id=1490>`__,
+   `expand\_keywords <conf-expand-keywords.html>`__ vs prefix
+
+-  fixed `#1487 <http://sphinxsearch.com/bugs/view.php?id=1487>`__,
+   \`id\` in expression fixed
+
+-  fixed `#1483 <http://sphinxsearch.com/bugs/view.php?id=1483>`__,
+   snippets limits fix
+
+-  fixed `#1481 <http://sphinxsearch.com/bugs/view.php?id=1481>`__,
+   shebang config changes check on rotation
+
+-  fixed `#1479 <http://sphinxsearch.com/bugs/view.php?id=1479>`__, port
+   handling in `PHP Sphinx API <api-reference.html>`__
+
+-  fixed `#1474 <http://sphinxsearch.com/bugs/view.php?id=1474>`__,
+   daemon crash at SphinxQL packet overflows
+   `max\_packet\_size <conf-max-packet-size.html>`__
+
+-  fixed `#1472 <http://sphinxsearch.com/bugs/view.php?id=1472>`__,
+   crash on loading index to ``indextool`` for check
+
+-  fixed `#1465 <http://sphinxsearch.com/bugs/view.php?id=1465>`__,
+   `expansion\_limit <conf-expansion-limit.html>`__ got lost in index
+   rotation
+
+-  fixed `#1427 <http://sphinxsearch.com/bugs/view.php?id=1427>`__,
+   #1506, utf8 3 and 4-bytes codepoints
+
+-  fixed `#1405 <http://sphinxsearch.com/bugs/view.php?id=1405>`__,
+   between with mixed int float values
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel209.html>`__                      | `Up <changelog.html>`__   |  `Next <rel207.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.25. Version 2.0.9-release, 26 aug 2013    | `Home <index.html>`__     |  A.27. Version 2.0.7-release, 26 mar 2013   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

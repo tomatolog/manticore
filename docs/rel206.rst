@@ -1,0 +1,246 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.28. Version 2.0.6-release, 22 oct 2012
+`Prev <rel207.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel205.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.28. Version 2.0.6-release, 22 oct 2012
+   :name: a.28.version-2.0.6-release-22-oct-2012
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1322 <http://sphinxsearch.com/bugs/view.php?id=1322>`__, J
+   connector seems to be broken in rel20 , but works in trunk
+
+-  fixed `#1321 <http://sphinxsearch.com/bugs/view.php?id=1321>`__, ‘set
+   names utf8’ passes, but ‘set names utf-8’ doesn’t because of syntax
+   error ‘-’
+
+-  fixed `#1318 <http://sphinxsearch.com/bugs/view.php?id=1318>`__,
+   unhandled float comparison operators at filter
+
+-  fixed `#1317 <http://sphinxsearch.com/bugs/view.php?id=1317>`__, FD
+   leaks on thread seamless rotation
+
+-  fixed `#1313 <http://sphinxsearch.com/bugs/view.php?id=1313>`__,
+   crash on stopping daemon with incorrect RT index config
+
+-  fixed `#1306 <http://sphinxsearch.com/bugs/view.php?id=1306>`__,
+   ‘jolly roger ;)’, and ‘(((((((((9 brackets)’ crashes ``searchd``
+
+-  fixed `#1304 <http://sphinxsearch.com/bugs/view.php?id=1304>`__, OS X
+   debug compilation
+
+-  fixed `#1302 <http://sphinxsearch.com/bugs/view.php?id=1302>`__,
+   daemon random crashes on OS X
+
+-  fixed `#1301 <http://sphinxsearch.com/bugs/view.php?id=1301>`__,
+   ``indexer`` fails to send rotate signal
+
+-  fixed `#1300 <http://sphinxsearch.com/bugs/view.php?id=1300>`__, lost
+   index settings on attach
+
+-  fixed `#1299 <http://sphinxsearch.com/bugs/view.php?id=1299>`__,
+   daemon failed to rotate `ATTACH <sphinxql-attach-index.html>`__\ ed
+   plain index
+
+-  fixed `#1289 <http://sphinxsearch.com/bugs/view.php?id=1289>`__,
+   `SENTENCE <extended-syntax.html>`__ or
+   `PARAGRAPH <extended-syntax.html>`__ searching leak memory
+
+-  fixes #1285, crash on running ``searchd`` with ``syslog`` and
+   ``watchdog``
+
+-  fixed `#1279 <http://sphinxsearch.com/bugs/view.php?id=1279>`__,
+   linking against explicitly disabled iconv. Also added
+   ``--with-libexpat`` to config options, which sometimes required on
+   systems without XML support
+
+-  fixed `#1278 <http://sphinxsearch.com/bugs/view.php?id=1278>`__,
+   broken `unixODBC <conf-odbc-dsn.html>`__ detection in configure
+   script.
+
+-  fixed `#1277 <http://sphinxsearch.com/bugs/view.php?id=1277>`__,
+   broken build on some toolchains (like uClibc) where not defined
+   ``LLONG_MIN``, added ``ULLONG_MAX``
+
+-  fixed `#1274 <http://sphinxsearch.com/bugs/view.php?id=1274>`__,
+   large ``spa`` ( >4GB ) file hasn’t loaded
+
+-  fixed `#1269 <http://sphinxsearch.com/bugs/view.php?id=1269>`__,
+   crash at RT index with `MVA <mva.html>`__ from disk chunk previously
+   updated
+
+-  fixed `#1268 <http://sphinxsearch.com/bugs/view.php?id=1268>`__,
+   unuseful warning removed
+
+-  fixed `#1264 <http://sphinxsearch.com/bugs/view.php?id=1264>`__,
+   string and MVA attributes aliasing works again
+
+-  fixed `#1254 <http://sphinxsearch.com/bugs/view.php?id=1254>`__, its
+   now possible to add indexes using `–rotate <ref-indexer.html>`__
+
+-  fixed `#1249 <http://sphinxsearch.com/bugs/view.php?id=1249>`__,
+   `SphinxQL <sphinxql-reference.html>`__ unusable with PHP >= 5.4.5
+
+-  fixed `#1246 <http://sphinxsearch.com/bugs/view.php?id=1246>`__,
+   attributes of 100 character length not being saved
+
+-  fixed `#1234 <http://sphinxsearch.com/bugs/view.php?id=1234>`__, case
+   sensitive `GROUP BY <sphinxql-select.html>`__ attribute
+
+-  fixed `#1216 <http://sphinxsearch.com/bugs/view.php?id=1216>`__,
+   typos, `mem\_limit <conf-mem-limit.html>`__ default size and `RT
+   documentation <rt-indexes.html>`__
+
+-  fixed `#1148 <http://sphinxsearch.com/bugs/view.php?id=1148>`__, RT
+   documentation updated
+
+-  fixed `#1140 <http://sphinxsearch.com/bugs/view.php?id=1140>`__,
+   mem\_limit default value
+
+-  fixed `#1138 <http://sphinxsearch.com/bugs/view.php?id=1138>`__,
+   updated documentation on
+   `sql\_attr\_string <conf-sql-attr-string.html>`__
+
+-  fixed `#1129 <http://sphinxsearch.com/bugs/view.php?id=1129>`__,
+   snippets vs empty files and empty filenames
+
+-  fixed `#1123 <http://sphinxsearch.com/bugs/view.php?id=1123>`__,
+   configure compatibility fix
+
+-  fixed `#1122 <http://sphinxsearch.com/bugs/view.php?id=1122>`__,
+   64bit `sql\_range\_step <conf-sql-range-step.html>`__
+
+-  fixed `#1082 <http://sphinxsearch.com/bugs/view.php?id=1082>`__,
+   crashes and deadlocks on OS X with ``workers=threads`` and field leak
+   of read-write lock
+
+-  fixed `#1081 <http://sphinxsearch.com/bugs/view.php?id=1081>`__,
+   select only count distinct attr1 but group by attr2
+
+-  fixed `#1064 <http://sphinxsearch.com/bugs/view.php?id=1064>`__,
+   mistake while working with timestamp functions
+
+-  fixed `#1043 <http://sphinxsearch.com/bugs/view.php?id=1043>`__,
+   inaccurate distinct count in case many indexes or distributed index
+
+-  fixed `#1042 <http://sphinxsearch.com/bugs/view.php?id=1042>`__,
+   arithmetic expressions overflow
+
+-  fixed `#1007 <http://sphinxsearch.com/bugs/view.php?id=1007>`__,
+   Russian stemming on big endian systems
+
+-  fixed `#986 <http://sphinxsearch.com/bugs/view.php?id=986>`__,
+   asserting in `SetRankingMode <api-func-setrankingmode.html>`__ (PHP
+   API)
+
+-  fixed `#975 <http://sphinxsearch.com/bugs/view.php?id=975>`__,
+   incorrect ranking in some rare cases
+
+-  fixed `#967 <http://sphinxsearch.com/bugs/view.php?id=967>`__, Python
+   API type checking error
+
+-  fixed `#934 <http://sphinxsearch.com/bugs/view.php?id=934>`__, API vs
+   fullscan vs non-empty query
+
+-  fixed `#899 <http://sphinxsearch.com/bugs/view.php?id=899>`__, error
+   if using `SetFilterRange <api-func-setfilterrange.html>`__ as HAVING
+   from SQL
+
+-  fixed `#867 <http://sphinxsearch.com/bugs/view.php?id=867>`__,
+   ``indexer`` accepts index names starting with digit or \_
+
+-  fixed `#699 <http://sphinxsearch.com/bugs/view.php?id=699>`__, signed
+   vs unsigned 64-bit DocIDs in SphinxQL
+
+-  fixed `#668 <http://sphinxsearch.com/bugs/view.php?id=668>`__, now
+   ignoring single @ character (incorrect field operator)
+
+-  fixed `#611 <http://sphinxsearch.com/bugs/view.php?id=611>`__, @!
+   operator vs non-existent field, updated documentation
+
+-  fixed `#412 <http://sphinxsearch.com/bugs/view.php?id=412>`__,
+   multiple ``--filter`` arguments work as they should in search utility
+
+-  fixed `#108 <http://sphinxsearch.com/bugs/view.php?id=108>`__,
+   support for system libstemmer library. The sources of libstemmer
+   placed into ``libstemmer_c`` is preferred, but the system lib will be
+   tried if no sources found
+
+-  fixed `ORDER BY <sphinxql-select.html>`__ output at query log with
+   SphinxQL mode
+
+-  fixed documentation entry about
+   `sql\_joined\_field <conf-sql-joined-field.html>`__
+
+-  fixed sample config file
+
+-  fixed x64 configurations for libstemmer
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel207.html>`__                      | `Up <changelog.html>`__   |  `Next <rel205.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.27. Version 2.0.7-release, 26 mar 2013    | `Home <index.html>`__     |  A.29. Version 2.0.5-release, 28 jul 2012   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

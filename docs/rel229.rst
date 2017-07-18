@@ -1,0 +1,124 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.5. Version 2.2.9-release, 16 apr 2015
+`Prev <rel2210.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel228.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.5. Version 2.2.9-release, 16 apr 2015
+   :name: a.5.version-2.2.9-release-16-apr-2015
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#2228 <http://sphinxsearch.com/bugs/view.php?id=2228>`__,
+   removed ``searchd`` shutdown behavior on failed connection
+
+-  fixed `#2208 <http://sphinxsearch.com/bugs/view.php?id=2208>`__,
+   `ZONESPANLIST() <extended-syntax.html>`__ support for RT indexes
+
+-  fixed `#2203 <http://sphinxsearch.com/bugs/view.php?id=2203>`__,
+   legacy API `SELECT <api-reference.html>`__ list
+
+-  fixed `#2201 <http://sphinxsearch.com/bugs/view.php?id=2201>`__,
+   ``indextool`` false positive error on RT index
+
+-  fixed `#2201 <http://sphinxsearch.com/bugs/view.php?id=2201>`__,
+   crash with string comparison at expressions and expression ranker
+
+-  fixed `#2199 <http://sphinxsearch.com/bugs/view.php?id=2199>`__,
+   invalid packedfactors JSON output for index with stopwords
+
+-  fixed `#2197 <http://sphinxsearch.com/bugs/view.php?id=2197>`__,
+   `TRUNCATE <sphinxql-truncate-rtindex.html>`__ fails to remove disk
+   chunk files after calling `OPTIMIZE <sphinxql-optimize-index.html>`__
+
+-  fixed `#2196 <http://sphinxsearch.com/bugs/view.php?id=2196>`__, .NET
+   connector issue (UTC\_TIMESTAMP() support)
+
+-  fixed `#2190 <http://sphinxsearch.com/bugs/view.php?id=2190>`__,
+   incorrect `GROUP BY <api-funcgroup-groupby.html>`__ outer JSON object
+
+-  fixed `#2176 <http://sphinxsearch.com/bugs/view.php?id=2176>`__,
+   agent used ``ha_strategy=random`` instead of specified in config
+
+-  fixed `#2144 <http://sphinxsearch.com/bugs/view.php?id=2144>`__,
+   query parser crash vs multiforms with heading numbers
+
+-  fixed `#2122 <http://sphinxsearch.com/bugs/view.php?id=2122>`__, id64
+   daemon failed to load RT disk chunk with kill-list from id32 build
+
+-  fixed `#2120 <http://sphinxsearch.com/bugs/view.php?id=2120>`__,
+   aliased JSON elements support
+
+-  fixed `#1979 <http://sphinxsearch.com/bugs/view.php?id=1979>`__,
+   snippets generation and span length and lcs calculation in proximity
+   queries
+
+-  fixed truncated results (and a potential crash) vs long enough
+   ZONESPANLIST() result
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+--------------------------------------------+
+| `Prev <rel2210.html>`__                     | `Up <changelog.html>`__   |  `Next <rel228.html>`__                    |
++---------------------------------------------+---------------------------+--------------------------------------------+
+| A.4. Version 2.2.10-release, 07 sep 2015    | `Home <index.html>`__     |  A.6. Version 2.2.8-release, 09 mar 2015   |
++---------------------------------------------+---------------------------+--------------------------------------------+
+
+.. raw:: html
+
+   </div>

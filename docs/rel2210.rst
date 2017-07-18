@@ -1,0 +1,293 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.4. Version 2.2.10-release, 07 sep 2015
+`Prev <rel2211.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel229.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.4. Version 2.2.10-release, 07 sep 2015
+   :name: a.4.version-2.2.10-release-07-sep-2015
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New features and changes
+   :name: new-features-and-changes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added #2310, ``--replay-flags=ignore-open-errors`` switch to replay
+   binlogs even if some files are missing
+
+-  added #2234, support for empty string values (stringattr=’’) in
+   `WHERE <sphinxql-select.html>`__ clause
+
+-  added #2233, support for ``IN()`` filters with string values
+
+-  added #2232, string collation support in
+   `SELECT <sphinxql-select.html>`__ expressions
+
+-  added #2121, “where flt<>val” support, “where fltcol=intval” and
+   “where fltcol!=intval” conditions
+
+-  added #2119, new ``indexer`` exit code 2 on a ``--rotate`` failure
+
+-  fixed `#2207 <http://sphinxsearch.com/bugs/view.php?id=2207>`__,
+   unified ``min_prefix_len``, ``min_infix_len`` behavior between RT and
+   plain indexes
+
+-  fixed `#2020 <http://sphinxsearch.com/bugs/view.php?id=2020>`__,
+   unified (and greatly shortened) the list of SphinxQL `reserved
+   keywords <sphinxql-reserved-keywords.html>`__ between indexer checks,
+   SphinxQL parser checks, and the documentation
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Major bug fixes
+   :name: major-bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#2251 <http://sphinxsearch.com/bugs/view.php?id=2251>`__,
+   expressions dependent on aggregation results (eg. as in SELECT
+   MAX(id) m1, m1+10 m2) were not computed properly in RT indexes
+
+-  fixed `#2248 <http://sphinxsearch.com/bugs/view.php?id=2248>`__,
+   `LENGTH() <misc-functions.html#expr-func-length>`__ was 2x off for
+   64-bit MVA attributes
+
+-  fixed `#2146 <http://sphinxsearch.com/bugs/view.php?id=2146>`__,
+   `OPTIMIZE <sphinxql-optimize-index.html>`__ could occasionally break
+   big RT indexes (by violating 4/16 GB string/MVA per chunk size
+   limits)
+
+-  fixed `#2118 <http://sphinxsearch.com/bugs/view.php?id=2118>`__,
+   multi-wordforms with clashing prefixes were processed in a wrong
+   order
+
+-  fixed `#1926 <http://sphinxsearch.com/bugs/view.php?id=1926>`__,
+   disabled and later re-enabled indexes were not picked up again by
+   ``searchd`` on SIGHUP
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Minor bug fixes
+   :name: minor-bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#2312 <http://sphinxsearch.com/bugs/view.php?id=2312>`__,
+   using FACTORS() along with a subtree cache could crash (because on
+   wrong qpos values from the cache passed to the ranker)
+
+-  fixed `#2310 <http://sphinxsearch.com/bugs/view.php?id=2310>`__,
+   comparing a non-existent JSON field with a string constant (as in
+   jcol.some\_typo=’abc’) could crash
+
+-  fixed `#2309 <http://sphinxsearch.com/bugs/view.php?id=2309>`__, UDFs
+   with BIGINT return were saved without a type into sphinxql\_state
+   file
+
+-  fixed `#2305 <http://sphinxsearch.com/bugs/view.php?id=2305>`__,
+   punctuation chars not mentioned in
+   `charset\_table <conf-charset-table.html>`__ could still occasionally
+   affect term position in the query
+
+-  fixed `#2303 <http://sphinxsearch.com/bugs/view.php?id=2303>`__, a
+   combination of `hitless\_words <conf-hitless-words.html>`__,
+   lemmatizer\_all, and a phrase operator could match a wrong result set
+
+-  fixed `#2301 <http://sphinxsearch.com/bugs/view.php?id=2301>`__,
+   ``searchd`` could sometimes crash on shutdown (at pid file unlink())
+   if the config was reloaded
+
+-  fixed `#2296 <http://sphinxsearch.com/bugs/view.php?id=2296>`__,
+   wordforms with multiple destination tokens broke snippet highlighting
+
+-  fixed `#2290 <http://sphinxsearch.com/bugs/view.php?id=2290>`__,
+   error in the middle of a multi-query batch did not abort SphinxQL
+   packet, causing problems with some MySQL drivers like PHP mysqlnd
+
+-  fixed `#2286 <http://sphinxsearch.com/bugs/view.php?id=2286>`__,
+   multi-quries with different string filters were incorrectly
+   considered identical
+
+-  fixed `#2280 <http://sphinxsearch.com/bugs/view.php?id=2280>`__, HTML
+   stripper incorrectly parsed hexadecimal NCRs (like eg. #xC0)
+
+-  fixed `#2273 <http://sphinxsearch.com/bugs/view.php?id=2273>`__, a
+   bit better error message when OPTIMIZE fails on a too big chunk
+
+-  fixed `#2258 <http://sphinxsearch.com/bugs/view.php?id=2258>`__, some
+   ranking FACTORS() were off when lemmatizer expansions yielded
+   duplicate terms
+
+-  fixed `#2257 <http://sphinxsearch.com/bugs/view.php?id=2257>`__, OR
+   operator over conditional operators could crash
+
+-  fixed `#2242 <http://sphinxsearch.com/bugs/view.php?id=2242>`__,
+   added whitespaces support to SNIPPET() before\_match/after\_matches
+   options, and fixed the handling of repeated %PASSAGE\_ID% macros
+
+-  fixed `#2238 <http://sphinxsearch.com/bugs/view.php?id=2238>`__,
+   added a few safeguards to prevent crashes/freezes on loading damaged
+   RT RAM chunks
+
+-  fixed `#2237 <http://sphinxsearch.com/bugs/view.php?id=2237>`__,
+   ATTACH-ing a part of a distributed index did not correctly invalidate
+   it, could crash
+
+-  fixed `#2235 <http://sphinxsearch.com/bugs/view.php?id=2235>`__,
+   `UPDATE <sphinxql-update.html>`__ … OPTION ``strict=1`` did not with
+   plain indexes
+
+-  fixed `#2225 <http://sphinxsearch.com/bugs/view.php?id=2225>`__,
+   ``searchd`` crashed on startup if agent host string was empty
+
+-  fixed `#2127 <http://sphinxsearch.com/bugs/view.php?id=2127>`__,
+   ``indextool`` did not handle RT indexes with updated JSON attributes
+   in them
+
+-  fixed `#2117 <http://sphinxsearch.com/bugs/view.php?id=2117>`__,
+   `GEODIST() <sorting-modes.html#sort-expr>`__ calls with hash
+   {in=deg,out=mi} arguments on a distributed index did not parse
+   correctly
+
+-  fixed `#2113 <http://sphinxsearch.com/bugs/view.php?id=2113>`__,
+   @@relaxed could occasonally crash ceratin complex queries
+
+-  fixed `#2106 <http://sphinxsearch.com/bugs/view.php?id=2106>`__,
+   using GROUP N BY with a custom ranker and FACTORS() caused crashes
+   and memory leaks
+
+-  fixed `#2093 <http://sphinxsearch.com/bugs/view.php?id=2093>`__,
+   wildcard character at the end of the keyword could sometimes
+   erroneously produce no matches
+
+-  fixed `#2088 <http://sphinxsearch.com/bugs/view.php?id=2088>`__, NEAR
+   operator with NOT argument could crash
+
+-  fixed `#1929 <http://sphinxsearch.com/bugs/view.php?id=1929>`__,
+   allowed \`123abc\` column names in SphinxQL SELECT (alas, they are
+   still allowed in ``indexer``)
+
+-  fixed `#1889 <http://sphinxsearch.com/bugs/view.php?id=1889>`__,
+   #1890, #1891, a few typo-style bugs in ``libsphinxclient``
+   sphinx\_set\_field\_weights(), sphinx\_set\_index\_weights(),
+   sphinx\_add\_filter\_entry()
+
+-  fixed `#1859 <http://sphinxsearch.com/bugs/view.php?id=1859>`__,
+   #2202, XML/TSV/CSV sources now works with control characters like
+   EOF, and UTF BOM marks
+
+-  fixed `#1815 <http://sphinxsearch.com/bugs/view.php?id=1815>`__, a
+   number of SphinxSE issues (inet adress endpoint, too big numbers at
+   MVA, and MVA inserts/replaces via SphinxQL)
+
+-  fixed `#1704 <http://sphinxsearch.com/bugs/view.php?id=1704>`__,
+   `CONTAINS() <numeric-functions.html#expr-func-contains>`__ now
+   correctly handles polygons with duplicated points
+
+-  fixed `#1643 <http://sphinxsearch.com/bugs/view.php?id=1643>`__,
+   `CRC32() <misc-functions.html#expr-func-crc32>`__ is now properly
+   evaluated as unsigned in BIGINT context
+
+-  fixed `#1567 <http://sphinxsearch.com/bugs/view.php?id=1567>`__,
+   #1747, #2245, column name quotation could fail in UDF expressions and
+   distributed queries
+
+-  fixed `#1551 <http://sphinxsearch.com/bugs/view.php?id=1551>`__,
+   off-by-one blended keyword position errors in proximity queries
+   (phrase, NEAR, etc)
+
+-  fixed `#1528 <http://sphinxsearch.com/bugs/view.php?id=1528>`__,
+   metaphone on too long (eg. Chinese or Japanese) strings crashed with
+   a buffer overflow
+
+-  fixed `#1510 <http://sphinxsearch.com/bugs/view.php?id=1510>`__,
+   added an unknown field warning to SetFieldWeights() API call and
+   SphinxQL OPTION field\_weights
+
+-  fixed `#1367 <http://sphinxsearch.com/bugs/view.php?id=1367>`__,
+   remote agents (in distributed index) could not be accessed via UNIX
+   sockets
+
+-  fixed `#1349 <http://sphinxsearch.com/bugs/view.php?id=1349>`__,
+   max\_matches=0 was not handled correctly in ``libsphinxclient``
+   sphinx\_set\_limits()
+
+-  fixed Github PR-1, SphinxSE TLS leak on table reopen
+
+-  fixed ``searchd`` crash when trying to load a damaged index with an
+   incorrect row count
+
+-  fixed ``indextool`` MVA checks (an index error could sometimes be
+   mistakenly reported)
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+--------------------------------------------+
+| `Prev <rel2211.html>`__                     | `Up <changelog.html>`__   |  `Next <rel229.html>`__                    |
++---------------------------------------------+---------------------------+--------------------------------------------+
+| A.3. Version 2.2.11-release, 19 jul 2016    | `Home <index.html>`__     |  A.5. Version 2.2.9-release, 16 apr 2015   |
++---------------------------------------------+---------------------------+--------------------------------------------+
+
+.. raw:: html
+
+   </div>

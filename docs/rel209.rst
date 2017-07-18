@@ -1,0 +1,151 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.25. Version 2.0.9-release, 26 aug 2013
+`Prev <rel2010.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel208.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.25. Version 2.0.9-release, 26 aug 2013
+   :name: a.25.version-2.0.9-release-26-aug-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1655 <http://sphinxsearch.com/bugs/view.php?id=1655>`__,
+   special characters like ()?\* were not processed correctly by
+   exceptions
+
+-  fixed `#1651 <http://sphinxsearch.com/bugs/view.php?id=1651>`__,
+   `CREATE FUNCTION <sphinxql-create-function.html>`__ can now be used
+   with BIGINT return type
+
+-  fixed `#1649 <http://sphinxsearch.com/bugs/view.php?id=1649>`__,
+   incorrect warning message (about statistics mismatch) was returned
+   when mixing wildcards and regular keywords
+
+-  fixed `#1603 <http://sphinxsearch.com/bugs/view.php?id=1603>`__,
+   passing MVA64 arguments to non-MVA functions caused unpredicted
+   behavior and crashes (now explicitly forbidden)
+
+-  fixed `#1601 <http://sphinxsearch.com/bugs/view.php?id=1601>`__,
+   negative numbers in `IN() <comparison-functions.html#expr-func-in>`__
+   clause caused a syntax error
+
+-  fixed `#1581 <http://sphinxsearch.com/bugs/view.php?id=1581>`__,
+   `dict=keywords <conf-dict.html>`__ and
+   `sql\_joined\_field <conf-sql-joined-field.html>`__ occasionally
+   caused ``indexer`` to build corrupted indexes
+
+-  fixed `#1546 <http://sphinxsearch.com/bugs/view.php?id=1546>`__, file
+   descriptor leaked on index rotation (that eventually prevented
+   ``searchd`` to reload indexes)
+
+-  fixed `#1537 <http://sphinxsearch.com/bugs/view.php?id=1537>`__,
+   ``COUNT(*)`` and compat\_sphinxql\_magics=0 via SphinxAPI caused an
+   incorrect error message
+
+-  fixed `#1531 <http://sphinxsearch.com/bugs/view.php?id=1531>`__,
+   #1589, several matching and highlighting issues when using both
+   `blend\_chars <conf-blend-chars.html>`__ and multi-wordforms
+
+-  fixed `#1521 <http://sphinxsearch.com/bugs/view.php?id=1521>`__,
+   ``indextool --check`` did not handle empty RT MVA and gave an
+   incorrect warning
+
+-  fixed `#1392 <http://sphinxsearch.com/bugs/view.php?id=1392>`__,
+   SphinxSE builds with MySQL 5.6 now
+
+-  fixed `#1346 <http://sphinxsearch.com/bugs/view.php?id=1346>`__,
+   `NEAR <extended-syntax.html>`__ handles duplicated keywords properly
+   now
+
+-  fixed `#757 <http://sphinxsearch.com/bugs/view.php?id=757>`__,
+   wordforms shared between multiple indexes with different tokenizer
+   settings failed to load (they now load with a warning)
+
+-  fixed that batch queries did not batch in some cases (because of
+   internal expression alias issues)
+
+-  fixed that `CALL KEYWORDS <sphinxql-call-keywords.html>`__
+   occasionally gave incorrect error messages
+
+-  fixed searchd crashes on `ATTACHing <sphinxql-attach-index.html>`__
+   plain indexes with MVAs
+
+-  fixed several deadlocks and other threading issues
+
+-  fixed incorrect sorting order with
+   `utf8\_general\_ci <collations.html>`__
+
+-  fixed that in some cases incorrect attribute values were returned
+   when using expression aliases
+
+-  optimized `xmlpipe2 <xmlpipe2.html>`__ indexing
+
+-  added a warning for missed stopwords, exception, wordforms files on
+   index load and in ``indextool --check``
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++----------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel2010.html>`__                      | `Up <changelog.html>`__   |  `Next <rel208.html>`__                     |
++----------------------------------------------+---------------------------+---------------------------------------------+
+| A.24. Version 2.0.10-release, 22 jan 2014    | `Home <index.html>`__     |  A.26. Version 2.0.8-release, 26 apr 2013   |
++----------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,305 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.21. Version 2.1.2-release, 10 oct 2013
+`Prev <rel213.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel211.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.21. Version 2.1.2-release, 10 oct 2013
+   :name: a.21.version-2.1.2-release-10-oct-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New features
+   :name: new-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added `FLUSH RAMCHUNK <sphinxql-flush-ramchunk.html>`__ statement
+
+-  added `SHOW PLAN <sphinxql-show-plan.html>`__ statement
+
+-  added support for `GROUP BY <sphinxql-select.html>`__ on multiple
+   attributes
+
+-  added `BM25F() <expression-ranker.html>`__ function to ``SELECT``
+   expressions (now works with the expression based ranker)
+
+-  added `indextool <ref-indextool.html>`__ ``--fold`` command and
+   ``-q`` switch
+
+-  added JSON debug check for RT index RAM chunk
+
+-  added `LENGTH() <misc-functions.html#expr-func-length>`__ function
+   for MVA
+
+-  added missing `rt\_attr\_bool <conf-rt-attr-bool.html>`__ directive
+
+-  added support for selecting over 250 columns via SphinxQL
+
+-  deprecated custom sort mode, and ``str2ordinal`` and
+   ``str2wordcount`` attribute types
+
+-  optimized ``SELECT``, ``UPDATE`` for indexes with many attributes (up
+   to 3.5x speedup in extreme cases)
+
+-  ``JSON`` attributes (up to 5-20% faster ``SELECTs`` using JSON
+   objects)
+
+-  optimized `xmlpipe2 <xmlpipe2.html>`__ indexing (up to 9 times faster
+   on some schemas)
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1684 <http://sphinxsearch.com/bugs/view.php?id=1684>`__,
+   `COUNT(DISTINCT smth) <sphinxql-select.html>`__ with implicit
+   ``GROUP BY`` returns correct value now
+
+-  fixed `#1672 <http://sphinxsearch.com/bugs/view.php?id=1672>`__,
+   exact token AOT vs lemma (``indexer`` skips exact form of token that
+   passed AOT through tokenizer)
+
+-  fixed `#1659 <http://sphinxsearch.com/bugs/view.php?id=1659>`__, fail
+   while loading empty infix dictionary with
+   `dict=keywords <conf-dict.html>`__
+
+-  fixed `#1638 <http://sphinxsearch.com/bugs/view.php?id=1638>`__,
+   force explicit JSON type conversion for aggregate functions
+
+-  fixed `#1628 <http://sphinxsearch.com/bugs/view.php?id=1628>`__,
+   `GROUP\_CONCAT() <sphinxql-select.html>`__ and
+   `GROUPBY() <sphinxql-select.html>`__ support for distributed agents
+
+-  fixed `#1619 <http://sphinxsearch.com/bugs/view.php?id=1619>`__,
+   ``INTEGER()`` conversion function doesn’t support signed integers
+
+-  fixed `#1615 <http://sphinxsearch.com/bugs/view.php?id=1615>`__,
+   global IDF vs exact term (=term) fixed global IDF for missed terms
+   fixed SphinxQL `global\_idf=0 option <conf-global-idf.html>`__
+
+-  fixed `#1607 <http://sphinxsearch.com/bugs/view.php?id=1607>`__, now
+   ignoring binlog when running daemon with ``--console`` flag
+
+-  fixed `#1606 <http://sphinxsearch.com/bugs/view.php?id=1606>`__, hard
+   interruption of the daemon by Ctrl+C (SIGINT) signal
+
+-  fixed `#1592 <http://sphinxsearch.com/bugs/view.php?id=1592>`__,
+   duplicates vs expression ranker
+
+-  fixed `#1578 <http://sphinxsearch.com/bugs/view.php?id=1578>`__,
+   `SORT BY <sorting-modes.html>`__ string attribute via API
+   ``attr_asc`` \\ ``attr_desc``
+
+-  fixed `#1575 <http://sphinxsearch.com/bugs/view.php?id=1575>`__,
+   crash of daemon on MVA receive from agents with
+   `dist\_threads <conf-dist-threads.html>`__ enabled
+
+-  fixed `#1574 <http://sphinxsearch.com/bugs/view.php?id=1574>`__,
+   agent got kill list of local indexes of distributed index
+
+-  fixed `#1573 <http://sphinxsearch.com/bugs/view.php?id=1573>`__,
+   ranker expression vs expanded terms
+
+-  fixed `#1572 <http://sphinxsearch.com/bugs/view.php?id=1572>`__,
+   ``BM25F`` vs negative terms
+
+-  fixed `#1550 <http://sphinxsearch.com/bugs/view.php?id=1550>`__,
+   float got cut at full-text part of a query
+
+-  fixed `#1541 <http://sphinxsearch.com/bugs/view.php?id=1541>`__,
+   ``BM25F`` expression in distributes indexes
+
+-  fixed `#1508 <http://sphinxsearch.com/bugs/view.php?id=1508>`__,
+   `#1522 <http://sphinxsearch.com/bugs/view.php?id=1522>`__,
+   distributed index query lasts up to
+   `agent\_connect\_timeout <conf-agent-connect-timeout.html>`__ with
+   epoll path
+
+-  fixed `#1508 <http://sphinxsearch.com/bugs/view.php?id=1508>`__,
+   master failed to connect waiting agents up to
+   `agent\_connect\_timeout <conf-agent-connect-timeout.html>`__ time
+
+-  fixed `#1489 <http://sphinxsearch.com/bugs/view.php?id=1489>`__,
+   filtering by integer field in JSON using floating point precision
+
+-  fixed `#1485 <http://sphinxsearch.com/bugs/view.php?id=1485>`__,
+   `index\_exact\_words <conf-index-exact-words.html>`__ vs keyword dict
+   with infix
+
+-  fixed `#1484 <http://sphinxsearch.com/bugs/view.php?id=1484>`__,
+   `INSERT <sphinxql-insert.html>`__ into RT vs no JSON attribute
+
+-  fixed `#1478 <http://sphinxsearch.com/bugs/view.php?id=1478>`__,
+   memory leaks at daemon `PACKEDFACTORS() <misc-functions.html>`__ as
+   UDF argument, index query tokenizer, expression ranker SUM()
+
+-  fixed `#1470 <http://sphinxsearch.com/bugs/view.php?id=1470>`__,
+   broken UDF unpack (since r3738 UDF version 2)
+
+-  fixed `#1468 <http://sphinxsearch.com/bugs/view.php?id=1468>`__,
+   multiple conditions in ``WHERE`` for JSON attributes
+
+-  fixed `#1466 <http://sphinxsearch.com/bugs/view.php?id=1466>`__,
+   `index\_field\_lengths <conf-index-field-lengths.html>`__ vs XML data
+   source
+
+-  fixed `#1463 <http://sphinxsearch.com/bugs/view.php?id=1463>`__,
+   daemon shutdown vs RT index optimize (added forced terminate of long
+   merging operation)
+
+-  fixed `#1460 <http://sphinxsearch.com/bugs/view.php?id=1460>`__,
+   `aggregate functions <sphinxql-select.html>`__ ``AVG()``, ``MAX()``,
+   ``MIN()``, ``SUM()`` do not work for JSON attributes
+
+-  fixed `#1459 <http://sphinxsearch.com/bugs/view.php?id=1459>`__,
+   ``BM25F`` doesn’t work with
+   `field\_string <conf-sql-field-string.html>`__ fields
+
+-  fixed `#1458 <http://sphinxsearch.com/bugs/view.php?id=1458>`__,
+   factors to copy ``field_tf`` at UDF
+
+-  fixed `#1450 <http://sphinxsearch.com/bugs/view.php?id=1450>`__,
+   garbage in JSON fields when selecting them from a RT index
+
+-  fixed `#1449 <http://sphinxsearch.com/bugs/view.php?id=1449>`__,
+   broken build on Mac OS X
+
+-  fixed `#1446 <http://sphinxsearch.com/bugs/view.php?id=1446>`__,
+   `WEIGHT() <weighting.html>`__ did not work in ``SELECT`` expressions
+
+-  fixed `#1445 <http://sphinxsearch.com/bugs/view.php?id=1445>`__,
+   field-start/field-end modifiers did not work for star-expanded
+   keywords
+
+-  fixed `#1443 <http://sphinxsearch.com/bugs/view.php?id=1443>`__,
+   `morphology=lemmatizer\_ru\_all <conf-morphology.html>`__ now works
+   with `index\_exact\_words=1 <conf-index-exact-words.html>`__ (exact
+   forms can be matches)
+
+-  fixed `#1442 <http://sphinxsearch.com/bugs/view.php?id=1442>`__,
+   incorrect ``COUNT(*)`` value in queries to distributed indexes with
+   implicit ``GROUP BY``
+
+-  fixed `#1439 <http://sphinxsearch.com/bugs/view.php?id=1439>`__,
+   filters on float values in JSON issue, string values quoting issue
+
+-  fixed `#1399 <http://sphinxsearch.com/bugs/view.php?id=1399>`__,
+   filter error message on string attribute
+
+-  fixed `#1384 <http://sphinxsearch.com/bugs/view.php?id=1384>`__,
+   added possibility to define any own DSN line with
+   `source=mssql <confgroup-source.html>`__ (like as in ``source=odbc``)
+
+-  fixed `ATTACH <sphinxql-attach-index.html>`__ vs wordforms or
+   stopwords; after daemon was restarted this setting was getting lost
+   in RT indexes
+
+-  fixed balancing of agents in HA
+
+-  fixed co-working of ``index_exact_word`` + AOT lemmatizer
+
+-  fixed epoll invoking and turned on by default
+
+-  fixed incorrect handling of wildcards in tokenizer
+
+-  fixed infix indexing with ``dict=keywords``
+
+-  fixed `max\_predicted\_time <sphinxql-select.html>`__ integer
+   overflows
+
+-  fixed memory error in tokenizer
+
+-  fixed several memory leaks
+
+-  fixed ``PACKEDFACTORS()`` to work in different ``GROUP BY`` queries
+
+-  fixed preprocessor definitions for `RE2 <conf-regexp-filter.html>`__
+   in VS solution
+
+-  fixed rotation of global IDF for ``workers=threads`` and
+   ``seamless_rotate=1``
+
+-  fixed rotation of old indexes
+
+-  fixed RT kill list survives ``TRUNCATE`` and works in newly
+   ``ATTACH``\ ed index
+
+-  fixed saving id32 RT index with id64 daemon
+
+-  fixed stemmer vs RT index ``INSERT``
+
+-  fixed string case error with JSON attributes in select list of a
+   query
+
+-  fixed ``TOP_COUNT`` usage in ``misc/suggest`` and updated to PHP 5.3
+   and UTF-8
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+------------------------------------------+
+| `Prev <rel213.html>`__                      | `Up <changelog.html>`__   |  `Next <rel211.html>`__                  |
++---------------------------------------------+---------------------------+------------------------------------------+
+| A.20. Version 2.1.3-release, 12 nov 2013    | `Home <index.html>`__     |  A.22. Version 2.1.1-beta, 20 feb 2013   |
++---------------------------------------------+---------------------------+------------------------------------------+
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,132 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.31. Version 2.0.3-release, 23 dec 2011
+`Prev <rel204.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel202.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.31. Version 2.0.3-release, 23 dec 2011
+   :name: a.31.version-2.0.3-release-23-dec-2011
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1031 <http://sphinxsearch.com/bugs/view.php?id=1031>`__,
+   SphinxQL parsing syntax for MVA at insert \\ replace statements
+
+-  fixed `#1027 <http://sphinxsearch.com/bugs/view.php?id=1027>`__,
+   stalls on attribute update in high-concurrency load
+
+-  fixed `#1026 <http://sphinxsearch.com/bugs/view.php?id=1026>`__,
+   daemon crash on malformed API command
+
+-  fixed `#1021 <http://sphinxsearch.com/bugs/view.php?id=1021>`__,
+   ``max_children`` option has been ignored with ``worker=threads``
+
+-  fixed `#1020 <http://sphinxsearch.com/bugs/view.php?id=1020>`__,
+   crash on large attribute files loading
+
+-  fixed `#1014 <http://sphinxsearch.com/bugs/view.php?id=1014>`__,
+   crash on rotation when index has been removed from config file
+   (``worker=threads``, \*nix box)
+
+-  fixed `#1001 <http://sphinxsearch.com/bugs/view.php?id=1001>`__,
+   broken MVA files in RT index while saving disk chunk
+
+-  fixed `#995 <http://sphinxsearch.com/bugs/view.php?id=995>`__, crash
+   on empty MVA updates
+
+-  fixed `#994 <http://sphinxsearch.com/bugs/view.php?id=994>`__, crash
+   on daemon shutdown with ``seamless_rotate=0`` and ``workers=threads``
+
+-  fixed `#993 <http://sphinxsearch.com/bugs/view.php?id=993>`__, #998,
+   crash on replay ``DELETE`` statement vs RT index with
+   ``dict=keywords``, fixed sequential ``INSERT`` into ``dict=keywords``
+   index right after ``INSERT`` into ``dict=crc`` index
+
+-  fixed `#991 <http://sphinxsearch.com/bugs/view.php?id=991>`__, crash
+   on indexing mssql source with ``mssql_unicode`` enabled
+
+-  fixed `#983 <http://sphinxsearch.com/bugs/view.php?id=983>`__, #950,
+   crash on host name lookup (SphinxSE with MySQL 5.5)
+
+-  fixed `#981 <http://sphinxsearch.com/bugs/view.php?id=981>`__,
+   snippet inconsistency with ``allow_empty=0``
+
+-  fixed `#980 <http://sphinxsearch.com/bugs/view.php?id=980>`__, broken
+   index produced by index merge in rare cases
+
+-  fixed `#971 <http://sphinxsearch.com/bugs/view.php?id=971>`__, absent
+   error message at master on agent “maxed out”
+
+-  fixed `#695 <http://sphinxsearch.com/bugs/view.php?id=695>`__, #815,
+   #835, #866, malformed warnings in SphinxQL
+
+-  fixed build of SphinxSE with MySQL 5.1
+
+-  fixed crash log for ‘fork’ and ‘prefork’ workers
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+------------------------------------------+
+| `Prev <rel204.html>`__                      | `Up <changelog.html>`__   |  `Next <rel202.html>`__                  |
++---------------------------------------------+---------------------------+------------------------------------------+
+| A.30. Version 2.0.4-release, 02 mar 2012    | `Home <index.html>`__     |  A.32. Version 2.0.2-beta, 15 nov 2011   |
++---------------------------------------------+---------------------------+------------------------------------------+
+
+.. raw:: html
+
+   </div>

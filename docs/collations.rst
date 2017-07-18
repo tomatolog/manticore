@@ -1,0 +1,172 @@
+.. raw:: html
+
+   <div class="navheader">
+
+5.13. Collations
+`Prev <multi-queries.html>`__ 
+Chapter 5. Searching
+ `Next <qcache.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: 5.13. Collations
+   :name: collations
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+Introduced to Sphinx in version 2.0.1-beta to supplement string sorting,
+collations essentially affect the string attribute comparisons. They
+specify both the character set encoding and the strategy that Sphinx
+uses to compare strings when doing ORDER BY or GROUP BY with a string
+attribute involved.
+
+String attributes are stored as is when indexing, and no character set
+or language information is attached to them. That’s okay as long as
+Sphinx only needs to store and return the strings to the calling
+application verbatim. But when you ask Sphinx to sort by a string value,
+that request immediately becomes quite ambiguous.
+
+First, single-byte (ASCII, or ISO-8859-1, or Windows-1251) strings need
+to be processed differently that the UTF-8 ones that may encode every
+character with a variable number of bytes. So we need to know what is
+the character set type to interpret the raw bytes as meaningful
+characters properly.
+
+Second, we additionally need to know the language-specific string
+sorting rules. For instance, when sorting according to US rules in
+en\_US locale, the accented character ‘ï’ (small letter i with
+diaeresis) should be placed somewhere after ‘z’. However, when sorting
+with French rules and fr\_FR locale in mind, it should be placed between
+‘i’ and ‘j’. And some other set of rules might choose to ignore accents
+at all, allowing ‘ï’ and ‘i’ to be mixed arbitrarily.
+
+Third, but not least, we might need case-sensitive sorting in some
+scenarios and case-insensitive sorting in some others.
+
+Collations combine all of the above: the character set, the language
+rules, and the case sensitivity. Sphinx currently provides the following
+four collations.
+
+.. raw:: html
+
+   <div class="orderedlist">
+
+1. ``libc_ci``
+
+2. ``libc_cs``
+
+3. ``utf8_general_ci``
+
+4. ``binary``
+
+.. raw:: html
+
+   </div>
+
+The first two collations rely on several standard C library (libc) calls
+and can thus support any locale that is installed on your system. They
+provide case-insensitive (\_ci) and case-sensitive (\_cs) comparisons
+respectively. By default they will use C locale, effectively resorting
+to bytewise comparisons. To change that, you need to specify a different
+available locale using
+`collation\_libc\_locale <conf-collation-libc-locale.html>`__ directive.
+The list of locales available on your system can usually be obtained
+with the ``locale`` command:
+
+.. code:: programlisting
+
+    $ locale -a
+    C
+    en_AG
+    en_AU.utf8
+    en_BW.utf8
+    en_CA.utf8
+    en_DK.utf8
+    en_GB.utf8
+    en_HK.utf8
+    en_IE.utf8
+    en_IN
+    en_NG
+    en_NZ.utf8
+    en_PH.utf8
+    en_SG.utf8
+    en_US.utf8
+    en_ZA.utf8
+    en_ZW.utf8
+    es_ES
+    fr_FR
+    POSIX
+    ru_RU.utf8
+    ru_UA.utf8
+
+The specific list of the system locales may vary. Consult your OS
+documentation to install additional needed locales.
+
+``utf8_general_ci`` and ``binary`` locales are built-in into Sphinx. The
+first one is a generic collation for UTF-8 data (without any so-called
+language tailoring); it should behave similar to ``utf8_general_ci``
+collation in MySQL. The second one is a simple bytewise comparison.
+
+Collation can be overridden via SphinxQL on a per-session basis using
+``SET collation_connection`` statement. All subsequent SphinxQL queries
+will use this collation. SphinxAPI and SphinxSE queries will use the
+server default collation, as specified in
+`collation\_server <conf-collation-server.html>`__ configuration
+directive. Sphinx currently defaults to ``libc_ci`` collation.
+
+Collations should affect all string attribute comparisons, including
+those within ORDER BY and GROUP BY, so differently ordered or grouped
+results can be returned depending on the collation chosen. Note that
+collations don’t affect full-text searching, for that use
+`charset\_table <conf-charset-table.html>`__.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++----------------------------------+---------------------------+---------------------------+
+| `Prev <multi-queries.html>`__    | `Up <searching.html>`__   |  `Next <qcache.html>`__   |
++----------------------------------+---------------------------+---------------------------+
+| 5.12. Multi-queries              | `Home <index.html>`__     |  5.14. Query cache        |
++----------------------------------+---------------------------+---------------------------+
+
+.. raw:: html
+
+   </div>

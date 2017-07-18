@@ -1,0 +1,293 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.22. Version 2.1.1-beta, 20 feb 2013
+`Prev <rel212.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel2011.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.22. Version 2.1.1-beta, 20 feb 2013
+   :name: a.22.version-2.1.1-beta-20-feb-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Major new features
+   :name: major-new-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added query profiling (SET PROFILING=1 and `SHOW
+   PROFILE <sphinxql-show-profile.html>`__ statements)
+
+-  added AOT-based Russian lemmatizer (`morphology={lemmatize\_ru \|
+   lemmatize\_ru\_all} <conf-morphology.html>`__,
+   `lemmatizer\_base <conf-lemmatizer-base.html>`__, and
+   `lemmatizer\_cache <conf-lemmatizer-cache.html>`__ directives)
+
+-  added `wordbreaker <ref-wordbreaker.html>`__, a tool to split
+   compounds into individual words
+
+-  added JSON attributes support
+   (`sql\_attr\_json <conf-sql-attr-json.html>`__,
+   `on\_json\_attr\_error <conf-on-json-attr-error.html>`__,
+   `json\_autoconv\_numbers <conf-json-autoconv-numbers.html>`__,
+   `json\_autoconv\_keynames <conf-json-autoconv-keynames.html>`__
+   directives)
+
+-  added initial subselects support, SELECT \* FROM (SELECT … ORDER BY
+   cond1 LIMIT X) ORDER BY cond2 LIMIT Y
+
+-  added bigram indexing, and phrase searching with bigrams
+   (`bigram\_index <conf-bigram-index.html>`__,
+   `bigram\_freq\_words <conf-bigram-freq-words.html>`__ directives)
+
+-  added HA/LB support, ha\_strategy and agent\_persistent directives,
+   SHOW AGENT STATUS statement
+
+-  added RT index optimization (`OPTIMIZE
+   INDEX <sphinxql-optimize-index.html>`__ statement,
+   `rt\_merge\_iops <conf-rt-merge-iops.html>`__ and
+   `rt\_merge\_maxiosize <conf-rt-merge-maxiosize.html>`__ directives)
+
+-  added wildcards support to `dict=keywords <conf-dict.html>`__ (eg.
+   “t?st\*”)
+
+-  added substring search support (min\_infix\_len=2 and above) to
+   `dict=keywords <conf-dict.html>`__
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New features
+   :name: new-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added –checkconfig switch to `indextool <ref-indextool.html>`__ to
+   check config file for correctness (bug
+   `#1395 <http://sphinxsearch.com/bugs/view.php?id=1395>`__)
+
+-  added global IDF support (`global\_idf <conf-global-idf.html>`__
+   directive, `OPTION global\_idf <sphinxql-select.html>`__)
+
+-  added “term1 term2 term3”/0.5 `quorum fraction
+   syntax <extended-syntax.html>`__ (bug
+   `#1372 <http://sphinxsearch.com/bugs/view.php?id=1372>`__)
+
+-  added an option to apply stopwords before morphology,
+   `stopwords\_unstemmed <conf-stopwords-unstemmed.html>`__ directive
+
+-  added an alternative method to compute keyword IDFs, `OPTION
+   idf=plain <sphinxql-select.html>`__
+
+-  added boolean query optimizations, `OPTION
+   boolean\_simplify=1 <sphinxql-select.html>`__ (bug
+   `#1294 <http://sphinxsearch.com/bugs/view.php?id=1294>`__)
+
+-  added stringptr return type support to UDFs, and `CREATE FUNCTION …
+   RETURNS STRING syntax <sphinxql-create-function.html>`__
+
+-  added early query termination by predicted execution time (`OPTION
+   max\_predicted\_time <sphinxql-select.html>`__, and
+   `predicted\_time\_costs <conf-predicted-time-costs.html>`__
+   directive)
+
+-  added `index\_field\_lengths <conf-index-field-lengths.html>`__
+   directive, BM25A() and BM25F() functions to `expression
+   ranker <expression-ranker.html>`__
+
+-  added ranker=export, and
+   `PACKEDFACTORS() <misc-functions.html#expr-func-packedfactors>`__
+   function
+
+-  added `OPTION agent\_query\_timeout <sphinxql-select.html>`__
+
+-  added support for attribute files over 4 GB (bug
+   `#1274 <http://sphinxsearch.com/bugs/view.php?id=1274>`__)
+
+-  added addr2line output to crash reports (bug
+   `#1265 <http://sphinxsearch.com/bugs/view.php?id=1265>`__)
+
+-  added `OPTION ignore\_nonexistent\_columns <sphinxql-update.html>`__
+   to UPDATE, and a respective
+   `UpdateAttributes() <api-func-updateatttributes.html>`__ argument
+
+-  added –keep-attrs switch to `indexer <ref-indexer.html>`__
+
+-  added –with-static-mysql, –with-static-pgsql switches to configure
+
+-  added double-buffering for RT `INSERTs <sphinxql-insert.html>`__ (bug
+   `#1200 <http://sphinxsearch.com/bugs/view.php?id=1200>`__)
+
+-  added –morph, –dumpdict switch to `indextool <ref-indextool.html>`__
+
+-  added support for multiple wordforms files, comment syntax, and
+   pre/post-morphology `wordforms <conf-wordforms.html>`__
+
+-  added `ZONESPANLIST() <sphinxql-select.html>`__ builtin function
+
+-  added `regexp\_filter <conf-regexp-filter.html>`__ directive, regexp
+   document/query filtering support (uses RE2)
+
+-  added min\_idf, max\_idf, sum\_idf `ranking
+   factors <expression-ranker.html>`__
+
+-  added uservars persistence, and
+   `sphinxql\_state <conf-sphinxql-state.html>`__ directive (bug
+   `#1132 <http://sphinxsearch.com/bugs/view.php?id=1132>`__)
+
+-  added `POLY2D <numeric-functions.html#expr-func-poly2d>`__,
+   `GEOPOLY2D <numeric-functions.html#expr-func-geopoly2d>`__,
+   `CONTAINS <numeric-functions.html#expr-func-contains>`__ functions
+
+-  added `ZONESPAN <extended-syntax.html>`__ operator
+
+-  added `snippets\_file\_prefix <conf-snippets-file-prefix.html>`__
+   directive
+
+-  added Arabic stemmer, `morphology=stem\_ar <conf-morphology.html>`__
+   directive (bug
+   `#519 <http://sphinxsearch.com/bugs/view.php?id=519>`__)
+
+-  added `OPTION sort\_method={pq \| kbuffer} <sphinxql-select.html>`__,
+   an alternative match sorting method
+
+-  added SPZ (`sentence, paragraph <conf-index-sp.html>`__,
+   `zone <conf-index-zones.html>`__) support to RT indexes
+
+-  added support for upto 255 keywords in `quorum
+   operator <extended-syntax.html>`__ (bug
+   `#1030 <http://sphinxsearch.com/bugs/view.php?id=1030>`__)
+
+-  added multi-threaded agent querying (bug
+   `#1000 <http://sphinxsearch.com/bugs/view.php?id=1000>`__)
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New SphinxQL features
+   :name: new-sphinxql-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added `SHOW INDEX indexname
+   STATUS <sphinxql-show-index-status.html>`__ statement
+
+-  added LIKE clause support to multiple SHOW xxx statements
+
+-  added `SNIPPET() <sphinxql-select.html>`__ function
+
+-  added `GROUP\_CONCAT() <sphinxql-select.html>`__ aggregate function
+
+-  added `GROUPBY() <sphinxql-select.html>`__ builtin function
+
+-  added iostats and cpustats to `SHOW META <sphinxql-show-meta.html>`__
+
+-  added support for `DELETE <sphinxql-delete.html>`__ statement over
+   distributed indexes (bug
+   `#1104 <http://sphinxsearch.com/bugs/view.php?id=1104>`__)
+
+-  added `EXIST(’attr\_name’, default\_value) <sphinxql-select.html>`__
+   builtin function (bug
+   `#1037 <http://sphinxsearch.com/bugs/view.php?id=1037>`__)
+
+-  added `SHOW VARIABLES WHERE
+   variable\_name=’xxx’ <sphinxql-show-variables.html>`__ syntax
+
+-  added `TRUNCATE RTINDEX <sphinxql-truncate-rtindex.html>`__ statement
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Major behavior changes and optimizations
+   :name: major-behavior-changes-and-optimizations
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  changed that UDFs are now allowed in fork/prefork modes via
+   `sphinxql\_state <conf-sphinxql-state.html>`__ startup script
+
+-  changed that compat\_sphinxql\_magics now defaults to 0
+
+-  changed that small enough exceptions, wordforms, stopwords files are
+   now embedded into the index header
+
+-  changed that `rt\_mem\_limit <conf-rt-mem-limit.html>`__ can now be
+   over 2 GB (bug
+   `#1059 <http://sphinxsearch.com/bugs/view.php?id=1059>`__)
+
+-  optimized tokenizer (upto 1.25x indexing and snippets speedup)
+
+-  optimized multi-keyword searching (added skiplists)
+
+-  optimized filtering and scan in several frequent cases (single-value,
+   2-arg, 3-arg WHERE clauses)
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+------------------------------------------+
+| `Prev <rel212.html>`__                      | `Up <changelog.html>`__   |  `Next <rel2011.html>`__                 |
++---------------------------------------------+---------------------------+------------------------------------------+
+| A.21. Version 2.1.2-release, 10 oct 2013    | `Home <index.html>`__     |  A.23. Version 2.0.11-dev, xx xxx xxxx   |
++---------------------------------------------+---------------------------+------------------------------------------+
+
+.. raw:: html
+
+   </div>

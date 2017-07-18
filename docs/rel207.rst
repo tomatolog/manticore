@@ -1,0 +1,232 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.27. Version 2.0.7-release, 26 mar 2013
+`Prev <rel208.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel206.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.27. Version 2.0.7-release, 26 mar 2013
+   :name: a.27.version-2.0.7-release-26-mar-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1475 <http://sphinxsearch.com/bugs/view.php?id=1475>`__,
+   memory leak in the expression parser
+
+-  fixed `#1457 <http://sphinxsearch.com/bugs/view.php?id=1457>`__,
+   error messages over 2KB were clipped
+
+-  fixed `#1454 <http://sphinxsearch.com/bugs/view.php?id=1454>`__,
+   searchd did not display an error message when the binlog path did not
+   exist
+
+-  fixed `#1441 <http://sphinxsearch.com/bugs/view.php?id=1441>`__, SHOW
+   META in a query batch was returning the last non-batch error
+
+-  fixed `#1435 <http://sphinxsearch.com/bugs/view.php?id=1435>`__, typo
+   in the documentation
+
+-  fixed `#1430 <http://sphinxsearch.com/bugs/view.php?id=1430>`__,
+   rt\_flush\_period now works even with a disabled binlog
+
+-  fixed `#1427 <http://sphinxsearch.com/bugs/view.php?id=1427>`__,
+   overlong 4-byte UTF-8 codes in source text could cause indexer
+   crashes or index corruption
+
+-  fixed `#1418 <http://sphinxsearch.com/bugs/view.php?id=1418>`__,
+   warnings from local index searches were lost with dist\_threads>0
+
+-  fixed `#1417 <http://sphinxsearch.com/bugs/view.php?id=1417>`__,
+   crash handler now works on searchd startup stage, too (eg. to report
+   index load time crashes)
+
+-  fixed `#1410 <http://sphinxsearch.com/bugs/view.php?id=1410>`__, bad
+   numerics like ‘123abc’ now result in a proper SphinxQL error message
+
+-  fixed `#1404 <http://sphinxsearch.com/bugs/view.php?id=1404>`__, a
+   tiny memory leak in shared mutex
+
+-  fixed `#1394 <http://sphinxsearch.com/bugs/view.php?id=1394>`__, race
+   in –iostats caused incorrect I/O statistics in threaded modes
+
+-  fixed `#1391 <http://sphinxsearch.com/bugs/view.php?id=1391>`__,
+   QUORUM operator vs docinfo=inline returned wrong attribute values
+
+-  fixed `#1389 <http://sphinxsearch.com/bugs/view.php?id=1389>`__, edge
+   case in the ORDER operator caused occasionally searchd crashes
+
+-  fixed `#1382 <http://sphinxsearch.com/bugs/view.php?id=1382>`__,
+   query parts with field limits but without real keywords (like ‘@name
+   {’) are now simply ignored and no longer cause a query syntax error
+
+-  fixed `#1370 <http://sphinxsearch.com/bugs/view.php?id=1370>`__,
+   Windows indexer builds failed to fetch rows from MSSQL 2012
+
+-  fixed `#1368 <http://sphinxsearch.com/bugs/view.php?id=1368>`__,
+   ORDER BY RAND() did not work in RT indexes
+
+-  fixed `#1364 <http://sphinxsearch.com/bugs/view.php?id=1364>`__,
+   queries with hitless words could occasionally crash searchd
+
+-  fixed `#1363 <http://sphinxsearch.com/bugs/view.php?id=1363>`__, ‘\*’
+   in charset\_table was causing query syntax errors with enable\_star=1
+
+-  fixed `#1353 <http://sphinxsearch.com/bugs/view.php?id=1353>`__,
+   added filtering by ‘id’ syntax (in addition to ‘@id’) to SphinxSE
+
+-  fixed `#1346 <http://sphinxsearch.com/bugs/view.php?id=1346>`__,
+   fixed NEAR operator behavior vs duplicated keywords
+
+-  fixed `#1345 <http://sphinxsearch.com/bugs/view.php?id=1345>`__,
+   invalid PROXIMITY operator threshold now causes a query syntax error
+   rather than unexpected search behavior
+
+-  fixed `#1343 <http://sphinxsearch.com/bugs/view.php?id=1343>`__,
+   misconfigured indexes with 0 full text fields are now explicitly
+   forbidden
+
+-  fixed `#1342 <http://sphinxsearch.com/bugs/view.php?id=1342>`__,
+   specific error messages (from the preload stage) went missing when
+   failing to load the indexes
+
+-  fixed `#1339 <http://sphinxsearch.com/bugs/view.php?id=1339>`__, no
+   warning on inconsistent word statistics
+
+-  fixed `#1335 <http://sphinxsearch.com/bugs/view.php?id=1335>`__, typo
+   in searchd help screen
+
+-  fixed `#1334 <http://sphinxsearch.com/bugs/view.php?id=1334>`__, typo
+   in SELECT documentation
+
+-  fixed `#1316 <http://sphinxsearch.com/bugs/view.php?id=1316>`__,
+   PHRASE operator did not match in a rare self-repeating document/query
+   case
+
+-  fixed `#1297 <http://sphinxsearch.com/bugs/view.php?id=1297>`__,
+   letting queries complete gracefully instead of killing them off in
+   seamless\_rotate=1, workers=prefork case
+
+-  fixed `#1295 <http://sphinxsearch.com/bugs/view.php?id=1295>`__,
+   mentioned index naming requirements (proper identifier) in the FROM
+   clause docs
+
+-  fixed `#1221 <http://sphinxsearch.com/bugs/view.php?id=1221>`__,
+   incorrect results when using @groupby in select list via SphinxAPI
+   with compat\_sphinxql\_magics=0
+
+-  fixed `#1180 <http://sphinxsearch.com/bugs/view.php?id=1180>`__,
+   special SPZ chars occasionally leaking into snippets
+
+-  fixed `#1171 <http://sphinxsearch.com/bugs/view.php?id=1171>`__,
+   preforked children did not reload logs on SIGUSR1
+
+-  fixed `#1150 <http://sphinxsearch.com/bugs/view.php?id=1150>`__,
+   added support for \`id\` syntax in DELETE and parents in WHERE
+
+-  fixed `#1135 <http://sphinxsearch.com/bugs/view.php?id=1135>`__,
+   crashes when using MVA/strings attributes in expression ranker
+
+-  fixed `#1124 <http://sphinxsearch.com/bugs/view.php?id=1124>`__,
+   corrupted attributes after merging with an empty index
+
+-  fixed `#1090 <http://sphinxsearch.com/bugs/view.php?id=1090>`__,
+   SphinxSE snippets UDF updated to support MySQL 5.5
+
+-  fixed `#1041 <http://sphinxsearch.com/bugs/view.php?id=1041>`__,
+   added initial support for MVA updates (and other mutex protected
+   things) on FreeBSD
+
+-  fixed `#999 <http://sphinxsearch.com/bugs/view.php?id=999>`__,
+   fullscan returned empty result sets in mixed batches of fullscan and
+   fulltext queries
+
+-  fixed `#921 <http://sphinxsearch.com/bugs/view.php?id=921>`__,
+   document count/bytes 32bit overflow in indexer progress output
+
+-  fixed `#539 <http://sphinxsearch.com/bugs/view.php?id=539>`__, added
+   processing suffix rules with dots in .affix file to spelldump
+
+-  fixed `#481 <http://sphinxsearch.com/bugs/view.php?id=481>`__,
+   rotation did not work on Windows with preopen=1
+
+-  fixed `#268 <http://sphinxsearch.com/bugs/view.php?id=268>`__, added
+   warnings about duplicate elements in xmlpipe2
+
+-  fixed CSphStaticMutex (double initialization issue)
+
+-  fixed documentation typo in SQL data sources
+
+-  fixed too-late initialization of mutex at daemon
+
+-  fixed that an instance of searchd resurrected by watchdog could leak
+   resources and/or crash
+
+-  added a console message about crashes during index loading at startup
+
+-  added more debug info about failed index loading
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel208.html>`__                      | `Up <changelog.html>`__   |  `Next <rel206.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.26. Version 2.0.8-release, 26 apr 2013    | `Home <index.html>`__     |  A.28. Version 2.0.6-release, 22 oct 2012   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

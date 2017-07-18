@@ -1,0 +1,97 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.20. Version 2.1.3-release, 12 nov 2013
+`Prev <rel214.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel212.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.20. Version 2.1.3-release, 12 nov 2013
+   :name: a.20.version-2.1.3-release-12-nov-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1753 <http://sphinxsearch.com/bugs/view.php?id=1753>`__, path
+   to re2 sources could not be set using ``--with-re2``, options
+   ``--with-re2-libs`` and ``--with-re2-includes`` added to
+   ``configure``
+
+-  fixed `#1739 <http://sphinxsearch.com/bugs/view.php?id=1739>`__,
+   erroneous conversion of RAM chunk into disk chunk when loading id32
+   index with id64 binary
+
+-  fixed `#1738 <http://sphinxsearch.com/bugs/view.php?id=1738>`__,
+   unlinking RAM chunk when converting it to disk chunk
+
+-  fixed `#1710 <http://sphinxsearch.com/bugs/view.php?id=1710>`__,
+   unable to filter by attributes created by index\_field\_lengths=1
+
+-  fixed `#1716 <http://sphinxsearch.com/bugs/view.php?id=1716>`__,
+   random crash with with multiple running threads
+
+-  fixed crash while querying index with lemmatizer and wordforms
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel214.html>`__                      | `Up <changelog.html>`__   |  `Next <rel212.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.19. Version 2.1.4-release, 18 dec 2013    | `Home <index.html>`__     |  A.21. Version 2.1.2-release, 10 oct 2013   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

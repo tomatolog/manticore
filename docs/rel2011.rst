@@ -1,0 +1,69 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.23. Version 2.0.11-dev, xx xxx xxxx
+`Prev <rel211.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel2010.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.23. Version 2.0.11-dev, xx xxx xxxx
+   :name: a.23.version-2.0.11-dev-xx-xxx-xxxx
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++------------------------------------------+---------------------------+----------------------------------------------+
+| `Prev <rel211.html>`__                   | `Up <changelog.html>`__   |  `Next <rel2010.html>`__                     |
++------------------------------------------+---------------------------+----------------------------------------------+
+| A.22. Version 2.1.1-beta, 20 feb 2013    | `Home <index.html>`__     |  A.24. Version 2.0.10-release, 22 jan 2014   |
++------------------------------------------+---------------------------+----------------------------------------------+
+
+.. raw:: html
+
+   </div>

@@ -1,1 +1,0 @@
-# Appendix A. Sphinx revision history {#appendix-a-sphinx-revision-history}

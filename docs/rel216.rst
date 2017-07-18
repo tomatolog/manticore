@@ -1,0 +1,134 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.17. Version 2.1.6-release, 24 feb 2014
+`Prev <rel217.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel215.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.17. Version 2.1.6-release, 24 feb 2014
+   :name: a.17.version-2.1.6-release-24-feb-2014
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1857 <http://sphinxsearch.com/bugs/view.php?id=1857>`__,
+   crash in arabic stemmer
+
+-  fixed `#1875 <http://sphinxsearch.com/bugs/view.php?id=1875>`__,
+   fixed crash on adding documents with long words in dict=keyword index
+   with morphology and infixes enabled
+
+-  fixed `#1876 <http://sphinxsearch.com/bugs/view.php?id=1876>`__,
+   crash on words with large codepoints and infix searches
+
+-  fixed `#1880 <http://sphinxsearch.com/bugs/view.php?id=1880>`__,
+   crash on multiquery with one incorrect query
+
+-  fixed `#1882 <http://sphinxsearch.com/bugs/view.php?id=1882>`__, race
+   of periodic and forced FLUSHing on an RT index
+
+-  fixed `#1881 <http://sphinxsearch.com/bugs/view.php?id=1881>`__,
+   quorum syntax with ‘.’ as blended char
+
+-  fixed evaluating of LCS by an expression ranker
+
+-  fixed `#1864 <http://sphinxsearch.com/bugs/view.php?id=1864>`__,
+   ``indexer`` crash on badly formed JSON, e.g. ‘[,1,2,3,4,]’
+
+-  fixed `#1853 <http://sphinxsearch.com/bugs/view.php?id=1853>`__,
+   incomplete `ORDER BY JSON <sphinxql-select.html>`__ attribute in
+   distributed indexes
+
+-  fixed `#1847 <http://sphinxsearch.com/bugs/view.php?id=1847>`__,
+   broken infix searches in RT indexes
+
+-  fixed `#1844 <http://sphinxsearch.com/bugs/view.php?id=1844>`__,
+   clash of mix cased attribute and field names at CSV source
+
+-  fixed `#1840 <http://sphinxsearch.com/bugs/view.php?id=1840>`__,
+   filter by `@uservar <sphinxql-set.html>`__ in distributes indexes
+
+-  fixed
+   `#1832 <http://sphinxsearch.com/bugs/view.php?id=1832>`__,#1833,#1834,
+   some big endianess issues
+
+-  fixed `#1830 <http://sphinxsearch.com/bugs/view.php?id=1830>`__, loss
+   of `ondisk\_attrs <conf-ondisk-attrs.html>`__ after rotation
+
+-  fixed `#1762 <http://sphinxsearch.com/bugs/view.php?id=1762>`__,
+   memory leak in `regexp\_filter <conf-regexp-filter.html>`__
+
+-  fixed `#1759 <http://sphinxsearch.com/bugs/view.php?id=1759>`__,
+   ``indextool`` false positives on persistent MVA checking
+
+-  fixed `GROUP BY <sphinxql-select.html>`__ id
+
+-  fixed crash on sending empty snippet result
+
+-  fixed index corruption in `UPDATE <sphinxql-update.html>`__ queries
+   with non-existent attributes
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel217.html>`__                      | `Up <changelog.html>`__   |  `Next <rel215.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.16. Version 2.1.7-release, 30 mar 2014    | `Home <index.html>`__     |  A.18. Version 2.1.5-release, 22 jan 2014   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

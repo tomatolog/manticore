@@ -1,1 +1,0 @@
-# Chapter 5. Searching {#chapter-5-searching}

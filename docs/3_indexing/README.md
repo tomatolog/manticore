@@ -1,1 +1,0 @@
-# Chapter 3. Indexing {#chapter-3-indexing}

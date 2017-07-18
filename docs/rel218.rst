@@ -1,0 +1,105 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.15. Version 2.1.8-release, 28 apr 2014
+`Prev <rel219.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel217.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.15. Version 2.1.8-release, 28 apr 2014
+   :name: a.15.version-2.1.8-release-28-apr-2014
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1937 <http://sphinxsearch.com/bugs/view.php?id=1937>`__,
+   crash at `SENTENCE <extended-syntax.html>`__ operator
+
+-  fixed `#1933 <http://sphinxsearch.com/bugs/view.php?id=1933>`__,
+   quorum operator works incorrectly if it’s number is exception
+
+-  fixed `#1932 <http://sphinxsearch.com/bugs/view.php?id=1932>`__,
+   fixed daemon index recovery after failed rotation
+
+-  fixed `#1923 <http://sphinxsearch.com/bugs/view.php?id=1923>`__,
+   crash at ``indexer`` with ``dict=keywords``
+
+-  fixed `#1918 <http://sphinxsearch.com/bugs/view.php?id=1918>`__,
+   fixed crash while hitless words are used within fulltext operators
+   which require hits
+
+-  fixed `#1878 <http://sphinxsearch.com/bugs/view.php?id=1878>`__,
+   daemon doesn’t reset `regexp\_filter <conf-regexp-filter.html>`__
+   after rotation with
+   `seamless\_rotate=0 <conf-seamless-rotate.html>`__
+
+-  fixed `#1769 <http://sphinxsearch.com/bugs/view.php?id=1769>`__,
+   crash after unsuccessful `INSERT <sphinxql-insert.html>`__ at RT
+   index
+
+-  fixed `#1682 <http://sphinxsearch.com/bugs/view.php?id=1682>`__,
+   field end modifier doesn’t work with words containing blended chars
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel219.html>`__                      | `Up <changelog.html>`__   |  `Next <rel217.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.14. Version 2.1.9-release, 03 jul 2014    | `Home <index.html>`__     |  A.16. Version 2.1.7-release, 30 mar 2014   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

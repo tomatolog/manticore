@@ -1,0 +1,450 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.33. Version 2.0.1-beta, 22 apr 2011
+`Prev <rel202.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel110.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.33. Version 2.0.1-beta, 22 apr 2011
+   :name: a.33.version-2.0.1-beta-22-apr-2011
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New general features
+   :name: new-general-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added remapping support to `blend\_chars <conf-blend-chars.html>`__
+   directive
+
+-  added multi-threaded snippet batches support (requires a batch sent
+   via API, `dist\_threads <conf-dist-threads.html>`__, and
+   ``load_files``)
+
+-  added collations (`collation\_server <conf-collation-server.html>`__,
+   `collation\_libc\_locale
+   directives <conf-collation-libc-locale.html>`__)
+
+-  added support for sorting and grouping on string attributes
+   (``ORDER BY``, ``GROUP BY``, ``WITHIN GROUP ORDER BY``)
+
+-  added UDF support (`plugin\_dir <conf-plugin-dir.html>`__ directive;
+   `CREATE FUNCTION <sphinxql-create-function.html>`__, `DROP
+   FUNCTION <sphinxql-drop-function.html>`__ statements)
+
+-  added `query\_log\_format <conf-query-log-format.html>`__ directive,
+   `SET GLOBAL query\_log\_format \| log\_level =
+   … <sphinxql-set.html>`__ statements; and connection id tracking
+
+-  added `sql\_column\_buffers <conf-sql-column-buffers.html>`__
+   directive, fixed out-of-buffer column handling in ODBC/MS SQL sources
+
+-  added `blend\_mode <conf-blend-mode.html>`__ directive that enables
+   indexing multiple variants of a blended sequence
+
+-  added UNIX socket support to C, Ruby APIs
+
+-  added ranged query support to
+   `sql\_joined\_field <conf-sql-joined-field.html>`__
+
+-  added `rt\_flush\_period <conf-rt-flush-period.html>`__ directive
+
+-  added `thread\_stack <conf-thread-stack.html>`__ directive
+
+-  added SENTENCE, PARAGRAPH, ZONE operators (and
+   `index\_sp <conf-index-sp.html>`__,
+   `index\_zones <conf-index-zones.html>`__ directives)
+
+-  added keywords dictionary support (and `dict <conf-dict.html>`__,
+   `expansion\_limit <conf-expansion-limit.html>`__ directives)
+
+-  added ``passage_boundary``, ``emit_zones`` options to snippets
+
+-  added `a watchdog process <conf-watchdog.html>`__ in threaded mode
+
+-  added persistent MVA updates
+
+-  added crash dumps to ``searchd.log``, deprecated ``crash_log_path``
+   directive
+
+-  added id32 index support in id64 binaries (EXPERIMENTAL)
+
+-  added SphinxSE support for DELETE and REPLACE on SphinxQL tables
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New SphinxQL features
+   :name: new-sphinxql-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added new, more SQL compliant SphinxQL syntax; and a
+   compat\_sphinxql\_magics directive
+
+-  added `CRC32() <misc-functions.html#expr-func-crc32>`__,
+   `DAY() <date-time-functions.html#expr-func-day>`__,
+   `MONTH() <date-time-functions.html#expr-func-month>`__,
+   `YEAR() <date-time-functions.html#expr-func-year>`__,
+   `YEARMONTH() <date-time-functions.html#expr-func-yearmonth>`__,
+   `YEARMONTHDAY() <date-time-functions.html#expr-func-yearmonthday>`__
+   functions
+
+-  added `DIV, MOD, and % operators <operators.html#expr-ari-ops>`__
+
+-  added `reverse\_scan=(0\|1) <sphinxql-select.html>`__ option to
+   SELECT
+
+-  added support for MySQL packets over 16M
+
+-  added dummy SHOW VARIABLES, SHOW COLLATION, and SET
+   character\_set\_results support (to support handshake with certain
+   client libraries and frameworks)
+
+-  added `mysql\_version\_string <conf-mysql-version-string.html>`__
+   directive (to workaround picky MySQL client libraries)
+
+-  added support for global filter variables, `SET GLOBAL
+   @uservar=(int\_list) <sphinxql-set.html>`__
+
+-  added `DELETE … IN (id\_list) <sphinxql-delete.html>`__ syntax
+   support
+
+-  added C-style comments syntax (for example,
+   ``SELECT /*!40000 some comment*/ id FROM test``)
+
+-  added `UPDATE … WHERE id=X <sphinxql-update.html>`__ syntax support
+
+-  added `SphinxQL multi-query support <sphinxql-multi-queries.html>`__
+
+-  added `DESCRIBE <sphinxql-describe.html>`__, `SHOW
+   TABLES <sphinxql-show-tables.html>`__ statements
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New command-line switches
+   :name: new-command-line-switches
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added ``--print-queries`` switch to ``indexer`` that dumps SQL
+   queries it runs
+
+-  added ``--sighup-each `` switch to ``indexer`` that rotates indexes
+   one by one
+
+-  added ``--strip-path`` switch to ``searchd`` that skips file paths
+   embedded in the index(-es)
+
+-  added ``--dumpconfig`` switch to ``indextool`` that dumps an index
+   header in ``sphinx.conf`` format
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Major changes and optimizations
+   :name: major-changes-and-optimizations
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  changed default preopen\_indexes value to 1
+
+-  optimized English stemmer (results in 1.3x faster snippets and
+   indexing with morphology=stem\_en)
+
+-  optimized snippets, 1.6x general speedup
+
+-  optimized const-list parsing in SphinxQL
+
+-  optimized full-document highlighting CPU/RAM use
+
+-  optimized binlog replay (improved performance on K-list update)
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#767 <http://sphinxsearch.com/bugs/view.php?id=767>`__, joined
+   fields vs ODBC sources
+
+-  fixed `#757 <http://sphinxsearch.com/bugs/view.php?id=757>`__,
+   wordforms shared by indexes with different settings
+
+-  fixed `#733 <http://sphinxsearch.com/bugs/view.php?id=733>`__,
+   loading of indexes in formats prior to v.14
+
+-  fixed `#763 <http://sphinxsearch.com/bugs/view.php?id=763>`__,
+   occasional snippets failures
+
+-  fixed `#648 <http://sphinxsearch.com/bugs/view.php?id=648>`__,
+   occasionally missed rotations on multiple SIGHUPs
+
+-  fixed `#750 <http://sphinxsearch.com/bugs/view.php?id=750>`__, an RT
+   segment merge leading to false positives and/or crashes in some cases
+
+-  fixed `#755 <http://sphinxsearch.com/bugs/view.php?id=755>`__, zones
+   in snippets output
+
+-  fixed `#754 <http://sphinxsearch.com/bugs/view.php?id=754>`__,
+   stopwords counting at snippet passage generation
+
+-  fixed `#723 <http://sphinxsearch.com/bugs/view.php?id=723>`__,
+   fork/prefork index rotation in children processes
+
+-  fixed `#696 <http://sphinxsearch.com/bugs/view.php?id=696>`__, freeze
+   on zero threshold in quorum operator
+
+-  fixed `#732 <http://sphinxsearch.com/bugs/view.php?id=732>`__, query
+   escaping in SphinxSE
+
+-  fixed `#739 <http://sphinxsearch.com/bugs/view.php?id=739>`__,
+   occasional crashes in MT mode on result set send
+
+-  fixed `#746 <http://sphinxsearch.com/bugs/view.php?id=746>`__, crash
+   with a named list in SphinxQL option
+
+-  fixed `#674 <http://sphinxsearch.com/bugs/view.php?id=674>`__, AVG vs
+   group order
+
+-  fixed `#734 <http://sphinxsearch.com/bugs/view.php?id=734>`__,
+   occasional crashes attempting to report NULL errors
+
+-  fixed `#829 <http://sphinxsearch.com/bugs/view.php?id=829>`__, tail
+   hits within field position modifier
+
+-  fixed `#712 <http://sphinxsearch.com/bugs/view.php?id=712>`__,
+   missing query\_mode, force\_all\_words snippet option defaults in
+   Java API
+
+-  fixed `#721 <http://sphinxsearch.com/bugs/view.php?id=721>`__, added
+   dupe removal on RT batch INSERT/REPLACE
+
+-  fixed `#720 <http://sphinxsearch.com/bugs/view.php?id=720>`__,
+   potential extraneous highlighting after a blended keyword
+
+-  fixed `#702 <http://sphinxsearch.com/bugs/view.php?id=702>`__,
+   exceptions vs star search
+
+-  fixed `#666 <http://sphinxsearch.com/bugs/view.php?id=666>`__, ext2
+   query grouping vs exceptions
+
+-  fixed `#688 <http://sphinxsearch.com/bugs/view.php?id=688>`__, WITHIN
+   GROUP ORDER BY related crash
+
+-  fixed `#660 <http://sphinxsearch.com/bugs/view.php?id=660>`__,
+   multi-queue batches vs dist\_threads
+
+-  fixed `#678 <http://sphinxsearch.com/bugs/view.php?id=678>`__, crash
+   on dict=keywords vs xmlpipe vs min\_prefix\_len
+
+-  fixed `#596 <http://sphinxsearch.com/bugs/view.php?id=596>`__, ECHILD
+   vs scripted configs
+
+-  fixed `#653 <http://sphinxsearch.com/bugs/view.php?id=653>`__,
+   dependency in expression, sorting, grouping
+
+-  fixed `#661 <http://sphinxsearch.com/bugs/view.php?id=661>`__,
+   concurrent distributed searches vs workers=threads
+
+-  fixed `#646 <http://sphinxsearch.com/bugs/view.php?id=646>`__, crash
+   on status query via UNIX socket
+
+-  fixed `#589 <http://sphinxsearch.com/bugs/view.php?id=589>`__,
+   libexpat.dll missing from some Win32 build types
+
+-  fixed `#574 <http://sphinxsearch.com/bugs/view.php?id=574>`__, quorum
+   match order
+
+-  fixed multiple documentation issues (#372, #483, #495, #601, #623,
+   #632, #654)
+
+-  fixed that ondisk\_dict did not affect RT indexes
+
+-  fixed that string attributes check in indextool –check was
+   erroneously sensitive to string data order
+
+-  fixed a rare crash when using BEFORE operator
+
+-  fixed an issue with multiforms vs BuildKeywords()
+
+-  fixed an edge case in OR operator (emitted wrong hits order
+   sometimes)
+
+-  fixed aliasing in docinfo accessors that lead to very rare crashes
+   and/or missing results
+
+-  fixed a syntax error on a short token at the end of a query
+
+-  fixed id64 filtering and performance degradation with range filters
+
+-  fixed missing rankers in libsphinxclient
+
+-  fixed missing SPH04 ranker in SphinxSE
+
+-  fixed column names in sql\_attr\_multi sample (works with example.sql
+   now)
+
+-  fixed an issue with distributed local+remote setup vs aggregate
+   functions
+
+-  fixed case sensitive columns names in RT indexes
+
+-  fixed a crash vs strings from multiple indexes in result set
+
+-  fixed blended keywords vs snippets
+
+-  fixed secure\_connection vs MySQL protocol vs MySQL.NET connector
+
+-  fixed that Python API did not works with Python 2.3
+
+-  fixed overshort\_step vs snippets
+
+-  fixed keyword staistics vs dist\_threads searching
+
+-  fixed multiforms vs query parsing (vs quorum)
+
+-  fixed missed quorum words vs RT segments
+
+-  fixed blended keywords occasionally skipping extra character when
+   querying (eg “abc[]”)
+
+-  fixed Python API to handle int32 values
+
+-  fixed prefix and infix indexing of joined fields
+
+-  fixed MVA ranged query
+
+-  fixed missing blended state reset on document boundary
+
+-  fixed a crash on missing index while replaying binlog
+
+-  fixed an error message on filter values overrun
+
+-  fixed passage duplication in snippets in weight\_order mode
+
+-  fixed select clauses over 1K vs remote agents
+
+-  fixed overshort accounting vs soft-whitespace tokens
+
+-  fixed rotation vs workers=threads
+
+-  fixed schema issues vs distributed indexes
+
+-  fixed blended-escaped sequence parsing issue
+
+-  fixed MySQL IN clause (values order etc)
+
+-  fixed that post\_index did not execute when 0 documents were
+   succesfully indexed
+
+-  fixed field position limit vs many hits
+
+-  fixed that joined fields missed an end marker at field end
+
+-  fixed that xxx\_step settings were missing from .sph index header
+
+-  fixed libsphinxclient missing request cleanup in sphinx\_query() (eg
+   after network errors)
+
+-  fixed that index\_weights were ignored when grouping
+
+-  fixed multi wordforms vs blend\_chars
+
+-  fixed broken MVA output in SphinxQL
+
+-  fixed a few RT leaks
+
+-  fixed an issue with RT string storage going missing
+
+-  fixed an issue with repeated queries vs dist\_threads
+
+-  fixed an issue with string attributes vs buffer overrun in SphinxQL
+
+-  fixed unexpected character data warnings within ignored xmlpipe tags
+
+-  fixed a crash in snippets with NEAR syntax query
+
+-  fixed passage duplication in snippets
+
+-  fixed libsphinxclient SIGPIPE handling
+
+-  fixed libsphinxclient vs VS2003 compiler bug
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++------------------------------------------+---------------------------+-----------------------------------------+
+| `Prev <rel202.html>`__                   | `Up <changelog.html>`__   |  `Next <rel110.html>`__                 |
++------------------------------------------+---------------------------+-----------------------------------------+
+| A.32. Version 2.0.2-beta, 15 nov 2011    | `Home <index.html>`__     |  A.34. Version 1.10-beta, 19 jul 2010   |
++------------------------------------------+---------------------------+-----------------------------------------+
+
+.. raw:: html
+
+   </div>

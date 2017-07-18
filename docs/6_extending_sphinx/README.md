@@ -1,1 +1,0 @@
-# Chapter 6. Extending Sphinx {#chapter-6-extending-sphinx}

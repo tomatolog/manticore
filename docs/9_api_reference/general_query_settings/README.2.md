@@ -1,1 +1,0 @@
-## General query settings {#general-query-settings}

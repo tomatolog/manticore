@@ -1,3 +1,0 @@
-### agent_retry_delay {#agent-retry-delay}
-
-Integer, in milliseconds. Specifies the delay sphinx rest before retrying to query a remote agent in case it fails. The value has sense only if non-zero [agent_retry_count](../../searchd_program_configuration_options/agentretry_count.md) or non-zero per-query OPTION retry_count specified. Default is 500\. This value may be also specified on per-query basis using &#039;OPTION retry_delay=XXX&#039; clause. If per-query option exists, it will override the one specified in config.

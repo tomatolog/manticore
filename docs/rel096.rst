@@ -1,0 +1,84 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.43. Version 0.9.6, 24 jul 2006
+`Prev <rel097rc.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel096rc1.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.43. Version 0.9.6, 24 jul 2006
+   :name: a.43.version-0.9.6-24-jul-2006
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added support for empty indexes
+
+-  added support for multiple sql\_query\_pre/post/post\_index
+
+-  fixed timestamp ranges filter in “match any” mode
+
+-  fixed configure issues with –without-mysql and –with-pgsql options
+
+-  fixed building on Solaris 9
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++-----------------------------------------+---------------------------+-----------------------------------------+
+| `Prev <rel097rc.html>`__                | `Up <changelog.html>`__   |  `Next <rel096rc1.html>`__              |
++-----------------------------------------+---------------------------+-----------------------------------------+
+| A.42. Version 0.9.7-rc1, 26 oct 2006    | `Home <index.html>`__     |  A.44. Version 0.9.6-rc1, 26 jun 2006   |
++-----------------------------------------+---------------------------+-----------------------------------------+
+
+.. raw:: html
+
+   </div>

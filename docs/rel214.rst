@@ -1,0 +1,95 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.19. Version 2.1.4-release, 18 dec 2013
+`Prev <rel215.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel213.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.19. Version 2.1.4-release, 18 dec 2013
+   :name: a.19.version-2.1.4-release-18-dec-2013
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#1778 <http://sphinxsearch.com/bugs/view.php?id=1778>`__,
+   indexes with more than 255 attributes
+
+-  fixed `#1777 <http://sphinxsearch.com/bugs/view.php?id=1777>`__,
+   `ORDER BY WEIGHT() <sphinxql-select.html>`__
+
+-  fixed `#1796 <http://sphinxsearch.com/bugs/view.php?id=1796>`__,
+   missing results in queries with quorum operator of indexes with some
+   lemmatizer
+
+-  fixed `#1780 <http://sphinxsearch.com/bugs/view.php?id=1780>`__,
+   incorrect results while querying indexes with wordforms, some
+   lemmatizer and enable\_star=1
+
+-  fixed, SHOW PROFILE for fullscan queries
+
+-  fixed, –with-re2 check
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++---------------------------------------------+---------------------------+---------------------------------------------+
+| `Prev <rel215.html>`__                      | `Up <changelog.html>`__   |  `Next <rel213.html>`__                     |
++---------------------------------------------+---------------------------+---------------------------------------------+
+| A.18. Version 2.1.5-release, 22 jan 2014    | `Home <index.html>`__     |  A.20. Version 2.1.3-release, 12 nov 2013   |
++---------------------------------------------+---------------------------+---------------------------------------------+
+
+.. raw:: html
+
+   </div>

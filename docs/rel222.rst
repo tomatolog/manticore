@@ -1,0 +1,154 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.12. Version 2.2.2-beta, 11 feb 2014
+`Prev <rel223.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel221.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.12. Version 2.2.2-beta, 11 feb 2014
+   :name: a.12.version-2.2.2-beta-11-feb-2014
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: New features
+   :name: new-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added #1604, `CALL KEYWORDS <sphinxql-call-keywords.html>`__ can show
+   now multiple lemmas for a keyword
+
+-  added `ALTER TABLE DROP COLUMN <sphinxql-attach.html>`__
+
+-  added ALTER for JSON/string/MVA attributes
+
+-  added `REMAP() <misc-functions.html#expr-func-remap>`__ function
+   which surpasses SetOverride() API
+
+-  added an argument to `PACKEDFACTORS() <misc-functions.html>`__ to
+   disable ATC calculation (syntax: PACKEDFACTORS({no\_atc=1}))
+
+-  added exact phrase query syntax
+
+-  added flag ``'--enable-dl'`` to configure script which works with
+   ``libmysqlclient``, ``libpostgresql``, ``libexpat``, ``libunixobdc``
+
+-  added new plugin system:
+   `CREATE <sphinxql-create-plugin.html>`__/`DROP
+   PLUGIN <sphinxql-drop-plugin.html>`__, `SHOW
+   PLUGINS <sphinxql-show-plugins.html>`__,
+   `plugin\_dir <conf-plugin-dir.html>`__ now in common,
+   `index/query\_token\_filter <sphinxql-create-plugin.html>`__ plugins
+
+-  added `ondisk\_attrs <conf-ondisk-attrs.html>`__ support for RT
+   indexes
+
+-  added position shift operator to phrase operator
+
+-  added possibility to add user-defined rankers (via
+   `plugins <extending-sphinx.html>`__)
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Optimizations, behavior changes, and removals
+   :name: optimizations-behavior-changes-and-removals
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  changed #1797, per-term statistics report (expanded terms fold to
+   their respective substrings)
+
+-  changed default `thread\_stack <conf-thread-stack.html>`__ value to
+   1M
+
+-  changed local directive in a distributed index which takes now a list
+   (eg. ``local=shard1,shard2,shard3``)
+
+-  deprecated `SetMatchMode() <api-func-setmatchmode.html>`__ API call
+
+-  deprecated `SetOverride() <api-func-setoverride.html>`__ API call
+
+-  optimized infix searches for dict=keywords
+
+-  optimized kill lists in plain and RT indexes
+
+-  removed deprecated ``"address"`` and ``"port"`` config keys
+
+-  removed deprecated CLI ``search`` and ``sql_query_info``
+
+-  removed deprecated ``charset_type`` and ``mssql_unicode``
+
+-  removed deprecated ``enable_star``
+
+-  removed deprecated ``ondisk_dict`` and ``ondisk_dict_default``
+
+-  removed deprecated ``str2ordinal`` attributes
+
+-  removed deprecated ``str2wordcount`` attributes
+
+-  removed support for client versions 0.9.6 and below
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++------------------------------------------+---------------------------+------------------------------------------+
+| `Prev <rel223.html>`__                   | `Up <changelog.html>`__   |  `Next <rel221.html>`__                  |
++------------------------------------------+---------------------------+------------------------------------------+
+| A.11. Version 2.2.3-beta, 13 may 2014    | `Home <index.html>`__     |  A.13. Version 2.2.1-beta, 13 nov 2013   |
++------------------------------------------+---------------------------+------------------------------------------+
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,133 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.7. Version 2.2.7-release, 20 jan 2015
+`Prev <rel228.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel226.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.7. Version 2.2.7-release, 20 jan 2015
+   :name: a.7.version-2.2.7-release-20-jan-2015
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Minor features
+   :name: minor-features
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  added #2112, string equal comparison support for
+   `IF() <comparison-functions.html#expr-func-if>`__ function (for JSON
+   and string attributes)
+
+-  added #2153, `IN() <comparison-functions.html#expr-func-in>`__
+   support for mixed and top-level JSON arrays
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#2158 <http://sphinxsearch.com/bugs/view.php?id=2158>`__,
+   crash at RT index after morphology changed to AOT after index was
+   created
+
+-  fixed `#2155 <http://sphinxsearch.com/bugs/view.php?id=2155>`__,
+   `stopwords <conf-stopwords.html>`__ got missed on disk chunk save at
+   RT index
+
+-  fixed `#2151 <http://sphinxsearch.com/bugs/view.php?id=2151>`__,
+   agents statistics missed in case of huge amount of agents
+
+-  fixed `#2139 <http://sphinxsearch.com/bugs/view.php?id=2139>`__,
+   escape all special characters in JSON result set, according to RFC
+   4627
+
+-  fixed `#2123 <http://sphinxsearch.com/bugs/view.php?id=2123>`__, no
+   pid file created in x64 release built with vs2012
+
+-  fixed `#2115 <http://sphinxsearch.com/bugs/view.php?id=2115>`__,
+   ``indexer`` crash on wordforms with multiple destination keywords
+
+-  fixed `#2050 <http://sphinxsearch.com/bugs/view.php?id=2050>`__,
+   multi result set doesn’t work without ``libmysqlclient``
+
+-  fixed `#2003 <http://sphinxsearch.com/bugs/view.php?id=2003>`__,
+   `lemmatize\_XX\_all <conf-morphology.html>`__ handling of short and
+   exact words
+
+-  fixed `#1912 <http://sphinxsearch.com/bugs/view.php?id=1912>`__,
+   reduce ``indextool`` memory usage during a check of a huge index
+
+-  fixed off by one errors in filtering of ``BIGINT`` attributes
+
+-  fixed seamless rotation in `prefork <conf-workers.html>`__ mode
+
+-  fixed snippets crash with `blend chars <conf-blend-chars.html>`__ at
+   the beginning of a string
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++--------------------------------------------+---------------------------+--------------------------------------------+
+| `Prev <rel228.html>`__                     | `Up <changelog.html>`__   |  `Next <rel226.html>`__                    |
++--------------------------------------------+---------------------------+--------------------------------------------+
+| A.6. Version 2.2.8-release, 09 mar 2015    | `Home <index.html>`__     |  A.8. Version 2.2.6-release, 13 nov 2014   |
++--------------------------------------------+---------------------------+--------------------------------------------+
+
+.. raw:: html
+
+   </div>

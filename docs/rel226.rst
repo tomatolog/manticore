@@ -1,0 +1,97 @@
+.. raw:: html
+
+   <div class="navheader">
+
+A.8. Version 2.2.6-release, 13 nov 2014
+`Prev <rel227.html>`__ 
+Appendix A. Sphinx revision history
+ `Next <rel225.html>`__
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="sect1">
+
+.. raw:: html
+
+   <div class="titlepage">
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div>
+
+.. rubric:: A.8. Version 2.2.6-release, 13 nov 2014
+   :name: a.8.version-2.2.6-release-13-nov-2014
+   :class: title
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. rubric:: Bug fixes
+   :name: bug-fixes
+
+.. raw:: html
+
+   <div class="itemizedlist">
+
+-  fixed `#2104 <http://sphinxsearch.com/bugs/view.php?id=2104>`__,
+   `ALL() <misc-functions.html#expr-func-all>`__/ANY()/INDEXOF() support
+   for distributed indexes
+
+-  fixed `#2102 <http://sphinxsearch.com/bugs/view.php?id=2102>`__, show
+   agent status misses warnings from agents
+
+-  fixed `#2100 <http://sphinxsearch.com/bugs/view.php?id=2100>`__,
+   crash of ``indexer`` while loading stopwords with tokenizer plugin
+
+-  fixed `#2098 <http://sphinxsearch.com/bugs/view.php?id=2098>`__,
+   arbitrary JSON subkeys and IS NULL for distributed indexes
+
+-  fixed `#2097 <http://sphinxsearch.com/bugs/view.php?id=2097>`__,
+   escaping of field-start modifier
+
+-  fixed possibly memory leak in plugin creation function
+
+-  indexation of duplicate documents
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="navfooter">
+
+--------------
+
++--------------------------------------------+---------------------------+--------------------------------------------+
+| `Prev <rel227.html>`__                     | `Up <changelog.html>`__   |  `Next <rel225.html>`__                    |
++--------------------------------------------+---------------------------+--------------------------------------------+
+| A.7. Version 2.2.7-release, 20 jan 2015    | `Home <index.html>`__     |  A.9. Version 2.2.5-release, 06 oct 2014   |
++--------------------------------------------+---------------------------+--------------------------------------------+
+
+.. raw:: html
+
+   </div>

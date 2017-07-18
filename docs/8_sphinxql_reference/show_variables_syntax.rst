@@ -1,0 +1,35 @@
+SHOW VARIABLES syntax
+---------------------
+
+::
+
+
+    SHOW [{GLOBAL | SESSION}] VARIABLES [WHERE variable_name='xxx']
+
+<b>SHOW VARIABLES</b> statement was added in version 2.0.1-beta to
+improve compatibility with 3rd party MySQL connectors and frameworks
+that automatically execute this statement. The WHERE option was added in
+version 2.1.1-beta.
+
+In version 2.0.1-beta, it did nothing.
+
+Starting from version 2.0.2-beta, it returns the current values of a few
+server-wide variables. Also, support for GLOBAL and SESSION clauses was
+added.
+
+::
+
+
+    mysql> SHOW GLOBAL VARIABLES;
+    +----------------------+----------+
+    | Variable_name        | Value    |
+    +----------------------+----------+
+    | autocommit           | 1        |
+    | collation_connection | libc_ci  |
+    | query_log_format     | sphinxql |
+    | log_level            | info     |
+    +----------------------+----------+
+    4 rows in set (0.00 sec)
+
+Starting from 2.1.1-beta, support for WHERE variable\_name clause was
+added, to help certain connectors.

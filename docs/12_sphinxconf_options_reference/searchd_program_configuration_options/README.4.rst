@@ -1,0 +1,2 @@
+``searchd`` program configuration options
+-----------------------------------------

@@ -27,7 +27,7 @@ respectively. Example:
 
 Starting from version 2.1.1-beta, an optional LIKE clause is supported.
 Refer to `the section called “SHOW META
-syntax” <../show_meta_syntax.md>`__ for its syntax details.
+syntax” <../show_meta_syntax.rst>`__ for its syntax details.
 
 ::
 

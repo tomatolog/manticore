@@ -34,17 +34,17 @@ UDFs have a wide variety of uses, for instance:
 UDFs reside in the external dynamic libraries (.so files on UNIX and
 .dll on Windows systems). Library files need to reside in a trusted
 folder specified by
-`plugin\_dir <../common_section_configuration_options/plugindir.md>`__
+`plugin\_dir <../common_section_configuration_options/plugindir.rst>`__
 directive, for obvious security reasons: securing a single folder is
 easy; letting anyone install arbitrary code into ``searchd`` is a risk.
 You can load and unload them dynamically into searchd with `CREATE
-FUNCTION <../create_function_syntax.md>`__ and `DROP
-FUNCTION <../drop_function_syntax.md>`__ SphinxQL statements
+FUNCTION <../create_function_syntax.rst>`__ and `DROP
+FUNCTION <../drop_function_syntax.rst>`__ SphinxQL statements
 respectively. Also, you can seamlessly reload UDFs (and other plugins)
-with `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ statement. Sphinx
+with `RELOAD PLUGINS <../reload_plugins_syntax.rst>`__ statement. Sphinx
 keeps track of the currently loaded functions, that is, every time you
 create or drop an UDF, ``searchd`` writes its state to the
-`sphinxql\_state <../searchd_program_configuration_options/sphinxqlstate.md>`__
+`sphinxql\_state <../searchd_program_configuration_options/sphinxqlstate.rst>`__
 file as a plain good old SQL script.
 
 Once you successfully load an UDF, you can use it in your SELECT or
@@ -178,7 +178,7 @@ type. Refer to ``sphinx_udf_argtype`` enumeration in ``sphinxudf.h`` for
 a full list. Most of the types map straightforwardly to the respective C
 types. The most notable exception is the SPH\_UDF\_TYPE\_FACTORS
 argument type. You get that type by calling your UDF with a
-`PACKEDFACTOR() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.md#expr-func-packedfactors>`__
+`PACKEDFACTOR() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.rst#expr-func-packedfactors>`__
 argument. It's data is a binary blob in a certain internal format, and
 to extract individual ranking signals from that blob, you need to use
 either of the two ``sphinx_factors_XXX()`` or

@@ -17,7 +17,7 @@ ha\_period\_karma seconds at most.
 
 Despite that at most 2 blocks are used for mirror selection, upto 15
 last blocks are actually stored, for instrumentation purposes. They can
-be inspected using `SHOW AGENT STATUS <../../show_agent_status.md>`__
+be inspected using `SHOW AGENT STATUS <../../show_agent_status.rst>`__
 statement.
 
 Example:

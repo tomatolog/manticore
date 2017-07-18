@@ -110,4 +110,4 @@ functions. Here's an example:
 
 The operators and functions supported in the expressions are discussed
 in a separate section, `the section called “Expressions, functions, and
-operators” <../expressions,_functions,_and_operators/README.md>`__.
+operators” <../expressions,_functions,_and_operators/README.rst>`__.

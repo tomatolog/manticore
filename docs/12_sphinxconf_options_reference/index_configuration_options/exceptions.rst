@@ -6,12 +6,12 @@ Tokenizing exceptions file. Optional, default is empty.
 Exceptions allow to map one or more tokens (including tokens with
 characters that would normally be excluded) to a single keyword. They
 are similar to
-`wordforms <../../index_configuration_options/wordforms.md>`__ in that
+`wordforms <../../index_configuration_options/wordforms.rst>`__ in that
 they also perform mapping, but have a number of important differences.
 
 Starting with version 2.1.1-beta small enough files are stored in the
 index header, see `the section called
-“embedded\_limit” <../../index_configuration_options/embeddedlimit.md>`__
+“embedded\_limit” <../../index_configuration_options/embeddedlimit.rst>`__
 for details.
 
 Short summary of the differences is as follows:
@@ -48,7 +48,7 @@ Example file:
     C plus plus => cplusplus
 
 All tokens here are case sensitive: they will <b>not</b> be processed by
-`charset\_table <../../index_configuration_options/charsettable.md>`__
+`charset\_table <../../index_configuration_options/charsettable.rst>`__
 rules. Thus, with the example exceptions file above, “at&t” text will be
 tokenized as two keywords “at” and “t”, because of lowercase letters. On
 the other hand, “AT&T” will match exactly and produce single “AT&T”
@@ -77,7 +77,7 @@ first entry from the sample.
 
 Exceptions also allow to capture special characters (that are exceptions
 from general
-`charset\_table <../../index_configuration_options/charsettable.md>`__
+`charset\_table <../../index_configuration_options/charsettable.rst>`__
 rules; hence the name). Assume that you generally do not want to treat
 ‘+’ as a valid character, but still want to be able search for some
 exceptions from this rule such as ‘C++’. The sample above will do just

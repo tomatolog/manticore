@@ -14,7 +14,7 @@ Starting from 2.0.1-beta string attributes can be used for sorting and
 grouping(ORDER BY, GROUP BY, WITHIN GROUP ORDER BY). Note that
 attributes declared using ``sql_attr_string`` will <b>not</b> be
 full-text indexed; you can use
-`sql\_field\_string <../../data_source_configuration_options/sqlfield_string.md>`__
+`sql\_field\_string <../../data_source_configuration_options/sqlfield_string.rst>`__
 directive for that.
 
 Example:

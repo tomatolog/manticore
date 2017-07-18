@@ -6,7 +6,7 @@ How to handle IO errors in file fields. Optional, default is
 
 When there is a problem indexing a file referenced by a file field (`the
 section called
-“sql\_file\_field” <../../data_source_configuration_options/sqlfile_field.md>`__),
+“sql\_file\_field” <../../data_source_configuration_options/sqlfile_field.rst>`__),
 ``indexer`` can either index the document, assuming empty content in
 this particular field, or skip the document, or fail indexing entirely.
 ``on_file_field_error`` directive controls that behavior. The values it

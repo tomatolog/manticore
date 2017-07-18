@@ -11,12 +11,12 @@ SphinxQL.
 
 It has two modes of operation. First one (without specifying a path)
 makes Sphinx daemon check for new index files in directory specified in
-`the section called “path” <../index_configuration_options/path.md>`__.
+`the section called “path” <../index_configuration_options/path.rst>`__.
 New index files must have a idx.new.sp? names.
 
 And if you additionally specify a path, daemon will look for index files
 in specified directory, move them to index `the section called
-“path” <../index_configuration_options/path.md>`__, rename from
+“path” <../index_configuration_options/path.rst>`__, rename from
 index\_files.sp? to idx.new.sp? and rotate them.
 
 ::

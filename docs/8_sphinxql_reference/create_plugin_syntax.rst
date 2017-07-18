@@ -16,7 +16,7 @@ plugin types are:
 
 -  query\_token\_filter
 
-Refer to `the section called “Sphinx plugins” <../sphinx_plugins.md>`__
+Refer to `the section called “Sphinx plugins” <../sphinx_plugins.rst>`__
 for more information regarding writing the plugins.
 
 ::

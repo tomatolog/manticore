@@ -12,7 +12,7 @@ Deb packages:
    **``$ sudo apt-get install mysql-client unixodbc libpq5``**
 2. Now you can install Sphinx:
 
-   **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_amd64.deb``**
+   **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_.rst64.deb``**
 
 PPA repository (Ubuntu only).
 

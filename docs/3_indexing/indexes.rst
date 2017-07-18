@@ -28,7 +28,7 @@ glance. But in reality, it can very frequently be worked around rather
 easily by setting up multiple disk indexes, searching through them all,
 and only rebuilding the one with a fraction of the most recently changed
 data. See `the section called “Live index
-updates” <../live_index_updates.md>`__ for details.
+updates” <../live_index_updates.rst>`__ for details.
 
 <b>RT indexes</b> enable you to implement dynamic updates and
 incremental additions to the full text index. RT stands for Real Time
@@ -36,7 +36,7 @@ and they are indeed “soft realtime” in terms of writes, meaning that
 most index changes become available for searching as quick as 1
 millisecond or less, but could occasionally stall for seconds. (Searches
 will still work even during that occasional writing stall.) Refer to
-`Chapter 4, *Real-time indexes* <../4_real-time_indexes/README.md>`__
+`Chapter 4, *Real-time indexes* <../4_real-time_indexes/README.rst>`__
 for details.
 
 Last but not least, Sphinx supports so-called <b>distributed
@@ -46,7 +46,7 @@ indexes that can be searched transparently to the application, with
 Sphinx doing all the chores of sending search requests to remote
 machines in the cluster, aggregating the result sets, retrying the
 failed requests, and even doing some load balancing. See `the section
-called “Distributed searching” <../distributed_searching.md>`__ for a
+called “Distributed searching” <../distributed_searching.rst>`__ for a
 discussion of distributed indexes.
 
 There can be as many indexes per configuration file as necessary.

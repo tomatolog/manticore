@@ -59,7 +59,7 @@ Currently implemented rankers are:
 
 You should specify the ``SPH_RANK_`` prefix and use capital letters only
 when using the
-`SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
+`SetRankingMode() <../../full-text_search_query_settings/setrankingmode.rst>`__
 call from the SphinxAPI. The API ports expose these as global constants.
 Using SphinxQL syntax, the prefix should be omitted and the ranker name
 is case insensitive. Example:

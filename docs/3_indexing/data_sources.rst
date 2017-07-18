@@ -17,13 +17,13 @@ At the time of this writing, there are built-in drivers for MySQL,
 PostgreSQL, MS SQL (on Windows), and ODBC. There is also a generic
 driver called xmlpipe2, which runs a specified command and reads the
 data from its ``stdout``. See `the section called “xmlpipe2 data
-source” <../xmlpipe2_data_source.md>`__ section for the format
+source” <../xmlpipe2_data_source.rst>`__ section for the format
 description. In 2.2.1-beta a tsvpipe (Tab Separated Values) and csvpipe
 (Comma Separated Values) data source was added. You can get more
 information here `the section called
 “tsvpipe:raw-latex:`\csvpipe `(Tab:raw-latex:`\Comma `Separated Values)
 data
-source” <../tsvpipecsvpipe_tabcomma_separated_values_data_sour.md>`__.
+source” <../tsvpipecsvpipe_tabcomma_separated_values_data_sour.rst>`__.
 
 There can be as many sources per index as necessary. They will be
 sequentially processed in the very same order which was specified in

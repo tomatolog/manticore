@@ -2,11 +2,11 @@ Version 0.9.9-rc1, 17 nov 2008
 ------------------------------
 
 -  added
-   `min\_stemming\_len <../index_configuration_options/minstemming_len.md>`__
+   `min\_stemming\_len <../index_configuration_options/minstemming_len.rst>`__
    directive
 
 -  added
-   `IsConnectError() <../general_api_functions/isconnecterror.md>`__ API
+   `IsConnectError() <../general_api_functions/isconnecterror.rst>`__ API
    call (helps distingusih API vs remote errors)
 
 -  added duplicate log messages filter to searchd
@@ -14,12 +14,12 @@ Version 0.9.9-rc1, 17 nov 2008
 -  added –nodetach debugging switch to searchd
 
 -  added blackhole agents support for debugging/testing
-   (`agent\_blackhole <../index_configuration_options/agentblackhole.md>`__
+   (`agent\_blackhole <../index_configuration_options/agentblackhole.rst>`__
    directive)
 
 -  added
-   `max\_filters <../searchd_program_configuration_options/maxfilters.md>`__,
-   `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.md>`__
+   `max\_filters <../searchd_program_configuration_options/maxfilters.rst>`__,
+   `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.rst>`__
    directives (were hardcoded before)
 
 -  added int64 expression evaluation path, automatic inference, and
@@ -28,58 +28,58 @@ Version 0.9.9-rc1, 17 nov 2008
 -  added crash handler for debugging (``crash_log_path`` directive)
 
 -  added MS SQL (aka SQL Server) source support (Windows only,
-   `mssql\_winauth <../data_source_configuration_options/mssqlwinauth.md>`__
+   `mssql\_winauth <../data_source_configuration_options/mssqlwinauth.rst>`__
    and mssql\_unicode directives)
 
 -  added indexer-side column unpacking feature
-   (`unpack\_zlib <../data_source_configuration_options/unpackzlib.md>`__,
-   `unpack\_mysqlcompress <../data_source_configuration_options/unpackmysqlcompress.md>`__
+   (`unpack\_zlib <../data_source_configuration_options/unpackzlib.rst>`__,
+   `unpack\_mysqlcompress <../data_source_configuration_options/unpackmysqlcompress.rst>`__
    directives)
 
 -  added nested brackers and NOTs support to `query
-   language <../extended_query_syntax.md>`__, rewritten query parser
+   language <../extended_query_syntax.rst>`__, rewritten query parser
 
 -  added persistent connections support
-   (`Open() <../persistent_connections/open.md>`__ and
-   `Close() <../persistent_connections/close.md>`__ API calls)
+   (`Open() <../persistent_connections/open.rst>`__ and
+   `Close() <../persistent_connections/close.rst>`__ API calls)
 
 -  added
-   `index\_exact\_words <../index_configuration_options/indexexact_words.md>`__
+   `index\_exact\_words <../index_configuration_options/indexexact_words.rst>`__
    feature, and exact form operator to query language (“hello =world”)
 
 -  added status variables support to SphinxSE (SHOW STATUS LIKE
    ‘sphinx\_%’)
 
 -  added
-   `max\_packet\_size <../searchd_program_configuration_options/maxpacket_size.md>`__
+   `max\_packet\_size <../searchd_program_configuration_options/maxpacket_size.rst>`__
    directive (was hardcoded at 8M before)
 
 -  added UNIX socket support, and multi-interface support
-   (`listen <../searchd_program_configuration_options/listen.md>`__
+   (`listen <../searchd_program_configuration_options/listen.rst>`__
    directive)
 
 -  added star-syntax support to
-   `BuildExcerpts() <../additional_functionality/buildexcerpts.md>`__
+   `BuildExcerpts() <../additional_functionality/buildexcerpts.rst>`__
    API call
 
 -  added inplace inversion of .spa and .spp
-   (`inplace\_enable <../index_configuration_options/inplaceenable.md>`__
+   (`inplace\_enable <../index_configuration_options/inplaceenable.rst>`__
    directive, 1.5-2x less disk space for indexing)
 
 -  added builtin Czech stemmer (morphology=stem\_cz)
 
 -  added `IDIV(), NOW(), INTERVAL(), IN()
-   functions <../5_searching/sorting_modes.md#sph-sort-expr-mode>`__ to
+   functions <../5_searching/sorting_modes.rst#sph-sort-expr-mode>`__ to
    expressions
 
 -  added index-level early-reject based on filters
 
 -  added MVA updates feature
-   (`mva\_updates\_pool <../searchd_program_configuration_options/mvaupdates_pool.md>`__
+   (`mva\_updates\_pool <../searchd_program_configuration_options/mvaupdates_pool.rst>`__
    directive)
 
 -  added select-list feature with computed expressions support (see
-   `SetSelect() <../general_query_settings/setselect.md>`__ API call,
+   `SetSelect() <../general_query_settings/setselect.rst>`__ API call,
    test.php –select switch), protocol 1.22
 
 -  added integer expressions support (2x faster than float)
@@ -87,15 +87,15 @@ Version 0.9.9-rc1, 17 nov 2008
 -  added multiforms support (multiple source words in wordforms file)
 
 -  added `legacy
-   rankers <../full-text_search_query_settings/setrankingmode.md>`__
+   rankers <../full-text_search_query_settings/setrankingmode.rst>`__
    (MATCH\_ALL/MATCH\_ANY/etc), removed legacy matching code (everything
    runs on V2 engine now)
 
--  added `field position limit <../extended_query_syntax.md>`__ modifier
+-  added `field position limit <../extended_query_syntax.rst>`__ modifier
    to field operator (syntax: @title [50] hello world)
 
 -  added killlist support
-   (`sql\_query\_killlist <../data_source_configuration_options/sqlquery_killlist.md>`__
+   (`sql\_query\_killlist <../data_source_configuration_options/sqlquery_killlist.rst>`__
    directive, –merge-killlists switch)
 
 -  added on-disk SPI support (ondisk\_dict directive)
@@ -103,17 +103,17 @@ Version 0.9.9-rc1, 17 nov 2008
 -  added indexer IO stats
 
 -  added periodic .spa flush
-   (`attr\_flush\_period <../searchd_program_configuration_options/attrflush_period.md>`__
+   (`attr\_flush\_period <../searchd_program_configuration_options/attrflush_period.rst>`__
    directive)
 
 -  added config reload on SIGHUP
 
 -  added per-query attribute overrides feature (see
-   `SetOverride() <../general_query_settings/setoverride.md>`__ API
+   `SetOverride() <../general_query_settings/setoverride.rst>`__ API
    call); protocol 1.21
 
 -  added signed 64bit attrs support
-   (`sql\_attr\_bigint <../data_source_configuration_options/sqlattr_bigint.md>`__
+   (`sql\_attr\_bigint <../data_source_configuration_options/sqlattr_bigint.rst>`__
    directive)
 
 -  improved HTML stripper to also skip PIs (<? … ?>, such as <?php … ?>)

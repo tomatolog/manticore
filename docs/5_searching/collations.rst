@@ -48,7 +48,7 @@ provide case-insensitive (\_ci) and case-sensitive (\_cs) comparisons
 respectively. By default they will use C locale, effectively resorting
 to bytewise comparisons. To change that, you need to specify a different
 available locale using
-`collation\_libc\_locale <../searchd_program_configuration_options/collationlibc_locale.md>`__
+`collation\_libc\_locale <../searchd_program_configuration_options/collationlibc_locale.rst>`__
 directive. The list of locales available on your system can usually be
 obtained with the ``locale`` command:
 
@@ -91,7 +91,7 @@ Collation can be overridden via SphinxQL on a per-session basis using
 ``SET collation_connection`` statement. All subsequent SphinxQL queries
 will use this collation. SphinxAPI and SphinxSE queries will use the
 server default collation, as specified in
-`collation\_server <../searchd_program_configuration_options/collationserver.md>`__
+`collation\_server <../searchd_program_configuration_options/collationserver.rst>`__
 configuration directive. Sphinx currently defaults to ``libc_ci``
 collation.
 
@@ -99,4 +99,4 @@ Collations should affect all string attribute comparisons, including
 those within ORDER BY and GROUP BY, so differently ordered or grouped
 results can be returned depending on the collation chosen. Note that
 collations don't affect full-text searching, for that use
-`charset\_table <../index_configuration_options/charsettable.md>`__.
+`charset\_table <../index_configuration_options/charsettable.rst>`__.

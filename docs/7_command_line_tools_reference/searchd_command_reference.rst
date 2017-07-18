@@ -34,7 +34,7 @@ The options available to ``searchd`` on all builds are:
    you may also need to confirm to ``searchd`` which configuration file
    to use with the ``--config`` option. NB, calling ``--stop`` will also
    make sure any changes applied to the indexes with
-   ```UpdateAttributes()`` <../additional_functionality/updateattributes.md>`__
+   ```UpdateAttributes()`` <../additional_functionality/updateattributes.rst>`__
    will be applied to the index files themselves. Example:
 
    ::
@@ -70,7 +70,7 @@ The options available to ``searchd`` on all builds are:
    using the first configured UNIX socket or TCP port. On success, it
    will query for a number of status and performance counter values and
    print them. You can use
-   `Status() <../additional_functionality/status.md>`__ API call to
+   `Status() <../additional_functionality/status.rst>`__ API call to
    access the very same counters from your application. Examples:
 
    ::
@@ -119,7 +119,7 @@ The options available to ``searchd`` on all builds are:
    input/output operations carried out in the course of that query, with
    a slight performance hit and of course bigger logs. Further details
    are available under the `query log
-   format <../searchd_query_log_formats/README.md>`__ section. You might
+   format <../searchd_query_log_formats/README.rst>`__ section. You might
    start ``searchd`` thus:
 
    ::
@@ -288,7 +288,7 @@ of signals.
 
 -  SIGHUP
 -  Initiates index rotation. Depending on the value of
-   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.md>`__
+   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.rst>`__
    setting, new queries might be shortly stalled; clients will receive
    temporary errors.
 

@@ -17,7 +17,7 @@ Basically, externally stored docinfo must be kept in RAM when querying.
 for performance reasons. So in some cases “inline” might be the only
 option. However, such cases are infrequent, and docinfo defaults to
 “extern”. Refer to `the section called
-“Attributes” <../../attributes.md>`__ for in-depth discussion and RAM
+“Attributes” <../../attributes.rst>`__ for in-depth discussion and RAM
 usage estimates.
 
 Example:

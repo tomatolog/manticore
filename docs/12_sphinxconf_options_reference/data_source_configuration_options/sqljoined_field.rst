@@ -58,7 +58,7 @@ Starting with 2.0.1-beta, <b>ranged queries</b> can be used when a
 single query is not efficient enough or does not work because of the
 database driver limitations. It works similar to the ranged queries in
 the main indexing loop, see `the section called “Ranged
-queries” <../../3_indexing/sql_data_sources_mysql,_postgresql.md#ranged-queries>`__.
+queries” <../../3_indexing/sql_data_sources_mysql,_postgresql.rst#ranged-queries>`__.
 The range will be queried for and fetched upfront once, then multiple
 queries with different ``$start`` and ``$end`` substitutions will be run
 to fetch the actual data.

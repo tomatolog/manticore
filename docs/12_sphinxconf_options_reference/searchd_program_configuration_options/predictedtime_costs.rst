@@ -7,16 +7,16 @@ Added in 2.1.1-beta.
 
 Terminating queries before completion based on their execution time (via
 either
-`SetMaxQueryTime() <../../general_query_settings/setmaxquerytime.md>`__
+`SetMaxQueryTime() <../../general_query_settings/setmaxquerytime.rst>`__
 API call, or `SELECT … OPTION
-max\_query\_time <../../select_syntax.md>`__ SphinxQL statement) is a
+max\_query\_time <../../select_syntax.rst>`__ SphinxQL statement) is a
 nice safety net, but it comes with an inborn drawback: indeterministic
 (unstable) results. That is, if you repeat the very same (complex)
 search query with a time limit several times, the time limit will get
 hit at different stages, and you will get *different* result sets.
 
 Starting with 2.1.1-beta, there is a new option, `SELECT … OPTION
-max\_predicted\_time <../../select_syntax.md>`__, that lets you limit
+max\_predicted\_time <../../select_syntax.rst>`__, that lets you limit
 the query time *and* get stable, repeatable results. Instead of
 regularly checking the actual current time while evaluating the query,
 which is indeterministic, it predicts the current running time using a

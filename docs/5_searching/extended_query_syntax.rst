@@ -230,7 +230,7 @@ matches. For instance, “runs” query will match both the document that
 contains “runs” *and* the document that contains “running”, because both
 forms stem to just “run” - while “=runs” query will only match the first
 document. Exact form operator requires
-`index\_exact\_words <../index_configuration_options/indexexact_words.md>`__
+`index\_exact\_words <../index_configuration_options/indexexact_words.rst>`__
 option to be enabled. This is a modifier that affects the keyword and
 thus can be used within operators such as phrase, proximity, and quorum
 operators. Starting with 2.2.2-beta, it is possible to apply an exact
@@ -308,7 +308,7 @@ few examples:
 
 The order of the arguments within the sentence or paragraph does not
 matter. These operators only work on indexes built with
-`index\_sp <../index_configuration_options/indexsp.md>`__ (sentence and
+`index\_sp <../index_configuration_options/indexsp.rst>`__ (sentence and
 paragraph indexing feature) enabled, and revert to a mere AND otherwise.
 Refer to the ``index_sp`` directive documentation for the notes on
 what's considered a sentence and a paragraph.
@@ -330,7 +330,7 @@ match in multiple spans. For instance, ``(ZONE:th hello world)`` query
 ZONE operator affects the query until the next field or ZONE limit
 operator, or the closing parenthesis. It only works on the indexes built
 with zones support (see `the section called
-“index\_zones” <../index_configuration_options/indexzones.md>`__) and
+“index\_zones” <../index_configuration_options/indexzones.rst>`__) and
 will be ignored otherwise.
 
 <b>ZONESPAN limit operator</b>, added in 2.1.1-beta, is similar to the

@@ -5,5 +5,5 @@ SetWeights
 
 Binds per-field weights in the order of appearance in the index.
 <b>DEPRECATED</b>, use
-`SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.md>`__
+`SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.rst>`__
 instead.

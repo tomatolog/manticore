@@ -19,7 +19,7 @@ Currently known systems Sphinx has been successfully running on are:
 
 -  Mac OS X
 
-CPU architectures known to work include i386 (aka x86), amd64 (aka
+CPU architectures known to work include i386 (aka x86), .rst64 (aka
 x86\_64), SPARC64, and ARM.
 
 Chances are good that Sphinx should work on other Unix platforms and/or

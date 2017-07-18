@@ -4,7 +4,7 @@ wordforms
 Word forms dictionary. Optional, default is empty.
 
 Word forms are applied after tokenizing the incoming text by
-`charset\_table <../../index_configuration_options/charsettable.md>`__
+`charset\_table <../../index_configuration_options/charsettable.rst>`__
 rules. They essentially let you replace one word with another. Normally,
 that would be used to bring different word forms to a single normal form
 (eg. to normalize all the variants such as “walks”, “walked”, “walking”
@@ -14,7 +14,7 @@ list.
 
 Starting with version 2.1.1-beta small enough files are stored in the
 index header, see `the section called
-“embedded\_limit” <../../index_configuration_options/embeddedlimit.md>`__
+“embedded\_limit” <../../index_configuration_options/embeddedlimit.rst>`__
 for details.
 
 Dictionaries are used to normalize incoming words both during indexing
@@ -32,7 +32,7 @@ indexes, additional ``searchd`` RAM usage will be about 50 MB.
 Dictionary file should be in a simple plain text format. Each line
 should contain source and destination word forms, in UTF-8 encoding,
 separated by “greater” sign. Rules from the
-`charset\_table <../../index_configuration_options/charsettable.md>`__
+`charset\_table <../../index_configuration_options/charsettable.rst>`__
 will be applied when the file is loaded. So basically it's as case
 sensitive as your other full-text indexed data, ie. typically case
 insensitive. Here's the file contents sample:

@@ -4,7 +4,7 @@ SetSortMode
 <b>Prototype:</b> function SetSortMode ( $mode, $sortby=“” )
 
 Set matches sorting mode, as described in `the section called “Sorting
-modes” <../../sorting_modes.md>`__. Parameter must be a constant
+modes” <../../sorting_modes.rst>`__. Parameter must be a constant
 specifying one of the known modes.
 
 <b>WARNING:</b> (PHP specific) you <b>must not</b> take the matching

@@ -30,9 +30,9 @@ of 1 to 10 million word forms.) Second, and more importantly, substring
 searches are not directly possible with control sums. Sphinx alleviated
 that by pre-indexing all the possible substrings as separate keywords
 (see `the section called
-“min\_prefix\_len” <../../index_configuration_options/minprefix_len.md>`__,
+“min\_prefix\_len” <../../index_configuration_options/minprefix_len.rst>`__,
 `the section called
-“min\_infix\_len” <../../index_configuration_options/mininfix_len.md>`__
+“min\_infix\_len” <../../index_configuration_options/mininfix_len.rst>`__
 directives). That actually has an added benefit of matching substrings
 in the quickest way possible. But at the same time pre-indexing all
 substrings grows the index size a lot (factors of 3-10x and even more
@@ -62,7 +62,7 @@ non-substring, CRC substring, keywords). Substring searching time can
 vary greatly depending on how many actual keywords match the given
 substring (in other words, into how many keywords does the search term
 expand). The maximum number of keywords matched is restricted by the
-`expansion\_limit <../../searchd_program_configuration_options/expansionlimit.md>`__
+`expansion\_limit <../../searchd_program_configuration_options/expansionlimit.rst>`__
 directive.
 
 Essentially, keywords and CRC dictionaries represent the two different

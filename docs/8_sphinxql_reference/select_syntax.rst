@@ -45,7 +45,7 @@ Specifically,
    is a wrapper around the snippets functionality, similar to what is
    available via CALL SNIPPETS. The first two arguments are: the text to
    highlight, and a query. Starting with 2.2-1-beta it's possible to
-   pass `options <../additional_functionality/buildexcerpts.md>`__ to
+   pass `options <../additional_functionality/buildexcerpts.rst>`__ to
    function. The intended use is as follows:
 
    ::
@@ -86,7 +86,7 @@ Specifically,
 
 -  FROM clause. FROM clause should contain the list of indexes to search
    through. Unlike in regular SQL, comma means enumeration of full-text
-   indexes as in `Query() <../querying/query.md>`__ API call rather than
+   indexes as in `Query() <../querying/query.rst>`__ API call rather than
    JOIN. Index name should be according to the rules of a C identifier.
 
 -  WHERE clause. This clause will map both to fulltext query and
@@ -94,11 +94,11 @@ Specifically,
    and BETWEEN are all supported and map directly to filters. OR is not
    supported yet but will be in the future. MATCH(‘query’) is supported
    and maps to fulltext query. Query will be interpreted according to
-   `full-text query language rules <../extended_query_syntax.md>`__.
+   `full-text query language rules <../extended_query_syntax.rst>`__.
    There must be at most one MATCH() in the clause. Starting with
    version 2.0.1-beta, ``{col_name | expr_alias} [NOT] IN @uservar``
    condition syntax is supported. (Refer to `the section called “SET
-   syntax” <../set_syntax.md>`__ for a discussion of global user
+   syntax” <../set_syntax.rst>`__ for a discussion of global user
    variables.)
 
 -  GROUP BY clause. Supports grouping by multiple columns or computed
@@ -140,7 +140,7 @@ Specifically,
 
    Starting with 2.0.1-beta, GROUP BY on a string attribute is
    supported, with respect for current collation (see `the section
-   called “Collations” <../collations.md>`__).
+   called “Collations” <../collations.rst>`__).
 
    Starting with 2.2.1-beta, you can query Sphinx to return (no more
    than) N top matches for each group accordingly to WITHIN GROUP ORDER
@@ -195,7 +195,7 @@ Specifically,
 
    Starting with 2.0.1-beta, WITHIN GROUP ORDER BY on a string attribute
    is supported, with respect for current collation (see `the section
-   called “Collations” <../collations.md>`__).
+   called “Collations” <../collations.rst>`__).
 
 -  HAVING clause. This is used to filter on GROUP BY values. It was
    added in 2.2.1-beta. Currently supports only one filtering condition.
@@ -231,7 +231,7 @@ Specifically,
 
    Starting with 2.0.1-beta, ORDER BY on a string attribute is
    supported, with respect for current collation (see `the section
-   called “Collations” <../collations.md>`__).
+   called “Collations” <../collations.rst>`__).
 
    Starting with 2.0.2-beta, ORDER BY RAND() syntax is supported. Note
    that this syntax is actually going to randomize the weight values and
@@ -253,7 +253,7 @@ Specifically,
 
    -  ‘agent\_query\_timeout’ - integer (max time in milliseconds to
       wait for remote queries to complete, see
-      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.md>`__
+      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.rst>`__
       under Index configuration options for details)
 
    -  ‘boolean\_simplify’ - 0 or 1, enables simplifying the query to
@@ -268,7 +268,7 @@ Specifically,
       for ranking)
 
    -  ‘global\_idf’ - use global statistics (frequencies) from the
-      `global\_idf file <../index_configuration_options/globalidf.md>`__
+      `global\_idf file <../index_configuration_options/globalidf.rst>`__
       for IDF computations, rather than the local index statistics.
       Added in version 2.1.1-beta.
 
@@ -361,12 +361,12 @@ Specifically,
 
    -  ‘max\_predicted\_time’ - integer (max predicted search time, see
       `the section called
-      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.md>`__)
+      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.rst>`__)
 
    -  ‘ranker’ - any of ‘proximity\_bm25’, ‘bm25’, ‘none’, ‘wordcount’,
       ‘proximity’, ‘matchany’, ‘fieldmask’, ‘sph04’, ‘expr’, or ‘export’
       (refer to `the section called “Search results
-      ranking” <../search_results_ranking/README.md>`__ for more details
+      ranking” <../search_results_ranking/README.rst>`__ for more details
       on each ranker)
 
    -  ‘retry\_count’ - integer (distributed retries count)
@@ -402,7 +402,7 @@ Specifically,
 -  FACET clause. This Sphinx specific extension enables faceted search
    with subtree optimization. It is capable of returning multiple result
    sets with a single SQL statement, without the need for complicated
-   `multi-queries <../multi-statement_queries.md>`__. FACET clauses
+   `multi-queries <../multi-statement_queries.rst>`__. FACET clauses
    should be written at the very end of SELECT statements with spaces
    between them.
 

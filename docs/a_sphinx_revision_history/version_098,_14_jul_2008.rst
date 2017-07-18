@@ -10,9 +10,9 @@ Indexing
 -  added support for floating point attributes
 
 -  added support for bitfields in attributes,
-   `sql\_attr\_bool <../data_source_configuration_options/sqlattr_bool.md>`__
+   `sql\_attr\_bool <../data_source_configuration_options/sqlattr_bool.rst>`__
    directive and bit-widths part in
-   `sql\_attr\_uint <../data_source_configuration_options/sqlattr_uint.md>`__
+   `sql\_attr\_uint <../data_source_configuration_options/sqlattr_uint.rst>`__
    directive
 
 -  added support for multi-valued attributes (MVA)
@@ -26,59 +26,59 @@ Indexing
    attributes
 
 -  added word form dictionaries,
-   `wordforms <../index_configuration_options/wordforms.md>`__ directive
+   `wordforms <../index_configuration_options/wordforms.rst>`__ directive
    (and spelldump utility)
 
 -  added tokenizing exceptions,
-   `exceptions <../index_configuration_options/exceptions.md>`__
+   `exceptions <../index_configuration_options/exceptions.rst>`__
    directive
 
 -  added an option to fully remove element contents to HTML stripper,
-   `html\_remove\_elements <../index_configuration_options/htmlremove_elements.md>`__
+   `html\_remove\_elements <../index_configuration_options/htmlremove_elements.rst>`__
    directive
 
 -  added HTML entities decoder (with full XHTML1 set support) to HTML
    stripper
 
 -  added per-index HTML stripping settings,
-   `html\_strip <../index_configuration_options/htmlstrip.md>`__,
-   `html\_index\_attrs <../index_configuration_options/htmlindex_attrs.md>`__,
+   `html\_strip <../index_configuration_options/htmlstrip.rst>`__,
+   `html\_index\_attrs <../index_configuration_options/htmlindex_attrs.rst>`__,
    and
-   `html\_remove\_elements <../index_configuration_options/htmlremove_elements.md>`__
+   `html\_remove\_elements <../index_configuration_options/htmlremove_elements.rst>`__
    directives
 
 -  added IO load throttling,
-   `max\_iops <../indexer_program_configuration_options/maxiops.md>`__
+   `max\_iops <../indexer_program_configuration_options/maxiops.rst>`__
    and
-   `max\_iosize <../indexer_program_configuration_options/maxiosize.md>`__
+   `max\_iosize <../indexer_program_configuration_options/maxiosize.rst>`__
    directives
 
 -  added SQL load throttling,
-   `sql\_ranged\_throttle <../data_source_configuration_options/sqlranged_throttle.md>`__
+   `sql\_ranged\_throttle <../data_source_configuration_options/sqlranged_throttle.rst>`__
    directive
 
 -  added an option to index prefixes/infixes for given fields only,
-   `prefix\_fields <../index_configuration_options/prefixfields.md>`__
-   and `infix\_fields <../index_configuration_options/infixfields.md>`__
+   `prefix\_fields <../index_configuration_options/prefixfields.rst>`__
+   and `infix\_fields <../index_configuration_options/infixfields.rst>`__
    directives
 
 -  added an option to ignore certain characters (instead of just
    treating them as whitespace),
-   `ignore\_chars <../index_configuration_options/ignorechars.md>`__
+   `ignore\_chars <../index_configuration_options/ignorechars.rst>`__
    directive
 
 -  added an option to increment word position on phrase boundary
    characters,
-   `phrase\_boundary <../index_configuration_options/phraseboundary.md>`__
+   `phrase\_boundary <../index_configuration_options/phraseboundary.rst>`__
    and
-   `phrase\_boundary\_step <../index_configuration_options/phraseboundary_step.md>`__
+   `phrase\_boundary\_step <../index_configuration_options/phraseboundary_step.rst>`__
    directives
 
 -  added –merge-dst-range switch (and filters) to index merging feature
    (–merge switch)
 
 -  added
-   `mysql\_connect\_flags <../data_source_configuration_options/mysqlconnect_flags.md>`__
+   `mysql\_connect\_flags <../data_source_configuration_options/mysqlconnect_flags.rst>`__
    directive (eg. to reduce indexing time MySQL network traffic and/or
    time)
 
@@ -91,13 +91,13 @@ Search daemon
 ~~~~~~~~~~~~~
 
 -  added an option to unlink old index on succesful rotation,
-   `unlink\_old <../searchd_program_configuration_options/unlinkold.md>`__
+   `unlink\_old <../searchd_program_configuration_options/unlinkold.rst>`__
    directive
 
 -  added an option to keep index files open at all times (fixes subtle
    races on rotation),
-   `preopen <../index_configuration_options/preopen.md>`__ and
-   `preopen\_indexes <../searchd_program_configuration_options/preopenindexes.md>`__
+   `preopen <../index_configuration_options/preopen.rst>`__ and
+   `preopen\_indexes <../searchd_program_configuration_options/preopenindexes.rst>`__
    directives
 
 -  added an option to profile searchd disk I/O, –iostats command-line
@@ -105,14 +105,14 @@ Search daemon
 
 -  added an option to rotate index seamlessly (fully avoids query
    stalls),
-   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.md>`__
+   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.rst>`__
    directive
 
 -  added HTML stripping support to excerpts (uses per-index settings)
 
 -  added ‘exact\_phrase’, ‘single\_passage’, ‘use\_boundaries’,
    'weight\_order 'options to
-   `BuildExcerpts() <../additional_functionality/buildexcerpts.md>`__
+   `BuildExcerpts() <../additional_functionality/buildexcerpts.rst>`__
    API call
 
 -  added distributed attribute updates propagation
@@ -136,14 +136,14 @@ Querying
    SPH\_MATCH\_EXTENDED2 mode)
 
 -  added ranking modes support (V2 engine only;
-   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.md>`__
+   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.rst>`__
    API call)
 
 -  added quorum searching support to query language (V2 engine only;
    example: “any three of all these words”/3)
 
 -  added query escaping support to query language, and
-   `EscapeString() <../additional_functionality/escapestring.md>`__ API
+   `EscapeString() <../additional_functionality/escapestring.rst>`__ API
    call
 
 -  added multi-field syntax support to query language (example:
@@ -156,19 +156,19 @@ Querying
    block-reject optimization)
 
 -  added COUNT(DISTINCT(attr)) calculation support,
-   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.md>`__ API
+   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.rst>`__ API
    call
 
 -  added group-by on MVA support,
-   `SetArrayResult() <../general_api_functions/setarrayresult.md>`__ PHP
+   `SetArrayResult() <../general_api_functions/setarrayresult.rst>`__ PHP
    API call
 
 -  added per-index weights feature,
-   `SetIndexWeights() <../full-text_search_query_settings/setindexweights.md>`__
+   `SetIndexWeights() <../full-text_search_query_settings/setindexweights.rst>`__
    API call
 
 -  added geodistance support,
-   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.md>`__
+   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.rst>`__
    API call
 
 -  added result set sorting by arbitrary expressions in run time (eg.
@@ -182,23 +182,23 @@ Querying
 -  added result set merging for indexes with different schemas
 
 -  added query comments support (3rd arg to
-   `Query() <../querying/query.md>`__/`AddQuery() <../querying/addquery.md>`__
+   `Query() <../querying/query.rst>`__/`AddQuery() <../querying/addquery.rst>`__
    API calls, copied verbatim to query log)
 
 -  added keyword extraction support,
-   `BuildKeywords() <../additional_functionality/buildkeywords.md>`__
+   `BuildKeywords() <../additional_functionality/buildkeywords.rst>`__
    API call
 
 -  added binding field weights by name,
-   `SetFieldWeights() <../full-text_search_query_settings/setfieldweights.md>`__
+   `SetFieldWeights() <../full-text_search_query_settings/setfieldweights.rst>`__
    API call
 
 -  added optional limit on query time,
-   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.md>`__
+   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.rst>`__
    API call
 
 -  added optional limit on found matches count (4rd arg to
-   `SetLimits() <../general_query_settings/setlimits.md>`__ API call,
+   `SetLimits() <../general_query_settings/setlimits.rst>`__ API call,
    so-called ‘cutoff’)
 
 APIs and SphinxSE

@@ -5,10 +5,10 @@ This is a new log format introduced in 2.0.1-beta, with the goals begin
 logging everything and then some, and in a format easy to automate (for
 instance, automatically replay). New format can either be enabled via
 the
-`query\_log\_format <../../searchd_program_configuration_options/querylog_format.md>`__
+`query\_log\_format <../../searchd_program_configuration_options/querylog_format.rst>`__
 directive in the configuration file, or switched back and forth on the
 fly with the
-```SET GLOBAL query_log_format=...`` <../../set_syntax.md>`__ statement
+```SET GLOBAL query_log_format=...`` <../../set_syntax.rst>`__ statement
 via SphinxQL. In the new format, the example from the previous section
 would look as follows. (Wrapped below for readability, but with just one
 query per line in the actual log.)

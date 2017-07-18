@@ -1,7 +1,7 @@
 sql\_attr\_timestamp
 ~~~~~~~~~~~~~~~~~~~~
 
-UNIX timestamp `attribute <../../attributes.md>`__ declaration.
+UNIX timestamp `attribute <../../attributes.rst>`__ declaration.
 Multi-value (there might be multiple attributes declared), optional.
 Applies to SQL source types (``mysql``, ``pgsql``, ``mssql``) only.
 

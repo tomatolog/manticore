@@ -20,10 +20,10 @@ maybe avoid computing it at all for performance reasons because you're
 sorting the result set by something else anyway. This can be
 accomplished by setting the appropriate ranking mode. The list of the
 modes is available in `the section called “Search results
-ranking” <../../search_results_ranking/README.md>`__.
+ranking” <../../search_results_ranking/README.rst>`__.
 
 ``$rankexpr`` argument was added in version 2.0.2-beta. It lets you
 specify a ranking formula to use with the `expression based
-ranker <../../search_results_ranking/expression_based_ranker_sphrank_expr.md>`__,
+ranker <../../search_results_ranking/expression_based_ranker_sphrank_expr.rst>`__,
 that is, when ``$ranker`` is set to SPH\_RANK\_EXPR. In all other cases,
 ``$rankexpr`` is ignored.

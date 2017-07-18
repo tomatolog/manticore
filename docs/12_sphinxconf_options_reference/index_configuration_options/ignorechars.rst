@@ -11,7 +11,7 @@ contrary, if ‘-’ is added to ignore\_chars list, the same text will be
 indexed as a single “abcdef” keyword.
 
 The syntax is the same as for
-`charset\_table <../../index_configuration_options/charsettable.md>`__,
+`charset\_table <../../index_configuration_options/charsettable.rst>`__,
 but it's only allowed to declare characters, and not allowed to map
 them. Also, the ignored characters must not be present in
 charset\_table.

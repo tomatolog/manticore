@@ -14,12 +14,12 @@ New functions and options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  added RAND(),HOUR(),MINUTE(),SECOND() functions
--  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.md>`__ SphinxQL
+-  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.rst>`__ SphinxQL
    statement and hostname\_lookup directive
--  added `RELOAD INDEX <../reload_index_syntax.md>`__ SphinxQL statement
+-  added `RELOAD INDEX <../reload_index_syntax.rst>`__ SphinxQL statement
 
 -  added
-   `sphinxql\_timeout <../searchd_program_configuration_options/sphinxqltimeout.md>`__
+   `sphinxql\_timeout <../searchd_program_configuration_options/sphinxqltimeout.rst>`__
    directive
 
 Changes and improvements
@@ -206,7 +206,7 @@ Bug fixes
 -  Eliminated gcc warnings in http\_parser.c. Eliminated msvc warning in
    sphinxquery.cpp.
 
--  Windows yy.cmd synced with bash yy.sh script
+-  Windows yy..rst synced with bash yy.sh script
 
 -  lex/bison files and rules fixed for bison >1.875
 

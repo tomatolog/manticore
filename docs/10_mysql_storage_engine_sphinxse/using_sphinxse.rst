@@ -143,7 +143,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;floatrange=@geodist,0,1000;';
 
 -  maxmatches - per-query max matches value, as in max\_matches
-   parameter to `SetLimits() <../general_query_settings/setlimits.md>`__
+   parameter to `SetLimits() <../general_query_settings/setlimits.rst>`__
    API call:
 
    ::
@@ -152,7 +152,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;maxmatches=2000;';
 
 -  cutoff - maximum allowed matches, as in cutoff parameter to
-   `SetLimits() <../general_query_settings/setlimits.md>`__ API call:
+   `SetLimits() <../general_query_settings/setlimits.rst>`__ API call:
 
    ::
 
@@ -160,7 +160,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;cutoff=10000;';
 
 -  maxquerytime - maximum allowed query time (in milliseconds), as in
-   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.md>`__
+   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.rst>`__
    API call:
 
    ::
@@ -169,7 +169,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;maxquerytime=1000;';
 
 -  groupby - group-by function and attribute, corresponding to
-   `SetGroupBy() <../group_by_settings/setgroupby.md>`__ API call:
+   `SetGroupBy() <../group_by_settings/setgroupby.rst>`__ API call:
 
    ::
 
@@ -186,7 +186,7 @@ sign. Any number of options can be specified. Available options are:
 
 -  distinct - an attribute to compute COUNT(DISTINCT) for when doing
    group-by, as in
-   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.md>`__ API
+   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.rst>`__ API
    call:
 
    ::
@@ -211,7 +211,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;fieldweights=title,10,abstract,3,content,1;';
 
 -  comment - a string to mark this query in query log (mapping to
-   $comment parameter in `Query() <../querying/query.md>`__ API call):
+   $comment parameter in `Query() <../querying/query.rst>`__ API call):
 
    ::
 
@@ -219,7 +219,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;comment=marker001;';
 
 -  select - a string with expressions to compute (mapping to
-   `SetSelect() <../general_query_settings/setselect.md>`__ API call):
+   `SetSelect() <../general_query_settings/setselect.rst>`__ API call):
 
    ::
 
@@ -235,7 +235,7 @@ sign. Any number of options can be specified. Available options are:
 
 -  ranker - a ranking function to use with “extended” matching mode, as
    in
-   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.md>`__
+   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.rst>`__
    API call (the only mode that supports full query syntax). Known
    values are “proximity\_bm25”, “bm25”, “none”, “wordcount”,
    “proximity”, “matchany”, “fieldmask”, “sph04” (starting with
@@ -302,7 +302,7 @@ sign. Any number of options can be specified. Available options are:
        idf=0.259532)
 
 -  geoanchor - geodistance anchor, as in
-   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.md>`__
+   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.rst>`__
    API call. Takes 4 parameters which are latitude and longitude
    attribute names, and anchor point coordinates respectively:
 

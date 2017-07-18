@@ -13,7 +13,7 @@ will only be available if searchd was started with –iostats and
 dist\_predicted\_time, [{local\|dist}]*fetched*\ [{docs\|hits\|skips}]
 counters will only be available if searchd was configured with
 `predicted time
-costs <../searchd_program_configuration_options/predictedtime_costs.md>`__
+costs <../searchd_program_configuration_options/predictedtime_costs.rst>`__
 and query had predicted\_time in OPTION clause.
 
 ::

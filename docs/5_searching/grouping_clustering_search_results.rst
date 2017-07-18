@@ -35,7 +35,7 @@ Grouping function value and per-group match count are returned along as
 
 The result set is sorted by group-by sorting clause, with the syntax
 similar to ```SPH_SORT_EXTENDED`` sorting
-clause <sorting_modes.md#sph-sort-extended-mode>`__ syntax. In addition
+clause <sorting_modes.rst#sph-sort-extended-mode>`__ syntax. In addition
 to ``@id`` and ``@weight``, group-by sorting clause may also include:
 
 -  @group (groupby function value),
@@ -68,5 +68,5 @@ then the result set will contain
 
 Starting with version 0.9.9-rc2, aggregate functions (AVG(), MIN(),
 MAX(), SUM()) are supported through
-`SetSelect() <../general_query_settings/setselect.md>`__ API call when
+`SetSelect() <../general_query_settings/setselect.rst>`__ API call when
 using GROUP BY.

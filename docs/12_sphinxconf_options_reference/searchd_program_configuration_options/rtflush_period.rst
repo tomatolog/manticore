@@ -9,7 +9,7 @@ result in ever-growing binlogs, impacting disk use and crash recovery
 time. With this directive the search daemon performs periodic flush
 checks, and eligible RAM chunks can get saved, enabling consequential
 binlog cleanup. See `the section called “Binary
-logging” <../../binary_logging.md>`__ for more details.
+logging” <../../binary_logging.rst>`__ for more details.
 
 Example:
 ^^^^^^^^

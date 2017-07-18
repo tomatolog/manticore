@@ -6,7 +6,7 @@ to ``xmlpipe2`` source types only.
 
 Specifies a command that will be executed and which output will be
 parsed for documents. Refer to `the section called “xmlpipe2 data
-source” <../../xmlpipe2_data_source.md>`__ for specific format
+source” <../../xmlpipe2_data_source.rst>`__ for specific format
 description.
 
 Example:

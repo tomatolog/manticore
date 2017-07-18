@@ -31,7 +31,7 @@ the pre-compiled binary files from the Downloads area on the website.
    It will not have been started, as you will need to configure it and
    build your indexes with ``indexer`` before starting the service. A
    guide to do this can be found under `Quick
-   tour <../quick_sphinx_usage_tour.md>`__.
+   tour <../quick_sphinx_usage_tour.rst>`__.
 
    During the next steps of the install (which involve running indexer
    pretty much as you would on Linux) you may find that you get an error

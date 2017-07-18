@@ -14,7 +14,7 @@ installed on CentOS as well.
    **``$ rpm -Uhv sphinx-2.2.1-1.rhel6.x86_64.rpm``**
 
 3. After preparing configuration file (see `Quick
-   tour <../quick_sphinx_usage_tour.md>`__), you can start searchd
+   tour <../quick_sphinx_usage_tour.rst>`__), you can start searchd
    daemon:
 
    **``$ service searchd start``**

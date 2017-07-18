@@ -17,7 +17,7 @@ the default case as of 2.0.3-release, ``binlog_max_log_size`` defaults
 to 0.)
 
 There are 3 different binlog flushing strategies, controlled by
-`binlog\_flush <../searchd_program_configuration_options/binlogflush.md>`__
+`binlog\_flush <../searchd_program_configuration_options/binlogflush.rst>`__
 directive which takes the values of 0, 1, or 2. 0 means to flush the log
 to OS and sync it to disk every second; 1 means flush and sync every
 transaction; and 2 (the default mode) means flush every transaction but
@@ -46,7 +46,7 @@ on disk, and unless RAM chunk gets saved, they can not be unlinked. An
 ever-growing binlog is not very good for disk use and crash recovery
 time. Starting with 2.0.1-beta you can configure ``searchd`` to perform
 a periodic RAM chunk flush to fix that problem using a
-`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.md>`__
+`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.rst>`__
 directive. With periodic flushes enabled, ``searchd`` will keep a
 separate thread, checking whether RT indexes RAM chunks need to be
 written back to disk. Once that happens, the respective binlogs can be

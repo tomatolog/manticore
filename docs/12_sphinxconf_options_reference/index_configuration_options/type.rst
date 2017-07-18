@@ -9,11 +9,11 @@ supported two index types: plain local indexes that are stored and
 processed on the local machine; and distributed indexes, that involve
 not only local searching but querying remote ``searchd`` instances over
 the network as well (see `the section called “Distributed
-searching” <../../distributed_searching.md>`__). Version 1.10-beta also
+searching” <../../distributed_searching.rst>`__). Version 1.10-beta also
 adds support for so-called real-time indexes (or RT indexes for short)
 that are also stored and processed locally, but additionally allow for
 on-the-fly updates of the full-text index (see `Chapter 4, *Real-time
-indexes* <../../4_real-time_indexes/README.md>`__). Note that
+indexes* <../../4_real-time_indexes/README.rst>`__). Note that
 *attributes* can be updated on-the-fly using either plain local indexes
 or RT ones. In 2.2.1-beta template indexes was introduced. They are
 actually a pseudo-indexes because they do not store any data. That means

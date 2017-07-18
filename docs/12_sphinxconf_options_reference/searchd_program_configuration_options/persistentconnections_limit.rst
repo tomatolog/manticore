@@ -3,7 +3,7 @@ persistent\_connections\_limit
 
 The maximum # of simultaneous persistent connections to remote
 `persistent
-agents <../../index_configuration_options/agentpersistent.md>`__. Each
+agents <../../index_configuration_options/agentpersistent.rst>`__. Each
 time connecting agent defined under ‘agent\_persistent’ we try to reuse
 existing connection (if any), or connect and save the connection for the
 future. However we can't hold unlimited # of such persistent
@@ -13,7 +13,7 @@ very directive limits the number. It affects the num of connections to
 each agent's host, across all distributed indexes.
 
 It is reasonable to set the value equal or less than
-`max\_children <../../searchd_program_configuration_options/maxchildren.md>`__
+`max\_children <../../searchd_program_configuration_options/maxchildren.rst>`__
 option of the agents.
 
 Example:

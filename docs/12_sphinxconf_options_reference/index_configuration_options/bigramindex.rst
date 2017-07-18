@@ -18,7 +18,7 @@ known modes are:
 
 -  ``first_freq``, only index word pairs where the *first* word is in a
    list of frequent words (see `the section called
-   “bigram\_freq\_words” <../../index_configuration_options/bigramfreq_words.md>`__).
+   “bigram\_freq\_words” <../../index_configuration_options/bigramfreq_words.rst>`__).
    For example, with ``bigram_freq_words = the, in, i, a``, indexing
    “alone in the dark” text will result in “in the” and “the dark” pairs
    being stored as bigrams, because they begin with a frequent keyword

@@ -17,7 +17,7 @@ definition.
 The difference between tsvpipe and csvpipe is delimiter and quoting
 rules. tsvpipe has tab character as hardcoded delimiter and has no
 quoting rules. csvpipe has option
-`csvpipe\_delimiter <../data_source_configuration_options/csvpipedelimiter.md>`__
+`csvpipe\_delimiter <../data_source_configuration_options/csvpipedelimiter.rst>`__
 for delimiter with default value ‘,’ and also has quoting rules, such
 as:
 
@@ -34,33 +34,33 @@ derectives as xmlpipe.
 
 tsvpipe declarations:
 
-`tsvpipe\_command <../data_source_configuration_options/xmlpipecommand.md>`__,
-`tsvpipe\_field <../data_source_configuration_options/xmlpipefield.md>`__,
-`tsvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.md>`__,
-`tsvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.md>`__,
-`tsvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.md>`__,
-`tsvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.md>`__,
-`tsvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.md>`__,
-`tsvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.md>`__,
-`tsvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.md>`__,
-`tsvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.md>`__,
-`tsvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.md>`__,
-`tsvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.md>`__
+`tsvpipe\_command <../data_source_configuration_options/xmlpipecommand.rst>`__,
+`tsvpipe\_field <../data_source_configuration_options/xmlpipefield.rst>`__,
+`tsvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.rst>`__,
+`tsvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.rst>`__,
+`tsvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.rst>`__,
+`tsvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.rst>`__,
+`tsvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.rst>`__,
+`tsvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.rst>`__,
+`tsvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.rst>`__,
+`tsvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.rst>`__,
+`tsvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.rst>`__,
+`tsvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.rst>`__
 
 csvpipe declarations:
 
-`csvpipe\_command <../data_source_configuration_options/xmlpipecommand.md>`__,
-`csvpipe\_field <../data_source_configuration_options/xmlpipefield.md>`__,
-`csvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.md>`__,
-`csvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.md>`__,
-`csvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.md>`__,
-`csvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.md>`__,
-`csvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.md>`__,
-`csvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.md>`__,
-`csvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.md>`__,
-`csvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.md>`__,
-`csvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.md>`__,
-`csvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.md>`__
+`csvpipe\_command <../data_source_configuration_options/xmlpipecommand.rst>`__,
+`csvpipe\_field <../data_source_configuration_options/xmlpipefield.rst>`__,
+`csvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.rst>`__,
+`csvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.rst>`__,
+`csvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.rst>`__,
+`csvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.rst>`__,
+`csvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.rst>`__,
+`csvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.rst>`__,
+`csvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.rst>`__,
+`csvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.rst>`__,
+`csvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.rst>`__,
+`csvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.rst>`__
 
 ::
 

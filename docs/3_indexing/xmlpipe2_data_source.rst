@@ -128,5 +128,5 @@ applicable) are:
 -  sphinx:killlist
 -  Optional element, child of sphinx:docset. Contains a number of “id”
    elements whose contents are document IDs to be put into a
-   `kill-list <../data_source_configuration_options/sqlquery_killlist.md>`__
+   `kill-list <../data_source_configuration_options/sqlquery_killlist.rst>`__
    for this index.

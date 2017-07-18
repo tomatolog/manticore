@@ -29,22 +29,22 @@ Bug fixes
 
 -  fixed #1050, expression ranker vs agents
 
--  fixed #1051, added `MVA64 <../mva_multi-valued_attributes.md>`__
-   support to `UDFs <../sphinx_udfs_user_defined_functions.md>`__
+-  fixed #1051, added `MVA64 <../mva_multi-valued_attributes.rst>`__
+   support to `UDFs <../sphinx_udfs_user_defined_functions.rst>`__
 
--  fixed #1054, `max\_query\_time <../select_syntax.md>`__ not handled
+-  fixed #1054, `max\_query\_time <../select_syntax.rst>`__ not handled
    properly on searching at `RT
-   index <../4_real-time_indexes/README.md>`__
+   index <../4_real-time_indexes/README.rst>`__
 
 -  fixed #1055,
-   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.md>`__
+   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.rst>`__
    on searching at RT disk chunks
 
 -  fixed #1057, daemon crashes on generating snippet with 0 documents
    provided
 
 -  fixed #1060,
-   `load\_files\_scattered <../additional_functionality/buildexcerpts.md>`__
+   `load\_files\_scattered <../additional_functionality/buildexcerpts.rst>`__
    don't work
 
 -  fixed #1065, libsphinxclient vs distribute index (agents)
@@ -71,7 +71,7 @@ Bug fixes
 -  fixed #1099, cleaning up temporary files on fail of indexing
 
 -  fixed #1100, missing
-   `xmlpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.md>`__
+   `xmlpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.rst>`__
    config directive
 
 -  fixed #1101, now ignoring dashes within keywords when dash is not in
@@ -94,5 +94,5 @@ Bug fixes
 
 -  fixed #1119, missing expression ranker support in SphinxSE
 
--  fixed #1120, negative `total\_found <../querying/README.md>`__, docs
+-  fixed #1120, negative `total\_found <../querying/README.rst>`__, docs
    and hits counter on huge indexes

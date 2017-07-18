@@ -29,7 +29,7 @@ very fast because they're working fully in RAM, but they can also be
 made persistent: updates are saved on disk on clean ``searchd`` shutdown
 initiated by SIGTERM signal. With additional restrictions, updates are
 also possible on MVA attributes; refer to
-`mva\_updates\_pool <../../searchd_program_configuration_options/mvaupdates_pool.md>`__
+`mva\_updates\_pool <../../searchd_program_configuration_options/mvaupdates_pool.rst>`__
 directive for details.
 
 Usage example:

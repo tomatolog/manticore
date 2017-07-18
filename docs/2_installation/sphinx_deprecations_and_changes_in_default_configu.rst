@@ -42,7 +42,7 @@ Changes are as follows:
    only covers a small part of this functionality and is not needed now.
 
 -  str2wordcount attributes are deprecated.
-   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.md>`__
+   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.rst>`__
    will create an integer attribute with field length set automatically
    and we recommend to use this configuration key when you need to store
    field lengths. Also, index\_field\_lengths=1 allows you to use new
@@ -55,8 +55,8 @@ Changes are as follows:
    hit\_format is obsolete and will be removed in the near future.
 
 -  docinfo=inline is deprecated. You can now use
-   `ondisk\_attrs <../index_configuration_options/ondiskattrs.md>`__ or
-   `ondisk\_attrs\_default <../searchd_program_configuration_options/ondiskattrs_default.md>`__
+   `ondisk\_attrs <../index_configuration_options/ondiskattrs.rst>`__ or
+   `ondisk\_attrs\_default <../searchd_program_configuration_options/ondiskattrs_default.rst>`__
    instead.
 
 -  workers=threads is a new default for all OS now. We're gonna get rid
@@ -86,7 +86,7 @@ using SphinxQL.
 
 -  The default matching mode for the API is now ‘extended’. Actually,
    all other modes are deprecated. We recommend using the `extended
-   query syntax <../extended_query_syntax.md>`__ instead.
+   query syntax <../extended_query_syntax.rst>`__ instead.
 
 Changes for 2.2.2-beta:
 
@@ -94,7 +94,7 @@ Changes for 2.2.2-beta:
    instead.
 
 -  Removed str2wordcount attributes. Use
-   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.md>`__
+   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.rst>`__
    instead.
 
 -  Removed str2ordinal attributes. Use string attributes for sorting.
@@ -113,7 +113,7 @@ Changes for 2.2.2-beta:
 -  Deprecated SetMatchMode() API call.
 
 -  Changed default
-   `thread\_stack <../searchd_program_configuration_options/threadstack.md>`__
+   `thread\_stack <../searchd_program_configuration_options/threadstack.rst>`__
    value to 1M.
 
 -  Deprecated SetOverride() API call.

@@ -5,7 +5,7 @@ Maximum file field adaptive buffer size, bytes. Optional, default is 8
 MB, minimum is 1 MB.
 
 File field buffer is used to load files referred to from
-`sql\_file\_field <../../data_source_configuration_options/sqlfile_field.md>`__
+`sql\_file\_field <../../data_source_configuration_options/sqlfile_field.rst>`__
 columns. This buffer is adaptive, starting at 1 MB at first allocation,
 and growing in 2x steps until either file contents can be loaded, or
 maximum buffer size, specified by ``max_file_field_buffer`` directive,

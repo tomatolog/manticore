@@ -34,8 +34,8 @@ to that per-field sum. Currently implemented field-level factors are:
 
 -  ``user_weight`` (integer), the user specified per-field weight (refer
    to
-   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.md>`__
-   in SphinxAPI and `OPTION field\_weights <../../select_syntax.md>`__
+   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.rst>`__
+   in SphinxAPI and `OPTION field\_weights <../../select_syntax.rst>`__
    in SphinxQL respectively). The weights default to 1 if not specified
    explicitly.
 

@@ -31,13 +31,13 @@ Index specification order matters. If document with identical IDs are
 found in two or more indexes, weight and attribute values from the very
 last matching index will be used for sorting and returning to client
 (unless explicitly overridden with
-`SetIndexWeights() <../../full-text_search_query_settings/setindexweights.md>`__).
+`SetIndexWeights() <../../full-text_search_query_settings/setindexweights.rst>`__).
 Therefore, in the example above, matches from “delta” index will always
 win over matches from “main”.
 
 On success, ``Query()`` returns a result set that contains some of the
 found matches (as requested by
-`SetLimits() <../../general_query_settings/setlimits.md>`__) and
+`SetLimits() <../../general_query_settings/setlimits.rst>`__) and
 additional general per-query statistics. The result set is a hash (PHP
 specific; other languages might utilize other structures instead of
 hash) with the following keys and values:
@@ -46,7 +46,7 @@ hash) with the following keys and values:
 -  Hash which maps found document IDs to another small hash containing
    document weight and attribute values (or an array of the similar
    small hashes if
-   `SetArrayResult() <../../general_api_functions/setarrayresult.md>`__
+   `SetArrayResult() <../../general_api_functions/setarrayresult.rst>`__
    was enabled).
 
 -  “total”:

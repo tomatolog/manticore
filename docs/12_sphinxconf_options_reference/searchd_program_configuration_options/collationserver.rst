@@ -6,7 +6,7 @@ version 2.0.1-beta.
 
 Specifies the default collation used for incoming requests. The
 collation can be overridden on a per-query basis. Refer to `the section
-called “Collations” <../../collations.md>`__ section for the list of
+called “Collations” <../../collations.rst>`__ section for the list of
 available collations and other details.
 
 Example:

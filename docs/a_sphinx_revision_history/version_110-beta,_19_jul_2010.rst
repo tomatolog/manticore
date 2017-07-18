@@ -2,36 +2,36 @@ Version 1.10-beta, 19 jul 2010
 ------------------------------
 
 -  added RT indexes support (`Chapter 4, *Real-time
-   indexes* <../4_real-time_indexes/README.md>`__)
+   indexes* <../4_real-time_indexes/README.rst>`__)
 
 -  added prefork and threads support
-   (`workers <../searchd_program_configuration_options/workers.md>`__
+   (`workers <../searchd_program_configuration_options/workers.rst>`__
    directives)
 
 -  added multi-threaded local searches in distributed indexes
-   (`dist\_threads <../searchd_program_configuration_options/distthreads.md>`__
+   (`dist\_threads <../searchd_program_configuration_options/distthreads.rst>`__
    directive)
 
 -  added common subquery cache
-   (`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.md>`__,
-   `subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.md>`__
+   (`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.rst>`__,
+   `subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.rst>`__
    directives)
 
 -  added string attributes support
-   (`sql\_attr\_string <../data_source_configuration_options/sqlattr_string.md>`__,
-   `sql\_field\_string <../data_source_configuration_options/sqlfield_string.md>`__,
-   `xml\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.md>`__,
-   `xml\_field\_string <../data_source_configuration_options/xmlpipefield_string.md>`__
+   (`sql\_attr\_string <../data_source_configuration_options/sqlattr_string.rst>`__,
+   `sql\_field\_string <../data_source_configuration_options/sqlfield_string.rst>`__,
+   `xml\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.rst>`__,
+   `xml\_field\_string <../data_source_configuration_options/xmlpipefield_string.rst>`__
    directives)
 
 -  added indexing-time word counter (``sql_attr_str2wordcount``,
    ``sql_field_str2wordcount`` directives)
 
--  added `CALL SNIPPETS() <../call_snippets_syntax.md>`__, `CALL
-   KEYWORDS() <../call_keywords_syntax.md>`__ SphinxQL statements
+-  added `CALL SNIPPETS() <../call_snippets_syntax.rst>`__, `CALL
+   KEYWORDS() <../call_keywords_syntax.rst>`__ SphinxQL statements
 
 -  added ``field_weights``, ``index_weights`` options to SphinxQL
-   `SELECT <../select_syntax.md>`__ statement
+   `SELECT <../select_syntax.rst>`__ statement
 
 -  added insert-only SphinxQL-talking tables to SphinxSE
    (connection=‘sphinxql://host[:port]/index’)
@@ -41,7 +41,7 @@ Version 1.10-beta, 19 jul 2010
 -  added backtrace on crash to ``searchd``
 
 -  added SQL+FS indexing, aka loading files by names fetched from SQL
-   (`sql\_file\_field <../data_source_configuration_options/sqlfile_field.md>`__
+   (`sql\_file\_field <../data_source_configuration_options/sqlfile_field.rst>`__
    directive)
 
 -  added a watchdog in threads mode to ``searchd``
@@ -51,43 +51,43 @@ Version 1.10-beta, 19 jul 2010
 -  added hitless indexing support (hitless\_words directive)
 
 -  added –check, –strip-path, –htmlstrip, –dumphitlist … –wordid
-   switches to `indextool <../indextool_command_reference.md>`__
+   switches to `indextool <../indextool_command_reference.rst>`__
 
 -  added –stopwait, –logdebug switches to
-   `searchd <../searchd_command_reference.md>`__
+   `searchd <../searchd_command_reference.rst>`__
 
 -  added –dump-rows, –verbose switches to
-   `indexer <../indexer_command_reference.md>`__
+   `indexer <../indexer_command_reference.rst>`__
 
 -  added “blended” characters indexing support
-   (`blend\_chars <../index_configuration_options/blendchars.md>`__
+   (`blend\_chars <../index_configuration_options/blendchars.rst>`__
    directive)
 
 -  added joined/payload field indexing
-   (`sql\_joined\_field <../data_source_configuration_options/sqljoined_field.md>`__
+   (`sql\_joined\_field <../data_source_configuration_options/sqljoined_field.rst>`__
    directive)
 
 -  added `FlushAttributes() API
-   call <../additional_functionality/flushattributes.md>`__
+   call <../additional_functionality/flushattributes.rst>`__
 
 -  added query\_mode, force\_all\_words, limit\_passages, limit\_words,
    start\_passage\_id, load\_files, html\_strip\_mode, allow\_empty
    options, and %PASSAGE\_ID% macro in before\_match, after\_match
    options to
-   `BuildExcerpts() <../additional_functionality/buildexcerpts.md>`__
+   `BuildExcerpts() <../additional_functionality/buildexcerpts.rst>`__
    API call
 
 -  added @groupby/@count/@distinct columns support to SELECT (but not to
    expressions)
 
 -  added query-time keyword expansion support
-   (`expand\_keywords <../index_configuration_options/expandkeywords.md>`__
+   (`expand\_keywords <../index_configuration_options/expandkeywords.rst>`__
    directive,
-   `SPH\_RANK\_SPH04 <../full-text_search_query_settings/setrankingmode.md>`__
+   `SPH\_RANK\_SPH04 <../full-text_search_query_settings/setrankingmode.rst>`__
    ranker)
 
 -  added query batch size limit option
-   (`max\_batch\_queries <../searchd_program_configuration_options/maxbatch_queries.md>`__
+   (`max\_batch\_queries <../searchd_program_configuration_options/maxbatch_queries.rst>`__
    directive; was hardcoded)
 
 -  added SINT() function to expressions

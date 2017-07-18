@@ -9,7 +9,7 @@ string. Additionally if provided, the contents of ``$comment`` are sent
 to the query log, marked in square brackets, just before the search
 terms, which can be very useful for debugging. Currently, this is
 limited to 128 characters. Returns index to results array returned from
-`RunQueries() <../../querying/runqueries.md>`__.
+`RunQueries() <../../querying/runqueries.rst>`__.
 
 Batch queries (or multi-queries) enable ``searchd`` to perform internal
 optimizations if possible. They also reduce network connection overheads

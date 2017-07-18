@@ -5,7 +5,7 @@ Agent mirror selection strategy, for load balancing. Optional, default
 is random. Added in 2.1.1-beta.
 
 The strategy used for mirror selection, or in other words, choosing a
-specific `agent mirror <../../index_configuration_options/agent.md>`__
+specific `agent mirror <../../index_configuration_options/agent.rst>`__
 in a distributed index. Essentially, this directive controls how exactly
 master does the load balancing between the configured mirror agent
 nodes. As of 2.1.1-beta, the following strategies are implemented:

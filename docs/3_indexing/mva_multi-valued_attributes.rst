@@ -16,7 +16,7 @@ attached to each document as long as RAM permits (``.spm`` file that
 contains the MVA values will be precached in RAM by ``searchd``). The
 source data can be taken either from a separate query, or from a
 document field; see source type in
-`sql\_attr\_multi <../data_source_configuration_options/sqlattr_multi.md>`__.
+`sql\_attr\_multi <../data_source_configuration_options/sqlattr_multi.rst>`__.
 In the first case the query will have to return pairs of document ID and
 MVA values, in the second one the field will be parsed for integer
 values. There are absolutely no requirements as to incoming data order;
@@ -37,5 +37,5 @@ because each document can participate in many groups, it can be chosen
 as the best one in in more than one group, leading to duplicate IDs. PHP
 API historically uses ordered hash on the document ID for the resulting
 rows; so you'll also need to use
-`SetArrayResult() <../general_api_functions/setarrayresult.md>`__ in
+`SetArrayResult() <../general_api_functions/setarrayresult.rst>`__ in
 order to employ group-by on MVA with PHP API.

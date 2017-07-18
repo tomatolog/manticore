@@ -84,7 +84,7 @@ operation is performed. These options are:
    attempt to rename the indexes (renaming the existing ones to include
    ``.old`` and renaming the ``.new`` to replace them), and then start
    serving from the newer files. Depending on the setting of
-   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.md>`__,
+   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.rst>`__,
    there may be a slight delay in being able to search the newer
    indexes. Example usage:
 

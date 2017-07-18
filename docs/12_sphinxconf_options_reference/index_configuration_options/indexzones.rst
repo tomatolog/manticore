@@ -12,7 +12,7 @@ document field belongs to H1 zone.
 
 Zone indexing, enabled by ``index_zones`` directive, is an optional
 extension of the HTML stripper. So it will also require that the
-`stripper <../../index_configuration_options/htmlstrip.md>`__ is enabled
+`stripper <../../index_configuration_options/htmlstrip.rst>`__ is enabled
 (with ``html_strip = 1``). The value of the ``index_zones`` should be a
 comma-separated list of those tag names and wildcards (ending with a
 star) that should be indexed as zones.
@@ -23,7 +23,7 @@ number of both zones (as in unique zone names, such as H1) and spans
 (all the occurrences of those H1 tags) in a document. Once indexed,
 zones can then be used for matching with the ZONE operator, see `the
 section called “Extended query
-syntax” <../../extended_query_syntax.md>`__.
+syntax” <../../extended_query_syntax.rst>`__.
 
 Example:
 ^^^^^^^^

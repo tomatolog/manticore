@@ -13,7 +13,7 @@ remove ``.tmp*`` files is if indexer fails to remove them automatically.
 For reference, different index files store the following data:
 
 -  ``.spa`` stores document attributes (used in `extern
-   docinfo <../../index_configuration_options/docinfo.md>`__ storage
+   docinfo <../../index_configuration_options/docinfo.rst>`__ storage
    mode only);
 
 -  ``.spd`` stores matching document ID lists for each word ID;

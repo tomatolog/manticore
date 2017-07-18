@@ -30,7 +30,7 @@ may be lifted in future releases, as we add the needed functionality to
 the RT indexes. The complete list is as follows.
 
 -  Target RT index needs to be empty. (See `the section called “TRUNCATE
-   RTINDEX syntax” <../truncate_rtindex_syntax.md>`__)
+   RTINDEX syntax” <../truncate_rtindex_syntax.rst>`__)
 
 -  Source disk index needs to have index\_sp=0, boundary\_step=0,
    stopword\_step=1.

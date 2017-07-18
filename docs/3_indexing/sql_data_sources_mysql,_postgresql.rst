@@ -6,16 +6,16 @@ With all the SQL drivers, indexing generally works as follows.
 -  connection to the database is established;
 
 -  pre-query (see `the section called
-   “sql\_query\_pre” <../data_source_configuration_options/sqlquery_pre.md>`__)
+   “sql\_query\_pre” <../data_source_configuration_options/sqlquery_pre.rst>`__)
    is executed to perform any necessary initial setup, such as setting
    per-connection encoding with MySQL;
 
 -  main query (see `the section called
-   “sql\_query” <../data_source_configuration_options/sqlquery.md>`__)
+   “sql\_query” <../data_source_configuration_options/sqlquery.rst>`__)
    is executed and the rows it returns are indexed;
 
 -  post-query (see `the section called
-   “sql\_query\_post” <../data_source_configuration_options/sqlquery_post.md>`__)
+   “sql\_query\_post” <../data_source_configuration_options/sqlquery_post.rst>`__)
    is executed to perform any necessary cleanup;
 
 -  connection to the database is closed;
@@ -26,7 +26,7 @@ With all the SQL drivers, indexing generally works as follows.
 -  connection to the database is established again;
 
 -  post-index query (see `the section called
-   “sql\_query\_post\_index” <../data_source_configuration_options/sqlquery_post_index.md>`__)
+   “sql\_query\_post\_index” <../data_source_configuration_options/sqlquery_post_index.rst>`__)
    is executed to perform any necessary final cleanup;
 
 -  connection to the database is closed again.

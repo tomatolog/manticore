@@ -16,7 +16,7 @@ updated. Previously, some of these types were not supported.
 
 ``where_condition`` (also added in 2.0.2-beta) has the same syntax as in
 the SELECT statement (see `the section called “SELECT
-syntax” <../select_syntax.md>`__ for details).
+syntax” <../select_syntax.rst>`__ for details).
 
 When assigning the out-of-range values to 32-bit attributes, they will
 be trimmed to their lower 32 bits without a prompt. For example, if you
@@ -26,7 +26,7 @@ value of 1 will actually be stored, because the lower 32 bits of
 
 MVA values sets for updating (and also for INSERT or REPLACE, refer to
 `the section called “INSERT and REPLACE
-syntax” <../insert_and_replace_syntax.md>`__) must be specified as
+syntax” <../insert_and_replace_syntax.rst>`__) must be specified as
 comma-separated lists in parentheses. To erase the MVA value, just
 assign () to it.
 
@@ -56,7 +56,7 @@ a number of per-update options. The syntax is:
     OPTION <optionname>=<value> [ , ... ]
 
 The list of allowed options are the same as for
-`SELECT <../select_syntax.md>`__ statement. Specifically for UPDATE
+`SELECT <../select_syntax.rst>`__ statement. Specifically for UPDATE
 statement you can use these options:
 
 -  ‘ignore\_nonexistent\_columns’ - this option, added in version

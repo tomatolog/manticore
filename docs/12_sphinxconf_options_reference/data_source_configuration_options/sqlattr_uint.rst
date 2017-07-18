@@ -1,7 +1,7 @@
 sql\_attr\_uint
 ~~~~~~~~~~~~~~~
 
-Unsigned integer `attribute <../../attributes.md>`__ declaration.
+Unsigned integer `attribute <../../attributes.rst>`__ declaration.
 Multi-value (there might be multiple attributes declared), optional.
 Applies to SQL source types (``mysql``, ``pgsql``, ``mssql``) only.
 
@@ -13,10 +13,10 @@ You can specify bit count for integer attributes by appending
 ‘:BITCOUNT’ to attribute name (see example below). Attributes with less
 than default 32-bit size, or bitfields, perform slower. But they require
 less RAM when using `extern
-storage <../../index_configuration_options/docinfo.md>`__: such
+storage <../../index_configuration_options/docinfo.rst>`__: such
 bitfields are packed together in 32-bit chunks in ``.spa`` attribute
 data file. Bit size settings are ignored if using `inline
-storage <../../index_configuration_options/docinfo.md>`__.
+storage <../../index_configuration_options/docinfo.rst>`__.
 
 Example:
 ^^^^^^^^

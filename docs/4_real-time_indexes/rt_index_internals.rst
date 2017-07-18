@@ -4,7 +4,7 @@ RT index internals
 RT index is internally chunked. It keeps a so-called RAM chunk that
 stores all the most recent changes. RAM chunk memory usage is rather
 strictly limited with per-index
-`rt\_mem\_limit <../index_configuration_options/rtmem_limit.md>`__
+`rt\_mem\_limit <../index_configuration_options/rtmem_limit.rst>`__
 directive. Once RAM chunk grows over this limit, a new disk chunk is
 created from its data, and RAM chunk is reset. Thus, while most changes
 on the RT index will be performed in RAM only and complete instantly (in
@@ -15,7 +15,7 @@ Since version 2.1.1-beta, Sphinx uses double-buffering to avoid INSERT
 stalls. When data is being dumped to disk, the second buffer is used, so
 further INSERTs won't be delayed. The second buffer is defined to be 10%
 the size of the standard buffer,
-`rt\_mem\_limit <../index_configuration_options/rtmem_limit.md>`__, but
+`rt\_mem\_limit <../index_configuration_options/rtmem_limit.rst>`__, but
 future versions of Sphinx may allow configuring this further.
 
 Disk chunks are, in fact, just regular disk-based indexes. But they're a
@@ -45,7 +45,7 @@ Data in RAM chunk gets saved to disk on clean daemon shutdown, and then
 loaded back on startup. However, on daemon or server crash, updates from
 RAM chunk might be lost. To prevent that, binary logging of transactions
 can be used; see `the section called “Binary
-logging” <../binary_logging.md>`__ for details.
+logging” <../binary_logging.rst>`__ for details.
 
 Full-text changes in RT index are transactional. They are stored in a
 per-thread accumulator until COMMIT, then applied at once. Bigger

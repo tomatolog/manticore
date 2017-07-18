@@ -1,6 +1,6 @@
 .. toctree::
-`1. Introduction <intro.html>`__
-`1.1. About <about.html>`__
+   intro
+   about
 `1.2. Sphinx features <features.html>`__
 `1.3. Where to get Sphinx <getting.html>`__
 `1.4. License <license.html>`__

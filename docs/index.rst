@@ -9,10 +9,12 @@
 
 .. toctree::
    :maxdepth: 2
-   :glob:
    
    intro
    about
+
+
+
 `1.2. Sphinx features <features.html>`__
 `1.3. Where to get Sphinx <getting.html>`__
 `1.4. License <license.html>`__
@@ -230,3 +232,10 @@ updates <delta-updates.html#ex-live-updates>`__
 5.1. `Boolean query example <boolean-syntax.html#ex-boolean-query>`__
 5.2. `Extended matching mode: query
 example <extended-syntax.html#ex-extended-query>`__
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

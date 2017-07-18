@@ -1,0 +1,1 @@
+## `searchd` program configuration options {#searchd-program-configuration-options}

@@ -1,0 +1,11 @@
+### sql_attr_bool {#sql-attr-bool}
+
+Boolean [attribute](../../attributes.md) declaration. Multi-value (there might be multiple attributes declared), optional. Applies to SQL source types (`mysql`, `pgsql`, `mssql`) only. Equivalent to [sql_attr_uint](../../data_source_configuration_options/sqlattr_uint.md) declaration with a bit count of 1.
+
+#### Example: {#example}
+
+```
+
+sql_attr_bool = is_deleted # will be packed to 1 bit
+
+```

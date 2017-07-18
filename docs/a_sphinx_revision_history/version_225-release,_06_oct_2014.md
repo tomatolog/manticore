@@ -1,0 +1,25 @@
+## Version 2.2.5-release, 06 oct 2014 {#version-2-2-5-release-06-oct-2014}
+
+### New minor features {#new-minor-features}
+
+*   added OPTION [rand_seed](../select_syntax.md) which affects ORDER BY RAND()
+
+### Bug fixes {#bug-fixes}
+
+*   fixed #2042, `indextool` fails with field mask on 32+ fields
+
+*   fixed #2031, wrong encoding with UnixODBC/Oracle source
+
+*   fixed #2056, several bugs in RLP tokenizer
+
+*   fixed #2054, [SHOW THREADS](../show_threads_syntax.md) hangs if queries in prefork mode
+
+*   fixed #2057, WARNING at `indexer` on duplicated wordforms
+
+*   fixed #2066, snippet generation with [weight_order](../additional_functionality/buildexcerpts.md) enabled
+
+*   fixed exception parsing in queries
+
+*   fixed crash in config parser
+
+*   fixed MySQL protocol response when daemon maxed out

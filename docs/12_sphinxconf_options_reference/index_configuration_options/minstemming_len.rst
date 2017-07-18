@@ -13,7 +13,7 @@ given threshold will not be stemmed. Note that keywords that are exactly
 as long as specified <b>will</b> be stemmed. So in order to avoid
 stemming 3-character keywords, you should specify 4 for the value. For
 more finely grained control, refer to
-`wordforms <../../index_configuration_options/wordforms.rst>`__ feature.
+`wordforms <../../index_configuration_options/wordforms.html>`__ feature.
 
 Example:
 ^^^^^^^^

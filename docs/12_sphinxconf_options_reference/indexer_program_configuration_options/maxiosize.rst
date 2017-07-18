@@ -9,7 +9,7 @@ I/O throttling related option. It limits maximum file I/O operation
 value of 0 means that no limit is imposed. Reads or writes that are
 bigger than the limit will be split in several smaller operations, and
 counted as several operation by
-`max\_iops <../../indexer_program_configuration_options/maxiops.rst>`__
+`max\_iops <../../indexer_program_configuration_options/maxiops.html>`__
 setting. At the time of this writing, all I/O calls should be under 256
 KB (default internal buffer size) anyway, so ``max_iosize`` values
 higher than 256 KB must not affect anything.

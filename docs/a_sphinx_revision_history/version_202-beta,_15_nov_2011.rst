@@ -5,75 +5,75 @@ Major new features
 ~~~~~~~~~~~~~~~~~~
 
 -  added keywords dictionary
-   (```dict=keywords`` <../index_configuration_options/dict.rst>`__)
+   (```dict=keywords`` <../index_configuration_options/dict.html>`__)
    support to RT indexes
 
--  added `MVA <../index_configuration_options/rtattr_multi.rst>`__,
-   `index\_exact\_words <../index_configuration_options/indexexact_words.rst>`__
+-  added `MVA <../index_configuration_options/rtattr_multi.html>`__,
+   `index\_exact\_words <../index_configuration_options/indexexact_words.html>`__
    support to RT indexes (#888)
 
--  added `MVA64 <../mva_multi-valued_attributes.rst>`__ (a set of
+-  added `MVA64 <../mva_multi-valued_attributes.html>`__ (a set of
    BIGINTs) support to both disk and RT indexes
-   (`rt\_attr\_multi\_64 <../index_configuration_options/rtattr_multi_64.rst>`__
+   (`rt\_attr\_multi\_64 <../index_configuration_options/rtattr_multi_64.html>`__
    directive)
 
 -  added an `expression-based
-   ranker <../search_results_ranking/expression_based_ranker_sphrank_expr.rst>`__,
+   ranker <../search_results_ranking/expression_based_ranker_sphrank_expr.html>`__,
    and a number of new ranking factors
 
--  added `ATTACH INDEX <../attach_index_syntax.rst>`__ statement that
+-  added `ATTACH INDEX <../attach_index_syntax.html>`__ statement that
    converts a disk index to RT index
 
--  added ``WHERE`` clause support to `UPDATE <../update_syntax.rst>`__
+-  added ``WHERE`` clause support to `UPDATE <../update_syntax.html>`__
    statement
 
 -  added ``bigint``, ``float``, and ``MVA`` attribute support to
-   `UPDATE <../update_syntax.rst>`__ statement
+   `UPDATE <../update_syntax.html>`__ statement
 
 New features
 ~~~~~~~~~~~~
 
 -  added support for upto `256 searchable
-   fields <../full-text_fields.rst>`__ (was upto 32 before)
+   fields <../full-text_fields.html>`__ (was upto 32 before)
 
 -  added
-   ```FIBONACCI()`` <../5_searching/expressions,_functions,_and_operators/numeric_functions.rst#expr-func-fibonacci>`__
+   ```FIBONACCI()`` <../5_searching/expressions,_functions,_and_operators/numeric_functions.html#expr-func-fibonacci>`__
    function to
-   `expressions <../expressions,_functions,_and_operators/README.rst>`__
+   `expressions <../expressions,_functions,_and_operators/README.html>`__
 
 -  added `load\_files\_scattered
-   option <../additional_functionality/buildexcerpts.rst>`__ to snippets
+   option <../additional_functionality/buildexcerpts.html>`__ to snippets
 
 -  added implicit attribute type promotions in multi-index result sets
    (#939)
 
 -  added index names to ``indexer`` progress message on merge (#928)
 
--  added ```--replay-flags`` <../searchd_command_reference.rst>`__ switch
+-  added ```--replay-flags`` <../searchd_command_reference.html>`__ switch
    to ``searchd``
 
 -  added string attribute support and a few previously missing `snippets
-   options <../building_snippets_excerpts_via_mysql.rst>`__ to SphinxSE
+   options <../building_snippets_excerpts_via_mysql.html>`__ to SphinxSE
 
 -  added previously missing
-   ```Status()`` <../additional_functionality/status.rst>`__,
-   ```SetConnectTimeout()`` <../general_api_functions/setconnecttimeout.rst>`__
+   ```Status()`` <../additional_functionality/status.html>`__,
+   ```SetConnectTimeout()`` <../general_api_functions/setconnecttimeout.html>`__
    API calls to Python API
 
--  added ``ORDER BY RAND()`` support to `SELECT <../select_syntax.rst>`__
+-  added ``ORDER BY RAND()`` support to `SELECT <../select_syntax.html>`__
    statement
 
 -  added Sphinx version to Windows crash log
 
 -  added RT index support to
-   `indextool <../indextool_command_reference.rst>`__ ``--check`` (checks
+   `indextool <../indextool_command_reference.html>`__ ``--check`` (checks
    disk chunks only) (#877)
 
 -  added ``prefork_rotation_throttle`` directive (preforked children
    restart delay, in milliseconds) (#873)
 
 -  added
-   `on\_file\_field\_error <../indexer_program_configuration_options/onfile_field_error.rst>`__
+   `on\_file\_field\_error <../indexer_program_configuration_options/onfile_field_error.html>`__
    directive (different ``sql_file_field`` handling modes)
 
 -  added manpages for all the programs
@@ -89,40 +89,40 @@ New features
    fetch)
 
 -  improved `sentence
-   extraction <../index_configuration_options/indexsp.rst>`__ (handles
+   extraction <../index_configuration_options/indexsp.html>`__ (handles
    salutations, starting initials better now)
 
 -  changed
-   `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.rst>`__
+   `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.html>`__
    sanity check to 10M values
 
 New SphinxQL features
 ~~~~~~~~~~~~~~~~~~~~~
 
--  added `FLUSH RTINDEX <../flush_rtindex_syntax.rst>`__ statement
+-  added `FLUSH RTINDEX <../flush_rtindex_syntax.html>`__ statement
 
 -  added ``dist_threads`` directive (parallel processing),
    ``load_files``, ``load_files_scattered``, batch syntax (multiple
-   documents) support to `CALL SNIPPETS <../call_snippets_syntax.rst>`__
+   documents) support to `CALL SNIPPETS <../call_snippets_syntax.html>`__
    statement
 
 -  added ``OPTION comment=&#039;...&#039;`` support to
-   `SELECT <../select_syntax.rst>`__ statement (#944)
+   `SELECT <../select_syntax.html>`__ statement (#944)
 
--  added `SHOW VARIABLES <../show_variables_syntax.rst>`__ statement
+-  added `SHOW VARIABLES <../show_variables_syntax.html>`__ statement
 
 -  added dummy handlers for `SET
-   TRANSACTION <../set_transaction_syntax.rst>`__, `SET
-   NAMES <../set_syntax.rst>`__, [SELECT @@sysvar](../select\_syntax.rst)
+   TRANSACTION <../set_transaction_syntax.html>`__, `SET
+   NAMES <../set_syntax.html>`__, [SELECT @@sysvar](../select\_syntax.html)
    statements, and for ``sql_auto_is_null``, ``sql_mode``, and @@-style
-   variables (like @@tx\_isolation) in `SET <../set_syntax.rst>`__
+   variables (like @@tx\_isolation) in `SET <../set_syntax.html>`__
    statement (better MySQL frameworks/connectors support)
 
 -  added complete `SphinxQL error
-   logging <../searchd_query_log_formats/sphinxql_log_format.rst>`__ (all
+   logging <../searchd_query_log_formats/sphinxql_log_format.html>`__ (all
    errors are logged now, not just ``SELECT``\ s)
 
--  improved `SELECT <../select_syntax.rst>`__ statement syntax, made
+-  improved `SELECT <../select_syntax.html>`__ statement syntax, made
    expressions aliases optional
 
 Bug fixes

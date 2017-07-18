@@ -28,10 +28,10 @@ Bug fixes
 -  fixed #1300, lost index settings on attach
 
 -  fixed #1299, daemon failed to rotate
-   `ATTACH <../attach_index_syntax.rst>`__\ ed plain index
+   `ATTACH <../attach_index_syntax.html>`__\ ed plain index
 
--  fixed #1289, `SENTENCE <../extended_query_syntax.rst>`__ or
-   `PARAGRAPH <../extended_query_syntax.rst>`__ searching leak memory
+-  fixed #1289, `SENTENCE <../extended_query_syntax.html>`__ or
+   `PARAGRAPH <../extended_query_syntax.html>`__ searching leak memory
 
 -  fixes #1285, crash on running ``searchd`` with ``syslog`` and
    ``watchdog``
@@ -41,7 +41,7 @@ Bug fixes
    systems without XML support
 
 -  fixed #1278, broken
-   `unixODBC <../data_source_configuration_options/odbcdsn.rst>`__
+   `unixODBC <../data_source_configuration_options/odbcdsn.html>`__
    detection in configure script.
 
 -  fixed #1277, broken build on some toolchains (like uClibc) where not
@@ -50,7 +50,7 @@ Bug fixes
 -  fixed #1274, large ``spa`` ( >4GB ) file hasn't loaded
 
 -  fixed #1269, crash at RT index with
-   `MVA <../mva_multi-valued_attributes.rst>`__ from disk chunk
+   `MVA <../mva_multi-valued_attributes.html>`__ from disk chunk
    previously updated
 
 -  fixed #1268, unuseful warning removed
@@ -58,34 +58,34 @@ Bug fixes
 -  fixed #1264, string and MVA attributes aliasing works again
 
 -  fixed #1254, its now possible to add indexes using
-   `–rotate <../indexer_command_reference.rst>`__
+   `–rotate <../indexer_command_reference.html>`__
 
--  fixed #1249, `SphinxQL <../8_sphinxql_reference/README.rst>`__
+-  fixed #1249, `SphinxQL <../8_sphinxql_reference/README.html>`__
    unusable with PHP >= 5.4.5
 
 -  fixed #1246, attributes of 100 character length not being saved
 
--  fixed #1234, case sensitive `GROUP BY <../select_syntax.rst>`__
+-  fixed #1234, case sensitive `GROUP BY <../select_syntax.html>`__
    attribute
 
 -  fixed #1216, typos,
-   `mem\_limit <../indexer_program_configuration_options/memlimit.rst>`__
+   `mem\_limit <../indexer_program_configuration_options/memlimit.html>`__
    default size and `RT
-   documentation <../4_real-time_indexes/README.rst>`__
+   documentation <../4_real-time_indexes/README.html>`__
 
 -  fixed #1148, RT documentation updated
 
 -  fixed #1140, mem\_limit default value
 
 -  fixed #1138, updated documentation on
-   `sql\_attr\_string <../data_source_configuration_options/sqlattr_string.rst>`__
+   `sql\_attr\_string <../data_source_configuration_options/sqlattr_string.html>`__
 
 -  fixed #1129, snippets vs empty files and empty filenames
 
 -  fixed #1123, configure compatibility fix
 
 -  fixed #1122, 64bit
-   `sql\_range\_step <../data_source_configuration_options/sqlrange_step.rst>`__
+   `sql\_range\_step <../data_source_configuration_options/sqlrange_step.html>`__
 
 -  fixed #1082, crashes and deadlocks on OS X with ``workers=threads``
    and field leak of read-write lock
@@ -102,7 +102,7 @@ Bug fixes
 -  fixed #1007, Russian stemming on big endian systems
 
 -  fixed #986, asserting in
-   `SetRankingMode <../full-text_search_query_settings/setrankingmode.rst>`__
+   `SetRankingMode <../full-text_search_query_settings/setrankingmode.html>`__
    (PHP API)
 
 -  fixed #975, incorrect ranking in some rare cases
@@ -112,7 +112,7 @@ Bug fixes
 -  fixed #934, API vs fullscan vs non-empty query
 
 -  fixed #899, error if using
-   `SetFilterRange <../result_set_filtering_settings/setfilterrange.rst>`__
+   `SetFilterRange <../result_set_filtering_settings/setfilterrange.html>`__
    as HAVING from SQL
 
 -  fixed #867, ``indexer`` accepts index names starting with digit or \_
@@ -131,11 +131,11 @@ Bug fixes
    libstemmer placed into ``libstemmer_c`` is preferred, but the system
    lib will be tried if no sources found
 
--  fixed `ORDER BY <../select_syntax.rst>`__ output at query log with
+-  fixed `ORDER BY <../select_syntax.html>`__ output at query log with
    SphinxQL mode
 
 -  fixed documentation entry about
-   `sql\_joined\_field <../data_source_configuration_options/sqljoined_field.rst>`__
+   `sql\_joined\_field <../data_source_configuration_options/sqljoined_field.html>`__
 
 -  fixed sample config file
 

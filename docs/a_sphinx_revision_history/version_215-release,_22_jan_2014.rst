@@ -10,13 +10,13 @@ Bug fixes
    morphology
 
 -  fixed #1799, crash in queries to distributed indexes with `GROUP
-   BY <../select_syntax.rst>`__ on multiple values
+   BY <../select_syntax.html>`__ on multiple values
 
 -  fixed #1718, ``expand_keywords`` option lost in disk chunks of RT
    indexes
 
 -  fixed documentation on
-   `rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.rst>`__
+   `rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.html>`__
 
 -  fixed network protocol issue which results in timeouts of
    ``libmysqlclient`` for big Sphinx responses

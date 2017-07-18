@@ -5,7 +5,7 @@ Lemmatizer cache size. Optional, default is 256K. Added in version
 2.1.1-beta.
 
 Our lemmatizer implementation (see `the section called
-“morphology” <../../index_configuration_options/morphology.rst>`__ for a
+“morphology” <../../index_configuration_options/morphology.html>`__ for a
 discussion of what lemmatizers are) uses a compressed dictionary format
 that enables a space/speed tradeoff. It can either perform lemmatization
 off the compressed data, using more CPU but less RAM, or it can

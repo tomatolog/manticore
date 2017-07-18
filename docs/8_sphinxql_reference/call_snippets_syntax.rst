@@ -14,7 +14,7 @@ single string, or the list of the strings enclosed in curly brackets.
 ``index`` is the name of the index from which to take the text
 processing settings. ``query`` is the full-text query to build snippets
 for. Additional options are documented in `the section called
-“BuildExcerpts” <../additional_functionality/buildexcerpts.rst>`__. Usage
+“BuildExcerpts” <../additional_functionality/buildexcerpts.html>`__. Usage
 example:
 
 ::

@@ -5,7 +5,7 @@ Agent mirror selection strategy, for load balancing. Optional, default
 is random. Added in 2.1.1-beta.
 
 The strategy used for mirror selection, or in other words, choosing a
-specific `agent mirror <../../index_configuration_options/agent.rst>`__
+specific `agent mirror <../../index_configuration_options/agent.html>`__
 in a distributed index. Essentially, this directive controls how exactly
 master does the load balancing between the configured mirror agent
 nodes. As of 2.1.1-beta, the following strategies are implemented:
@@ -46,9 +46,9 @@ basically work as follows:
 Currently (as of 2.1.1-beta), we begin with equal probabilities (or
 percentages, for brevity), and on every step, scale them by the inverse
 of the latencies observed during the last “karma” period, and then
-renormalize them. For example, if during the first 60 seconds after the
+renormalize them. For example, if during the f.html 60 seconds after the
 master startup 4 mirrors had latencies of 10, 5, 30, and 3 msec/query
-respectively, the first adjustment step would go as follow:
+respectively, the f.html adjustment step would go as follow:
 
 -  initial percentages: 0.25, 0.25, 0.25, 0.2%;
 

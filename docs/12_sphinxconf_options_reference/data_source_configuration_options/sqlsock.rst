@@ -7,7 +7,7 @@ source types (``mysql``, ``pgsql``, ``mssql``) only.
 
 On Linux, it would typically be ``/var/lib/mysql/mysql.sock``. On
 FreeBSD, it would typically be ``/tmp/mysql.sock``. Note that it depends
-on `sql\_host <../../data_source_configuration_options/sqlhost.rst>`__
+on `sql\_host <../../data_source_configuration_options/sqlhost.html>`__
 setting whether this value will actually be used.
 
 Example:

@@ -7,7 +7,7 @@ list of queries. Applies to SQL source types (``mysql``, ``pgsql``,
 
 Multi-value means that you can specify several pre-queries. They are
 executed before `the main fetch
-query <../../data_source_configuration_options/sqlquery.rst>`__, and they
+query <../../data_source_configuration_options/sqlquery.html>`__, and they
 will be executed exactly in order of appearance in the configuration
 file. Pre-query results are ignored.
 

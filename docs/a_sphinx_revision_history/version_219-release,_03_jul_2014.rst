@@ -7,7 +7,7 @@ Bug fixes
 -  fixed #1994, parsing of empty JSON arrays
 
 -  fixed #1987, handling of
-   `index\_exact\_words <../index_configuration_options/indexexact_words.rst>`__
+   `index\_exact\_words <../index_configuration_options/indexexact_words.html>`__
    with AOT morphology and infixes on
 
 -  fixed #1984, teaching HTML parser to handle hex numbers
@@ -16,5 +16,5 @@ Bug fixes
 
 -  fixed #1977, escaping of characters doens't work with exceptions
 
--  fixed #1968, parsing of `WEIGHT() <../select_syntax.rst>`__ function
+-  fixed #1968, parsing of `WEIGHT() <../select_syntax.html>`__ function
    (queries to distributed indexes affected)

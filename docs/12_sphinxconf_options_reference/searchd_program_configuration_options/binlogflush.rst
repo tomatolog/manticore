@@ -11,7 +11,7 @@ and synced to disk. Three modes are supported:
    worth of committed transactions can be lost both on daemon crash, or
    OS/hardware crash.
 
--  1, flush and sync every transaction. Worst performance, but every
+-  1, flush and sync every transaction. W.html performance, but every
    committed transaction data is guaranteed to be saved.
 
 -  2, flush every transaction, sync every second. Good performance, and

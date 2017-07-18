@@ -27,7 +27,7 @@ proper (least to most recent) order:
 
     $res = $cl->Query ( "test", "main delta" );
 
-First, we need to properly handle deletions. The result set should not
+F.html, we need to properly handle deletions. The result set should not
 contain documents 2, 3, or 5. Second, we also need to avoid phantom
 results. Unless we do something about it, document 11 *will* appear in
 search results! It will be found in ‘main’ (but not ‘delta’). And it

@@ -16,7 +16,7 @@ The possible values are:
 -  A worker threads pool is created on daemon startup. An internal
    network thread handles all the incoming network connections.
    Subsequent queries on any connection are then put into a queue, and
-   processed in order by the first avaialble worker thread from the
+   processed in order by the f.html avaialble worker thread from the
    pool. No threads are normally created or killed, neither for new
    connections, nor for new queries. Network thread uses poll() and
    epoll() on Linux and WSAPoll on Windows (Vista and later). This is

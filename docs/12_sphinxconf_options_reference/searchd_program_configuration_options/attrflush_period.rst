@@ -2,7 +2,7 @@ attr\_flush\_period
 ~~~~~~~~~~~~~~~~~~~
 
 When calling ``UpdateAttributes()`` to update document attributes in
-real-time, changes are first written to the in-memory copy of attributes
+real-time, changes are f.html written to the in-memory copy of attributes
 (``docinfo`` must be set to ``extern``). Then, once ``searchd`` shuts
 down normally (via ``SIGTERM`` being sent), the changes are written to
 disk. Introduced in version 0.9.9-rc1.

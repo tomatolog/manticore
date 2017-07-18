@@ -24,23 +24,23 @@ follows:
    C++;
 
 -  load that plugin into searchd using `CREATE
-   PLUGIN <../create_plugin_syntax.rst>`__;
+   PLUGIN <../create_plugin_syntax.html>`__;
 
 -  invoke it using the plugin specific calls (typically using this or
    that OPTION).
 
 -  to unload or reload a plugin use `DROP
-   PLUGIN <../drop_plugin_syntax.rst>`__ and `RELOAD
-   PLUGINS <../reload_plugins_syntax.rst>`__ respectively.
+   PLUGIN <../drop_plugin_syntax.html>`__ and `RELOAD
+   PLUGINS <../reload_plugins_syntax.html>`__ respectively.
 
-Note that while UDFs are first-class plugins they are nevertheless
+Note that while UDFs are f.html-class plugins they are nevertheless
 installed using a separate `CREATE
-FUNCTION <../create_function_syntax.rst>`__ statement. It lets you
+FUNCTION <../create_function_syntax.html>`__ statement. It lets you
 specify the return type neatly so there was especially little reason to
 ruin backwards compatibility *and* change the syntax.
 
 Dynamic plugins are supported in
-`workers=threads <../searchd_program_configuration_options/workers.rst>`__
+`workers=threads <../searchd_program_configuration_options/workers.html>`__
 mode only. Multiple plugins (and/or UDFs) may reside in a single library
 file. So you might choose to either put all your project-specific
 plugins in a single common uber-library; or you might choose to have a

@@ -4,19 +4,19 @@ Version 2.2.2-beta, 11 feb 2014
 New features
 ~~~~~~~~~~~~
 
--  added #1604, `CALL KEYWORDS <../call_keywords_syntax.rst>`__ can show
+-  added #1604, `CALL KEYWORDS <../call_keywords_syntax.html>`__ can show
    now multiple lemmas for a keyword
 
--  added `ALTER TABLE DROP COLUMN <../alter_syntax.rst>`__
+-  added `ALTER TABLE DROP COLUMN <../alter_syntax.html>`__
 
 -  added ALTER for JSON/string/MVA attributes
 
 -  added
-   `REMAP() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.rst#expr-func-remap>`__
+   `REMAP() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-remap>`__
    function which surpasses SetOverride() API
 
 -  added an argument to
-   `PACKEDFACTORS() <../expressions,_functions,_and_operators/miscellaneous_functions.rst>`__
+   `PACKEDFACTORS() <../expressions,_functions,_and_operators/miscellaneous_functions.html>`__
    to disable ATC calculation (syntax: PACKEDFACTORS({no\_atc=1}))
 
 -  added exact phrase query syntax
@@ -26,21 +26,21 @@ New features
    ``libunixobdc``
 
 -  added new plugin system:
-   `CREATE <../create_plugin_syntax.rst>`__/`DROP
-   PLUGIN <../drop_plugin_syntax.rst>`__, `SHOW
-   PLUGINS <../show_plugins_syntax.rst>`__,
-   `plugin\_dir <../common_section_configuration_options/plugindir.rst>`__
+   `CREATE <../create_plugin_syntax.html>`__/`DROP
+   PLUGIN <../drop_plugin_syntax.html>`__, `SHOW
+   PLUGINS <../show_plugins_syntax.html>`__,
+   `plugin\_dir <../common_section_configuration_options/plugindir.html>`__
    now in common,
-   `index/query\_token\_filter <../create_plugin_syntax.rst>`__ plugins
+   `index/query\_token\_filter <../create_plugin_syntax.html>`__ plugins
 
 -  added
-   `ondisk\_attrs <../index_configuration_options/ondiskattrs.rst>`__
+   `ondisk\_attrs <../index_configuration_options/ondiskattrs.html>`__
    support for RT indexes
 
 -  added position shift operator to phrase operator
 
 -  added possibility to add user-defined rankers (via
-   `plugins <../6_extending_sphinx/README.rst>`__)
+   `plugins <../6_extending_sphinx/README.html>`__)
 
 Optimizations, behavior changes, and removals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,18 +49,18 @@ Optimizations, behavior changes, and removals
    their respective substrings)
 
 -  changed default
-   `thread\_stack <../searchd_program_configuration_options/threadstack.rst>`__
+   `thread\_stack <../searchd_program_configuration_options/threadstack.html>`__
    value to 1M
 
 -  changed local directive in a distributed index which takes now a list
    (eg. ``local=shard1,shard2,shard3``)
 
 -  deprecated
-   `SetMatchMode() <../full-text_search_query_settings/setmatchmode.rst>`__
+   `SetMatchMode() <../full-text_search_query_settings/setmatchmode.html>`__
    API call
 
 -  deprecated
-   `SetOverride() <../general_query_settings/setoverride.rst>`__ API call
+   `SetOverride() <../general_query_settings/setoverride.html>`__ API call
 
 -  optimized infix searches for dict=keywords
 

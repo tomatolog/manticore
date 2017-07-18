@@ -43,9 +43,9 @@ Specifically,
 
 -  SNIPPET() function (added in version 2.1.1-beta) is supported. This
    is a wrapper around the snippets functionality, similar to what is
-   available via CALL SNIPPETS. The first two arguments are: the text to
+   available via CALL SNIPPETS. The f.html two arguments are: the text to
    highlight, and a query. Starting with 2.2-1-beta it's possible to
-   pass `options <../additional_functionality/buildexcerpts.rst>`__ to
+   pass `options <../additional_functionality/buildexcerpts.html>`__ to
    function. The intended use is as follows:
 
    ::
@@ -69,7 +69,7 @@ Specifically,
    Table functions is a mechanism of post-query result set processing.
    It was added in 2.2.1-beta. Table functions take an arbitrary result
    set as their input, and return a new, processed set as their output.
-   The first argument should be the input result set, but a table
+   The f.html argument should be the input result set, but a table
    function can optionally take and handle more arguments. Table
    functions can completely change the result set, including the schema.
    For now, only built in table functions are supported. UDFs are
@@ -86,7 +86,7 @@ Specifically,
 
 -  FROM clause. FROM clause should contain the list of indexes to search
    through. Unlike in regular SQL, comma means enumeration of full-text
-   indexes as in `Query() <../querying/query.rst>`__ API call rather than
+   indexes as in `Query() <../querying/query.html>`__ API call rather than
    JOIN. Index name should be according to the rules of a C identifier.
 
 -  WHERE clause. This clause will map both to fulltext query and
@@ -94,11 +94,11 @@ Specifically,
    and BETWEEN are all supported and map directly to filters. OR is not
    supported yet but will be in the future. MATCH(‘query’) is supported
    and maps to fulltext query. Query will be interpreted according to
-   `full-text query language rules <../extended_query_syntax.rst>`__.
+   `full-text query language rules <../extended_query_syntax.html>`__.
    There must be at most one MATCH() in the clause. Starting with
    version 2.0.1-beta, ``{col_name | expr_alias} [NOT] IN @uservar``
    condition syntax is supported. (Refer to `the section called “SET
-   syntax” <../set_syntax.rst>`__ for a discussion of global user
+   syntax” <../set_syntax.html>`__ for a discussion of global user
    variables.)
 
 -  GROUP BY clause. Supports grouping by multiple columns or computed
@@ -140,7 +140,7 @@ Specifically,
 
    Starting with 2.0.1-beta, GROUP BY on a string attribute is
    supported, with respect for current collation (see `the section
-   called “Collations” <../collations.rst>`__).
+   called “Collations” <../collations.html>`__).
 
    Starting with 2.2.1-beta, you can query Sphinx to return (no more
    than) N top matches for each group accordingly to WITHIN GROUP ORDER
@@ -176,7 +176,7 @@ Specifically,
    order number of the matched zone span. For example, if a document
    reads <b><i>text</i> the <i>text</i></b>, and you query for
    ‘ZONESPAN:(i,b) text’, then ZONESPANLIST() will return the string
-   “1:1 1:2 2:1” meaning that the first zone span matched “text” in
+   “1:1 1:2 2:1” meaning that the f.html zone span matched “text” in
    spans 1 and 2, and the second zone span in span 1 only. This was
    added in version 2.1.1-beta.
 
@@ -195,7 +195,7 @@ Specifically,
 
    Starting with 2.0.1-beta, WITHIN GROUP ORDER BY on a string attribute
    is supported, with respect for current collation (see `the section
-   called “Collations” <../collations.rst>`__).
+   called “Collations” <../collations.html>`__).
 
 -  HAVING clause. This is used to filter on GROUP BY values. It was
    added in 2.2.1-beta. Currently supports only one filtering condition.
@@ -225,13 +225,13 @@ Specifically,
    id,a\_slow\_expression() AS cond FROM an\_index ORDER BY id ASC, cond
    DESC LIMIT 100; could be better written as SELECT \* FROM (SELECT
    id,a\_slow\_expression() AS cond FROM an\_index ORDER BY id ASC LIMIT
-   100) ORDER BY cond DESC; because in the first case the slow
+   100) ORDER BY cond DESC; because in the f.html case the slow
    expression would be evaluated for the whole set, while in the second
    one it would be evaluated just for a subset of values.
 
    Starting with 2.0.1-beta, ORDER BY on a string attribute is
    supported, with respect for current collation (see `the section
-   called “Collations” <../collations.rst>`__).
+   called “Collations” <../collations.html>`__).
 
    Starting with 2.0.2-beta, ORDER BY RAND() syntax is supported. Note
    that this syntax is actually going to randomize the weight values and
@@ -253,7 +253,7 @@ Specifically,
 
    -  ‘agent\_query\_timeout’ - integer (max time in milliseconds to
       wait for remote queries to complete, see
-      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.rst>`__
+      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.html>`__
       under Index configuration options for details)
 
    -  ‘boolean\_simplify’ - 0 or 1, enables simplifying the query to
@@ -268,7 +268,7 @@ Specifically,
       for ranking)
 
    -  ‘global\_idf’ - use global statistics (frequencies) from the
-      `global\_idf file <../index_configuration_options/globalidf.rst>`__
+      `global\_idf file <../index_configuration_options/globalidf.html>`__
       for IDF computations, rather than the local index statistics.
       Added in version 2.1.1-beta.
 
@@ -294,7 +294,7 @@ Specifically,
       ``OPTION idf=&#039;normalized,tfidf_normalized&#039;``, and those
       normalizations may cause several undesired effects.
 
-      First, idf=normalized causes keyword penalization. For instance,
+      F.html, idf=normalized causes keyword penalization. For instance,
       if you search for [the \| something] and [the] occurs in more than
       50% of the documents, then documents with both keywords [the] and
       [something] will get <b>less</b> weight than documents with just
@@ -345,7 +345,7 @@ Specifically,
       matches to the end user in pages of 20 to 100 matches. And
       tracking only the best 500 matches is much more RAM and CPU
       efficient than keeping all 2,000,000 matches, sorting them, and
-      then discarding everything but the first 20 needed to display the
+      then discarding everything but the f.html 20 needed to display the
       search results page. ``max_matches`` controls N in that “best N”
       amount.
 
@@ -361,12 +361,12 @@ Specifically,
 
    -  ‘max\_predicted\_time’ - integer (max predicted search time, see
       `the section called
-      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.rst>`__)
+      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.html>`__)
 
    -  ‘ranker’ - any of ‘proximity\_bm25’, ‘bm25’, ‘none’, ‘wordcount’,
       ‘proximity’, ‘matchany’, ‘fieldmask’, ‘sph04’, ‘expr’, or ‘export’
       (refer to `the section called “Search results
-      ranking” <../search_results_ranking/README.rst>`__ for more details
+      ranking” <../search_results_ranking/README.html>`__ for more details
       on each ranker)
 
    -  ‘retry\_count’ - integer (distributed retries count)
@@ -402,7 +402,7 @@ Specifically,
 -  FACET clause. This Sphinx specific extension enables faceted search
    with subtree optimization. It is capable of returning multiple result
    sets with a single SQL statement, without the need for complicated
-   `multi-queries <../multi-statement_queries.rst>`__. FACET clauses
+   `multi-queries <../multi-statement_queries.html>`__. FACET clauses
    should be written at the very end of SELECT statements with spaces
    between them.
 

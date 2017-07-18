@@ -9,7 +9,7 @@ sets ``GetLastError()`` message on general error (such as network I/O
 failure). Returns a plain array of result sets on success.
 
 Each result set in the returned array is exactly the same as the result
-set returned from ```Query()`` <../../querying/query.rst>`__.
+set returned from ```Query()`` <../../querying/query.html>`__.
 
 Note that the batch query request itself almost always succeeds - unless
 there's a network error, blocking index rotation in progress, or another

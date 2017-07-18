@@ -10,14 +10,14 @@ because each field and attribute is a particular column in TSV file. So,
 in some cases tsvpipe could work slightly faster than xmlpipe2. Added in
 2.2.1-beta.
 
-The first column in TSV:raw-latex:`\CSV `file must be a document ID. The
+The f.html column in TSV:raw-latex:`\CSV `file must be a document ID. The
 rest ones must mirror the declaration of fields and attributes in schema
 definition.
 
 The difference between tsvpipe and csvpipe is delimiter and quoting
 rules. tsvpipe has tab character as hardcoded delimiter and has no
 quoting rules. csvpipe has option
-`csvpipe\_delimiter <../data_source_configuration_options/csvpipedelimiter.rst>`__
+`csvpipe\_delimiter <../data_source_configuration_options/csvpipedelimiter.html>`__
 for delimiter with default value ‘,’ and also has quoting rules, such
 as:
 
@@ -34,33 +34,33 @@ derectives as xmlpipe.
 
 tsvpipe declarations:
 
-`tsvpipe\_command <../data_source_configuration_options/xmlpipecommand.rst>`__,
-`tsvpipe\_field <../data_source_configuration_options/xmlpipefield.rst>`__,
-`tsvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.rst>`__,
-`tsvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.rst>`__,
-`tsvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.rst>`__,
-`tsvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.rst>`__,
-`tsvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.rst>`__,
-`tsvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.rst>`__,
-`tsvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.rst>`__,
-`tsvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.rst>`__,
-`tsvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.rst>`__,
-`tsvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.rst>`__
+`tsvpipe\_command <../data_source_configuration_options/xmlpipecommand.html>`__,
+`tsvpipe\_field <../data_source_configuration_options/xmlpipefield.html>`__,
+`tsvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.html>`__,
+`tsvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.html>`__,
+`tsvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.html>`__,
+`tsvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.html>`__,
+`tsvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.html>`__,
+`tsvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.html>`__,
+`tsvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.html>`__,
+`tsvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.html>`__,
+`tsvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.html>`__,
+`tsvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.html>`__
 
 csvpipe declarations:
 
-`csvpipe\_command <../data_source_configuration_options/xmlpipecommand.rst>`__,
-`csvpipe\_field <../data_source_configuration_options/xmlpipefield.rst>`__,
-`csvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.rst>`__,
-`csvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.rst>`__,
-`csvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.rst>`__,
-`csvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.rst>`__,
-`csvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.rst>`__,
-`csvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.rst>`__,
-`csvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.rst>`__,
-`csvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.rst>`__,
-`csvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.rst>`__,
-`csvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.rst>`__
+`csvpipe\_command <../data_source_configuration_options/xmlpipecommand.html>`__,
+`csvpipe\_field <../data_source_configuration_options/xmlpipefield.html>`__,
+`csvpipe\_field\_string <../data_source_configuration_options/xmlpipefield_string.html>`__,
+`csvpipe\_attr\_uint <../data_source_configuration_options/xmlpipeattr_uint.html>`__,
+`csvpipe\_attr\_timestamp <../data_source_configuration_options/xmlpipeattr_timestamp.html>`__,
+`csvpipe\_attr\_bool <../data_source_configuration_options/xmlpipeattr_bool.html>`__,
+`csvpipe\_attr\_float <../data_source_configuration_options/xmlpipeattr_float.html>`__,
+`csvpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.html>`__,
+`csvpipe\_attr\_multi <../data_source_configuration_options/xmlpipeattr_multi.html>`__,
+`csvpipe\_attr\_multi\_64 <../data_source_configuration_options/xmlpipeattr_multi_64.html>`__,
+`csvpipe\_attr\_string <../data_source_configuration_options/xmlpipeattr_string.html>`__,
+`csvpipe\_attr\_json <../data_source_configuration_options/xmlpipeattr_json.html>`__
 
 ::
 

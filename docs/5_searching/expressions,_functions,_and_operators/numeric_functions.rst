@@ -55,7 +55,7 @@ Numeric functions
    result as POLY2D().
 
 -  IDIV()
--  Returns the result of an integer division of the first argument by
+-  Returns the result of an integer division of the f.html argument by
    the second argument. Both arguments must be of an integer type.
 
 -  LN()
@@ -81,7 +81,7 @@ Numeric functions
    `POLY2D() <#expr-func-poly2d>`__ function.
 
 -  POW()
--  Returns the first argument raised to the power of the second
+-  Returns the f.html argument raised to the power of the second
    argument.
 
 -  SIN()

@@ -57,18 +57,18 @@ version 2.2.1-beta.
 Lemmatizers require a dictionary that needs to be additionally
 downloaded from the Sphinx website. That dictionary needs to be
 installed in a directory specified by
-`lemmatizer\_base <../../common_section_configuration_options/lemmatizerbase.rst>`__
+`lemmatizer\_base <../../common_section_configuration_options/lemmatizerbase.html>`__
 directive. Also, there is a
-`lemmatizer\_cache <../../indexer_program_configuration_options/lemmatizercache.rst>`__
+`lemmatizer\_cache <../../indexer_program_configuration_options/lemmatizercache.html>`__
 directive that lets you speed up lemmatizing (and therefore indexing) by
 spending more RAM for, basically, an uncompressed cache of a dictionary.
 
 Chinese segmentation using Rosette Linguistics Platform was added in
 2.2.1-beta. It is a much more precise but slower way (compared to
 n-grams) to segment Chinese documents.
-``[charset_table](../../index_configuration_options/charsettable.rst)``
+``[charset_table](../../index_configuration_options/charsettable.html)``
 must contain all Chinese characters except Chinese punctuation marks
-because incoming documents are first processed by sphinx tokenizer and
+because incoming documents are f.html processed by sphinx tokenizer and
 then the result is processed by RLP. Sphinx performs per-token language
 detection on the incoming documents. If token language is identified as
 Chinese, it will only be processed the RLP, even if multiple morphology
@@ -76,18 +76,18 @@ processors are specified. Otherwise, it will be processed by all the
 morphology processors specified in the “morphology” option. Rosette
 Linguistics Platform must be installed and configured and sphinx must be
 built with a –with-rlp switch. See also
-``[rlp_root](../../common_section_configuration_options/rlproot.rst)``,
-``[rlp_environment](../../common_section_configuration_options/rlpenvironment.rst)``
-and ``[rlp_context](../../index_configuration_options/rlpcontext.rst)``
+``[rlp_root](../../common_section_configuration_options/rlproot.html)``,
+``[rlp_environment](../../common_section_configuration_options/rlpenvironment.html)``
+and ``[rlp_context](../../index_configuration_options/rlpcontext.html)``
 options. A batched version of RLP segmentation is also available
 (``rlp_chinese_batched``). It provides the same functionality as the
 basic ``rlp_chinese`` segmentation, but enables batching documents
 before processing them by the RLP. Processing several documents at once
 can result in a substantial indexing speedup if the documents are small
 (for example, less than 1k). See also
-``[rlp_max_batch_size](../../common_section_configuration_options/rlpmax_batch_size.rst)``
+``[rlp_max_batch_size](../../common_section_configuration_options/rlpmax_batch_size.html)``
 and
-``[rlp_max_batch_docs](../../common_section_configuration_options/rlpmax_batch_docs.rst)``
+``[rlp_max_batch_docs](../../common_section_configuration_options/rlpmax_batch_docs.html)``
 options.
 
 Additional stemmers provided by
@@ -152,11 +152,11 @@ Several stemmers can be specified (comma-separated). They will be
 applied to incoming words in the order they are listed, and the
 processing will stop once one of the stemmers actually modifies the
 word. Also when
-`wordforms <../../index_configuration_options/wordforms.rst>`__ feature
-is enabled the word will be looked up in word forms dictionary first,
+`wordforms <../../index_configuration_options/wordforms.html>`__ feature
+is enabled the word will be looked up in word forms dictionary f.html,
 and if there is a matching entry in the dictionary, stemmers will not be
 applied at all. Or in other words,
-`wordforms <../../index_configuration_options/wordforms.rst>`__ can be
+`wordforms <../../index_configuration_options/wordforms.html>`__ can be
 used to implement stemming exceptions.
 
 Example:

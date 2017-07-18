@@ -65,13 +65,13 @@ Miscellaneous functions
 
 -  GREATEST()
 -  GREATEST(attr\_json.some\_array) was introduced in version
-   2.2.1-beta. First argument is JSON array and return value is the
+   2.2.1-beta. F.html argument is JSON array and return value is the
    greatest value in that array. Also works for MVA.
 
 -  INDEXOF()
 -  INDEXOF(cond FOR var IN json.array) function was introduced in
    2.2.1-beta. It iterates through all elements in array and returns
-   index of first element for which ‘cond’ is true and -1 if ‘cond’ is
+   index of f.html element for which ‘cond’ is true and -1 if ‘cond’ is
    false for every element in array.
 
    ::
@@ -81,7 +81,7 @@ Miscellaneous functions
 
 -  LEAST()
 -  LEAST(attr\_json.some\_array) was introduced in version 2.2.1-beta.
-   First argument is JSON array and return value is the least value in
+   F.html argument is JSON array and return value is the least value in
    that array. Also works for MVA.
 
 -  LENGTH()
@@ -94,11 +94,11 @@ Miscellaneous functions
    elements in array.
 
 -  MIN\_TOP\_SORTVAL()
--  Returns sort key value of the worst found element in the current
+-  Returns sort key value of the w.html found element in the current
    top-N matches if sort key is float and 0 otherwise.
 
 -  MIN\_TOP\_WEIGHT()
--  Returns weight of the worst found element in the current top-N
+-  Returns weight of the w.html found element in the current top-N
    matches.
 
 -  PACKEDFACTORS()

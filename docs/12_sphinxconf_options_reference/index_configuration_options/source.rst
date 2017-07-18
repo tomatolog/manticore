@@ -9,7 +9,7 @@ sources, without any restrictions on the source types: ie. you can pull
 part of the data from MySQL server, part from PostgreSQL, part from the
 filesystem using xmlpipe2 wrapper.
 
-However, there are some restrictions on the source data. First, document
+However, there are some restrictions on the source data. F.html, document
 IDs must be globally unique across all sources. If that condition is not
 met, you might get unexpected search results. Second, source schemas
 must be the same in order to be stored within the same index.

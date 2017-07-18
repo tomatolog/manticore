@@ -3,7 +3,7 @@ Multi-statement queries
 
 Starting version 2.0.1-beta, SphinxQL supports multi-statement queries,
 or batches. Possible inter-statement optimizations described in `the
-section called “Multi-queries” <../multi-queries.rst>`__ do apply to
+section called “Multi-queries” <../multi-queries.html>`__ do apply to
 SphinxQL just as well. The batched queries should be separated by a
 semicolon. Your MySQL client library needs to support MySQL multi-query
 mechanism and multiple result set. For instance, mysqli interface in PHP

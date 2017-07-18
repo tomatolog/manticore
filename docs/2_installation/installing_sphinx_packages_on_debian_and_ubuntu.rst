@@ -12,7 +12,7 @@ Deb packages:
    **``$ sudo apt-get install mysql-client unixodbc libpq5``**
 2. Now you can install Sphinx:
 
-   **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_.rst64.deb``**
+   **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_.html64.deb``**
 
 PPA repository (Ubuntu only).
 
@@ -20,7 +20,7 @@ Installing Sphinx is much easier from Sphinxsearch PPA repository,
 because you will get all dependencies and can also update Sphinx to the
 latest version with the same command.
 
-1. First, add Sphinxsearch repository and update the list of packages:
+1. F.html, add Sphinxsearch repository and update the list of packages:
 
    **``$ sudo add-apt-repository ppa:builds/sphinxsearch-rel23``**
 

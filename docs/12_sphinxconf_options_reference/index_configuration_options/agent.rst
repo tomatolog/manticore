@@ -2,7 +2,7 @@ agent
 ~~~~~
 
 Remote agent declaration in the `distributed
-index <../../distributed_searching.rst>`__. Multi-value, optional,
+index <../../distributed_searching.html>`__. Multi-value, optional,
 default is empty.
 
 ``agent`` directive declares remote agents that are searched every time
@@ -63,19 +63,19 @@ control over that.
 Starting with 2.2.9-release, the value can additionally enumerate per
 agent options such as:
 
--  `ha\_strategy <../../index_configuration_options/hastrategy.rst>`__ -
+-  `ha\_strategy <../../index_configuration_options/hastrategy.html>`__ -
    random, roundrobin, nodeads, noerrors (replaces index
-   `ha\_strategy <../../index_configuration_options/hastrategy.rst>`__
+   `ha\_strategy <../../index_configuration_options/hastrategy.html>`__
    for particular agent)
 
--  `conn <../../index_configuration_options/agentpersistent.rst>`__ -
+-  `conn <../../index_configuration_options/agentpersistent.html>`__ -
    pconn, persistent (same as
-   `agent\_persistent <../../index_configuration_options/agentpersistent.rst>`__
+   `agent\_persistent <../../index_configuration_options/agentpersistent.html>`__
    agent declaration)
 
--  `blackhole <../../index_configuration_options/agentblackhole.rst>`__ -
+-  `blackhole <../../index_configuration_options/agentblackhole.html>`__ -
    0,1 (same as
-   `agent\_blackhole <../../index_configuration_options/agentblackhole.rst>`__
+   `agent\_blackhole <../../index_configuration_options/agentblackhole.html>`__
    agent declaration)
 
 ::
@@ -143,24 +143,24 @@ querying box1:9312, and box2chunk when querying box2:9312.
 
 By default, all queries are routed to the best of the mirrors. The best
 one is picked based on the recent statistics, as controlled by the
-`ha\_period\_karma <../../searchd_program_configuration_options/haperiod_karma.rst>`__
+`ha\_period\_karma <../../searchd_program_configuration_options/haperiod_karma.html>`__
 config directive. Master stores a number of metrics (total query count,
 error count, response time, etc) recently observed for every agent. It
 groups those by time spans, and karma is that time span length. The best
 agent mirror is then determined dynamically based on the last 2 such
 time spans. Specific algorithm that will be used to pick a mirror can be
 configured
-`ha\_strategy <../../index_configuration_options/hastrategy.rst>`__
+`ha\_strategy <../../index_configuration_options/hastrategy.html>`__
 directive.
 
 The karma period is in seconds and defaults to 60 seconds. Master stores
 upto 15 karma spans with per-agent statistics for instrumentation
-purposes (see `SHOW AGENT STATUS <../../show_agent_status.rst>`__
+purposes (see `SHOW AGENT STATUS <../../show_agent_status.html>`__
 statement). However, only the last 2 spans out of those are ever used
 for HA/LB logic.
 
 When there are no queries, master sends a regular ping command every
-`ha\_ping\_interval <../../searchd_program_configuration_options/haping_interval.rst>`__
+`ha\_ping\_interval <../../searchd_program_configuration_options/haping_interval.html>`__
 milliseconds in order to have some statistics and at least check,
 whether the remote host is still alive. ha\_ping\_interval defaults to
 1000 msec. Setting it to 0 disables pings and statistics will only be

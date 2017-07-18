@@ -5,21 +5,21 @@ Multi-queries, or query batches, let you send multiple queries to Sphinx
 in one go (more formally, one network request).
 
 Two API methods that implement multi-query mechanism are
-`AddQuery() <../querying/addquery.rst>`__ and
-`RunQueries() <../querying/runqueries.rst>`__. You can also run multiple
+`AddQuery() <../querying/addquery.html>`__ and
+`RunQueries() <../querying/runqueries.html>`__. You can also run multiple
 queries with SphinxQL, see `the section called “Multi-statement
-queries” <../multi-statement_queries.rst>`__. (In fact, regular
-`Query() <../querying/addquery.rst>`__ call is internally implemented as
+queries” <../multi-statement_queries.html>`__. (In fact, regular
+`Query() <../querying/addquery.html>`__ call is internally implemented as
 a single AddQuery() call immediately followed by RunQueries() call.)
 AddQuery() captures the current state of all the query settings set by
 previous API calls, and memorizes the query. RunQueries() actually sends
 all the memorized queries, and returns multiple result sets. There are
 no restrictions on the queries at all, except just a sanity check on a
 number of queries in a single batch (see `the section called
-“max\_batch\_queries” <../searchd_program_configuration_options/maxbatch_queries.rst>`__).
+“max\_batch\_queries” <../searchd_program_configuration_options/maxbatch_queries.html>`__).
 
 Why use multi-queries? Generally, it all boils down to performance.
-First, by sending requests to ``searchd`` in a batch instead of one by
+F.html, by sending requests to ``searchd`` in a batch instead of one by
 one, you always save a bit by doing less network roundtrips. Second, and
 somewhat more important, sending queries in a batch enables ``searchd``
 to perform certain internal optimizations. As new types of optimizations
@@ -78,9 +78,9 @@ There's a common two-word part (“barack obama”) that can be computed
 only once, then cached and shared across the queries. And common subtree
 optimization does just that. Per-query cache size is strictly controlled
 by
-`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.rst>`__
+`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.html>`__
 and
-`subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.rst>`__
+`subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.html>`__
 directives (so that caching *all* sixteen gazillions of documents that
 match “i am” does not exhaust the RAM and instantly kill your server).
 

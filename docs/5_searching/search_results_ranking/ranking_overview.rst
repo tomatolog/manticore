@@ -28,8 +28,8 @@ SPH\_MATCH\_ANY, SPH\_MATCH\_PHRASE, and SPH\_MATCH\_BOOLEAN) you can
 not choose the ranker. You can only do that in the SPH\_MATCH\_EXTENDED
 mode. (Which is the only mode in SphinxQL and the suggested mode in
 SphinxAPI anyway.) To choose a non-default ranker you can either use
-`SetRankingMode() <../../full-text_search_query_settings/setrankingmode.rst>`__
-with SphinxAPI, or `OPTION ranker <../../select_syntax.rst>`__ clause in
+`SetRankingMode() <../../full-text_search_query_settings/setrankingmode.html>`__
+with SphinxAPI, or `OPTION ranker <../../select_syntax.html>`__ clause in
 ``SELECT`` statement when using SphinxQL.
 
 As a sidenote, legacy matching modes are internally implemented via the

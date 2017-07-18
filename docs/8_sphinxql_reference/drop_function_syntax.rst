@@ -8,7 +8,7 @@ DROP FUNCTION syntax
 
 DROP FUNCTION statement, introduced in version 2.0.1-beta, deinstalls a
 `user-defined function
-(UDF) <../sphinx_udfs_user_defined_functions.rst>`__ with the given name.
+(UDF) <../sphinx_udfs_user_defined_functions.html>`__ with the given name.
 On success, the function is no longer available for use in subsequent
 queries. Pending concurrent queries will not be affected and the library
 unload, if necessary, will be postponed until those queries complete.

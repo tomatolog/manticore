@@ -26,7 +26,7 @@ normally indexed.
 
 Attributes can be used for filtering, though, to restrict returned rows,
 as well as sorting or `result
-grouping <../grouping_clustering_search_results.rst>`__; it is entirely
+grouping <../grouping_clustering_search_results.html>`__; it is entirely
 possible to sort results purely based on attributes, and ignore the
 search relevance tools. Additionally, attributes are returned from the
 search daemon, while the indexed text is not.
@@ -85,13 +85,13 @@ Currently supported attribute types are:
 
 -  floating point values (32-bit, IEEE 754 single precision);
 
--  `strings <../data_source_configuration_options/sqlattr_string.rst>`__
+-  `strings <../data_source_configuration_options/sqlattr_string.html>`__
    (since 1.10-beta);
 
--  `JSON <../data_source_configuration_options/sqlattr_json.rst>`__
+-  `JSON <../data_source_configuration_options/sqlattr_json.html>`__
    (since 2.1.1-beta);
 
--  `MVA <../mva_multi-valued_attributes.rst>`__, multi-value attributes
+-  `MVA <../mva_multi-valued_attributes.html>`__, multi-value attributes
    (variable-length lists of 32-bit unsigned integers).
 
 The complete set of per-document attribute values is sometimes referred

@@ -34,8 +34,8 @@ to that per-field sum. Currently implemented field-level factors are:
 
 -  ``user_weight`` (integer), the user specified per-field weight (refer
    to
-   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.rst>`__
-   in SphinxAPI and `OPTION field\_weights <../../select_syntax.rst>`__
+   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.html>`__
+   in SphinxAPI and `OPTION field\_weights <../../select_syntax.html>`__
    in SphinxQL respectively). The weights default to 1 if not specified
    explicitly.
 
@@ -59,10 +59,10 @@ to that per-field sum. Currently implemented field-level factors are:
    IDF over all matched occurrences. That's by construction equivalent
    to summing TF*\ IDF over all matched keywords.
 
--  ``min_hit_pos`` (integer), the position of the first matched keyword
+-  ``min_hit_pos`` (integer), the position of the f.html matched keyword
    occurrence, counted in words. Indexing begins from position 1.
 
--  ``min_best_span_pos`` (integer), the position of the first maximum
+-  ``min_best_span_pos`` (integer), the position of the f.html maximum
    LCS occurrences span. For example, assume that our query was ‘hello
    world program’ and ‘hello world’ subphrase was matched twice in the
    field, in positions 13 and 21. Assume that ‘hello’ and ‘world’
@@ -106,7 +106,7 @@ to that per-field sum. Currently implemented field-level factors are:
    formula, but here are a few ideas you can start with: (a) any
    min\_gaps based boosts could be simply ignored when word\_count<2;
    (b) non-trivial min\_gaps values (i.e. when word\_count>=2) could be
-   clamped with a certain “worst case” constant while trivial values
+   clamped with a certain “w.html case” constant while trivial values
    (i.e. when min\_gaps=0 and word\_count<2) could be replaced by that
    constant; (c) a transfer function like 1/(1+min\_gaps) could be
    applied (so that better, smaller min\_gaps values would maximize it

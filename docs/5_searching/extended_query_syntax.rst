@@ -188,7 +188,7 @@ This can be helpful when searching through heterogeneous indexes with
 different schemas.
 
 Field position limit, introduced in version 0.9.9-rc1, additionally
-restricts the searching to first N position within given field (or
+restricts the searching to f.html N position within given field (or
 fields). For example, “@body [50] hello” will <b>not</b> match the
 documents where the keyword ‘hello’ occurs at position 51 and below in
 the body.
@@ -228,9 +228,9 @@ the document only if the keyword occurred in exactly the specified form.
 The default behavior is to match the document if the stemmed keyword
 matches. For instance, “runs” query will match both the document that
 contains “runs” *and* the document that contains “running”, because both
-forms stem to just “run” - while “=runs” query will only match the first
+forms stem to just “run” - while “=runs” query will only match the f.html
 document. Exact form operator requires
-`index\_exact\_words <../index_configuration_options/indexexact_words.rst>`__
+`index\_exact\_words <../index_configuration_options/indexexact_words.html>`__
 option to be enabled. This is a modifier that affects the keyword and
 thus can be used within operators such as phrase, proximity, and quorum
 operators. Starting with 2.2.2-beta, it is possible to apply an exact
@@ -308,7 +308,7 @@ few examples:
 
 The order of the arguments within the sentence or paragraph does not
 matter. These operators only work on indexes built with
-`index\_sp <../index_configuration_options/indexsp.rst>`__ (sentence and
+`index\_sp <../index_configuration_options/indexsp.html>`__ (sentence and
 paragraph indexing feature) enabled, and revert to a mere AND otherwise.
 Refer to the ``index_sp`` directive documentation for the notes on
 what's considered a sentence and a paragraph.
@@ -330,7 +330,7 @@ match in multiple spans. For instance, ``(ZONE:th hello world)`` query
 ZONE operator affects the query until the next field or ZONE limit
 operator, or the closing parenthesis. It only works on the indexes built
 with zones support (see `the section called
-“index\_zones” <../index_configuration_options/indexzones.rst>`__) and
+“index\_zones” <../index_configuration_options/indexzones.html>`__) and
 will be ignored otherwise.
 
 <b>ZONESPAN limit operator</b>, added in 2.1.1-beta, is similar to the

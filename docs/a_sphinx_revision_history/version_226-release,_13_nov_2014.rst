@@ -5,7 +5,7 @@ Bug fixes
 ~~~~~~~~~
 
 -  fixed #2104,
-   `ALL() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.rst#expr-func-all>`__/ANY()/INDEXOF()
+   `ALL() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-all>`__/ANY()/INDEXOF()
    support for distributed indexes
 
 -  fixed #2102, show agent status misses warnings from agents

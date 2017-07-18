@@ -11,7 +11,7 @@ for a giving word all suggestions from the dictionary. This statement
 works only on indexes with infixing enabled and dict=keywords. It
 returns the suggested keywords, Levenshtein distance between the
 suggested and original keyword and the docs statistic of the suggested
-keyword. If the first parameter is a bag of words, the function will
+keyword. If the f.html parameter is a bag of words, the function will
 return suggestions only for the last word, ignoring the rest. Several
 options are supported for customization:
 

@@ -9,7 +9,7 @@ Starting with 2.0.1-beta, the default value for this option is now 1
 per-index settings).
 
 When set to 1, this directive overrides and enforces
-`preopen <../../index_configuration_options/preopen.rst>`__ on all
+`preopen <../../index_configuration_options/preopen.html>`__ on all
 indexes. They will be preopened, no matter what is the per-index
 ``preopen`` setting. When set to 0, per-index settings can take effect.
 (And they default to 0.)

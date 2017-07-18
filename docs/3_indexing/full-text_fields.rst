@@ -24,6 +24,6 @@ because the specific whitespace, capitalization, punctuation, etc will
 all be lost during indexing. It is theoretically possible to partially
 reconstruct a given document from the Sphinx full-text index, but that
 would be a slow process (especially if the `CRC
-dictionary <../index_configuration_options/dict.rst>`__ is used, which
+dictionary <../index_configuration_options/dict.html>`__ is used, which
 does not even store the original keywords and works with their hashes
 instead).

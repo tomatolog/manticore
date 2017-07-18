@@ -6,7 +6,7 @@ dict=crc only. Optional, default is empty (index all fields in infix
 mode).
 
 Similar to
-`prefix\_fields <../../index_configuration_options/prefixfields.rst>`__,
+`prefix\_fields <../../index_configuration_options/prefixfields.html>`__,
 but lets you limit infix-indexing to given fields.
 
 Example:

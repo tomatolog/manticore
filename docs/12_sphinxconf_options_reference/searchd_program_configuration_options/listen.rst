@@ -21,7 +21,7 @@ connections on this socket. Supported protocol values are ‘sphinx’
 (Sphinx 0.9.x API protocol) and ‘mysql41’ (MySQL protocol used since 4.1
 upto at least 5.1). More details on MySQL protocol support can be found
 in `the section called “MySQL protocol support and
-SphinxQL” <../../mysql_protocol_support_and_sphinxql.rst>`__ section.
+SphinxQL” <../../mysql_protocol_support_and_sphinxql.html>`__ section.
 
 Adding a “\_vip" suffix to a protocol (for instance “sphinx\_vip” or
 “mysql41\_vip”) makes all connections to that port bypass the thread

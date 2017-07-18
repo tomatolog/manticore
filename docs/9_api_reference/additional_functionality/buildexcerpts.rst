@@ -22,7 +22,7 @@ highlighting parameters:
 -  “before\_match”:
 -  A string to insert before a keyword match. Starting with version
    1.10-beta, a %PASSAGE\_ID% macro can be used in this string. The
-   first match of the macro is replaced with an incrementing passage
+   f.html match of the macro is replaced with an incrementing passage
    number within a current snippet. Numbering starts at 1 by default but
    can be overridden with “start\_passage\_id” option. In a
    multi-document call, %PASSAGE\_ID% would restart at every given
@@ -52,7 +52,7 @@ highlighting parameters:
 -  “use\_boundaries”:
 -  Whether to additionally break passages by phrase boundary characters,
    as configured in index settings with
-   `phrase\_boundary <../../index_configuration_options/phraseboundary.rst>`__
+   `phrase\_boundary <../../index_configuration_options/phraseboundary.html>`__
    directive. Boolean, default is false.
 
 -  “weight\_order”:
@@ -62,7 +62,7 @@ highlighting parameters:
 
 -  “query\_mode”:
 -  Added in version 1.10-beta. Whether to handle $words as a query in
-   `extended syntax <../../extended_query_syntax.rst>`__, or as a bag of
+   `extended syntax <../../extended_query_syntax.html>`__, or as a bag of
    words (default behavior). For instance, in query mode (“one two” \|
    “three four”) will only highlight and include those occurrences “one
    two” or “three four” when the two words from each pair are adjacent
@@ -97,17 +97,17 @@ highlighting parameters:
    extract snippets from (default behavior), or to treat it as file
    names, and load data from specified files on the server side.
    Starting with version 2.0.1-beta, up to
-   `dist\_threads <../../searchd_program_configuration_options/distthreads.rst>`__
+   `dist\_threads <../../searchd_program_configuration_options/distthreads.html>`__
    worker threads per request will be created to parallelize the work
    when this flag is enabled. Boolean, default is false. Starting with
    version 2.0.2-beta, building of the snippets could be parallelized
    between remote agents. Just set the
-   `‘dist\_threads’ <../../searchd_program_configuration_options/distthreads.rst>`__
+   `‘dist\_threads’ <../../searchd_program_configuration_options/distthreads.html>`__
    param in the config to the value greater than 1, and then invoke the
    snippets generation over the distributed index, which contain only
-   one(!) `local <../../index_configuration_options/local.rst>`__ agent
+   one(!) `local <../../index_configuration_options/local.html>`__ agent
    and several remotes. Starting with version 2.1.1-beta, the
-   `snippets\_file\_prefix <../../searchd_program_configuration_options/snippetsfile_prefix.rst>`__
+   `snippets\_file\_prefix <../../searchd_program_configuration_options/snippetsfile_prefix.html>`__
    option is also in the game and the final filename is calculated by
    concatenation of the prefix with given name. Otherwords, when
    snippets\_file\_prefix is ‘/var/data’ and filename is ‘text.txt’ the

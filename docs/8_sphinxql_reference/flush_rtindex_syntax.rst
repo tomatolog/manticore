@@ -15,7 +15,7 @@ that all the transactions in the log since the last successful RAM chunk
 write would need to be replayed. Those writes normally happen either on
 a clean shutdown, or periodically with a (big enough!) interval between
 writes specified in
-`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.rst>`__
+`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.html>`__
 directive. So such a backup made at an arbitrary point in time just
 might end up with way too much binary log data to replay.
 

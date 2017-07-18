@@ -6,7 +6,7 @@ Bug fixes
 
 -  fixed #1778, indexes with more than 255 attributes
 
--  fixed #1777, `ORDER BY WEIGHT() <../select_syntax.rst>`__
+-  fixed #1777, `ORDER BY WEIGHT() <../select_syntax.html>`__
 
 -  fixed #1796, missing results in queries with quorum operator of
    indexes with some lemmatizer

@@ -6,7 +6,7 @@ Lemmatizer dictionaries base path. Optional, default is /usr/local/share
 2.1.1-beta.
 
 Our lemmatizer implementation (see `the section called
-“morphology” <../../index_configuration_options/morphology.rst>`__ for a
+“morphology” <../../index_configuration_options/morphology.html>`__ for a
 discussion of what lemmatizers are) is dictionary driven.
 lemmatizer\_base directive configures the base dictionary path. File
 names are hardcoded and specific to a given lemmatizer; the Russian

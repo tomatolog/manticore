@@ -10,7 +10,7 @@ required for the SENTENCE and PARAGRAPH operators to work. Sentence
 boundary detection is based on plain text analysis, so you only need to
 set ``index_sp = 1`` to enable it. Paragraph detection is however based
 on HTML markup, and happens in the `HTML
-stripper <../../index_configuration_options/htmlstrip.rst>`__. So to
+stripper <../../index_configuration_options/htmlstrip.html>`__. So to
 index paragraph locations you also need to enable the stripper by
 specifying ``html_strip = 1``. Both types of boundaries are detected
 based on a few built-in rules enumerated just below.

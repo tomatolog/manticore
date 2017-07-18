@@ -13,7 +13,7 @@ It deletes existing rows (documents) from an existing index based on ID.
 ``index`` is the name of RT index from which the row should be deleted.
 
 ``where_condition`` has the same syntax as in the SELECT statement (see
-`the section called “SELECT syntax” <../select_syntax.rst>`__ for
+`the section called “SELECT syntax” <../select_syntax.html>`__ for
 details).
 
 ::

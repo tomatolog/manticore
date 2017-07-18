@@ -10,10 +10,10 @@ CREATE FUNCTION syntax
 
 CREATE FUNCTION statement, introduced in version 2.0.1-beta, installs a
 `user-defined function
-(UDF) <../sphinx_udfs_user_defined_functions.rst>`__ with the given name
+(UDF) <../sphinx_udfs_user_defined_functions.html>`__ with the given name
 and type from the given library file. The library file must reside in a
 trusted
-`plugin\_dir <../common_section_configuration_options/plugindir.rst>`__
+`plugin\_dir <../common_section_configuration_options/plugindir.html>`__
 directory. On success, the function is available for use in all
 subsequent queries that the server receives. Example:
 

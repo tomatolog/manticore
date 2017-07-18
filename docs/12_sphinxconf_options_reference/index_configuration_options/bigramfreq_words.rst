@@ -11,7 +11,7 @@ searching time to significantly accelerate phrase or sub-phrase
 matching.
 
 Some of the bigram indexing modes (see `the section called
-“bigram\_index” <../../index_configuration_options/bigramindex.rst>`__)
+“bigram\_index” <../../index_configuration_options/bigramindex.html>`__)
 require to define a list of frequent keywords. These are <b>not</b> to
 be confused with stopwords! Stopwords are completely eliminated when
 both indexing and searching. Frequent keywords are only used by bigrams

@@ -14,17 +14,17 @@ Bug fixes
    (simplified ranker) vs prefix-expanded keywords vs ``dict=keywords``
 
 -  fixed #1252, COUNT(\*) vs
-   `dist\_threads <../searchd_program_configuration_options/distthreads.rst>`__
+   `dist\_threads <../searchd_program_configuration_options/distthreads.html>`__
    could occasionally crash (race condition)
 
 -  fixed #1251, missing expression support in the
-   `IN() <../5_searching/expressions,_functions,_and_operators/comparison_functions.rst#expr-func-in>`__
+   `IN() <../5_searching/expressions,_functions,_and_operators/comparison_functions.html#expr-func-in>`__
    function
 
 -  fixed #1245,
-   `FlushAttributes <../additional_functionality/flushattributes.rst>`__
+   `FlushAttributes <../additional_functionality/flushattributes.html>`__
    mistakenly disabled by
-   `attr\_flush\_period=0 <../searchd_program_configuration_options/attrflush_period.rst>`__
+   `attr\_flush\_period=0 <../searchd_program_configuration_options/attrflush_period.html>`__
    setting
 
 -  fixed #1244, per-API-command (search, update, etc) statistics were
@@ -49,13 +49,13 @@ Bug fixes
    (``query_log_format=sphinxql``)
 
 -  fixed #1214, phrase query parsing issues when
-   `blend\_chars <../index_configuration_options/blendchars.rst>`__
+   `blend\_chars <../index_configuration_options/blendchars.html>`__
    contained a quote (“) symbol
 
 -  fixed #1213, attribute aliases were not recognized by the subsequent
    ``SELECT`` items
 
--  fixed #1212, ```indextool`` <../indextool_command_reference.rst>`__
+-  fixed #1212, ```indextool`` <../indextool_command_reference.html>`__
    failed to check hitless keywords
 
 -  fixed #1210, crash when indexing an index with joined fields only (no
@@ -77,12 +77,12 @@ Bug fixes
    highlighting the entire document
 
 -  fixed #1184, ``indexer`` crash when
-   `ngram\_chars <../index_configuration_options/ngramchars.rst>`__ was
+   `ngram\_chars <../index_configuration_options/ngramchars.html>`__ was
    set, but
-   `ngram\_len=0 <../index_configuration_options/ngramlen.rst>`__
+   `ngram\_len=0 <../index_configuration_options/ngramlen.html>`__
 
 -  fixed #1182, ``indexer`` crash on certain combinations of
-   ```docinfo=inline`` <../index_configuration_options/docinfo.rst>`__ vs
+   ```docinfo=inline`` <../index_configuration_options/docinfo.html>`__ vs
    bitfields
 
 -  fixed #1181, ``GROUP BY`` on a MVA64 was truncated at 32 bits
@@ -94,7 +94,7 @@ Bug fixes
    out-of-bounds codes
 
 -  fixed #1177, SPZ queries in snippets erroneously required
-   `passage\_boundary <../additional_functionality/buildexcerpts.rst>`__
+   `passage\_boundary <../additional_functionality/buildexcerpts.html>`__
    option to be explicitly set
 
 -  fixed #1176, multi-queries with a ``GROUP/ORDER BY`` on a string
@@ -118,7 +118,7 @@ Bug fixes
    ``NOT``
 
 -  fixed #1137, ``searchd``
-   `–stopwait <../searchd_command_reference.rst>`__ hanged when the
+   `–stopwait <../searchd_command_reference.html>`__ hanged when the
    running instance crashed during shutdown
 
 -  fixed #1136, high idle CPU load on systems without
@@ -128,7 +128,7 @@ Bug fixes
    ``pthread_timed_lock()``
 
 -  fixed #1133,
-   ```BuildExcerpts()`` <../additional_functionality/buildexcerpts.rst>`__
+   ```BuildExcerpts()`` <../additional_functionality/buildexcerpts.html>`__
    on a distributed index with ``load_files`` did not distribute the
    jobs
 
@@ -145,7 +145,7 @@ Bug fixes
    referring to stopwords
 
 -  fixed #1062, bigint filter ranges truncated when searching via
-   `SphinxQL <../8_sphinxql_reference/README.rst>`__
+   `SphinxQL <../8_sphinxql_reference/README.html>`__
 
 -  fixed #1052, SphinxSE range arguments with leading zeroes mistakenly
    parsed as octal
@@ -172,10 +172,10 @@ Bug fixes
    correctly
 
 -  fixed #553, default/missing port value was not handled properly in
-   `SetServer() <../general_api_functions/setserver.rst>`__ API call
+   `SetServer() <../general_api_functions/setserver.html>`__ API call
 
 -  fixed that blended vs multiforms vs
-   `min\_word\_len <../index_configuration_options/minword_len.rst>`__
+   `min\_word\_len <../index_configuration_options/minword_len.html>`__
    could hang the query parser
 
 -  fixed missing command-line switches documentation

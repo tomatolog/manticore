@@ -13,7 +13,7 @@ very likely to mean the same product. Or, for a more tricky example,
 descriptions do mean the same.
 
 Regexps provide you with a mechanism to specify a number of rules
-specific to your application to handle such cases. In the first ‘iphone
+specific to your application to handle such cases. In the f.html ‘iphone
 3gs’ example, you could possibly get away with a wordforms files
 tailored to handle a handful of iPhone models. However even in a
 comparatively simple second ‘13-inch’ example there is just way too many

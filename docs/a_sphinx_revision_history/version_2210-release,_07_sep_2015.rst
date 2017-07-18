@@ -8,12 +8,12 @@ New features and changes
    binlogs even if some files are missing
 
 -  added #2234, support for empty string values (stringattr='') in
-   `WHERE <../select_syntax.rst>`__ clause
+   `WHERE <../select_syntax.html>`__ clause
 
 -  added #2233, support for ``IN()`` filters with string values
 
 -  added #2232, string collation support in
-   `SELECT <../select_syntax.rst>`__ expressions
+   `SELECT <../select_syntax.html>`__ expressions
 
 -  added #2121, “where flt<>val” support, “where fltcol=intval” and
    “where fltcol!=intval” conditions
@@ -24,7 +24,7 @@ New features and changes
    between RT and plain indexes
 
 -  fixed #2020, unified (and greatly shortened) the list of SphinxQL
-   `reserved keywords <../list_of_sphinxql_reserved_keywords.rst>`__
+   `reserved keywords <../list_of_sphinxql_reserved_keywords.html>`__
    between indexer checks, SphinxQL parser checks, and the documentation
 
 Major bug fixes
@@ -34,10 +34,10 @@ Major bug fixes
    SELECT MAX(id) m1, m1+10 m2) were not computed properly in RT indexes
 
 -  fixed #2248,
-   `LENGTH() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.rst#expr-func-length>`__
+   `LENGTH() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-length>`__
    was 2x off for 64-bit MVA attributes
 
--  fixed #2146, `OPTIMIZE <../optimize_index_syntax.rst>`__ could
+-  fixed #2146, `OPTIMIZE <../optimize_index_syntax.html>`__ could
    occasionally break big RT indexes (by violating 4/16 GB string/MVA
    per chunk size limits)
 
@@ -60,11 +60,11 @@ Minor bug fixes
    sphinxql\_state file
 
 -  fixed #2305, punctuation chars not mentioned in
-   `charset\_table <../index_configuration_options/charsettable.rst>`__
+   `charset\_table <../index_configuration_options/charsettable.html>`__
    could still occasionally affect term position in the query
 
 -  fixed #2303, a combination of
-   `hitless\_words <../index_configuration_options/hitlesswords.rst>`__,
+   `hitless\_words <../index_configuration_options/hitlesswords.html>`__,
    lemmatizer\_all, and a phrase operator could match a wrong result set
 
 -  fixed #2301, ``searchd`` could sometimes crash on shutdown (at pid
@@ -101,7 +101,7 @@ Minor bug fixes
 -  fixed #2237, ATTACH-ing a part of a distributed index did not
    correctly invalidate it, could crash
 
--  fixed #2235, `UPDATE <../update_syntax.rst>`__ … OPTION ``strict=1``
+-  fixed #2235, `UPDATE <../update_syntax.html>`__ … OPTION ``strict=1``
    did not with plain indexes
 
 -  fixed #2225, ``searchd`` crashed on startup if agent host string was
@@ -111,7 +111,7 @@ Minor bug fixes
    JSON attributes in them
 
 -  fixed #2117,
-   `GEODIST() <../5_searching/sorting_modes.rst#sph-sort-expr-mode>`__
+   `GEODIST() <../5_searching/sorting_modes.html#sph-sort-expr-mode>`__
    calls with hash {in=deg,out=mi} arguments on a distributed index did
    not parse correctly
 
@@ -140,11 +140,11 @@ Minor bug fixes
    big numbers at MVA, and MVA inserts/replaces via SphinxQL)
 
 -  fixed #1704,
-   `CONTAINS() <../5_searching/expressions,_functions,_and_operators/numeric_functions.rst#expr-func-contains>`__
+   `CONTAINS() <../5_searching/expressions,_functions,_and_operators/numeric_functions.html#expr-func-contains>`__
    now correctly handles polygons with duplicated points
 
 -  fixed #1643,
-   `CRC32() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.rst#expr-func-crc32>`__
+   `CRC32() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-crc32>`__
    is now properly evaluated as unsigned in BIGINT context
 
 -  fixed #1567, #1747, #2245, column name quotation could fail in UDF

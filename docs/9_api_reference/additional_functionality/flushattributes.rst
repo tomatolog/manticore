@@ -9,7 +9,7 @@ success. Returns -1 and sets an error message on error. Introduced in
 version 1.10-beta.
 
 Attribute values updated using
-`UpdateAttributes() <../../additional_functionality/updateattributes.rst>`__
+`UpdateAttributes() <../../additional_functionality/updateattributes.html>`__
 API call are only kept in RAM until a so-called flush (which writes the
 current, possibly updated attribute values back to disk).
 FlushAttributes() call lets you enforce a flush. The call will block

@@ -21,7 +21,7 @@ factors.
 The ranking formula is an arbitrary arithmetic expression that can use
 constants, document attributes, built-in functions and operators
 (described in `the section called “Expressions, functions, and
-operators” <../../expressions,_functions,_and_operators/README.rst>`__),
+operators” <../../expressions,_functions,_and_operators/README.html>`__),
 and also a few ranking-specific things that are only accessible in a
 ranking formula. Namely, those are field aggregation functions,
 field-level, and document-level ranking factors.

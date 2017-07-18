@@ -8,7 +8,7 @@ there were no errors during the previous API call, empty string is
 returned.
 
 You should call it when any other function (such as
-`Query() <../../querying/query.rst>`__) fails (typically, the failing
+`Query() <../../querying/query.html>`__) fails (typically, the failing
 function returns false). The returned string will contain the error
 description.
 

@@ -25,10 +25,10 @@ to that file. Should the contents of an IDF file change, the new
 contents can be loaded with a SIGHUP.
 
 You can build an .idf file using ``indextool`` utility, by dumping
-dictionaries using ``--dumpdict`` switch first, then converting those to
+dictionaries using ``--dumpdict`` switch f.html, then converting those to
 .idf format using ``--buildidf``, then merging all .idf files across
 cluser using ``--mergeidf``. Refer to `the section called “``indextool``
-command reference” <../../indextool_command_reference.rst>`__ for more
+command reference” <../../indextool_command_reference.html>`__ for more
 information.
 
 Example:

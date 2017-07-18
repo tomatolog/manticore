@@ -20,7 +20,7 @@ specified attribute using one of the following built-in functions:
 -  SPH\_GROUPBY\_DAY, extracts year, month and day in YYYYMMDD format
    from timestamp;
 
--  SPH\_GROUPBY\_WEEK, extracts year and first day of the week number
+-  SPH\_GROUPBY\_WEEK, extracts year and f.html day of the week number
    (counting from year start) in YYYYNNN format from timestamp;
 
 -  SPH\_GROUPBY\_MONTH, extracts month in YYYYMM format from timestamp;
@@ -35,7 +35,7 @@ Grouping function value and per-group match count are returned along as
 
 The result set is sorted by group-by sorting clause, with the syntax
 similar to ```SPH_SORT_EXTENDED`` sorting
-clause <sorting_modes.rst#sph-sort-extended-mode>`__ syntax. In addition
+clause <sorting_modes.html#sph-sort-extended-mode>`__ syntax. In addition
 to ``@id`` and ``@weight``, group-by sorting clause may also include:
 
 -  @group (groupby function value),
@@ -64,9 +64,9 @@ then the result set will contain
 
 -  with day number and per-day match count attached,
 
--  sorted by day number in descending order (ie. recent days first).
+-  sorted by day number in descending order (ie. recent days f.html).
 
 Starting with version 0.9.9-rc2, aggregate functions (AVG(), MIN(),
 MAX(), SUM()) are supported through
-`SetSelect() <../general_query_settings/setselect.rst>`__ API call when
+`SetSelect() <../general_query_settings/setselect.html>`__ API call when
 using GROUP BY.

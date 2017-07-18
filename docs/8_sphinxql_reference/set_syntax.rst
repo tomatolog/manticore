@@ -64,7 +64,7 @@ in the respective scope. Known per-session server variables are:
 -  ``COLLATION_CONNECTION = collation_name``
 -  Selects the collation to be used for ORDER BY or GROUP BY on string
    values in the subsequent queries. Refer to `the section called
-   “Collations” <../collations.rst>`__ for a list of known collation
+   “Collations” <../collations.html>`__ for a list of known collation
    names. Introduced in version 2.0.1-beta.
 
 -  ``CHARACTER_SET_RESULTS = charset_name``
@@ -85,7 +85,7 @@ in the respective scope. Known per-session server variables are:
 -  ``PROFILING = {0 | 1}``
 -  Enables query profiling in the current session. Defaults to 0. See
    also `the section called “SHOW PROFILE
-   syntax” <../show_profile_syntax.rst>`__. Introduced in version
+   syntax” <../show_profile_syntax.html>`__. Introduced in version
    2.1.1-beta.
 
 Known global server variables are:
@@ -98,15 +98,15 @@ Known global server variables are:
    2.0.1-beta.
 
 -  ``QCACHE_MAX_BYTES = &lt;value&gt;``
--  Changes the `query cache <../query_cache.rst>`__ RAM use limit to a
+-  Changes the `query cache <../query_cache.html>`__ RAM use limit to a
    given value. Added in 2.3.1-beta.
 
 -  ``QCACHE_THRESH_MSEC = &lt;value&gt;``
--  Changes the `query cache <../query_cache.rst>`__ minimum wall time
+-  Changes the `query cache <../query_cache.html>`__ minimum wall time
    threshold to a given value. Added in 2.3.1-beta.
 
 -  ``QCACHE_TTL_SEC = &lt;value&gt;``
--  Changes the `query cache <../query_cache.rst>`__ TTL for a cached
+-  Changes the `query cache <../query_cache.html>`__ TTL for a cached
    result to a given value. Added in 2.3.1-beta.
 
 Examples:

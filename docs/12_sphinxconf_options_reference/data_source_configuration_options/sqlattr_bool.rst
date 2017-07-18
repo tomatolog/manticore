@@ -1,10 +1,10 @@
 sql\_attr\_bool
 ~~~~~~~~~~~~~~~
 
-Boolean `attribute <../../attributes.rst>`__ declaration. Multi-value
+Boolean `attribute <../../attributes.html>`__ declaration. Multi-value
 (there might be multiple attributes declared), optional. Applies to SQL
 source types (``mysql``, ``pgsql``, ``mssql``) only. Equivalent to
-`sql\_attr\_uint <../../data_source_configuration_options/sqlattr_uint.rst>`__
+`sql\_attr\_uint <../../data_source_configuration_options/sqlattr_uint.html>`__
 declaration with a bit count of 1.
 
 Example:

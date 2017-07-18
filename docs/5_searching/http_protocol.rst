@@ -6,7 +6,7 @@ and can be accessed with regular HTTP clients. Available only with
 workers = thread\_pool.
 
 To enabled the HTTP protocol, a
-`listen <../searchd_program_configuration_options/listen.rst>`__
+`listen <../searchd_program_configuration_options/listen.html>`__
 directive with http specified as a protocol needs to be declared:
 
 ::

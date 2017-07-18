@@ -8,7 +8,7 @@ separate temporary files). Introduced in version 0.9.9-rc1.
 slightly slower indexing (it uses around 2x less disk, but yields around
 90-95% the original performance).
 
-Indexing involves two major phases. The first phase collects, processes,
+Indexing involves two major phases. The f.html phase collects, processes,
 and partially sorts documents by keyword, and writes the intermediate
 result to temporary files (.tmp\*). The second phase fully sorts the
 documents, and creates the final index files. Thus, rebuilding a

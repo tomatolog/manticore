@@ -10,6 +10,7 @@
 .. toctree::
    :maxdepth: 2
    :glob:
+   
    intro
    about
 `1.2. Sphinx features <features.html>`__

@@ -1,4 +1,15 @@
+.. Manticore documentation master file
+
+.. _dochome:
+
+===================================
+ Manticore 2.3.3 - Documentation
+===================================
+
+
 .. toctree::
+   :maxdepth: 2
+   :glob:
    intro
    about
 `1.2. Sphinx features <features.html>`__

@@ -8,10 +8,10 @@
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
    
    intro
-   about
+   installation
 
 
 

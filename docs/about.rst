@@ -1,13 +1,6 @@
-.. raw:: html
+About
+------------
 
-   <div class="navheader">
-
-1.1. About
-`Prev <intro.html>`__ 
-Chapter 1. Introduction
- `Next <features.html>`__
-
---------------
 
 .. raw:: html
 

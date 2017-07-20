@@ -1,4 +1,4 @@
-Chapter 9. API reference
+API reference
 ========================
 
 There is a number of native searchd client API implementations for

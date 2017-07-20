@@ -28,15 +28,15 @@ Version 1.10-beta, 19 jul 2010
    ``sql_field_str2wordcount`` directives)
 
 -  added `CALL SNIPPETS() <../call_snippets_syntax.md>`__, `CALL
-   KEYWORDS() <../call_keywords_syntax.md>`__ SphinxQL statements
+   KEYWORDS() <../call_keywords_syntax.md>`__ ManticoreQL statements
 
--  added ``field_weights``, ``index_weights`` options to SphinxQL
+-  added ``field_weights``, ``index_weights`` options to ManticoreQL
    `SELECT <../select_syntax.md>`__ statement
 
--  added insert-only SphinxQL-talking tables to SphinxSE
+-  added insert-only ManticoreQL-talking tables to ManticoreSE
    (connection=‘sphinxql://host[:port]/index’)
 
--  added ``select`` option to SphinxSE queries
+-  added ``select`` option to ManticoreSE queries
 
 -  added backtrace on crash to ``searchd``
 
@@ -92,7 +92,7 @@ Version 1.10-beta, 19 jul 2010
 
 -  added SINT() function to expressions
 
--  improved SphinxQL syntax error reporting
+-  improved ManticoreQL syntax error reporting
 
 -  improved expression optimizer (better constant handling)
 
@@ -116,7 +116,7 @@ Version 1.10-beta, 19 jul 2010
 -  optimized 1-keyword queries (performace regression introduced in
    0.9.9)
 
--  optimized SphinxQL protocol overheads, and performance on bigger
+-  optimized ManticoreQL protocol overheads, and performance on bigger
    result sets
 
 -  optimized unbuffered attributes writes on index merge
@@ -124,9 +124,9 @@ Version 1.10-beta, 19 jul 2010
 -  changed attribute handling, duplicate names are strictly forbidden
    now
 
--  fixed that SphinxQL sessions could stall shutdown
+-  fixed that ManticoreQL sessions could stall shutdown
 
--  fixed consts with leading minus in SphinxQL
+-  fixed consts with leading minus in ManticoreQL
 
 -  fixed AND/OR precedence in expressions
 
@@ -170,7 +170,7 @@ Version 1.10-beta, 19 jul 2010
 
 -  fixed #504, SIGPIPE in libsphinxclient
 
--  fixed #506, better MySQL protocol commands support in SphinxQL (PING
+-  fixed #506, better MySQL protocol commands support in ManticoreQL (PING
    etc)
 
 -  fixed #509, indexing ranged results from stored procedures

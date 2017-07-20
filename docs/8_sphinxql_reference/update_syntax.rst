@@ -45,7 +45,7 @@ strings, arrays and other types yet.
       WHERE MATCH('hehe') AND enabled=1;
     Query OK, 148 rows affected (0.01 sec)
 
-OPTION clause. This is a Sphinx specific extension that lets you control
+OPTION clause. This is a Manticore specific extension that lets you control
 a number of per-update options. The syntax is:
 
 ::

@@ -1,26 +1,26 @@
-Installing Sphinx packages on Debian and Ubuntu
+Installing Manticore packages on Debian and Ubuntu
 -----------------------------------------------
 
-There are two ways of getting Sphinx for Ubuntu: regular deb packages
+There are two ways of getting Manticore for Ubuntu: regular deb packages
 and the Launchpad PPA repository.
 
 Deb packages:
 
-1. Sphinx requires a few libraries to be installed on Debian/Ubuntu. Use
+1. Manticore requires a few libraries to be installed on Debian/Ubuntu. Use
    apt-get to download and install these dependencies:
 
    **``$ sudo apt-get install mysql-client unixodbc libpq5``**
-2. Now you can install Sphinx:
+2. Now you can install Manticore:
 
    **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_amd64.deb``**
 
 PPA repository (Ubuntu only).
 
-Installing Sphinx is much easier from Sphinxsearch PPA repository,
-because you will get all dependencies and can also update Sphinx to the
+Installing Manticore is much easier from Manticoresearch PPA repository,
+because you will get all dependencies and can also update Manticore to the
 latest version with the same command.
 
-1. First, add Sphinxsearch repository and update the list of packages:
+1. First, add Manticoresearch repository and update the list of packages:
 
    **``$ sudo add-apt-repository ppa:builds/sphinxsearch-rel23``**
 
@@ -30,6 +30,6 @@ latest version with the same command.
 
    **``$ sudo apt-get install sphinxsearch``**
 
-Sphinx ``searchd`` daemon can be started/stopped using service command:
+Manticore ``searchd`` daemon can be started/stopped using service command:
 
 **``$ sudo service sphinxsearch start``**

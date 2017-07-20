@@ -1,15 +1,15 @@
 Multi-statement queries
 -----------------------
 
-SphinxQL supports multi-statement queries, or batches. Possible
+ManticoreQL supports multi-statement queries, or batches. Possible
 inter-statement optimizations described in `the section called
-“Multi-queries” <../multi-queries.md>`__ do apply to SphinxQL just as
+“Multi-queries” <../multi-queries.md>`__ do apply to ManticoreQL just as
 well. The batched queries should be separated by a semicolon. Your MySQL
 client library needs to support MySQL multi-query mechanism and multiple
 result set. For instance, mysqli interface in PHP and DBI/DBD libraries
 in Perl are known to work.
 
-Here's a PHP sample showing how to utilize mysqli interface with Sphinx.
+Here's a PHP sample showing how to utilize mysqli interface with Manticore.
 
 ::
 
@@ -42,7 +42,7 @@ Here's a PHP sample showing how to utilize mysqli interface with Sphinx.
 
     } while ( mysqli_next_result($link) );
 
-Its output with the sample ``test1`` index included with Sphinx is as
+Its output with the sample ``test1`` index included with Manticore is as
 follows.
 
 ::

@@ -47,7 +47,7 @@ Version 0.9.9-rc1, 17 nov 2008
    `index\_exact\_words <../index_configuration_options/indexexact_words.md>`__
    feature, and exact form operator to query language (“hello =world”)
 
--  added status variables support to SphinxSE (SHOW STATUS LIKE
+-  added status variables support to ManticoreSE (SHOW STATUS LIKE
    ‘sphinx\_%’)
 
 -  added

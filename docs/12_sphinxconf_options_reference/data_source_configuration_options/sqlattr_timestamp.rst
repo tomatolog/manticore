@@ -15,7 +15,7 @@ with different date-based functions, such as time segments sorting mode,
 or day/week/month/year extraction for GROUP BY.
 
 Note that DATE or DATETIME column types in MySQL can <b>not</b> be
-directly used as timestamp attributes in Sphinx; you need to explicitly
+directly used as timestamp attributes in Manticore; you need to explicitly
 convert such columns using UNIX\_TIMESTAMP function (if data is in
 range).
 

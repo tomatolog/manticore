@@ -1,7 +1,7 @@
-Using SphinxSE
+Using ManticoreSE
 --------------
 
-To search via SphinxSE, you would need to create special ENGINE=SPHINX
+To search via ManticoreSE, you would need to create special ENGINE=SPHINX
 “search table”, and then SELECT from it with full text query put into
 WHERE clause for query column.
 
@@ -32,12 +32,12 @@ ignored so you can use arbitrary ones.
 
 Additional columns must be either ``INTEGER``, ``TIMESTAMP``,
 ``BIGINT``, ``VARCHAR``, or ``FLOAT``. They will be bound to attributes
-provided in Sphinx result set by name, so their names must match
+provided in Manticore result set by name, so their names must match
 attribute names specified in ``sphinx.conf``. If there's no such
-attribute name in Sphinx search results, column will have ``NULL``
+attribute name in Manticore search results, column will have ``NULL``
 values.
 
-Special “virtual” attributes names can also be bound to SphinxSE
+Special “virtual” attributes names can also be bound to ManticoreSE
 columns. ``_sph_`` needs to be used instead of ``@`` for that. For
 instance, to obtain the values of ``@groupby``, ``@count``, or
 ``@distinct`` virtual attributes, use ``_sph_groupby``, ``_sph_count``
@@ -98,7 +98,7 @@ sign. Any number of options can be specified. Available options are:
 
 -  minid, maxid - min and max document ID to match;
 
--  weights - comma-separated list of weights to be assigned to Sphinx
+-  weights - comma-separated list of weights to be assigned to Manticore
    full-text fields:
 
    ::
@@ -118,7 +118,7 @@ sign. Any number of options can be specified. Available options are:
        # exclude groups 3 and 11
        ... WHERE query='test;!filter=group_id,3,11;';
 
--  range, !range - comma-separated (integer or bigint) Sphinx attribute
+-  range, !range - comma-separated (integer or bigint) Manticore attribute
    name, and min and max values to match:
 
    ::
@@ -130,7 +130,7 @@ sign. Any number of options can be specified. Available options are:
        # exclude groups from 5 to 25
        ... WHERE query='test;!range=group_id,5,25;';
 
--  floatrange, !floatrange - comma-separated (floating point) Sphinx
+-  floatrange, !floatrange - comma-separated (floating point) Manticore
    attribute name, and min and max values to match:
 
    ::
@@ -310,12 +310,12 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;geoanchor=latattr,lonattr,0.123,0.456';
 
 One **very important** note that it is **much** more efficient to allow
-Sphinx to perform sorting, filtering and slicing the result set than to
+Manticore to perform sorting, filtering and slicing the result set than to
 raise max matches count and use WHERE, ORDER BY and LIMIT clauses on
-MySQL side. This is for two reasons. First, Sphinx does a number of
+MySQL side. This is for two reasons. First, Manticore does a number of
 optimizations and performs better than MySQL on these tasks. Second,
 less data would need to be packed by searchd, transferred and unpacked
-by SphinxSE.
+by ManticoreSE.
 
 Additional query info besides result set could be retrieved with
 ``SHOW ENGINE SPHINX STATUS`` statement:
@@ -350,7 +350,7 @@ that this method does not require super-user privileges.
     +--------------------+----------------------------------+
     5 rows in set (0.00 sec)
 
-You could perform JOINs on SphinxSE search table and tables using other
+You could perform JOINs on ManticoreSE search table and tables using other
 engines. Here's an example with “documents” from example.sql:
 
 ::

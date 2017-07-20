@@ -2,7 +2,7 @@ MVA (multi-valued attributes)
 -----------------------------
 
 MVAs, or multi-valued attributes, are an important special type of
-per-document attributes in Sphinx. MVAs let you attach sets of numeric
+per-document attributes in Manticore. MVAs let you attach sets of numeric
 values to every document. That is useful to implement article tags,
 product categories, etc. Filtering and group-by (but not sorting) on MVA
 attributes is supported.

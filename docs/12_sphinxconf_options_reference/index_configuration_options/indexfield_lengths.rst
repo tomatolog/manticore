@@ -15,7 +15,7 @@ integers, and their values are generally accessible.
 
 BM25A() and BM25F() functions in the expression ranker are based on
 these lengths and require ``index_field_lengths`` to be enabled.
-Historically, Sphinx used a simplified, stripped-down variant of BM25
+Historically, Manticore used a simplified, stripped-down variant of BM25
 that, unlike the complete function, did <b>not</b> account for document
 length. (We later realized that it should have been called BM15 from the
 start.) Also we added support for both a complete variant of BM25, and

@@ -29,7 +29,7 @@ Bug fixes
    eventually prevented ``searchd`` to reload indexes)
 
 -  fixed #1537, ``COUNT(*)`` and compat\_sphinxql\_magics=0 via
-   SphinxAPI caused an incorrect error message
+   ManticoreAPI caused an incorrect error message
 
 -  fixed #1531, #1589, several matching and highlighting issues when
    using both
@@ -39,7 +39,7 @@ Bug fixes
 -  fixed #1521, ``indextool --check`` did not handle empty RT MVA and
    gave an incorrect warning
 
--  fixed #1392, SphinxSE builds with MySQL 5.6 now
+-  fixed #1392, ManticoreSE builds with MySQL 5.6 now
 
 -  fixed #1346, `NEAR <../extended_query_syntax.md>`__ handles
    duplicated keywords properly now

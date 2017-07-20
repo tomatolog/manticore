@@ -1,7 +1,7 @@
 xmlpipe2 data source
 --------------------
 
-xmlpipe2 lets you pass arbitrary full-text and attribute data to Sphinx
+xmlpipe2 lets you pass arbitrary full-text and attribute data to Manticore
 in yet another custom XML format. It also allows to specify the schema
 (ie. the set of fields and attributes) either in the XML stream itself,
 or in the source settings.
@@ -73,9 +73,9 @@ will be ignored. All embedded tags and their attributes (such as <b> in
 Support for incoming stream encodings depends on whether ``iconv`` is
 installed on the system. xmlpipe2 is parsed using ``libexpat`` parser
 that understands US-ASCII, ISO-8859-1, UTF-8 and a few UTF-16 variants
-natively. Sphinx ``configure`` script will also check for ``libiconv``
+natively. Manticore ``configure`` script will also check for ``libiconv``
 presence, and utilize it to handle other encodings. ``libexpat`` also
-enforces the requirement to use UTF-8 charset on Sphinx side, because
+enforces the requirement to use UTF-8 charset on Manticore side, because
 the parsed data it returns is always in UTF-8.
 
 XML elements (tags) recognized by xmlpipe2 (and their attributes where

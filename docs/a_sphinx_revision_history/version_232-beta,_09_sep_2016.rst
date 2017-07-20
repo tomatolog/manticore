@@ -14,9 +14,9 @@ New functions and options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  added RAND(),HOUR(),MINUTE(),SECOND() functions
--  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.md>`__ SphinxQL
+-  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.md>`__ ManticoreQL
    statement and hostname\_lookup directive
--  added `RELOAD INDEX <../reload_index_syntax.md>`__ SphinxQL statement
+-  added `RELOAD INDEX <../reload_index_syntax.md>`__ ManticoreQL statement
 
 -  added
    `sphinxql\_timeout <../searchd_program_configuration_options/sphinxqltimeout.md>`__
@@ -29,7 +29,7 @@ Changes and improvements
    query times and found rows of last 1,5,15 minutes and total since
    daemon start
 -  changed retry\_count behaviour
--  added wildcard support and new options for CALL KEYWORDS SphinxQL
+-  added wildcard support and new options for CALL KEYWORDS ManticoreQL
    statement
 -  faster RT inserts
 -  faster CSV/TSV indexing
@@ -37,7 +37,7 @@ Changes and improvements
 -  indexer –keeep-attrs support specific path
 -  daemon now picks changed index path when it receives HUP
 -  added alias support for MVA attributes
--  added SphinxQL support for comparison, IN, and BETWEEN conditions
+-  added ManticoreQL support for comparison, IN, and BETWEEN conditions
    over ANY/ALL(mva)
 -  added explicit JSON type conversion in WHERE clause
 
@@ -83,7 +83,7 @@ Bug fixes
 -  fixed #1825 added support for embedded zeroes in fields for pgsql,
    odbc data sources
 
--  PHP sphinx api: renamed SphinxClient c-tr to \_\_construct
+-  PHP sphinx api: renamed ManticoreClient c-tr to \_\_construct
 
 -  fixed #2461 crash of daemon with worker thread\_pool on high load of
    fast queries
@@ -174,7 +174,7 @@ Bug fixes
 
 -  fixed ubertest to pass on different linux platforms
 
--  added SphinxQL support for comparison, IN, and BETWEEN conditions
+-  added ManticoreQL support for comparison, IN, and BETWEEN conditions
    over ANY/ALL(mva); and added missing “ident NOT BETWEEN x AND y”
    syntax
 
@@ -277,7 +277,7 @@ Bug fixes
 
 -  refactoring, removed unneeded code
 
--  added RELOAD INDEX to SphinxQL
+-  added RELOAD INDEX to ManticoreQL
 
 -  fixed #2209 prohibited order by MVA, added error message
 
@@ -315,5 +315,5 @@ Bug fixes
 -  fixed HTML stripper handling of broken PI (processing instruction)
    tags
 
--  added #2179 SphinxQL client timeout searchd section option
+-  added #2179 ManticoreQL client timeout searchd section option
    sphinxql\_timeout, default value is 900 seconds

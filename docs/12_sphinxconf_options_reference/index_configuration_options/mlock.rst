@@ -11,7 +11,7 @@ to that cached copy, and OS might decide to swap it out to disk. First
 queries to such “cooled down” index will cause swap-in and their latency
 will suffer.
 
-Setting mlock option to 1 makes Sphinx lock physical RAM used for that
+Setting mlock option to 1 makes Manticore lock physical RAM used for that
 cached data using mlock(2) system call, and that prevents swapping (see
 man 2 mlock for details). mlock(2) is a privileged call, so it will
 require ``searchd`` to be either run from root account, or be granted

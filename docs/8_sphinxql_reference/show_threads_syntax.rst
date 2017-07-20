@@ -20,7 +20,7 @@ system threads. It returns a table with columns that describe:
 
 The ‘Info’ column will be cut at the width you've specified in the
 ‘columns=width’ option (notice the third row in the example table
-below). This column will contain raw SphinxQL queries and, if there are
+below). This column will contain raw ManticoreQL queries and, if there are
 API queries, full text syntax and comments will be displayed. With an
 API-snippet, the data size will be displayed along with the query.
 

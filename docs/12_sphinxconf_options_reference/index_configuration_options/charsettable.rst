@@ -4,7 +4,7 @@ charset\_table
 Accepted characters table, with case folding rules. Optional, default
 value are latin and cyrillic characters.
 
-charset\_table is the main workhorse of Sphinx tokenizing process, ie.
+charset\_table is the main workhorse of Manticore tokenizing process, ie.
 the process of extracting keywords from document text or query text. It
 controls what characters are accepted as valid and what are not, and how
 the accepted characters should be transformed (eg. should the case be

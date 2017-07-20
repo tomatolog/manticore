@@ -12,7 +12,7 @@ latitude and longitude attributes, respectively. ``$lat`` and ``$long``
 are floats that specify anchor point latitude and longitude, in radians.
 
 Once an anchor point is set, you can use magic ``&quot;@geodist&quot;``
-attribute name in your filters and/or sorting expressions. Sphinx will
+attribute name in your filters and/or sorting expressions. Manticore will
 compute geosphere distance between the given anchor point and a point
 specified by latitude and longitude attributes from each full-text
 match, and attach this value to the resulting match. The latitude and

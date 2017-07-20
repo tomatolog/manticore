@@ -1,7 +1,7 @@
 ``spelldump`` command reference
 -------------------------------
 
-``spelldump`` is one of the helper tools within the Sphinx package.
+``spelldump`` is one of the helper tools within the Manticore package.
 
 It is used to extract the contents of a dictionary file that uses
 ``ispell`` or ``MySpell`` format, which can help build word lists for

@@ -6,7 +6,7 @@ in local timezone, or in UTC. Optional, default is 0 (means ‘local tz’).
 
 By default all ‘group by time’ expressions (like group by day, week,
 month and year in API, also group by day, month, year, yearmonth,
-yearmonthday in Sphinxql) is done using local time. I.e. when you have
+yearmonthday in Manticoreql) is done using local time. I.e. when you have
 docs with attributes timed ‘13:00 utc’ and ‘15:00 utc’ - in case of
 grouping they both will fall into facility group according to your local
 tz setting. Say, if you live in ‘utc’, it will be one day, but if you

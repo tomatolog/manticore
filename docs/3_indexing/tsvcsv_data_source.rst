@@ -1,4 +1,4 @@
-tsvpipe:raw-latex:`\csvpipe `(Tab:raw-latex:`\Comma `Separated Values) data source
+TSV/CSV data source
 ----------------------------------------------------------------------------------
 
 This is the simplest way to pass data to the indexer. It was created due

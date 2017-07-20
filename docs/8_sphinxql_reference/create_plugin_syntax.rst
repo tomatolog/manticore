@@ -15,7 +15,7 @@ specified plugin from it. The known plugin types are:
 
 -  query\_token\_filter
 
-Refer to `the section called “Sphinx plugins” <../sphinx_plugins.md>`__
+Refer to `the section called “Manticore plugins” <../sphinx_plugins.md>`__
 for more information regarding writing the plugins.
 
 ::

@@ -12,7 +12,7 @@ disk and RT indexes.
 
 CRC dictionaries never store the original keyword text in the index.
 Instead, keywords are replaced with their control sum value (either
-CRC32 or FNV64, depending whether Sphinx was built with
+CRC32 or FNV64, depending whether Manticore was built with
 ``--enable-id64``) both when searching and indexing, and that value is
 used internally in the index.
 
@@ -24,7 +24,7 @@ collision in a dictionary of 1 billion entries is approximately 1:16, or
 6.25 percent. And most dictionaries will be much more compact that a
 billion keywords, as a typical spoken human language has in the region
 of 1 to 10 million word forms.) Second, and more importantly, substring
-searches are not directly possible with control sums. Sphinx alleviated
+searches are not directly possible with control sums. Manticore alleviated
 that by pre-indexing all the possible substrings as separate keywords
 (see `the section called
 “min\_prefix\_len” <../../index_configuration_options/minprefix_len.md>`__,

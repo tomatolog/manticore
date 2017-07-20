@@ -203,7 +203,7 @@ The example above (“the world is a wonderful place”/3) will match all
 documents that have at least 3 of the 6 specified words. Operator is
 limited to 255 keywords. Instead of an absolute number, you can also
 specify a number between 0.0 and 1.0 (standing for 0% and 100%), and
-Sphinx will match only documents with at least the specified percentage
+Manticore will match only documents with at least the specified percentage
 of given words. The same example above could also have been written “the
 world is a wonderful place”/0.5 and it would match documents with at
 least 50% of the 6 words.

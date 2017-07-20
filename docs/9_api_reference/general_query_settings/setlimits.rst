@@ -32,7 +32,7 @@ application. The default limit is set to 1000. Normally, you must not
 have to go over this limit. One thousand records is enough to present to
 the end user. And if you're thinking about pulling the results to
 application for further sorting or filtering, that would be <b>much</b>
-more efficient if performed on Sphinx side.
+more efficient if performed on Manticore side.
 
 ``$cutoff`` setting is intended for advanced performance control. It
 tells ``searchd`` to forcibly stop search query once ``$cutoff`` matches

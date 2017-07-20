@@ -10,7 +10,7 @@ report their length as 2147483647 bytes to ``indexer`` even though the
 actually used length is likely considerably less. However, the receiving
 buffers still need to be allocated upfront, and their sizes have to be
 determined. When the driver does not report the column length at all,
-Sphinx allocates default 1 KB buffers for each non-char column, and 1 MB
+Manticore allocates default 1 KB buffers for each non-char column, and 1 MB
 buffers for each char column. Driver-reported column length also gets
 clamped by an upper limit of 8 MB, so in case the driver reports
 (almost) a 2 GB column length, it will be clamped and a 8 MB buffer will

@@ -84,7 +84,7 @@ Bug fixes
    ``WHERE id IN (values_list)`` clauses used in ``SELECT``, ``UPDATE``
    statements
 
--  fixed #1112, Sphinx doesn't work out-of-the-box because the collision
+-  fixed #1112, Manticore doesn't work out-of-the-box because the collision
    of ``binlog_path`` option
 
 -  fixed #1116, crash on ``FLUSH RTINDEX`` unknown-index-name
@@ -92,7 +92,7 @@ Bug fixes
 -  fixed #1117, occasional RT headers corruption (leading to crashes
    and/or missing results)
 
--  fixed #1119, missing expression ranker support in SphinxSE
+-  fixed #1119, missing expression ranker support in ManticoreSE
 
 -  fixed #1120, negative `total\_found <../querying/README.md>`__, docs
    and hits counter on huge indexes

@@ -1,7 +1,7 @@
 ``indexer`` command reference
 -----------------------------
 
-``indexer`` is the first of the two principal tools as part of Sphinx.
+``indexer`` is the first of the two principal tools as part of Manticore.
 Invoked from either the command line directly, or as part of a larger
 script, ``indexer`` is solely responsible for gathering the data that
 will be searchable.
@@ -53,7 +53,7 @@ operation is performed. These options are:
    when calling ``indexer`` from the shell. This is most of use in
    shared environments where the binary files are installed somewhere
    like ``/usr/local/sphinx/`` but you want to provide users with the
-   ability to make their own custom Sphinx set-ups, or if you want to
+   ability to make their own custom Manticore set-ups, or if you want to
    run multiple instances on a single server. In cases like those you
    could allow them to create their own ``sphinx.conf`` files and pass
    them to ``indexer`` with this option. For example:

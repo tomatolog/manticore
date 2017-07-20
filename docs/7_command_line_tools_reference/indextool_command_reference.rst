@@ -1,7 +1,7 @@
 ``indextool`` command reference
 -------------------------------
 
-``indextool`` is one of the helper tools within the Sphinx package. It
+``indextool`` is one of the helper tools within the Manticore package. It
 is used to dump miscellaneous debug information about the physical
 index. (Additional functionality such as index verification is planned
 in the future, hence the indextool name rather than just indexdump.) Its

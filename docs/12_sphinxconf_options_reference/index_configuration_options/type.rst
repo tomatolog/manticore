@@ -4,7 +4,7 @@ type
 Index type. Known values are ‘plain’, ‘distributed’, ‘rt’ and
 ‘template’. Optional, default is ‘plain’ (plain local index).
 
-Sphinx supports several different types of indexes. Plain local indexes
+Manticore supports several different types of indexes. Plain local indexes
 are stored and processed on the local machine. Distributed indexes
 involve not only local searching but querying remote ``searchd``
 instances over the network as well (see `the section called “Distributed

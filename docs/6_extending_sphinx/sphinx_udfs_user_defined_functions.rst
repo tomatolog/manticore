@@ -1,4 +1,4 @@
-Sphinx UDFs (User Defined Functions)
+Manticore UDFs (User Defined Functions)
 ------------------------------------
 
 Our expression engine can be extended with user defined functions, or
@@ -27,7 +27,7 @@ UDFs have a wide variety of uses, for instance:
 
 -  adding custom mathematical or string functions;
 
--  accessing the database or files from within Sphinx;
+-  accessing the database or files from within Manticore;
 
 -  implementing complex ranking functions.
 
@@ -39,9 +39,9 @@ directive, for obvious security reasons: securing a single folder is
 easy; letting anyone install arbitrary code into ``searchd`` is a risk.
 You can load and unload them dynamically into searchd with `CREATE
 FUNCTION <../create_function_syntax.md>`__ and `DROP
-FUNCTION <../drop_function_syntax.md>`__ SphinxQL statements
+FUNCTION <../drop_function_syntax.md>`__ ManticoreQL statements
 respectively. Also, you can seamlessly reload UDFs (and other plugins)
-with `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ statement. Sphinx
+with `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ statement. Manticore
 keeps track of the currently loaded functions, that is, every time you
 create or drop an UDF, ``searchd`` writes its state to the
 `sphinxql\_state <../searchd_program_configuration_options/sphinxqlstate.md>`__
@@ -80,7 +80,7 @@ signal data from within the UDF reside in that file.
 
 Both ``sphinxudf.h`` header and ``sphinxudf.c`` are standalone. So you
 can copy around those files only; they do not depend on any other bits
-of Sphinx source code.
+of Manticore source code.
 
 Within your UDF, you <b>must</b> implement and export only a couple
 functions, literally. First, for UDF interface version control, you
@@ -106,7 +106,7 @@ UDF interface version into a newer or older ``searchd``. Second, yout
 <b>must</b> implement the actual function, too.
 ``sphinx_int64_t testfunc ( SPH_UDF_INIT * init, SPH_UDF_ARGS * args, char * error_flag ) { return 123; }``
 
-UDF function names in SphinxQL are case insensitive. However, the
+UDF function names in ManticoreQL are case insensitive. However, the
 respective C function names are not, they need to be all
 <b>lower-case</b>, or the UDF will not load. More importantly, it is
 vital that a) the calling convention is C (aka \_\_cdecl), b) arguments
@@ -173,7 +173,7 @@ By the time it is called it does not receive any actual values, so the
 are known and will be passed. You can check them in the initialization
 function and return an error if they are of an unsupported type.
 
-UDFs can receive arguments of pretty much any valid internal Sphinx
+UDFs can receive arguments of pretty much any valid internal Manticore
 type. Refer to ``sphinx_udf_argtype`` enumeration in ``sphinxudf.h`` for
 a full list. Most of the types map straightforwardly to the respective C
 types. The most notable exception is the SPH\_UDF\_TYPE\_FACTORS
@@ -204,7 +204,7 @@ allocate the returned string values. Internally in your UDF you can use
 whatever you want, so the ``testfunc_init()`` example above is correct
 code even though it uses malloc() directly: you manage that pointer
 yourself, it gets freed up using a matching free() call, and all is
-well. However, the returned strings values are managed by Sphinx and we
+well. However, the returned strings values are managed by Manticore and we
 have our own allocator, so for the return values specifically, you need
 to use it too.
 
@@ -232,11 +232,11 @@ The calling sequence of the other functions is fixed, though. Namely,
    buffer will be returned.
 
 -  ``testfunc()`` is called for every eligible row (see above), whenever
-   Sphinx needs to compute the UDF value. It can also indicate an
+   Manticore needs to compute the UDF value. It can also indicate an
    (internal) failure error by writing a non-zero byte value to
    ``error_flag``. In that case, it is guaranteed that will no more be
    called for subsequent rows, and a default return value of 0 will be
-   substituted. Sphinx might or might not choose to terminate such
+   substituted. Manticore might or might not choose to terminate such
    queries early, neither behavior is currently guaranteed.
 
 -  ``testfunc_deinit()`` is called once when the query processing (in a

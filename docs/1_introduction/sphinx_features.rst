@@ -1,7 +1,7 @@
-Sphinx features
+Manticore features
 ---------------
 
-Key Sphinx features are:
+Key Manticore features are:
 
 -  high indexing and searching performance;
 
@@ -14,12 +14,12 @@ Key Sphinx features are:
 -  proven scalability up to billions of documents, terabytes of data,
    and thousands of queries per second;
 
--  easy integration with SQL and XML data sources, and SphinxQL,
-   SphinxAPI, or SphinxSE search interfaces;
+-  easy integration with SQL and XML data sources, and ManticoreQL,
+   ManticoreAPI, or ManticoreSE search interfaces;
 
 -  easy scaling with distributed searches.
 
-To expand a bit, Sphinx:
+To expand a bit, Manticore:
 
 -  has high indexing speed (upto 10-15 MB/sec per core on an internal
    benchmark);
@@ -38,8 +38,8 @@ To expand a bit, Sphinx:
 
 -  provides document excerpts (snippets) generation;
 
--  provides searching from within application with SphinxQL or SphinxAPI
-   interfaces, and from within MySQL with pluggable SphinxSE storage
+-  provides searching from within application with ManticoreQL or ManticoreAPI
+   interfaces, and from within MySQL with pluggable ManticoreSE storage
    engine;
 
 -  supports boolean, phrase, word proximity and other types of queries;

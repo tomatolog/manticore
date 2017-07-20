@@ -1,4 +1,4 @@
-Sphinx plugins
+Manticore plugins
 --------------
 
 Here's the complete plugin type list.

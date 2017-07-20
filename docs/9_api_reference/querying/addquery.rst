@@ -28,7 +28,7 @@ results but also some per-category counts, such as the amount of
 products grouped by vendor. Without multi-query, you would have to run
 several queries which perform essentially the same search and retrieve
 the same matches, but create result sets differently. With multi-query,
-you simply pass all these queries in a single batch and Sphinx optimizes
+you simply pass all these queries in a single batch and Manticore optimizes
 the redundant full-text search internally.
 
 ``AddQuery()`` internally saves full current settings state along with

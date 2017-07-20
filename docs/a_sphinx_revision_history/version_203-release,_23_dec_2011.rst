@@ -4,7 +4,7 @@ Version 2.0.3-release, 23 dec 2011
 Bug fixes
 ~~~~~~~~~
 
--  fixed #1031, SphinxQL parsing syntax for MVA at insert  replace
+-  fixed #1031, ManticoreQL parsing syntax for MVA at insert  replace
    statements
 
 -  fixed #1027, stalls on attribute update in high-concurrency load
@@ -34,7 +34,7 @@ Bug fixes
 -  fixed #991, crash on indexing mssql source with ``mssql_unicode``
    enabled
 
--  fixed #983, #950, crash on host name lookup (SphinxSE with MySQL 5.5)
+-  fixed #983, #950, crash on host name lookup (ManticoreSE with MySQL 5.5)
 
 -  fixed #981, snippet inconsistency with ``allow_empty=0``
 
@@ -42,8 +42,8 @@ Bug fixes
 
 -  fixed #971, absent error message at master on agent “maxed out”
 
--  fixed #695, #815, #835, #866, malformed warnings in SphinxQL
+-  fixed #695, #815, #835, #866, malformed warnings in ManticoreQL
 
--  fixed build of SphinxSE with MySQL 5.1
+-  fixed build of ManticoreSE with MySQL 5.1
 
 -  fixed crash log for ‘fork’ and ‘prefork’ workers

@@ -201,7 +201,7 @@ Querying
    `SetLimits() <../general_query_settings/setlimits.md>`__ API call,
    so-called ‘cutoff’)
 
-APIs and SphinxSE
+APIs and ManticoreSE
 ~~~~~~~~~~~~~~~~~
 
 -  added pure C API (libsphinxclient)
@@ -210,14 +210,14 @@ APIs and SphinxSE
 
 -  added Java API
 
--  added SphinxSE support for MVAs (use varchar), floats (use float),
+-  added ManticoreSE support for MVAs (use varchar), floats (use float),
    64bit docids (use bigint)
 
--  added SphinxSE options “floatrange”, “geoanchor”, “fieldweights”,
+-  added ManticoreSE options “floatrange”, “geoanchor”, “fieldweights”,
    “indexweights”, “maxquerytime”, “comment”, “host” and “port”; and
    support for “expr:CLAUSE”
 
--  improved SphinxSE max query size (using MySQL condition pushdown),
+-  improved ManticoreSE max query size (using MySQL condition pushdown),
    upto 256K now
 
 General

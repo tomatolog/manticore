@@ -1,7 +1,7 @@
 Required tools
 ~~~~~~~~~~~~~~
 
-On UNIX, you will need the following tools to build and install Sphinx:
+On UNIX, you will need the following tools to build and install Manticore:
 
 -  a working C++ compiler. GNU gcc and clang are known to work.
 

@@ -1,7 +1,7 @@
 Available built-in rankers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sphinx ships with a number of built-in rankers suited for different
+Manticore ships with a number of built-in rankers suited for different
 purposes. A number of them uses two factors, phrase proximity (aka LCS)
 and BM25. Phrase proximity works on the keyword positions, while BM25
 works on the keyword frequencies. Basically, the better the degree of
@@ -60,17 +60,17 @@ Currently implemented rankers are:
 You should specify the ``SPH_RANK_`` prefix and use capital letters only
 when using the
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-call from the SphinxAPI. The API ports expose these as global constants.
-Using SphinxQL syntax, the prefix should be omitted and the ranker name
+call from the ManticoreAPI. The API ports expose these as global constants.
+Using ManticoreQL syntax, the prefix should be omitted and the ranker name
 is case insensitive. Example:
 
 ::
 
 
-    // SphinxAPI
+    // ManticoreAPI
     $client->SetRankingMode ( SPH_RANK_SPH04 );
 
-    // SphinxQL
+    // ManticoreQL
     mysql_query ( "SELECT ... OPTION ranker=sph04" );
 
 Legacy matching modes rankers

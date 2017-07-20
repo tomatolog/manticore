@@ -1,2 +1,2 @@
-Chapter 10. MySQL storage engine (SphinxSE)
+Chapter 10. MySQL storage engine (ManticoreSE)
 ===========================================

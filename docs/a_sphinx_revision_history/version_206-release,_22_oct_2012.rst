@@ -60,7 +60,7 @@ Bug fixes
 -  fixed #1254, its now possible to add indexes using
    `–rotate <../indexer_command_reference.md>`__
 
--  fixed #1249, `SphinxQL <../8_sphinxql_reference/README.md>`__
+-  fixed #1249, `ManticoreQL <../8_sphinxql_reference/README.md>`__
    unusable with PHP >= 5.4.5
 
 -  fixed #1246, attributes of 100 character length not being saved
@@ -117,7 +117,7 @@ Bug fixes
 
 -  fixed #867, ``indexer`` accepts index names starting with digit or \_
 
--  fixed #699, signed vs unsigned 64-bit DocIDs in SphinxQL
+-  fixed #699, signed vs unsigned 64-bit DocIDs in ManticoreQL
 
 -  fixed #668, now ignoring single @ character (incorrect field
    operator)
@@ -132,7 +132,7 @@ Bug fixes
    lib will be tried if no sources found
 
 -  fixed `ORDER BY <../select_syntax.md>`__ output at query log with
-   SphinxQL mode
+   ManticoreQL mode
 
 -  fixed documentation entry about
    `sql\_joined\_field <../data_source_configuration_options/sqljoined_field.md>`__

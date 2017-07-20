@@ -1,7 +1,7 @@
 ``searchd`` command reference
 -----------------------------
 
-``searchd`` is the second of the two principle tools as part of Sphinx.
+``searchd`` is the second of the two principle tools as part of Manticore.
 ``searchd`` is the part of the system which actually handles searches;
 it functions as a server and is responsible for receiving queries,
 processing them and returning a dataset back to the different APIs for
@@ -216,8 +216,8 @@ you install it as a service.
    ::
 
 
-       C:\WINDOWS\system32> C:\Sphinx\bin\searchd.exe --install
-          --config C:\Sphinx\sphinx.conf
+       C:\WINDOWS\system32> C:\Manticore\bin\searchd.exe --install
+          --config C:\Manticore\sphinx.conf
 
    If you wanted to have the I/O stats every time you started
    ``searchd``, you would specify its option on the same line as the
@@ -226,8 +226,8 @@ you install it as a service.
    ::
 
 
-       C:\WINDOWS\system32> C:\Sphinx\bin\searchd.exe --install
-          --config C:\Sphinx\sphinx.conf --iostats
+       C:\WINDOWS\system32> C:\Manticore\bin\searchd.exe --install
+          --config C:\Manticore\sphinx.conf --iostats
 
 -  ``--delete`` removes the service from the Microsoft Management
    Console and other places where services are registered, after
@@ -244,7 +244,7 @@ you install it as a service.
    ::
 
 
-       C:\WINDOWS\system32> C:\Sphinx\bin\searchd.exe --delete
+       C:\WINDOWS\system32> C:\Manticore\bin\searchd.exe --delete
 
 -  ``--servicename &lt;name&gt;`` applies the given name to ``searchd``
    when installing or deleting the service, as would appear in the
@@ -258,8 +258,8 @@ you install it as a service.
    ::
 
 
-       C:\WINDOWS\system32> C:\Sphinx\bin\searchd.exe --install
-          --config C:\Sphinx\sphinx.conf --servicename SphinxSearch
+       C:\WINDOWS\system32> C:\Manticore\bin\searchd.exe --install
+          --config C:\Manticore\sphinx.conf --servicename ManticoreSearch
 
 -  ``--ntservice`` is the option that is passed by the Management
    Console to ``searchd`` to invoke it as a service on Windows

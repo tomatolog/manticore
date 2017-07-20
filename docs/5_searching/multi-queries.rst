@@ -1,13 +1,13 @@
 Multi-queries
 -------------
 
-Multi-queries, or query batches, let you send multiple queries to Sphinx
+Multi-queries, or query batches, let you send multiple queries to Manticore
 in one go (more formally, one network request).
 
 Two API methods that implement multi-query mechanism are
 `AddQuery() <../querying/addquery.md>`__ and
 `RunQueries() <../querying/runqueries.md>`__. You can also run multiple
-queries with SphinxQL, see `the section called “Multi-statement
+queries with ManticoreQL, see `the section called “Multi-statement
 queries” <../multi-statement_queries.md>`__. (In fact, regular
 `Query() <../querying/addquery.md>`__ call is internally implemented as
 a single AddQuery() call immediately followed by RunQueries() call.)
@@ -24,7 +24,7 @@ one, you always save a bit by doing less network roundtrips. Second, and
 somewhat more important, sending queries in a batch enables ``searchd``
 to perform certain internal optimizations. As new types of optimizations
 are being added over time, it generally makes sense to pack all the
-queries into batches where possible, so that simply upgrading Sphinx to
+queries into batches where possible, so that simply upgrading Manticore to
 a new version would automatically enable new optimizations. In the case
 when there aren't any possible batch optimizations to apply, queries
 will be processed one by one internally.
@@ -90,7 +90,7 @@ sorting modes:
 
 
     require ( "sphinxapi.php" );
-    $cl = new SphinxClient ();
+    $cl = new ManticoreClient ();
     $cl->SetMatchMode ( SPH_MATCH_EXTENDED );
 
     $cl->SetSortMode ( SPH_SORT_RELEVANCE );

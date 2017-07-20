@@ -1,20 +1,20 @@
-Quick Sphinx usage tour
+Quick Manticore usage tour
 -----------------------
 
-All the example commands below assume that you installed Sphinx in
+All the example commands below assume that you installed Manticore in
 ``/usr/local/sphinx``, so ``searchd`` can be found in
 ``/usr/local/sphinx/bin/searchd``.
 
-To use Sphinx, you will need to:
+To use Manticore, you will need to:
 
 1. Create a configuration file.
 
-   Default configuration file name is ``sphinx.conf``. All Sphinx
+   Default configuration file name is ``sphinx.conf``. All Manticore
    programs look for this file in current working directory by default.
 
    Sample configuration file, ``sphinx.conf.dist``, which has all the
    options documented, is created by ``configure``. Copy and edit that
-   sample file to make your own configuration: (assuming Sphinx is
+   sample file to make your own configuration: (assuming Manticore is
    installed into ``/usr/local/sphinx/``)
 
    ::

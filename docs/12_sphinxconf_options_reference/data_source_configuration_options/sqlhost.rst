@@ -4,7 +4,7 @@ sql\_host
 SQL server host to connect to. Mandatory, no default value. Applies to
 SQL source types (``mysql``, ``pgsql``, ``mssql``) only.
 
-In the simplest case when Sphinx resides on the same host with your
+In the simplest case when Manticore resides on the same host with your
 MySQL or PostgreSQL installation, you would simply specify “localhost”.
 Note that MySQL client library chooses whether to connect over TCP/IP or
 over UNIX socket based on the host name. Specifically “localhost” will

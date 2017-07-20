@@ -1,4 +1,4 @@
-Compiling MySQL 5.0.x with SphinxSE
+Compiling MySQL 5.0.x with ManticoreSE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. copy ``sphinx.5.0.yy.diff`` patch file into MySQL sources directory
@@ -21,7 +21,7 @@ Compiling MySQL 5.0.x with SphinxSE
        sh BUILD/autorun.sh
 
 3. in MySQL sources directory, create ``sql/sphinx`` directory in and
-   copy all files in ``mysqlse`` directory from Sphinx sources there.
+   copy all files in ``mysqlse`` directory from Manticore sources there.
    Example:
 
    ::
@@ -29,7 +29,7 @@ Compiling MySQL 5.0.x with SphinxSE
 
        cp -R /root/builds/sphinx-0.9.7/mysqlse /root/builds/mysql-5.0.24/sql/sphinx
 
-4. configure MySQL and enable Sphinx engine:
+4. configure MySQL and enable Manticore engine:
 
    ::
 

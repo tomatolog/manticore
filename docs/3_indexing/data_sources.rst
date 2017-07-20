@@ -3,12 +3,12 @@ Data sources
 
 The data to be indexed can generally come from very different sources:
 SQL databases, plain text files, HTML files, mailboxes, and so on. From
-Sphinx point of view, the data it indexes is a set of structured
+Manticore point of view, the data it indexes is a set of structured
 *documents*, each of which has the same set of *fields* and
 *attributes*. This is similar to SQL, where each row would correspond to
 a document, and each column to either a field or an attribute.
 
-Depending on what source Sphinx should get the data from, different code
+Depending on what source Manticore should get the data from, different code
 is required to fetch the data and prepare it for indexing. This code is
 called *data source driver* (or simply *driver* or *data source* for
 brevity).

@@ -9,7 +9,7 @@ mapping string index names to integer weights. Default is empty array
 that means to disable weighting summing.
 
 When a match with the same document ID is found in several different
-local indexes, by default Sphinx simply chooses the match from the index
+local indexes, by default Manticore simply chooses the match from the index
 specified last in the query. This is to support searching through
 partially overlapping index partitions.
 

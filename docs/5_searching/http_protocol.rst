@@ -1,7 +1,7 @@
 HTTP protocol
 -------------
 
-Sphinx search daemon supports HTTP protocol and can be accessed with
+Manticore search daemon supports HTTP protocol and can be accessed with
 regular HTTP clients. Available only with `workers =
 thread\_pool <../searchd_program_configuration_options/networkers.md>`__.
 
@@ -28,7 +28,7 @@ Supported endpoints:
        curl -X POST 'http://sphinxsearch:9308/search/' 
        -d 'index=forum&match=@subject php sphinx&select=id,subject,author_id&limit=5'
 
--  / sql - allows running a SELECT SphinxQL, set as query parameter
+-  / sql - allows running a SELECT ManticoreQL, set as query parameter
 
    ::
 
@@ -38,4 +38,4 @@ Supported endpoints:
         author_id order by id desc limit 0,5'
 
 The result for /sql/ and /search/ endpoints is an array of attrs,matches
-and meta, same as for SphinxAPI, encoded as a JSON object.
+and meta, same as for ManticoreAPI, encoded as a JSON object.

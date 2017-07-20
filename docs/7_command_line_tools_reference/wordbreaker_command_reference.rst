@@ -1,7 +1,7 @@
 ``wordbreaker`` command reference
 ---------------------------------
 
-``wordbreaker`` is one of the helper tools within the Sphinx package. It
+``wordbreaker`` is one of the helper tools within the Manticore package. It
 is used to split compound words, as usual in URLs, into its component
 words. For example, this tool can split “lordoftherings” into its four
 component words, or “http://manofsteel.warnerbros.com” into “man of

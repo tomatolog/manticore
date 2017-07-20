@@ -8,11 +8,11 @@ month; or to group Web search results by site; or to group matching
 forum posts by author; etc.
 
 In theory, this could be performed by doing only the full-text search in
-Sphinx and then using found IDs to group on SQL server side. However, in
+Manticore and then using found IDs to group on SQL server side. However, in
 practice doing this with a big result set (10K-10M matches) would
 typically kill performance.
 
-To avoid that, Sphinx offers so-called grouping mode. It is enabled with
+To avoid that, Manticore offers so-called grouping mode. It is enabled with
 SetGroupBy() API call. When grouping, all matches are assigned to
 different groups based on group-by value. This value is computed from
 specified attribute using one of the following built-in functions:

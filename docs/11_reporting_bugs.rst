@@ -1,7 +1,7 @@
 Chapter 11. Reporting bugs
 ==========================
 
-Unfortunately, Sphinx is not yet 100% bug free (even though we're
+Unfortunately, Manticore is not yet 100% bug free (even though we're
 working hard towards that), so you might occasionally run into some
 issues.
 
@@ -24,7 +24,7 @@ Crashes
 In case of crashes we sometimes can get enough info to fix from
 backtrace.
 
-Sphinx tries to write crash backtrace to its log file. It may look like
+Manticore tries to write crash backtrace to its log file. It may look like
 this:
 
 ::
@@ -81,7 +81,7 @@ binary:
 Attach this file to bug report along with backtrace. You should however
 ensure that the binary is not stripped. Our official binary packages
 should be fine. (That, or we have the symbols stored.) However, if you
-manually build Sphinx from the source tarball, do not run ``strip``
+manually build Manticore from the source tarball, do not run ``strip``
 utility on that binary, and/or do not let your build/packaging system do
 that!
 

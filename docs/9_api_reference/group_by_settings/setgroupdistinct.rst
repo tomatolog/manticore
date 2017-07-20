@@ -10,7 +10,7 @@ Only available for grouping queries.
 group, all values of this attribute will be stored (as RAM limits
 permit), then the amount of distinct values will be calculated and
 returned to the client. This feature is similar to ``COUNT(DISTINCT)``
-clause in standard SQL; so these Sphinx calls:
+clause in standard SQL; so these Manticore calls:
 
 ::
 

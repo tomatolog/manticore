@@ -1,8 +1,8 @@
 Expressions, functions, and operators
 -------------------------------------
 
-Sphinx lets you use arbitrary arithmetic expressions both via SphinxQL
-and SphinxAPI, involving attribute values, internal attributes (document
+Manticore lets you use arbitrary arithmetic expressions both via ManticoreQL
+and ManticoreAPI, involving attribute values, internal attributes (document
 ID and relevance weight), arithmetic operations, a number of built-in
 functions, and user-defined functions. This section documents the
 supported operators and functions. Here's the complete reference list

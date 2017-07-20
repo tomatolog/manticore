@@ -28,7 +28,7 @@ Bug fixes
    setting
 
 -  fixed #1244, per-API-command (search, update, etc) statistics were
-   not updated by SphinxQL requests
+   not updated by ManticoreQL requests
 
 -  fixed #1243, misc issues (broken statistics, weights, checks) with
    very long keywords having blended parts in RT indexes
@@ -45,7 +45,7 @@ Bug fixes
    rotation)
 
 -  fixed #1227, API queries with ``SetGeoAnchor()`` were logged
-   incorrectly in SphinxQL-format query logs
+   incorrectly in ManticoreQL-format query logs
    (``query_log_format=sphinxql``)
 
 -  fixed #1214, phrase query parsing issues when
@@ -100,7 +100,7 @@ Bug fixes
 -  fixed #1176, multi-queries with a ``GROUP/ORDER BY`` on a string
    attributed crashed
 
--  fixed #1175, connection id mismatch in SphinxQL-format query logs
+-  fixed #1175, connection id mismatch in ManticoreQL-format query logs
 
 -  fixed #1167, nested parentheses in a full-text query could mistakenly
    reset preceding field or zone limit operator
@@ -136,7 +136,7 @@ Bug fixes
    indexing
 
 -  fixed #1121, occasional bad entries (wrong characters or invalid SQL)
-   in SphinxQL-format query log
+   in ManticoreQL-format query log
 
 -  fixed #1118, ``libsphinxclient`` requests failed when using
    ``SPH_RANK_EXPR``
@@ -145,9 +145,9 @@ Bug fixes
    referring to stopwords
 
 -  fixed #1062, bigint filter ranges truncated when searching via
-   `SphinxQL <../8_sphinxql_reference/README.md>`__
+   `ManticoreQL <../8_sphinxql_reference/README.md>`__
 
--  fixed #1052, SphinxSE range arguments with leading zeroes mistakenly
+-  fixed #1052, ManticoreSE range arguments with leading zeroes mistakenly
    parsed as octal
 
 -  fixed #1011, negative MVA64 values mistakenly converted to positive
@@ -163,7 +163,7 @@ Bug fixes
    values)
 
 -  fixed #906, #1074, Mac OS X 10.7.3 builds (conflicting memory
-   allocation routines in Sphinx and external libs)
+   allocation routines in Manticore and external libs)
 
 -  fixed #901, #1066, sending bigger request packets was broken in
    Python API

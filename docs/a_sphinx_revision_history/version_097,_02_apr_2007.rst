@@ -12,7 +12,7 @@ Version 0.9.7, 02 apr 2007
 
 -  added support for zero/NULL attributes
 
--  added support for 0.9.7 features to SphinxSE
+-  added support for 0.9.7 features to ManticoreSE
 
 -  added support for n-grams (alpha, 1-grams only for now)
 

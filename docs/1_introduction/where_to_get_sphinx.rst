@@ -1,10 +1,10 @@
-Where to get Sphinx
+Where to get Manticore
 -------------------
 
-Sphinx is available through its official Web site at
+Manticore is available through its official Web site at
 http://sphinxsearch.com/.
 
-Currently, Sphinx distribution tarball includes the following software:
+Currently, Manticore distribution tarball includes the following software:
 
 -  ``indexer``: an utility which creates fulltext indexes;
 

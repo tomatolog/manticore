@@ -10,7 +10,7 @@ other per-document values as well. For instance, one might need to sort
 news search results by date and then relevance, or search through
 products within specified price range, or limit blog search to posts
 made by selected users, or group results by month. To do that
-efficiently, Sphinx allows to attach a number of additional *attributes*
+efficiently, Manticore allows to attach a number of additional *attributes*
 to each document, and store their values in the full-text index. It's
 then possible to use stored values to filter, sort, or group full-text
 matches.

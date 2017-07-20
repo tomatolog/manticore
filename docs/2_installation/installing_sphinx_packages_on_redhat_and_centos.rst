@@ -1,7 +1,7 @@
-Installing Sphinx packages on RedHat and CentOS
+Installing Manticore packages on RedHat and CentOS
 -----------------------------------------------
 
-Currently we distribute Sphinx RPMS and SRPMS on our website for both
+Currently we distribute Manticore RPMS and SRPMS on our website for both
 5.x and 6.x versions of Red Hat Enterprise Linux, but they can be
 installed on CentOS as well.
 
@@ -9,7 +9,7 @@ installed on CentOS as well.
 
    **``$ yum install postgresql-libs unixODBC``**
 
-2. Download RedHat RPM from Sphinx website and install it:
+2. Download RedHat RPM from Manticore website and install it:
 
    **``$ rpm -Uhv sphinx-2.2.1-1.rhel6.x86_64.rpm``**
 

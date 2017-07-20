@@ -3,11 +3,11 @@ Installation
 Supported systems
 -----------------
 
-Sphinx can be compiled either from source or installed using prebuilt
+Manticore can be compiled either from source or installed using prebuilt
 packages. Most modern UNIX systems with a C++ compiler should be able to
-compile and run Sphinx without any modifications.
+compile and run Manticore without any modifications.
 
-Currently known systems Sphinx has been successfully running on are:
+Currently known systems Manticore has been successfully running on are:
 
 -  Linux 2.4.x, 2.6.x, 3.x, 4.x (many various distributions)
 
@@ -24,19 +24,19 @@ Currently known systems Sphinx has been successfully running on are:
 CPU architectures known to work include i386 (aka x86), amd64 (aka
 x86\_64), SPARC64, and ARM.
 
-Chances are good that Sphinx should work on other Unix platforms and/or
+Chances are good that Manticore should work on other Unix platforms and/or
 CPU architectures just as well. Please report any other platforms that
 worked for you!
 
 All platforms are production quality. There are no principal functional
 limitations on any platform.
 
-Compiling Sphinx from source
+Compiling Manticore from source
 ----------------------------
 Required tools
 ~~~~~~~~~~~~~~
 
-On UNIX, you will need the following tools to build and install Sphinx:
+On UNIX, you will need the following tools to build and install Manticore:
 
 -  a working C++ compiler. GNU gcc and clang are known to work.
 
@@ -68,20 +68,20 @@ Compiling on Linux
    There's a number of options to configure. The complete listing may be
    obtained by using ``--help`` switch. The most important ones are:
 
-   -  ``--prefix``, which specifies where to install Sphinx; such as
+   -  ``--prefix``, which specifies where to install Manticore; such as
       ``--prefix=/usr/local/sphinx`` (all of the examples use this
       prefix)
 
    -  ``--with-mysql``, which specifies where to look for MySQL include
       and library files, if auto-detection fails;
 
-   -  ``--with-static-mysql``, which builds Sphinx with statically
+   -  ``--with-static-mysql``, which builds Manticore with statically
       linked MySQL support;
 
    -  ``--with-pgsql``, which specifies where to look for PostgreSQL
       include and library files.
 
-   -  ``--with-static-pgsql``, which builds Sphinx with statically
+   -  ``--with-static-pgsql``, which builds Manticore with statically
       linked PostgreSQL support;
 
 3. Build the binaries:
@@ -134,29 +134,29 @@ details, so I could properly fix them in next releases.
 If you keep getting any other error, or the suggestions above do not
 seem to help you, please don't hesitate to contact me.
 
-Installing Sphinx packages on Debian and Ubuntu
+Installing Manticore packages on Debian and Ubuntu
 -----------------------------------------------
 
-There are two ways of getting Sphinx for Ubuntu: regular deb packages
+There are two ways of getting Manticore for Ubuntu: regular deb packages
 and the Launchpad PPA repository.
 
 Deb packages:
 
-1. Sphinx requires a few libraries to be installed on Debian/Ubuntu. Use
+1. Manticore requires a few libraries to be installed on Debian/Ubuntu. Use
    apt-get to download and install these dependencies:
 
    **``$ sudo apt-get install mysql-client unixodbc libpq5``**
-2. Now you can install Sphinx:
+2. Now you can install Manticore:
 
    **``$ sudo dpkg -i sphinxsearch_2.3.2-beta-1~trusty_amd64.deb``**
 
 PPA repository (Ubuntu only).
 
-Installing Sphinx is much easier from Sphinxsearch PPA repository,
-because you will get all dependencies and can also update Sphinx to the
+Installing Manticore is much easier from Manticoresearch PPA repository,
+because you will get all dependencies and can also update Manticore to the
 latest version with the same command.
 
-1. First, add Sphinxsearch repository and update the list of packages:
+1. First, add Manticoresearch repository and update the list of packages:
 
    **``$ sudo add-apt-repository ppa:builds/sphinxsearch-rel23``**
 
@@ -166,13 +166,13 @@ latest version with the same command.
 
    **``$ sudo apt-get install sphinxsearch``**
 
-Sphinx ``searchd`` daemon can be started/stopped using service command:
+Manticore ``searchd`` daemon can be started/stopped using service command:
 
 **``$ sudo service sphinxsearch start``**
-Installing Sphinx packages on RedHat and CentOS
+Installing Manticore packages on RedHat and CentOS
 -----------------------------------------------
 
-Currently we distribute Sphinx RPMS and SRPMS on our website for both
+Currently we distribute Manticore RPMS and SRPMS on our website for both
 5.x and 6.x versions of Red Hat Enterprise Linux, but they can be
 installed on CentOS as well.
 
@@ -180,7 +180,7 @@ installed on CentOS as well.
 
    **``$ yum install postgresql-libs unixODBC``**
 
-2. Download RedHat RPM from Sphinx website and install it:
+2. Download RedHat RPM from Manticore website and install it:
 
    **``$ rpm -Uhv sphinx-2.2.1-1.rhel6.x86_64.rpm``**
 
@@ -189,10 +189,10 @@ installed on CentOS as well.
    daemon:
 
    **``$ service searchd start``**
-Installing Sphinx on Windows
+Installing Manticore on Windows
 ----------------------------
 
-Installing Sphinx on a Windows server is often easier than installing on
+Installing Manticore on a Windows server is often easier than installing on
 a Linux environment; unless you are preparing code patches, you can use
 the pre-compiled binary files from the Downloads area on the website.
 
@@ -205,8 +205,8 @@ the pre-compiled binary files from the Downloads area on the website.
    the files, or a freeware package like 7Zip to open the archive.
 
    For the remainder of this guide, we will assume that the folders are
-   unzipped into ``C:\Sphinx``, such that ``searchd.exe`` can be found
-   in ``C:\Sphinx\bin\searchd.exe``. If you decide to use any different
+   unzipped into ``C:\Manticore``, such that ``searchd.exe`` can be found
+   in ``C:\Manticore\bin\searchd.exe``. If you decide to use any different
    location for the folders or configuration file, please change it
    accordingly.
 
@@ -215,7 +215,7 @@ the pre-compiled binary files from the Downloads area on the website.
 
 3. Install the ``searchd`` system as a Windows service:
 
-   **``C:\Sphinx\bin&gt; C:\Sphinx\bin\searchd --install --config C:\Sphinx\sphinx.conf.in --servicename SphinxSearch``**
+   **``C:\Manticore\bin&gt; C:\Manticore\bin\searchd --install --config C:\Manticore\sphinx.conf.in --servicename ManticoreSearch``**
 
 4. The ``searchd`` service will now be listed in the Services panel
    within the Management Console, available from Administrative Tools.
@@ -231,7 +231,7 @@ the pre-compiled binary files from the Downloads area on the website.
    directory, or sometimes in Windows:raw-latex:`\System`32, or failing
    that in the MySQL core directories. If you do receive an error please
    copy libmysql.dll into the bin directory.
-Sphinx deprecations and changes in default configuration
+Manticore deprecations and changes in default configuration
 --------------------------------------------------------
 
 Changes are as follows:
@@ -254,7 +254,7 @@ Changes are as follows:
    a pre-query to fetch your data in UTF-8 and you're all set. Also, in
    fact, our current UTF-8 tokenizer is even faster than the SBCS one.
 
--  custom sort (@custom) is now removed from Sphinx. This feature was
+-  custom sort (@custom) is now removed from Manticore. This feature was
    introduced long before sort by expression became a reality and it has
    been deprecated for a very long time.
 
@@ -280,9 +280,9 @@ Changes are as follows:
 
 -  ondisk\_dict\_default is deprecated. No need to save RAM this way.
 
-None of the different querying methods are deprecated, but SphinxQL is
-the most advanced method. We plan to remove SphinxAPI and Sphinx SE
-someday so it would be a good idea to start using SphinxQL.
+None of the different querying methods are deprecated, but ManticoreQL is
+the most advanced method. We plan to remove ManticoreAPI and Manticore SE
+someday so it would be a good idea to start using ManticoreQL.
 
 -  The SetWeights() API call has been deprecated for a long time and has
    now been removed from official APIs.
@@ -290,23 +290,23 @@ someday so it would be a good idea to start using SphinxQL.
 -  The default matching mode for the API is now ‘extended’. Actually,
    all other modes are deprecated. We recommend using the `extended
    query syntax <../extended_query_syntax.md>`__ instead.
-Quick Sphinx usage tour
+Quick Manticore usage tour
 -----------------------
 
-All the example commands below assume that you installed Sphinx in
+All the example commands below assume that you installed Manticore in
 ``/usr/local/sphinx``, so ``searchd`` can be found in
 ``/usr/local/sphinx/bin/searchd``.
 
-To use Sphinx, you will need to:
+To use Manticore, you will need to:
 
 1. Create a configuration file.
 
-   Default configuration file name is ``sphinx.conf``. All Sphinx
+   Default configuration file name is ``sphinx.conf``. All Manticore
    programs look for this file in current working directory by default.
 
    Sample configuration file, ``sphinx.conf.dist``, which has all the
    options documented, is created by ``configure``. Copy and edit that
-   sample file to make your own configuration: (assuming Sphinx is
+   sample file to make your own configuration: (assuming Manticore is
    installed into ``/usr/local/sphinx/``)
 
    ::

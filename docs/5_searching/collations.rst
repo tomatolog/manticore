@@ -2,14 +2,14 @@ Collations
 ----------
 
 Collations essentially affect the string attribute comparisons. They
-specify both the character set encoding and the strategy that Sphinx
+specify both the character set encoding and the strategy that Manticore
 uses to compare strings when doing ORDER BY or GROUP BY with a string
 attribute involved.
 
 String attributes are stored as is when indexing, and no character set
 or language information is attached to them. That's okay as long as
-Sphinx only needs to store and return the strings to the calling
-application verbatim. But when you ask Sphinx to sort by a string value,
+Manticore only needs to store and return the strings to the calling
+application verbatim. But when you ask Manticore to sort by a string value,
 that request immediately becomes quite ambiguous.
 
 First, single-byte (ASCII, or ISO-8859-1, or Windows-1251) strings need
@@ -30,7 +30,7 @@ Third, but not least, we might need case-sensitive sorting in some
 scenarios and case-insensitive sorting in some others.
 
 Collations combine all of the above: the character set, the language
-rules, and the case sensitivity. Sphinx currently provides the following
+rules, and the case sensitivity. Manticore currently provides the following
 four collations.
 
 1. ``libc_ci``
@@ -81,17 +81,17 @@ obtained with the ``locale`` command:
 The specific list of the system locales may vary. Consult your OS
 documentation to install additional needed locales.
 
-``utf8_general_ci`` and ``binary`` locales are built-in into Sphinx. The
+``utf8_general_ci`` and ``binary`` locales are built-in into Manticore. The
 first one is a generic collation for UTF-8 data (without any so-called
 language tailoring); it should behave similar to ``utf8_general_ci``
 collation in MySQL. The second one is a simple bytewise comparison.
 
-Collation can be overridden via SphinxQL on a per-session basis using
-``SET collation_connection`` statement. All subsequent SphinxQL queries
-will use this collation. SphinxAPI and SphinxSE queries will use the
+Collation can be overridden via ManticoreQL on a per-session basis using
+``SET collation_connection`` statement. All subsequent ManticoreQL queries
+will use this collation. ManticoreAPI and ManticoreSE queries will use the
 server default collation, as specified in
 `collation\_server <../searchd_program_configuration_options/collationserver.md>`__
-configuration directive. Sphinx currently defaults to ``libc_ci``
+configuration directive. Manticore currently defaults to ``libc_ci``
 collation.
 
 Collations should affect all string attribute comparisons, including

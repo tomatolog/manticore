@@ -4,7 +4,7 @@ hitless\_words
 Hitless words list. Optional, allowed values are ‘all’, or a list file
 name.
 
-By default, Sphinx full-text index stores not only a list of matching
+By default, Manticore full-text index stores not only a list of matching
 documents for every given keyword, but also a list of its in-document
 positions (aka hitlist). Hitlists enables phrase, proximity, strict
 order and other advanced types of searching, as well as phrase proximity

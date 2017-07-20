@@ -4,15 +4,15 @@ Credits
 Author
 ~~~~~~
 
-Sphinx initial author (and a benevolent dictator ever since):
+Manticore initial author (and a benevolent dictator ever since):
 
 -  Andrew Aksyonoff, http://shodan.ru
 
 Team
 ~~~~
 
-Past and present employees of Sphinx Technologies Inc who should be
-noted on their work on Sphinx (in alphabetical order):
+Past and present employees of Manticore Technologies Inc who should be
+noted on their work on Manticore (in alphabetical order):
 
 -  Adam Rice
 
@@ -47,7 +47,7 @@ noted on their work on Sphinx (in alphabetical order):
 Contributors
 ~~~~~~~~~~~~
 
-People who contributed to Sphinx and their contributions (in no
+People who contributed to Manticore and their contributions (in no
 particular order):
 
 -  Robert “coredev” Bengtsson (Sweden), initial version of PostgreSQL

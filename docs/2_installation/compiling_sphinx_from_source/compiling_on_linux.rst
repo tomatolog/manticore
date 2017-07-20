@@ -20,20 +20,20 @@ Compiling on Linux
    There's a number of options to configure. The complete listing may be
    obtained by using ``--help`` switch. The most important ones are:
 
-   -  ``--prefix``, which specifies where to install Sphinx; such as
+   -  ``--prefix``, which specifies where to install Manticore; such as
       ``--prefix=/usr/local/sphinx`` (all of the examples use this
       prefix)
 
    -  ``--with-mysql``, which specifies where to look for MySQL include
       and library files, if auto-detection fails;
 
-   -  ``--with-static-mysql``, which builds Sphinx with statically
+   -  ``--with-static-mysql``, which builds Manticore with statically
       linked MySQL support;
 
    -  ``--with-pgsql``, which specifies where to look for PostgreSQL
       include and library files.
 
-   -  ``--with-static-pgsql``, which builds Sphinx with statically
+   -  ``--with-static-pgsql``, which builds Manticore with statically
       linked PostgreSQL support;
 
 3. Build the binaries:

@@ -5,7 +5,7 @@ JSON attribute declaration. Multi-value (ie. there may be more than one
 such attribute declared), optional. Applies to SQL source types
 (``mysql``, ``pgsql``, ``mssql``) only.
 
-When indexing JSON attributes, Sphinx expects a text field with JSON
+When indexing JSON attributes, Manticore expects a text field with JSON
 formatted data. JSON attributes supports arbitrary JSON data with no
 limitation in nested levels or types.
 
@@ -27,7 +27,7 @@ limitation in nested levels or types.
         ]
     }
 
-These attributes allow Sphinx to work with documents without a fixed set
+These attributes allow Manticore to work with documents without a fixed set
 of attribute columns. When you filter on a key of a JSON attribute,
 documents that don't include the key will simply be ignored.
 

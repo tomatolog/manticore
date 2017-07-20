@@ -6,10 +6,10 @@ RELOAD INDEX syntax
 
     RELOAD INDEX idx [ FROM '/path/to/index_files' ]
 
-RELOAD INDEX allows you to rotate indexes using SphinxQL.
+RELOAD INDEX allows you to rotate indexes using ManticoreQL.
 
 It has two modes of operation. First one (without specifying a path)
-makes Sphinx daemon check for new index files in directory specified in
+makes Manticore daemon check for new index files in directory specified in
 `the section called “path” <../index_configuration_options/path.md>`__.
 New index files must have a idx.new.sp? names.
 

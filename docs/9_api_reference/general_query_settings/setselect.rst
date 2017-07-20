@@ -12,7 +12,7 @@ SELECT and FROM. It lets you choose what attributes (columns) to fetch,
 and also what expressions over the columns to compute and fetch. A
 certain difference from SQL is that expressions <b>must</b> always be
 aliased to a correct identifier (consisting of letters and digits) using
-‘AS’ keyword. SQL also lets you do that but does not require to. Sphinx
+‘AS’ keyword. SQL also lets you do that but does not require to. Manticore
 enforces aliases so that the computation results can always be returned
 under a “normal” name in the result set, used in other clauses, etc.
 

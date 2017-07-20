@@ -1,7 +1,7 @@
 Distributed searching
 ---------------------
 
-To scale well, Sphinx has distributed searching capabilities.
+To scale well, Manticore has distributed searching capabilities.
 Distributed searching is useful to improve query latency (ie. search
 time) and throughput (ie. max queries/sec) in multi-server, multi-CPU or
 multi-core environments. This is essential for applications which need
@@ -13,7 +13,7 @@ search nodes and then process it in parallel.
 
 Partitioning is done manually. You should
 
--  setup several instances of Sphinx programs (``indexer`` and
+-  setup several instances of Manticore programs (``indexer`` and
    ``searchd``) on different servers;
 
 -  make the instances index (and search) different parts of data;

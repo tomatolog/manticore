@@ -158,7 +158,7 @@ New features
 
 -  added multi-threaded agent querying (bug #1000)
 
-New SphinxQL features
+New ManticoreQL features
 ~~~~~~~~~~~~~~~~~~~~~
 
 -  added `SHOW INDEX indexname

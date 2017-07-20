@@ -53,7 +53,7 @@ New features
    to ``searchd``
 
 -  added string attribute support and a few previously missing `snippets
-   options <../building_snippets_excerpts_via_mysql.md>`__ to SphinxSE
+   options <../building_snippets_excerpts_via_mysql.md>`__ to ManticoreSE
 
 -  added previously missing
    ```Status()`` <../additional_functionality/status.md>`__,
@@ -63,7 +63,7 @@ New features
 -  added ``ORDER BY RAND()`` support to `SELECT <../select_syntax.md>`__
    statement
 
--  added Sphinx version to Windows crash log
+-  added Manticore version to Windows crash log
 
 -  added RT index support to
    `indextool <../indextool_command_reference.md>`__ ``--check`` (checks
@@ -96,7 +96,7 @@ New features
    `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.md>`__
    sanity check to 10M values
 
-New SphinxQL features
+New ManticoreQL features
 ~~~~~~~~~~~~~~~~~~~~~
 
 -  added `FLUSH RTINDEX <../flush_rtindex_syntax.md>`__ statement
@@ -118,7 +118,7 @@ New SphinxQL features
    variables (like @@tx\_isolation) in `SET <../set_syntax.md>`__
    statement (better MySQL frameworks/connectors support)
 
--  added complete `SphinxQL error
+-  added complete `ManticoreQL error
    logging <../searchd_query_log_formats/sphinxql_log_format.md>`__ (all
    errors are logged now, not just ``SELECT``\ s)
 
@@ -145,7 +145,7 @@ Bug fixes
 
 -  fixed #951, UTF-8 snippets could hang on malformed data
 
--  fixed #947, bad float column type was reported via SphinxQL, breaking
+-  fixed #947, bad float column type was reported via ManticoreQL, breaking
    some clients
 
 -  fixed #940, group-by with a small enough ``max_matches`` limit could
@@ -245,7 +245,7 @@ Bug fixes
 -  fixed that empty result set returned the full schema (rather than
    ``SELECT``-ed columns)
 
--  fixed that SphinxQL did not have a sanity check for (currently
+-  fixed that ManticoreQL did not have a sanity check for (currently
    unsupported) result set schemas over 250 attributes
 
 -  fixed that updates on regular indexes were not binlogged
@@ -253,7 +253,7 @@ Bug fixes
 -  fixed that multi-query optimization check for expressions did not
    handle multi-index case
 
--  fixed that SphinxSE did not build vs MySQL 5.5 release
+-  fixed that ManticoreSE did not build vs MySQL 5.5 release
 
 -  fixed that ``proximity_bm25`` ranker could yield incorrect weight on
    duplicated keywords
@@ -272,7 +272,7 @@ Bug fixes
 -  fixed that Java API did not let specify a connection timeout
 
 -  fixed that ordinal and wordcount attributes could not be fetched via
-   SphinxQL
+   ManticoreQL
 
 -  fixed that in a rare edge case ``OR/ORDER`` would not match properly
 

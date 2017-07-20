@@ -1,7 +1,7 @@
 History
 -------
 
-Sphinx development was started back in 2001, because I didn't manage to
+Manticore development was started back in 2001, because I didn't manage to
 find an acceptable search solution (for a database driven Web site)
 which would meet my requirements. Actually, each and every important
 aspect was a problem:
@@ -25,6 +25,6 @@ Despite the amount of time passed and numerous improvements made in the
 other solutions, there's still no solution which I personally would be
 eager to migrate to.
 
-Considering that and a lot of positive feedback received from Sphinx
+Considering that and a lot of positive feedback received from Manticore
 users during last years, the obvious decision is to continue developing
-Sphinx (and, eventually, to take over the world).
+Manticore (and, eventually, to take over the world).

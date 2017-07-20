@@ -5,7 +5,7 @@ Version 0.9.9-release, 02 dec 2009
 
 -  added automatic persistent connection reopening to PHP, Python APIs
 
--  added 64-bit value/range filters, fullscan mode support to SphinxSE
+-  added 64-bit value/range filters, fullscan mode support to ManticoreSE
 
 -  MAJOR CHANGE, our IANA assigned ports are 9312 and 9306 respectively
    (goodbye, trusty 3312)
@@ -56,23 +56,23 @@ Version 0.9.9-release, 02 dec 2009
 
 -  fixed #376 (minor error message mismatch)
 
--  fixed #413 (minus in SphinxQL)
+-  fixed #413 (minus in ManticoreQL)
 
--  fixed #417 (floats w/o leading digit in SphinxQL)
+-  fixed #417 (floats w/o leading digit in ManticoreQL)
 
 -  fixed #403 (typo in SetFieldWeights name in Java API)
 
 -  fixed index rotation vs persistent connections
 
--  fixed backslash handling in SphinxQL parser
+-  fixed backslash handling in ManticoreQL parser
 
 -  fixed uint unpacking vs. PHP 5.2.9 (possibly other versions)
 
--  fixed #325 (filter settings send from SphinxSE)
+-  fixed #325 (filter settings send from ManticoreSE)
 
--  fixed #352 (removed mysql wrapper around close() in SphinxSE)
+-  fixed #352 (removed mysql wrapper around close() in ManticoreSE)
 
--  fixed #389 (display error messages through SphinxSE status variable)
+-  fixed #389 (display error messages through ManticoreSE status variable)
 
 -  fixed linking with port-installed iconv on OS X
 
@@ -97,11 +97,11 @@ Version 0.9.9-release, 02 dec 2009
 
 -  fixed #338 (added missing fullscan to mode check in Java API)
 
--  fixed #323 (added floats support to SphinxQL)
+-  fixed #323 (added floats support to ManticoreQL)
 
 -  fixed #340 (support listen=port:proto syntax too)
 
--  fixed #332 (:raw-latex:`\r `is legal SphinxQL space now)
+-  fixed #332 (:raw-latex:`\r `is legal ManticoreQL space now)
 
 -  fixed xmlpipe2 K-lists
 

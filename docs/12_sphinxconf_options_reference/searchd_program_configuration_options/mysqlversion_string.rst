@@ -2,7 +2,7 @@ mysql\_version\_string
 ~~~~~~~~~~~~~~~~~~~~~~
 
 A server version string to return via MySQL protocol. Optional, default
-is empty (return Sphinx version).
+is empty (return Manticore version).
 
 Several picky MySQL client libraries depend on a particular version
 number format used by MySQL, and moreover, sometimes choose a different

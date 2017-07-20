@@ -27,10 +27,10 @@ Removals
 Minor features
 ~~~~~~~~~~~~~~
 
--  added `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ SphinxQL
+-  added `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ ManticoreQL
    statement
 
--  added `FLUSH ATTRIBUTES <../flush_attributes_syntax.md>`__ SphinxQL
+-  added `FLUSH ATTRIBUTES <../flush_attributes_syntax.md>`__ ManticoreQL
    statement
 
 Bug fixes

@@ -1,2 +1,2 @@
-Appendix A. Sphinx revision history
+Appendix A. Manticore revision history
 ===================================

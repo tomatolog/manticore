@@ -17,7 +17,7 @@ SELECT syntax
         [FACET facet_options[ FACET facet_options][ ...]]
 
 <b>SELECT</b> statement's syntax is based upon regular SQL but adds
-several Sphinx-specific extensions and has a few omissions (such as
+several Manticore-specific extensions and has a few omissions (such as
 (currently) missing support for JOINs). Specifically,
 
 -  Column list clause. Column names, arbitrary expressions, and star
@@ -53,9 +53,9 @@ several Sphinx-specific extensions and has a few omissions (such as
 
    where myUdf() would be a UDF that fetches a document by its ID from
    some external storage. This enables applications to fetch the entire
-   result set directly from Sphinx in one query, without having to
+   result set directly from Manticore in one query, without having to
    separately fetch the documents in the application and then send them
-   back to Sphinx for highlighting.
+   back to Manticore for highlighting.
 
    SNIPPET() is a so-called “post limit” function, meaning that
    computing snippets is postponed not just until the entire final
@@ -139,7 +139,7 @@ several Sphinx-specific extensions and has a few omissions (such as
    collation (see `the section called
    “Collations” <../collations.md>`__).
 
-   You can query Sphinx to return (no more than) N top matches for each
+   You can query Manticore to return (no more than) N top matches for each
    group accordingly to WITHIN GROUP ORDER BY.
 
    ::
@@ -175,7 +175,7 @@ several Sphinx-specific extensions and has a few omissions (such as
    “1:1 1:2 2:1” meaning that the first zone span matched “text” in
    spans 1 and 2, and the second zone span in span 1 only.
 
--  WITHIN GROUP ORDER BY clause. This is a Sphinx specific extension
+-  WITHIN GROUP ORDER BY clause. This is a Manticore specific extension
    that lets you control how the best row within a group will to be
    selected. The syntax matches that of regular ORDER BY clause:
 
@@ -233,10 +233,10 @@ several Sphinx-specific extensions and has a few omissions (such as
    by those randomized weights.
 
 -  LIMIT clause. Both LIMIT N and LIMIT M,N forms are supported. Unlike
-   in regular SQL (but like in Sphinx API), an implicit LIMIT 0,20 is
+   in regular SQL (but like in Manticore API), an implicit LIMIT 0,20 is
    present by default.
 
--  OPTION clause. This is a Sphinx specific extension that lets you
+-  OPTION clause. This is a Manticore specific extension that lets you
    control a number of per-query options. The syntax is:
 
    ::
@@ -284,7 +284,7 @@ several Sphinx-specific extensions and has a few omissions (such as
       of matched documents.
 
       The historically default IDF (Inverse Document Frequency) in
-      Sphinx is equivalent to
+      Manticore is equivalent to
       ``OPTION idf=&#039;normalized,tfidf_normalized&#039;``, and those
       normalizations may cause several undesired effects.
 
@@ -392,7 +392,7 @@ several Sphinx-specific extensions and has a few omissions (such as
        OPTION ranker=bm25, max_matches=3000,
            field_weights=(title=10, body=3), agent_query_timeout=10000
 
--  FACET clause. This Sphinx specific extension enables faceted search
+-  FACET clause. This Manticore specific extension enables faceted search
    with subtree optimization. It is capable of returning multiple result
    sets with a single SQL statement, without the need for complicated
    `multi-queries <../multi-statement_queries.md>`__. FACET clauses

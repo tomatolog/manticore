@@ -7,7 +7,7 @@ SHOW PROFILE syntax
     SHOW PROFILE
 
 SHOW PROFILE shows a detailed execution profile of the previous SQL
-statement executed in the current SphinxQL session. Also, profiling must
+statement executed in the current ManticoreQL session. Also, profiling must
 be enabled in the current session <b>before</b> running the statement to
 be instrumented. That can be done with a ``SET profiling=1`` statement.
 By default, profiling is disabled to avoid potential performance
@@ -81,7 +81,7 @@ Here's a brief description of the currently profiled states.
 -  <b>io</b>, generic file IO time.
 -  <b>dist\_connect</b>, connecting to remote agents in the distributed
    index case.
--  <b>sql\_parse</b>, parsing the SphinxQL syntax.
+-  <b>sql\_parse</b>, parsing the ManticoreQL syntax.
 -  <b>dict\_setup</b>, dictionary and tokenizer setup.
 -  <b>parse</b>, parsing the full-text query syntax.
 -  <b>transforms</b>, full-text query transformations (wildcard and

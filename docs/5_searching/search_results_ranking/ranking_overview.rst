@@ -16,23 +16,23 @@ relevance is *subjective*. As in, what seems relevant to you might not
 seem relevant to me. Hence, in general case it's not just hard to
 compute, it's theoretically impossible.
 
-So ranking in Sphinx is configurable. It has a notion of a so-called
+So ranking in Manticore is configurable. It has a notion of a so-called
 <b>ranker</b>. A ranker can formally be defined as a function that takes
 document and query as its input and produces a relevance value as
 output. In layman's terms, a ranker controls exactly how (using which
-specific algorithm) will Sphinx assign weights to the document.
+specific algorithm) will Manticore assign weights to the document.
 
 Previously, this ranking function was rigidly bound to the matching
 mode. So in the legacy matching modes (that is, SPH\_MATCH\_ALL,
 SPH\_MATCH\_ANY, SPH\_MATCH\_PHRASE, and SPH\_MATCH\_BOOLEAN) you can
 not choose the ranker. You can only do that in the SPH\_MATCH\_EXTENDED
-mode. (Which is the only mode in SphinxQL and the suggested mode in
-SphinxAPI anyway.) To choose a non-default ranker you can either use
+mode. (Which is the only mode in ManticoreQL and the suggested mode in
+ManticoreAPI anyway.) To choose a non-default ranker you can either use
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-with SphinxAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
-``SELECT`` statement when using SphinxQL.
+with ManticoreAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
+``SELECT`` statement when using ManticoreQL.
 
 As a sidenote, legacy matching modes are internally implemented via the
-unified syntax anyway. When you use one of those modes, Sphinx just
+unified syntax anyway. When you use one of those modes, Manticore just
 internally adjusts the query and sets the associated ranker, then
 executes the query using the very same unified code path.

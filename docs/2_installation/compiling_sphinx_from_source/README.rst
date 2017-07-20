@@ -1,2 +1,2 @@
-Compiling Sphinx from source
+Compiling Manticore from source
 ----------------------------

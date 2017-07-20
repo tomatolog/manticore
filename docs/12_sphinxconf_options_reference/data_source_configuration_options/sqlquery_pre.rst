@@ -17,7 +17,7 @@ counters, set various per-connection SQL server options and variables,
 and so on.
 
 Perhaps the most frequent pre-query usage is to specify the encoding
-that the server will use for the rows it returns. Note that Sphinx
+that the server will use for the rows it returns. Note that Manticore
 accepts only UTF-8 texts. Two MySQL specific examples of setting the
 encoding are:
 

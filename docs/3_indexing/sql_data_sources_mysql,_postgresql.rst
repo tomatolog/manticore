@@ -41,7 +41,7 @@ Ranged queries
 Main query, which needs to fetch all the documents, can impose a read
 lock on the whole table and stall the concurrent queries (eg. INSERTs to
 MyISAM table), waste a lot of memory for result set, etc. To avoid this,
-Sphinx supports so-called *ranged queries*. With ranged queries, Sphinx
+Manticore supports so-called *ranged queries*. With ranged queries, Manticore
 first fetches min and max document IDs from the table, and then
 substitutes different ID intervals into main query text and runs the
 modified query to fetch another chunk of documents. Here's an example.
@@ -75,7 +75,7 @@ be of some help.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The difference between post-query and post-index query is in that
-post-query is run immediately when Sphinx received all the documents,
+post-query is run immediately when Manticore received all the documents,
 but further indexing **may** still fail for some other reason. On the
 contrary, by the time the post-index query gets executed, it is
 **guaranteed** that the indexing was successful. Database connection is

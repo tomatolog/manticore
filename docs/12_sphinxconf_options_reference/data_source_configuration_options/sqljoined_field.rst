@@ -25,7 +25,7 @@ where
 
 <b>Joined fields</b> let you avoid JOIN and/or GROUP\_CONCAT statements
 in the main document fetch query (sql\_query). This can be useful when
-SQL-side JOIN is slow, or needs to be offloaded on Sphinx side, or
+SQL-side JOIN is slow, or needs to be offloaded on Manticore side, or
 simply to emulate MySQL-specific GROUP\_CONCAT functionality in case
 your database server does not support it.
 

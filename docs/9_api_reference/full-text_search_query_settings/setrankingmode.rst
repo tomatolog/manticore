@@ -7,7 +7,7 @@ Sets ranking mode (aka ranker). Only available in SPH\_MATCH\_EXTENDED
 matching mode. Parameter must be a constant specifying one of the known
 rankers.
 
-By default, in the EXTENDED matching mode Sphinx computes two factors
+By default, in the EXTENDED matching mode Manticore computes two factors
 which contribute to the final match weight. The major part is a phrase
 proximity value between the document text and the query. The minor part
 is so-called BM25 statistical function, which varies from 0 to 1

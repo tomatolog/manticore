@@ -1,18 +1,18 @@
 Indexes
 =======================
 
-To be able to answer full-text search queries fast, Sphinx needs to
+To be able to answer full-text search queries fast, Manticore needs to
 build a special data structure optimized for such queries from your text
 data. This structure is called *index*; and the process of building
 index from text is called *indexing*.
 
 Different index types are well suited for different tasks. For example,
 a disk-based tree-based index would be easy to update (ie. insert new
-documents to existing index), but rather slow to search. Sphinx
+documents to existing index), but rather slow to search. Manticore
 architecture allows internally for different *index types*, or
 *backends*, to be implemented comparatively easily.
 
-Sphinx provides 2 different backends: a <b>disk index</b> backend, and a
+Manticore provides 2 different backends: a <b>disk index</b> backend, and a
 <b>RT (realtime) index</b> backend.
 
 <b>Disk indexes</b> are designed to provide maximum indexing and
@@ -39,11 +39,11 @@ will still work even during that occasional writing stall.) Refer to
 `Chapter 4, *Real-time indexes* <../4_real-time_indexes/README.md>`__
 for details.
 
-Last but not least, Sphinx supports so-called <b>distributed
+Last but not least, Manticore supports so-called <b>distributed
 indexes</b>. Compared to disk and RT indexes, those are not a real
 physical backend, but rather just lists of either local or remote
 indexes that can be searched transparently to the application, with
-Sphinx doing all the chores of sending search requests to remote
+Manticore doing all the chores of sending search requests to remote
 machines in the cluster, aggregating the result sets, retrying the
 failed requests, and even doing some load balancing. See `the section
 called “Distributed searching” <../distributed_searching.md>`__ for a

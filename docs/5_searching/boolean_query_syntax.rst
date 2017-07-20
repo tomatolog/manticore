@@ -75,6 +75,6 @@ complex queries, or algorithmically generated queries.
 
 Queries like “-dog”, which implicitly include all documents from the
 collection, can not be evaluated. This is both for technical and
-performance reasons. Technically, Sphinx does not always keep a list of
+performance reasons. Technically, Manticore does not always keep a list of
 all IDs. Performance-wise, when the collection is huge (ie. 10-100M
 documents), evaluating such queries could take very long.

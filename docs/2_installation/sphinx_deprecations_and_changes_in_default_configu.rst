@@ -1,4 +1,4 @@
-Sphinx deprecations and changes in default configuration
+Manticore deprecations and changes in default configuration
 --------------------------------------------------------
 
 Changes are as follows:
@@ -21,7 +21,7 @@ Changes are as follows:
    a pre-query to fetch your data in UTF-8 and you're all set. Also, in
    fact, our current UTF-8 tokenizer is even faster than the SBCS one.
 
--  custom sort (@custom) is now removed from Sphinx. This feature was
+-  custom sort (@custom) is now removed from Manticore. This feature was
    introduced long before sort by expression became a reality and it has
    been deprecated for a very long time.
 
@@ -47,9 +47,9 @@ Changes are as follows:
 
 -  ondisk\_dict\_default is deprecated. No need to save RAM this way.
 
-None of the different querying methods are deprecated, but SphinxQL is
-the most advanced method. We plan to remove SphinxAPI and Sphinx SE
-someday so it would be a good idea to start using SphinxQL.
+None of the different querying methods are deprecated, but ManticoreQL is
+the most advanced method. We plan to remove ManticoreAPI and Manticore SE
+someday so it would be a good idea to start using ManticoreQL.
 
 -  The SetWeights() API call has been deprecated for a long time and has
    now been removed from official APIs.

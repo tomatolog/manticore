@@ -9,7 +9,7 @@ replace different forms of the same word with the base, normalized form.
 For instance, English stemmer will normalize both “dogs” and “dog” to
 “dog”, making search results for both searches the same.
 
-There are 3 different morphology preprocessors that Sphinx implements:
+There are 3 different morphology preprocessors that Manticore implements:
 lemmatizers, stemmers, and phonetic algorithms.
 
 -  Lemmatizer reduces a keyword form to a so-called lemma, a proper
@@ -36,7 +36,7 @@ lemmatizers, stemmers, and phonetic algorithms.
    codes that are equal even when the words original are different, but
    phonetically close.
 
-The morphology processors that come with our own built-in Sphinx
+The morphology processors that come with our own built-in Manticore
 implementations are:
 
 -  English, Russian, and German lemmatizers;
@@ -46,12 +46,12 @@ implementations are:
 -  SoundEx and MetaPhone phonetic algorithms.
 
 You can also link with <b>libstemmer</b> library for even more stemmers
-(see details below). With libstemmer, Sphinx also supports morphological
+(see details below). With libstemmer, Manticore also supports morphological
 processing for more than 15 other languages. Binary packages should come
 prebuilt with libstemmer support, too.
 
 Lemmatizers require a dictionary that needs to be additionally
-downloaded from the Sphinx website. That dictionary needs to be
+downloaded from the Manticore website. That dictionary needs to be
 installed in a directory specified by
 `lemmatizer\_base <../../common_section_configuration_options/lemmatizerbase.md>`__
 directive. Also, there is a
@@ -65,7 +65,7 @@ n-grams) to segment Chinese documents.
 ``[charset_table](../../index_configuration_options/charsettable.md)``
 must contain all Chinese characters except Chinese punctuation marks
 because incoming documents are first processed by sphinx tokenizer and
-then the result is processed by RLP. Sphinx performs per-token language
+then the result is processed by RLP. Manticore performs per-token language
 detection on the incoming documents. If token language is identified as
 Chinese, it will only be processed the RLP, even if multiple morphology
 processors are specified. Otherwise, it will be processed by all the

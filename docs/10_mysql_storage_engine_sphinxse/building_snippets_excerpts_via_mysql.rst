@@ -1,13 +1,13 @@
 Building snippets (excerpts) via MySQL
 --------------------------------------
 
-SphinxSE also includes a UDF function that lets you create snippets
+ManticoreSE also includes a UDF function that lets you create snippets
 through MySQL. The functionality is fully similar to
 `BuildExcerprts <../additional_functionality/buildexcerpts.md>`__ API
-call but accessible through MySQL+SphinxSE.
+call but accessible through MySQL+ManticoreSE.
 
 The binary that provides the UDF is named ``sphinx.so`` and should be
-automatically built and installed to proper location along with SphinxSE
+automatically built and installed to proper location along with ManticoreSE
 itself. If it does not get installed automatically for some reason, look
 for ``sphinx.so`` in the build directory and copy it to the plugins
 directory of your MySQL instance. After that, register the UDF using the

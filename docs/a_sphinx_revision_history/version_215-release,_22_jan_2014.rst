@@ -19,4 +19,4 @@ Bug fixes
    `rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.md>`__
 
 -  fixed network protocol issue which results in timeouts of
-   ``libmysqlclient`` for big Sphinx responses
+   ``libmysqlclient`` for big Manticore responses

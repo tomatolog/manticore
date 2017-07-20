@@ -40,10 +40,10 @@ Bug fixes
 
 -  fixed #1481, shebang config changes check on rotation
 
--  fixed #1479, port handling in `PHP Sphinx
+-  fixed #1479, port handling in `PHP Manticore
    API <../9_api_reference/README.md>`__
 
--  fixed #1474, daemon crash at SphinxQL packet overflows
+-  fixed #1474, daemon crash at ManticoreQL packet overflows
    `max\_packet\_size <../searchd_program_configuration_options/maxpacket_size.md>`__
 
 -  fixed #1472, crash on loading index to ``indextool`` for check

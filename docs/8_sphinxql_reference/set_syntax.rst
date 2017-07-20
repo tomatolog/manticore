@@ -69,17 +69,17 @@ in the respective scope. Known per-session server variables are:
 -  ``CHARACTER_SET_RESULTS = charset_name``
 -  Does nothing; a placeholder to support frameworks, clients, and
    connectors that attempt to automatically enforce a charset when
-   connecting to a Sphinx server.
+   connecting to a Manticore server.
 
 -  ``SQL_AUTO_IS_NULL = value``
 -  Does nothing; a placeholder to support frameworks, clients, and
    connectors that attempt to automatically enforce a charset when
-   connecting to a Sphinx server.
+   connecting to a Manticore server.
 
 -  ``SQL_MODE = value``
 -  Does nothing; a placeholder to support frameworks, clients, and
    connectors that attempt to automatically enforce a charset when
-   connecting to a Sphinx server.
+   connecting to a Manticore server.
 
 -  ``PROFILING = {0 | 1}``
 -  Enables query profiling in the current session. Defaults to 0. See

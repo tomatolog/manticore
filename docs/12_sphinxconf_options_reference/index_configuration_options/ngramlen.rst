@@ -27,12 +27,12 @@ individual words, then wrapping the words in quotes and using extended
 mode will result in proper matches being found even if the text was
 <b>not</b> segmented. For instance, assume that the original query is BC
 DEF. After wrapping in quotes on the application side, it should look
-like “BC” “DEF” (*with* quotes). This query will be passed to Sphinx and
+like “BC” “DEF” (*with* quotes). This query will be passed to Manticore and
 internally split into 1-grams too, resulting in “B C” “D E F” query,
 still with quotes that are the phrase matching operator. And it will
 match the text even though there were no separators in the text.
 
-Even if the search query is not segmented, Sphinx should still produce
+Even if the search query is not segmented, Manticore should still produce
 good results, thanks to phrase based ranking: it will pull closer phrase
 matches (which in case of N-gram CJK words can mean closer
 multi-character word matches) to the top.

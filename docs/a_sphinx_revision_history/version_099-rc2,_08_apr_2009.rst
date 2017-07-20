@@ -57,7 +57,7 @@ Version 0.9.9-rc2, 08 apr 2009
    `max\_xmlpipe2\_field <../indexer_program_configuration_options/maxxmlpipe2_field.md>`__
    directive
 
--  added `initial SphinxQL
+-  added `initial ManticoreQL
    support <../mysql_protocol_support_and_sphinxql.md>`__ to mysql41
    handler, SELECT …/SHOW WARNINGS/STATUS/META are handled
 
@@ -65,7 +65,7 @@ Version 0.9.9-rc2, 08 apr 2009
 
 -  added `fieldmask
    ranker <../full-text_search_query_settings/setrankingmode.md>`__,
-   updated SphinxSE list of rankers
+   updated ManticoreSE list of rankers
 
 -  added
    `mysql\_ssl\_xxx <../data_source_configuration_options/mysqlssl_cert_,_mysqlssl_key_,_mysqlssl_ca.md>`__
@@ -107,7 +107,7 @@ Version 0.9.9-rc2, 08 apr 2009
 -  improved handshake error handling, fixed protocol version byte order
    (omg)
 
--  updated SphinxSE to protocol 1.22
+-  updated ManticoreSE to protocol 1.22
 
 -  allowed phrase\_boundary\_step=-1 (trick to emulate keyword
    expansion)
@@ -155,7 +155,7 @@ Version 0.9.9-rc2, 08 apr 2009
 -  fixed handling of numeric keywords with leading zeroes such as “007”
    (bug #251)
 
--  fixed junk in SphinxSE status variables (bug #304)
+-  fixed junk in ManticoreSE status variables (bug #304)
 
 -  fixed wordlist checkpoints serialization (bug #236)
 

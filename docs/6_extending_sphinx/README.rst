@@ -1,2 +1,2 @@
-Chapter 6. Extending Sphinx
+Chapter 6. Extending Manticore
 ===========================

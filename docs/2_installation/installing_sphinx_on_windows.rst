@@ -1,7 +1,7 @@
-Installing Sphinx on Windows
+Installing Manticore on Windows
 ----------------------------
 
-Installing Sphinx on a Windows server is often easier than installing on
+Installing Manticore on a Windows server is often easier than installing on
 a Linux environment; unless you are preparing code patches, you can use
 the pre-compiled binary files from the Downloads area on the website.
 
@@ -14,8 +14,8 @@ the pre-compiled binary files from the Downloads area on the website.
    the files, or a freeware package like 7Zip to open the archive.
 
    For the remainder of this guide, we will assume that the folders are
-   unzipped into ``C:\Sphinx``, such that ``searchd.exe`` can be found
-   in ``C:\Sphinx\bin\searchd.exe``. If you decide to use any different
+   unzipped into ``C:\Manticore``, such that ``searchd.exe`` can be found
+   in ``C:\Manticore\bin\searchd.exe``. If you decide to use any different
    location for the folders or configuration file, please change it
    accordingly.
 
@@ -24,7 +24,7 @@ the pre-compiled binary files from the Downloads area on the website.
 
 3. Install the ``searchd`` system as a Windows service:
 
-   **``C:\Sphinx\bin&gt; C:\Sphinx\bin\searchd --install --config C:\Sphinx\sphinx.conf.in --servicename SphinxSearch``**
+   **``C:\Manticore\bin&gt; C:\Manticore\bin\searchd --install --config C:\Manticore\sphinx.conf.in --servicename ManticoreSearch``**
 
 4. The ``searchd`` service will now be listed in the Services panel
    within the Management Console, available from Administrative Tools.

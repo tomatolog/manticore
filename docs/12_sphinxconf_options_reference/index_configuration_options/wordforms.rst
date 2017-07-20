@@ -21,7 +21,7 @@ Dictionaries are used to normalize incoming words both during indexing
 and searching. Therefore, to pick up changes in wordforms file it's
 required to rotate index.
 
-Word forms support in Sphinx is designed to support big dictionaries
+Word forms support in Manticore is designed to support big dictionaries
 well. They moderately affect indexing speed: for instance, a dictionary
 with 1 million entries slows down indexing about 1.5 times. Searching
 speed is not affected at all. Additional RAM impact is roughly equal to
@@ -45,7 +45,7 @@ insensitive. Here's the file contents sample:
     walking > walk
 
 There is a bundled ``spelldump`` utility that helps you create a
-dictionary file in the format Sphinx can read from source ``.dict`` and
+dictionary file in the format Manticore can read from source ``.dict`` and
 ``.aff`` dictionary files in ``ispell`` or ``MySpell`` format (as
 bundled with OpenOffice).
 

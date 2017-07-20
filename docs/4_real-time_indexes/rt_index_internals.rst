@@ -11,12 +11,12 @@ on the RT index will be performed in RAM only and complete instantly (in
 milliseconds), those changes that overflow the RAM chunk will stall for
 the duration of disk chunk creation (a few seconds).
 
-Sphinx uses double-buffering to avoid INSERT stalls. When data is being
+Manticore uses double-buffering to avoid INSERT stalls. When data is being
 dumped to disk, the second buffer is used, so further INSERTs won't be
 delayed. The second buffer is defined to be 10% the size of the standard
 buffer,
 `rt\_mem\_limit <../index_configuration_options/rtmem_limit.md>`__, but
-future versions of Sphinx may allow configuring this further.
+future versions of Manticore may allow configuring this further.
 
 Disk chunks are, in fact, just regular disk-based indexes. But they're a
 part of an RT index and automatically managed by it, so you need not

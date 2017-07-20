@@ -29,7 +29,7 @@ New features
    `rt\_attr\_bool <../index_configuration_options/rtattr_bool.md>`__
    directive
 
--  added support for selecting over 250 columns via SphinxQL
+-  added support for selecting over 250 columns via ManticoreQL
 
 -  deprecated custom sort mode, and ``str2ordinal`` and
    ``str2wordcount`` attribute types
@@ -65,7 +65,7 @@ Bug fixes
    integers
 
 -  fixed #1615, global IDF vs exact term (=term) fixed global IDF for
-   missed terms fixed SphinxQL `global\_idf=0
+   missed terms fixed ManticoreQL `global\_idf=0
    option <../index_configuration_options/globalidf.md>`__
 
 -  fixed #1607, now ignoring binlog when running daemon with

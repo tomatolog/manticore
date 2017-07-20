@@ -28,7 +28,7 @@ Bug fixes
    (eg. to report index load time crashes)
 
 -  fixed #1410, bad numerics like ‘123abc’ now result in a proper
-   SphinxQL error message
+   ManticoreQL error message
 
 -  fixed #1404, a tiny memory leak in shared mutex
 
@@ -57,7 +57,7 @@ Bug fixes
    with enable\_star=1
 
 -  fixed #1353, added filtering by ‘id’ syntax (in addition to ‘@id’) to
-   SphinxSE
+   ManticoreSE
 
 -  fixed #1346, fixed NEAR operator behavior vs duplicated keywords
 
@@ -86,7 +86,7 @@ Bug fixes
    in the FROM clause docs
 
 -  fixed #1221, incorrect results when using @groupby in select list via
-   SphinxAPI with compat\_sphinxql\_magics=0
+   ManticoreAPI with compat\_sphinxql\_magics=0
 
 -  fixed #1180, special SPZ chars occasionally leaking into snippets
 
@@ -100,7 +100,7 @@ Bug fixes
 
 -  fixed #1124, corrupted attributes after merging with an empty index
 
--  fixed #1090, SphinxSE snippets UDF updated to support MySQL 5.5
+-  fixed #1090, ManticoreSE snippets UDF updated to support MySQL 5.5
 
 -  fixed #1041, added initial support for MVA updates (and other mutex
    protected things) on FreeBSD

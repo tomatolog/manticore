@@ -22,8 +22,24 @@ functionality must not differ across languages.
    :maxdepth: 2
    
    general_api_functions/*
+   
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   
    general_query_settings/*
+   
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   
    full-text_search_query_settings/*
+   
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   
    result_set_filtering_settings/*
    group_by_settings/*
    querying/*

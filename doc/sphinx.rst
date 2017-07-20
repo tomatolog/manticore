@@ -1136,7 +1136,7 @@ matching engine. Full support for up to 256 fields was added in version 2.0.2-be
 
 
 
-Note that the original contents of the fields are notstored in the Sphinx index. The text that you send to Sphinx gets processed, and 
+Note that the original contents of the fields are **not** stored in the Sphinx index. The text that you send to Sphinx gets processed, and 
 a full-text index (a special data structure that enables quick searches for a keyword) 
 gets built from that text. But the original text contents are then simply discarded. 
 Sphinx assumes that you store those contents elsewhere anyway. 
@@ -1344,14 +1344,14 @@ tree-based index would be easy to update (ie. insert new documents to existing i
 but rather slow to search. Sphinx architecture allows internally for different index types, or backends, to be implemented comparatively easily. 
 
 
-Starting with 1.10-beta, Sphinx provides 2 different backends: a disk indexbackend, and a RT (realtime) indexbackend. 
+Starting with 1.10-beta, Sphinx provides 2 different backends: a **disk index** backend, and a **RT (realtime) index** backend. 
 
 
-Disk indexesare designed to provide maximum indexing and searching speed, while keeping the RAM 
+**Disk indexes** are designed to provide maximum indexing and searching speed, while keeping the RAM 
 footprint as low as possible. That comes at a cost of text index updates. You can 
 not update an existing document or incrementally add a new document to a disk index. 
 You only can batch rebuild the entire disk index from scratch. (Note that you still 
-can update document's attributeson the fly, even with the disk indexes.) 
+can update document's **attributes** on the fly, even with the disk indexes.) 
 
 
 This "rebuild only" limitation might look as a big constraint at a first glance. 
@@ -1360,14 +1360,14 @@ up multiple disk indexes, searching through them all, and only rebuilding the on
 with a fraction of the most recently changed data. See for details. 
 
 
-RT indexesenable you to implement dynamic updates and incremental additions to the full text 
+**RT indexes** enable you to implement dynamic updates and incremental additions to the full text 
 index. RT stands for Real Time and they are indeed "soft realtime" in terms of writes, 
 meaning that most index changes become available for searching as quick as 1 millisecond 
 or less, but could occasionally stall for seconds. (Searches will still work even 
 during that occasional writing stall.) Refer to for details. 
 
 
-Last but not least, Sphinx supports so-called distributed indexes. Compared to disk and RT indexes, those are not a real physical backend, but rather 
+Last but not least, Sphinx supports so-called **distributed indexes** . Compared to disk and RT indexes, those are not a real physical backend, but rather 
 just lists of either local or remote indexes that can be searched transparently to 
 the application, with Sphinx doing all the chores of sending search requests to remote 
 machines in the cluster, aggregating the result sets, retrying the failed requests, 
@@ -2265,7 +2265,7 @@ log to OS prevents from data loss on ``searchd`` crashes but not system crashes.
 
 On recovery after an unclean shutdown, binlogs are replayed and all logged transactions 
 since the last good on-disk state are restored. Transactions are checksummed so in 
-case of binlog file corruption garbage data will notbe replayed; such a broken transaction will be detected and, currently, will stop 
+case of binlog file corruption garbage data will **not** be replayed; such a broken transaction will be detected and, currently, will stop 
 replay. Transactions also start with a magic marker and timestamped, so in case of 
 binlog damage in the middle of the file, it's technically possible to skip broken 
 transactions and keep replaying from the next good one, and/or it's possible to replay 
@@ -2735,7 +2735,7 @@ This can be helpful when searching through heterogeneous indexes with different 
 
 Field position limit, introduced in version 0.9.9-rc1, additionally restricts the 
 searching to first N position within given field (or fields). For example, "@body[50] 
-hello" will notmatch the documents where the keyword 'hello' occurs at position 51 and below in 
+hello" will **not** match the documents where the keyword 'hello' occurs at position 51 and below in 
 the body. 
 
 
@@ -2826,7 +2826,7 @@ phrase query will be shifted. Therefore, 'match any' has no impact on search per
 
 
 
-NEAR operator, added in 2.0.1-beta, is a generalized version of a proximity operator. The syntax 
+**NEAR operator** , added in 2.0.1-beta, is a generalized version of a proximity operator. The syntax 
 is ``NEAR/N`` , it is case-sensitive, and no spaces are allowed between the NEAR keyword, the slash 
 sign, and the distance value. 
 
@@ -2844,7 +2844,7 @@ with NEAR is less restrictive: it would allow for up to 6 words between 'one' an
 
 
 
-SENTENCE and PARAGRAPH operators, added in 2.0.1-beta, matches the document when both its arguments are within the 
+**SENTENCE and PARAGRAPH operators** , added in 2.0.1-beta, matches the document when both its arguments are within the 
 same sentence or the same paragraph of text, respectively. The arguments can be either 
 keywords, or phrases, or the instances of the same operator. Here are a few examples: 
 
@@ -2862,7 +2862,7 @@ Refer to the ``index_sp`` directive documentation for the notes on what's consid
 
 
 
-ZONE limit operator, added in 2.0.1-beta, is quite similar to field limit operator, but restricts matching 
+**ZONE limit operator** , added in 2.0.1-beta, is quite similar to field limit operator, but restricts matching 
 to a given in-field zone or a list of zones. Note that the subsequent subexpressions 
 are notrequired to match in a single contiguous span of a given zone, and may match in multiple 
 spans. For instance, ``(ZONE:th hello world)`` query willmatch this example document: 
@@ -2878,12 +2878,12 @@ ZONE operator affects the query until the next field or ZONE limit operator, or 
 closing parenthesis. It only works on the indexes built with zones support (see ) and will be ignored otherwise. 
 
 
-ZONESPAN limit operator, added in 2.1.1-beta, is similar to the ZONE operator, but requires the match to 
+**ZONESPAN limit operator** , added in 2.1.1-beta, is similar to the ZONE operator, but requires the match to 
 occur in a single contiguous span. In the example above, ``(ZONESPAN:th hello world)>`` would not match the document, since "hello" and "world" do not occur within the same 
 span. 
 
 
-MAYBEoperator was added in 2.2.3-beta. It works much like | operator but doesn't return 
+**MAYBE** operator was added in 2.2.3-beta. It works much like | operator but doesn't return 
 documents which match only right subtree expression. 
 
 
@@ -2921,7 +2921,7 @@ theoretically impossible.
 
 
 So ranking in Sphinx is configurable. It has a notion of
-a so-called ranker. A ranker can formally be defined
+a so-called **ranker** . A ranker can formally be defined
 as a function that takes document and query as its input and
 produces a relevance value as output. In layman's terms,
 a ranker controls exactly how (using which specific algorithm)
@@ -3316,7 +3316,7 @@ Quick summary of the ranking factors
 
 Document-level ranking factors
 
-A document-level factor is a numeric value computed by the ranking
+A **document-level factor**  is a numeric value computed by the ranking
 engine for every matched document with regards to the current query.
 (So it differs from a plain document attribute in that the attribute
 do not depend on the full text query, while factors might.) Those
@@ -3380,13 +3380,13 @@ matched in the entire
 
 Field-level ranking factors
 
-A field-level factor is a numeric value computed by the ranking
+A **field-level factor**  is a numeric value computed by the ranking
 engine for every matched in-document text field with regards to the
 current query. As more than one field can be matched by a query,
 but the final weight needs to be a single integer value, these
 values need to be folded into a single one. To achieve that,
 field-level factors can only be used within a field aggregation
-function, they can not be used anywhere in the expression.
+function, they can **not**  be used anywhere in the expression.
 For example, you can not use ``(lcs+bm25)``  as your
 ranking expression, as ``lcs``  takes multiple values (one
 in every matched field). You should use ``(sum(lcs)+bm25)`` 
@@ -3646,21 +3646,21 @@ that problem by
 ``atc``  (float), added in version 2.2.1-beta. Aggregate Term Closeness.
 A   proximity based measure that grows higher when the document contains more groups
 of 
-  more closely located and more important (rare) query keywords. WARNING:
-you should 
-  use ATC with OPTION idf='plain,tfidf_unnormalized'; otherwise you would
-get unexpected 
-  results.
+  more closely located and more important (rare) query keywords. **WARNING:** 
+you 
+  should use ATC with OPTION idf='plain,tfidf_unnormalized'; otherwise you would
+get 
+  unexpected results.
 
 
 
 ATC basically works as follows. For every keyword occurrence
-in the 
-  document, we compute the so called term closeness. For that,
-we examine all the 
-  other closest occurrences of all the query keywords (keyword itself
-included too) 
-  to the left and to the right of the subject occurrence, compute a distance
+in 
+  the document, we compute the so called term closeness. For that,
+we examine all 
+  the other closest occurrences of all the query keywords (keyword itself
+included 
+  too) to the left and to the right of the subject occurrence, compute a distance
 dampening 
   coefficient as k = pow(distance, -1.75) for those occurrences, and sum the
 dampened 
@@ -3747,7 +3747,7 @@ somewhat
 
 Ranking factor aggregation functions
 
-A field aggregation function is a single argument function
+A **field aggregation function**  is a single argument function
 that takes an expression with field-level factors, iterates it over
 all the matched fields, and computes the final results.
 Currently implemented field aggregation functions are:
@@ -4387,7 +4387,7 @@ IF()
 
 ``IF()``  behavior is slightly different that that of its MySQL counterpart.
 It takes 3 arguments, check whether the 1st argument is equal to 0.0, returns the 2nd argument if it is not zero, or the 3rd one when it is.
-Note that unlike comparison operators, ``IF()``  does not use a threshold!
+Note that unlike comparison operators, ``IF()``  does **not**  use a threshold!
 Therefore, it's safe to use comparison results as its 1st argument, but arithmetic operators might produce unexpected results.
 For instance, the following two calls will produce different results even though they are logically equivalent:
 
@@ -4488,7 +4488,7 @@ returns 1 if condition is true for any element in array.
 
 ATAN2()
 
-Returns the arctangent function of two arguments, expressed in radians.
+Returns the arctangent function of two arguments, expressed in **radians** .
 
 
 
@@ -4508,8 +4508,8 @@ GEODIST()
 
 GEODIST(lat1, lon1, lat2, lon2, [...]) function, introduced in version 0.9.9-rc2,
 computes geosphere distance between two given points specified by their
-coordinates. Note that by default both latitudes and longitudes must be in radians
-and the result will be in meters. You can use arbitrary expression as any
+coordinates. Note that by default both latitudes and longitudes must be in **radians** 
+and the result will be in **meters** . You can use arbitrary expression as any
 of the four coordinates. An optimized path will be selected when one pair
 of the arguments refers directly to a pair attributes and the other one
 is constant.
@@ -4757,7 +4757,7 @@ unpack the factors into it before usage, and deinitialize it afterwards, as foll
 PACKEDFACTORS() data is available at all query stages, not just
 when doing the initial matching and ranking pass. That enables
 another particularly interesting application of PACKEDFACTORS(),
-namely re-ranking.
+namely **re-ranking** .
 
 
 
@@ -5351,7 +5351,7 @@ just one query per line in the actual log.)
    
 
 
-Note that all requests would be logged in this format,
+Note that **all**  requests would be logged in this format,
 including those sent via SphinxAPI and SphinxSE, not just those
 sent via SphinxQL. Also note, that this kind of logging works only with plain log
 files and will not work if you use 'syslog' for logging.
@@ -5556,7 +5556,7 @@ As of 0.9.10, there are two major optimizations to be aware of: common query opt
 
 
 
-Common query optimizationmeans that ``searchd`` will identify all those queries in a batch where only the sorting and group-by settings 
+**Common query optimization** means that ``searchd`` will identify all those queries in a batch where only the sorting and group-by settings 
 differ, and only perform searching once. For instance, if a batch consists of 3 queries, all of them are for "ipod nano", 
 but 1st query requests top-10 results sorted by price, 2nd query groups by vendor 
 ID and requests top-5 vendors sorted by rating, and 3rd query requests max price, 
@@ -5564,7 +5564,7 @@ full-text search for "ipod nano" will only be performed once, and its results wi
 be reused to build 3 different result sets. 
 
 
-So-called faceted searchingis a particularly important case that benefits from this optimization. Indeed, faceted 
+So-called **faceted searching** is a particularly important case that benefits from this optimization. Indeed, faceted 
 searching can be implemented by running a number of queries, one to retrieve search 
 results themselves, and a few other ones with same full-text query but different 
 group-by settings to retrieve all the required groups of results (top-3 authors, 
@@ -5572,7 +5572,7 @@ top-5 vendors, etc). And as long as full-text query and filtering settings stay 
 same, common query optimization will trigger, and greatly improve performance. 
 
 
-Common subtree optimizationis even more interesting. It lets ``searchd`` exploit similarities between batched full-text queries. It identifies common full-text 
+**Common subtree optimization** is even more interesting. It lets ``searchd`` exploit similarities between batched full-text queries. It identifies common full-text 
 query parts (subtrees) in all queries, and caches them between queries. For instance, 
 look at the following query batch: 
 ::
@@ -5832,7 +5832,7 @@ query again.
 
 
 Cache entries expire with TTL, and also get invalidated on index rotation, or on 
-TRUNCATE, or on ATTACH. Note that at the moment entries are notinvalidated on arbitrary RT index writes! So a cached query might be returning older 
+TRUNCATE, or on ATTACH. Note that at the moment entries are **not** invalidated on arbitrary RT index writes! So a cached query might be returning older 
 results for the duration of its TTL. 
 
 
@@ -5952,8 +5952,8 @@ Both ``sphinxudf.h`` header and ``sphinxudf.c`` are standalone. So you can copy 
 other bits of Sphinx source code. 
 
 
-Within your UDF, you mustimplement and export only a couple functions, literally. First, for UDF interface 
-version control, you mustdefine a function ``int LIBRARYNAME_ver()`` , where LIBRARYNAME is the name of your library file, and you must return ``SPH_UDF_VERSION`` (a value defined in ``sphinxudf.h`` ) from it. Here's an example. 
+Within your UDF, you **must** implement and export only a couple functions, literally. First, for UDF interface 
+version control, you **must** define a function ``int LIBRARYNAME_ver()`` , where LIBRARYNAME is the name of your library file, and you must return ``SPH_UDF_VERSION`` (a value defined in ``sphinxudf.h`` ) from it. Here's an example. 
 ::
 
    
@@ -5968,7 +5968,7 @@ version control, you mustdefine a function ``int LIBRARYNAME_ver()`` , where LIB
    
 
 That protects you from accidentally loading a library with a mismatching UDF interface 
-version into a newer or older ``searchd`` . Second, yout mustimplement the actual function, too. ``
+version into a newer or older ``searchd`` . Second, yout **must** implement the actual function, too. ``
 sphinx_int64_t testfunc ( SPH_UDF_INIT * init, SPH_UDF_ARGS * args,
     char * error_flag )
 {
@@ -5978,7 +5978,7 @@ sphinx_int64_t testfunc ( SPH_UDF_INIT * init, SPH_UDF_ARGS * args,
 
 
 UDF function names in SphinxQL are case insensitive. However, the respective C function 
-names are not, they need to be all lower-case, or the UDF will not load. More importantly, it is vital that a) the calling convention 
+names are not, they need to be all **lower-case** , or the UDF will not load. More importantly, it is vital that a) the calling convention 
 is C (aka __cdecl), b) arguments list matches the plugin system expectations exactly, 
 and c) the return type matches the one you specify in ``CREATE FUNCTION`` . Unfortunately, there is no (easy) way for us to check for those mistakes when loading 
 the function, and they could crash the server and/or result in unexpected results. 
@@ -6000,7 +6000,7 @@ cases. However, the data passed in the ``args`` structure will be different. In 
 
 Finally, the third argument is an error flag. UDF can raise it to indicate that some 
 kinda of an internal error happened, the UDF can not continue, and the query should 
-terminate early. You should notuse this for argument type checks or for any other error reporting that is likely 
+terminate early. You should **not** use this for argument type checks or for any other error reporting that is likely 
 to happen during normal use. This flag is designed to report sudden critical runtime 
 errors, such as running out of memory. 
 
@@ -6050,7 +6050,7 @@ you want to use that one.
 
 As for the return types, UDFs can currently return a signle INTEGER, BIGINT, FLOAT, 
 or STRING value. The C function return type should be sphinx_int64_t, sphinx_int64_t, 
-double, or char* respectively. In the last case you mustuse ``args->fn_malloc`` function to allocate the returned string values. Internally in your UDF you can use 
+double, or char* respectively. In the last case you **must** use ``args->fn_malloc`` function to allocate the returned string values. Internally in your UDF you can use 
 whatever you want, so the ``testfunc_init()`` example above is correct code even though it uses malloc() directly: you manage that 
 pointer yourself, it gets freed up using a matching free() call, and all is well. 
 However, the returned strings values are managed by Sphinx and we have our own allocator, 
@@ -7498,7 +7498,7 @@ SphinxQL statements syntax.
    
 
 
-SELECTstatement was introduced in version 0.9.9-rc2. It's syntax is based upon regular 
+**SELECT** statement was introduced in version 0.9.9-rc2. It's syntax is based upon regular 
 SQL but adds several Sphinx-specific extensions and has a few omissions (such as 
 (currently) missing support for JOINs). Specifically, 
 
@@ -7763,19 +7763,19 @@ contains
   the matched zone span identifier, a colon, and the order number
 of the matched 
   zone span. For example, if a document reads
-<emphasis role="bold"><i>text</i> the 
-  <i>text</i></emphasis>, and you query for
-'ZONESPAN:(i,b) text', then ZONESPANLIST() 
-  will return the string
-"1:1 1:2 2:1" meaning that the first zone span matched "text"
-in 
-  spans 1 and 2, and the second zone span in span 1 only.
-This was added in version 
-  2.1.1-beta.
+<b><i>text</i> the <i>text</i></b>, 
+  and you query for
+'ZONESPAN:(i,b) text', then ZONESPANLIST() will return the string
+"1:1 
+  1:2 2:1" meaning that the first zone span matched "text"
+in spans 1 and 2, and 
+  the second zone span in span 1 only.
+This was added in version 2.1.1-beta.
 
 
 
  
+  
 - 
     WITHIN GROUP ORDER BY clause. This is a Sphinx specific
 extension that lets 
@@ -7960,7 +7960,7 @@ divide IDF by query
 
 
 
-where N is the collection size and n is the number of matched
+where **N**  is the collection size and **n**  is the number of matched
 documents.
 
 
@@ -7986,62 +7986,63 @@ in more than
   50% of the documents, then documents with both keywords
 [the] and [something] 
   will 
-  get less weight than documents with
-just one keyword [something]. Using 
-  ``OPTION 
+  get **less**  weight than documents with
+just one keyword [something]. 
+  Using ``OPTION 
   idf=plain``  avoids this.
-Plain IDF varies in [0, log(N)] range, and 
-  keywords
+Plain IDF varies in [0, log(N)] range, 
+  and keywords
 are 
-  never penalized; while the normalized IDF varies in [-log(N), log(N)]
-range, 
-  and 
+  never penalized; while the normalized IDF varies in [-log(N), 
+  log(N)]
+range, and 
   too frequent keywords are penalized.
 
 
 
-Second, idf=tfidf_normalized causes 
-  IDF 
+Second, idf=tfidf_normalized 
+  causes IDF 
   drift over queries. Historically,
-we additionally divided IDF by query keyword 
-  
+we additionally divided IDF by 
+  query keyword 
   count, so that the entire
-sum(tf*idf) over all keywords would still fit into 
-  [0,1] 
+sum(tf*idf) over all keywords would 
+  still fit into [0,1] 
   range. However,
-that means that queries [word1] and [word1 | nonmatchingword2] 
-  
+that means that queries [word1] and [word1 
+  | nonmatchingword2] 
   would
-assign different weights to the exactly same result set, because the IDFs
+assign different weights to the exactly same result 
+  set, because the IDFs
 for 
-  
-  both "word1" and "nonmatchingword2" would be divided by 2.
+  both "word1" and "nonmatchingword2" would be divided 
+  by 2.
 ``OPTION idf=tfidf_unnormalized`` 
-  
    fixes that. Note that
-BM25, BM25A, BM25F() ranking factors will be scale accordingly
+BM25, BM25A, 
+  BM25F() ranking factors will be scale accordingly
 once 
-  
   you disable this normalization.
 
 
 
-IDF flags can be mixed; 'plain' and 'normalized' 
-  
+IDF 
+  flags can be mixed; 'plain' and 'normalized' 
   are mutually exclusive;
-'tfidf_unnormalized' and 'tfidf_normalized' are mutually 
-  
+'tfidf_unnormalized' 
+  and 'tfidf_normalized' are mutually 
   exclusive;
-and unspecified flags in such a mutually exclusive group take their
+and unspecified flags in such 
+  a mutually exclusive group take their
 defaults. 
-  
-  That means that ``OPTION idf=plain``  is equivalent
+  That means that ``OPTION idf=plain`` 
+   is equivalent
 to a complete ``OPTION idf='plain,tfidf_normalized'`` 
-  
    specification.
 
 
-   
+ 
+  
 -   local_df (added in 2.2.1-beta):  0 or 1,automatically sum DFs over all the
 local 
   
@@ -8364,7 +8365,7 @@ that automatically execute this statement.
    
 
 
-SHOW METAshows additional meta-information about the latest query such as query time and keyword 
+**SHOW META** shows additional meta-information about the latest query such as query time and keyword 
 statistics. IO and CPU counters will only be available if searchd was started with 
 --iostats and --cpustats switches respectively. Additional predicted_time, dist_predicted_time, 
 [{local|dist}]_fetched_[{docs|hits|skips}] counters will only be available if searchd 
@@ -8454,7 +8455,7 @@ character:
    
 
 
-SHOW WARNINGSstatement, introduced in version 0.9.9-rc2, can be used to retrieve the warning produced 
+**SHOW WARNINGS** statement, introduced in version 0.9.9-rc2, can be used to retrieve the warning produced 
 by the latest query. The error message will be returned along with the query itself: 
 
 ::
@@ -8502,7 +8503,7 @@ by the latest query. The error message will be returned along with the query its
    
 
 
-SHOW STATUS, introduced in version 0.9.9-rc2, displays a number of useful performance counters. 
+**SHOW STATUS** , introduced in version 0.9.9-rc2, displays a number of useful performance counters. 
 IO and CPU counters will only be available if searchd was started with --iostats 
 and --cpustats switches respectively. 
 ::
@@ -8574,7 +8575,7 @@ It inserts new rows (documents) into an existing index, with the provided column
 values. 
 
 
-ID column must be present in all cases. Rows with duplicate IDs will notbe overwritten by INSERT; use REPLACE to do that. REPLACE works exactly like INSERT, 
+ID column must be present in all cases. Rows with duplicate IDs will **not** be overwritten by INSERT; use REPLACE to do that. REPLACE works exactly like INSERT, 
 except that if an old row has the same ID as a new row, the old row is deleted before 
 the new row is inserted. 
 
@@ -9380,7 +9381,7 @@ if necessary, will be postponed until those queries complete. Example:
    
 
 
-SHOW VARIABLESstatement was added in version 2.0.1-beta to improve compatibility with 3rd party 
+**SHOW VARIABLES** statement was added in version 2.0.1-beta to improve compatibility with 3rd party 
 MySQL connectors and frameworks that automatically execute this statement. The WHERE 
 option was added in version 2.1.1-beta. 
 
@@ -10131,7 +10132,7 @@ selection probability used when one of the weighted-probability strategiesis in 
 
 SHOW PROFILE statement, added in version 2.1.1-beta, shows a detailed execution profile 
 of the previous SQL statement executed in the current SphinxQL session. Also, profiling 
-must be enabled in the current session beforerunning the statement to be instrumented. That can be done with a ``SET profiling=1`` statement. By default, profiling is disabled to avoid potential performance implications, 
+must be enabled in the current session **before** running the statement to be instrumented. That can be done with a ``SET profiling=1`` statement. By default, profiling is disabled to avoid potential performance implications, 
 and therefore the profile will be empty. 
 
 
@@ -10184,47 +10185,47 @@ Here's a complete instrumentation example:
 Status column briefly describes where exactly (in which state) was the time spent. 
 Duration column shows the wall clock time, in seconds. Switches column displays the 
 number of times query engine changed to the given state. Those are just logical engine 
-state switches and notany OS level context switches nor function calls (even though some of the sections 
-can actually map to function calls) and they do nothave any direct effect on the performance. In a sense, number of switches is just 
+state switches and **not** any OS level context switches nor function calls (even though some of the sections 
+can actually map to function calls) and they do **not** have any direct effect on the performance. In a sense, number of switches is just 
 a number of times when the respective instrumentation point was hit. 
 
 
 States in the profile are returned in a prerecorded order that roughly maps (but 
-is notidentical) to the actual query order. 
+is **not** identical) to the actual query order. 
 
 
 A list of states may (and will) vary over time, as we refine the states. Here's a 
 brief description of the currently profiled states. 
 
-- unknown, generic catch-all state. Accounts for both
-not-yet-instrumented code, or 
-  just small miscellaneous tasks that do not
-really belong in any other state, but 
-  are too small to deserve their own state.
+- **unknown** , generic catch-all state. Accounts for both
+not-yet-instrumented code, 
+  or just small miscellaneous tasks that do not
+really belong in any other state, 
+  but are too small to deserve their own state.
  
-- net_read, reading the query from the network (that is, the application). 
-- io, generic file IO time. 
-- dist_connect, connecting to remote agents in the distributed index case. 
-- sql_parse, parsing the SphinxQL syntax. 
-- dict_setup, dictionary and tokenizer setup. 
-- parse, parsing the full-text query syntax. 
-- transforms, full-text query transformations (wildcard and other expansions, simplification, 
+- **net_read** , reading the query from the network (that is, the application). 
+- **io** , generic file IO time. 
+- **dist_connect** , connecting to remote agents in the distributed index case. 
+- **sql_parse** , parsing the SphinxQL syntax. 
+- **dict_setup** , dictionary and tokenizer setup. 
+- **parse** , parsing the full-text query syntax. 
+- **transforms** , full-text query transformations (wildcard and other expansions, 
+  simplification, etc). 
+- **init** , initializing the query evaluation. 
+- **open** , opening the index files. 
+- **read_docs** , IO time spent reading document lists. 
+- **read_hits** , IO time spent reading keyword positions. 
+- **get_docs** , computing the matching documents. 
+- **get_hits** , computing the matching positions. 
+- **filter** , filtering the full-text matches. 
+- **rank** , computing the relevance rank. 
+- **sort** , sorting the matches. 
+- **finalize** , finalizing the per-index search result set (last stage expressions, 
   etc). 
-- init, initializing the query evaluation. 
-- open, opening the index files. 
-- read_docs, IO time spent reading document lists. 
-- read_hits, IO time spent reading keyword positions. 
-- get_docs, computing the matching documents. 
-- get_hits, computing the matching positions. 
-- filter, filtering the full-text matches. 
-- rank, computing the relevance rank. 
-- sort, sorting the matches. 
-- finalize, finalizing the per-index search result set (last stage expressions, etc). 
-  
-- dist_wait, waiting for the remote results from the agents in the distributed index 
-  case. 
-- aggregate, aggregating multiple result sets. 
-- net_write, writing the result set to the network. 
+- **dist_wait** , waiting for the remote results from the agents in the distributed 
+  index case. 
+- **aggregate** , aggregating multiple result sets. 
+- **net_write** , writing the result set to the network. 
 
 
 
@@ -10248,15 +10249,15 @@ really belong in any other state, but
 Added in version 2.1.1-beta. Displays various per-index statistics. Currently, those 
 include: 
 
-- indexed_documents and indexed_bytes, number of
-the documents indexed and their text 
-  size in bytes, respectively. 
-- field_tokens_XXX, sums of per-field lengths (in tokens)
-over the entire index (that 
-  is used internally in BM25A and BM25F functions
-for ranking purposes). Only available 
-  for indexes built with index_field_lengths=1. 
-- ram_bytes, total size (in bytes) of the RAM-resident
+- **indexed_documents**  and **indexed_bytes** , number of
+the documents indexed and 
+  their text size in bytes, respectively. 
+- **field_tokens_XXX** , sums of per-field lengths (in tokens)
+over the entire index 
+  (that is used internally in BM25A and BM25F functions
+for ranking purposes). Only 
+  available for indexes built with index_field_lengths=1. 
+- **ram_bytes** , total size (in bytes) of the RAM-resident
 index portion.
  
 - queries time statistics of last 1 minute, 5 minutes, 15 minutes and total since daemon 
@@ -10380,7 +10381,7 @@ At the moment, OPTIMIZE needs to be issued manually, the indexes will notbe opti
 
 SHOW PLAN statement, added in 2.1.2-release, displays the execution plan of the previous 
 SELECT statement. The plan gets generated and stored during the actual execution, 
-so profiling must be enabled in the current session beforerunning that statement. That can be done with a ``SET profiling=1`` statement. 
+so profiling must be enabled in the current session **before** running that statement. That can be done with a ``SET profiling=1`` statement. 
 
 
 Here's a complete instrumentation example: 
@@ -10499,7 +10500,7 @@ Refer to for more information regarding writing the plugins.
 
 
 Added in 2.2.2-beta. Markes the specified plugin for unloading. The unloading is 
-notimmediate, because the concurrent queries might be using it. However, after a DROP 
+**not** immediate, because the concurrent queries might be using it. However, after a DROP 
 new queries will not be able to use it. Then, once all the currently executing queries 
 using it are completed, the plugin will be unloaded. Once all the plugins from the 
 given library are unloaded, the library is also automatically unloaded. 
@@ -10623,15 +10624,15 @@ describe:
 
 
 
-- thread id 
-- connection protocol, possible values are sphinxapi and sphinxql 
-- thread state, possible values are handshake, net_read,
+- **thread id** 
+- **connection protocol** , possible values are sphinxapi and sphinxql 
+- **thread state** , possible values are handshake, net_read,
 net_write, query, net_idle 
   
-- time since the current state was changed (in seconds,
+- **time**  since the current state was changed (in seconds,
 with microsecond precision) 
   
-- information about queries 
+- **information**  about queries 
 
 
 
@@ -10837,21 +10838,21 @@ be further brought in as much compliance with standard SQL syntax as possible).
 The important changes are as follows: 
 
 - 
-``@ID``  magic name is deprecated in favor of
-``ID`` . Document ID is considered 
+**``@ID``  magic name is deprecated in favor of
+``ID`` .**  Document ID is considered 
   an attribute.
 
 
  
 - 
-``WEIGHT``  is no longer implicitly returned,
-because it is not actually a column 
-  (an index attribute),
-but rather an internal function computed per each row (a 
-  match).
+**``WEIGHT``  is no longer implicitly returned** ,
+because it is not actually a 
+  column (an index attribute),
+but rather an internal function computed per each 
+  row (a match).
 You have to explicitly ask for it, using the ``WEIGHT()`` 
-function. (The 
-  requirement to alias the result will be lifted
+function. 
+  (The requirement to alias the result will be lifted
 in the next release.)
 
     ::
@@ -10860,11 +10861,11 @@ in the next release.)
      SELECT id, WEIGHT() w FROM myindex WHERE MATCH('test')
  
 - 
-You can now use quoted reserved keywords as aliases.
-The quote character is backtick 
-  ("`", ASCII code 96 decimal,
-60 hex). One particularly useful example would be 
-  returning
+**You can now use quoted reserved keywords as aliases.** 
+The quote character is 
+  backtick ("`", ASCII code 96 decimal,
+60 hex). One particularly useful example 
+  would be returning
 ``weight``  column like the old mode:
 
     ::
@@ -10881,18 +10882,15 @@ columns based on their position in the result
 the name (for instance, by using ``mysql_fetch_row()`` 
 rather 
   than ``mysql_fetch_assoc()``  in PHP),
-check and fix the order of columns in your 
-  queries.
-
-
- 
+**check and fix the order of columns in 
+  your queries.** 
 - 
 ``SELECT *``  return the columns in index order,
 as it used to, including the ID 
   column. However,
-``SELECT *``  does not automatically return WEIGHT().
-To update 
-  such queries in case you access columns by names,
+**``SELECT *``  does not automatically return WEIGHT().** 
+To 
+  update such queries in case you access columns by names,
 simply add it to the query:
 
  
@@ -10914,12 +10912,12 @@ ID, weight, and then other columns:
      SELECT id, *, WEIGHT() `weight` FROM myindex WHERE MATCH('test')
  
 - 
-Magic ``@count``  and ``@distinct`` 
-attributes are no longer implicitly returned. 
-  You now
+**Magic ``@count``  and ``@distinct`` 
+attributes are no longer implicitly returned** 
+  . You now
 have to explicitly ask for them when using GROUP BY.
-(Also note that you 
-  currently have to alias them;
+(Also note that 
+  you currently have to alias them;
 that requirement will be lifted in the future.)
 
  
@@ -10975,7 +10973,7 @@ But the provided functionality must not differ across languages.
 
 
 GetLastError
-Prototype: function GetLastError()
+**Prototype:**  function GetLastError()
 
 
 
@@ -11000,7 +10998,7 @@ call it several times if needed.
 
 
 GetLastWarning
-Prototype: function GetLastWarning ()
+**Prototype:**  function GetLastWarning ()
 
 
 
@@ -11027,7 +11025,7 @@ call it several times if needed.
 
 
 SetServer
-Prototype: function SetServer ( $host, $port )
+**Prototype:**  function SetServer ( $host, $port )
 
 
 
@@ -11040,7 +11038,7 @@ Default host and port are 'localhost' and 9312, respectively.
 
 
 SetRetries
-Prototype: function SetRetries ( $count, $delay=0 )
+**Prototype:**  function SetRetries ( $count, $delay=0 )
 
 
 
@@ -11052,7 +11050,7 @@ Sets distributed retry count and delay.
 On temporary failures ``searchd``  will attempt up to
 ``$count``  retries per agent. ``$delay``  is the delay
 between the retries, in milliseconds. Retries are disabled by default.
-Note that this call will not make the API itself retry on
+Note that this call will **not**  make the API itself retry on
 temporary failure; it only tells ``searchd``  to do so.
 Currently, the list of temporary failures includes all kinds of connect()
 failures and maxed out (too busy) remote agents.
@@ -11062,7 +11060,7 @@ failures and maxed out (too busy) remote agents.
 
 
 SetConnectTimeout
-Prototype: function SetConnectTimeout ( $timeout )
+**Prototype:**  function SetConnectTimeout ( $timeout )
 
 
 
@@ -11088,7 +11086,7 @@ to advise the user.
 
 
 SetArrayResult
-Prototype: function SetArrayResult ( $arrayresult )
+**Prototype:**  function SetArrayResult ( $arrayresult )
 
 
 
@@ -11119,7 +11117,7 @@ will only keep one entry per document ID.
 
 
 IsConnectError
-Prototype: function IsConnectError ()
+**Prototype:**  function IsConnectError ()
 
 
 
@@ -11141,7 +11139,7 @@ Introduced in version 0.9.9-rc1.
 
 
 SetLimits
-Prototype: function SetLimits ( $offset, $limit, $max_matches=1000, $cutoff=0 )
+**Prototype:**  function SetLimits ( $offset, $limit, $max_matches=1000, $cutoff=0 )
 
 
 
@@ -11164,11 +11162,11 @@ first 20 matches.
 
 
 ``max_matches``  setting controls how much matches ``searchd`` 
-will keep in RAM while searching. All matching documents will be normally
+will keep in RAM while searching. **All**  matching documents will be normally
 processed, ranked, filtered, and sorted even if ``max_matches``  is set to 1.
 But only best N documents are stored in memory at any given moment for performance
 and RAM usage reasons, and this setting controls that N. Note that there are
-two places where ``max_matches``  limit is enforced. Per-query
+**two**  places where ``max_matches``  limit is enforced. Per-query
 limit is controlled by this API call, but there also is per-server limit
 controlled by ``max_matches``  setting in the config file. To prevent
 RAM usage abuse, server will not allow to set per-query limit
@@ -11181,7 +11179,7 @@ You can't retrieve more than ``max_matches``  matches to the client application.
 The default limit is set to 1000. Normally, you must not have to go over
 this limit. One thousand records is enough to present to the end user.
 And if you're thinking about pulling the results to application
-for further sorting or filtering, that would be much more efficient
+for further sorting or filtering, that would be **much**  more efficient
 if performed on Sphinx side.
 
 
@@ -11196,7 +11194,7 @@ once ``$cutoff``  matches had been found and processed.
 
 
 SetMaxQueryTime
-Prototype: function SetMaxQueryTime ( $max_query_time )
+**Prototype:**  function SetMaxQueryTime ( $max_query_time )
 
 
 
@@ -11216,10 +11214,10 @@ separately.
 
 
 SetOverride
-DEPRECATED
+**DEPRECATED** 
 
 
-Prototype: function SetOverride ( $attrname, $attrtype, $values )
+**Prototype:**  function SetOverride ( $attrname, $attrtype, $values )
 
 
 
@@ -11247,7 +11245,7 @@ exactly the friends of current user), and use that value when ranking.
 
 
 SetSelect
-Prototype: function SetSelect ( $clause )
+**Prototype:**  function SetSelect ( $clause )
 
 
 
@@ -11259,7 +11257,7 @@ to compute and fetch. Clause syntax mimics SQL. Introduced in version 0.9.9-rc1.
 SetSelect() is very similar to the part of a typical SQL query between SELECT and FROM.
 It lets you choose what attributes (columns) to fetch, and also what expressions
 over the columns to compute and fetch. A certain difference from SQL is that expressions
-must always be aliased to a correct identifier (consisting of letters and digits)
+**must**  always be aliased to a correct identifier (consisting of letters and digits)
 using 'AS' keyword. SQL also lets you do that but does not require to. Sphinx enforces
 aliases so that the computation results can always be returned under a "normal" name
 in the result set, used in other clauses, etc.
@@ -11311,10 +11309,10 @@ Example:
 
 
 SetMatchMode
-DEPRECATED
+**DEPRECATED** 
 
 
-Prototype: function SetMatchMode ( $mode )
+**Prototype:**  function SetMatchMode ( $mode )
 
 
 
@@ -11324,7 +11322,7 @@ Parameter must be a constant specifying one of the known modes.
 
 
 
-WARNING: (PHP specific) you must not take the matching mode
+**WARNING:**  (PHP specific) you **must not**  take the matching mode
 constant name in quotes, that syntax specifies a string and is incorrect:
 
 ::
@@ -11341,7 +11339,7 @@ constant name in quotes, that syntax specifies a string and is incorrect:
 
 
 SetRankingMode
-Prototype: function SetRankingMode ( $ranker, $rankexpr="" )
+**Prototype:**  function SetRankingMode ( $ranker, $rankexpr="" )
 
 
 
@@ -11384,7 +11382,7 @@ In all other cases, ``$rankexpr``  is ignored.
 
 
 SetSortMode
-Prototype: function SetSortMode ( $mode, $sortby="" )
+**Prototype:**  function SetSortMode ( $mode, $sortby="" )
 
 
 
@@ -11394,7 +11392,7 @@ Parameter must be a constant specifying one of the known modes.
 
 
 
-WARNING: (PHP specific) you must not take the matching mode
+**WARNING:**  (PHP specific) you **must not**  take the matching mode
 constant name in quotes, that syntax specifies a string and is incorrect:
 
 ::
@@ -11411,19 +11409,19 @@ constant name in quotes, that syntax specifies a string and is incorrect:
 
 
 SetWeights
-Prototype: function SetWeights ( $weights )
+**Prototype:**  function SetWeights ( $weights )
 
 
 
 Binds per-field weights in the order of appearance in the index.
-DEPRECATED, use SetFieldWeights() instead.
+**DEPRECATED** , use SetFieldWeights() instead.
 
 
 
 
 
 SetFieldWeights
-Prototype: function SetFieldWeights ( $weights )
+**Prototype:**  function SetFieldWeights ( $weights )
 
 
 
@@ -11463,7 +11461,7 @@ unexpected results.
 
 
 SetIndexWeights
-Prototype: function SetIndexWeights ( $weights )
+**Prototype:**  function SetIndexWeights ( $weights )
 
 
 
@@ -11506,7 +11504,7 @@ the final weight return to the client will be 2*100+3*10 = 230.
 
 
 SetIDRange
-Prototype: function SetIDRange ( $min, $max )
+**Prototype:**  function SetIDRange ( $min, $max )
 
 
 
@@ -11526,7 +11524,7 @@ will be matched.
 
 
 SetFilter
-Prototype: function SetFilter ( $attribute, $values, $exclude=false )
+**Prototype:**  function SetFilter ( $attribute, $values, $exclude=false )
 
 
 
@@ -11554,7 +11552,7 @@ array will be matched (or rejected, if ``$exclude``  is true).
 
 
 SetFilterRange
-Prototype: function SetFilterRange ( $attribute, $min, $max, $exclude=false )
+**Prototype:**  function SetFilterRange ( $attribute, $min, $max, $exclude=false )
 
 
 
@@ -11584,7 +11582,7 @@ will be matched (or rejected, if ``$exclude``  is true).
 
 
 SetFilterFloatRange
-Prototype: function SetFilterFloatRange ( $attribute, $min, $max, $exclude=false )
+**Prototype:**  function SetFilterFloatRange ( $attribute, $min, $max, $exclude=false )
 
 
 
@@ -11614,7 +11612,7 @@ will be matched (or rejected, if ``$exclude``  is true).
 
 
 SetGeoAnchor
-Prototype: function SetGeoAnchor ( $attrlat, $attrlong, $lat, $long )
+**Prototype:**  function SetGeoAnchor ( $attrlat, $attrlong, $lat, $long )
 
 
 
@@ -11643,7 +11641,7 @@ so geodistance value of 1000.0 means 1 km. 1 mile is approximately 1609.344 mete
 
 
 SetFilterString
-Prototype: function SetFilterString ( $attribute, $value, $exclude=false )
+**Prototype:**  function SetFilterString ( $attribute, $value, $exclude=false )
 
 
 
@@ -11677,7 +11675,7 @@ will be matched (or rejected, if ``$exclude``  is true).
 
 
 SetGroupBy
-Prototype: function SetGroupBy ( $attribute, $func, $groupsort="@group desc" )
+**Prototype:**  function SetGroupBy ( $attribute, $func, $groupsort="@group desc" )
 
 
 
@@ -11731,7 +11729,7 @@ is supported, with respect to current collation.
 
 
 SetGroupDistinct
-Prototype: function SetGroupDistinct ( $attribute )
+**Prototype:**  function SetGroupDistinct ( $attribute )
 
 
 
@@ -11790,7 +11788,7 @@ of distinct vendor IDs within each category.
 
 
 Query
-Prototype: function Query ( $query, $index="*", $comment="" )
+**Prototype:**  function Query ( $query, $index="*", $comment="" )
 
 
 
@@ -11899,7 +11897,7 @@ it is analogous to a single ``AddQuery()``  call, followed by a corresponding
 
 
 AddQuery
-Prototype: function AddQuery ( $query, $index="*", $comment="" )
+**Prototype:**  function AddQuery ( $query, $index="*", $comment="" )
 
 
 
@@ -11996,7 +11994,7 @@ to track the indexes manually if you need then.
 
 
 RunQueries
-Prototype: function RunQueries ()
+**Prototype:**  function RunQueries ()
 
 
 
@@ -12034,7 +12032,7 @@ the results - but every result set will have a specific error message.
 
 
 ResetFilters
-Prototype: function ResetFilters ()
+**Prototype:**  function ResetFilters ()
 
 
 
@@ -12053,7 +12051,7 @@ the respective calls.
 
 
 ResetGroupBy
-Prototype: function ResetGroupBy ()
+**Prototype:**  function ResetGroupBy ()
 
 
 
@@ -12083,7 +12081,7 @@ calls can perform non-grouping searches.
 
 
 BuildExcerpts
-Prototype: function BuildExcerpts ( $docs, $index, $words, $opts=array() )
+**Prototype:**  function BuildExcerpts ( $docs, $index, $words, $opts=array() )
 
 
 
@@ -12122,7 +12120,7 @@ star-syntax available in queries.
 
 
     "chunk_separator":
-    A string to insert between snippet chunks (passages). Default is "Â&nbsp;...Â&nbsp;".
+    A string to insert between snippet chunks (passages). Default is "Â ...Â ".
 
 
 
@@ -12317,7 +12315,7 @@ Returns false on failure. Returns a plain array of strings with excerpts (snippe
 
 
 UpdateAttributes
-Prototype: function UpdateAttributes ( $index, $attrs, $values, $mva=false, $ignorenonexistent=false )
+**Prototype:**  function UpdateAttributes ( $index, $attrs, $values, $mva=false, $ignorenonexistent=false )
 
 
 
@@ -12382,7 +12380,7 @@ will be 37 and the new amount will be 11; etc.
 
 
 BuildKeywords
-Prototype: function BuildKeywords ( $query, $index, $hits )
+**Prototype:**  function BuildKeywords ( $query, $index, $hits )
 
 
 
@@ -12415,7 +12413,7 @@ Usage example:
 
 
 EscapeString
-Prototype: function EscapeString ( $string )
+**Prototype:**  function EscapeString ( $string )
 
 
 
@@ -12453,7 +12451,7 @@ Usage example:
 
 
 Status
-Prototype: function Status ()
+**Prototype:**  function Status ()
 
 
 
@@ -12480,7 +12478,7 @@ Usage example:
 
 
 FlushAttributes
-Prototype: function FlushAttributes ()
+**Prototype:**  function FlushAttributes ()
 
 
 
@@ -12543,7 +12541,7 @@ that would otherwise require reconnects.
 
 
 Open
-Prototype: function Open ()
+**Prototype:**  function Open ()
 
 
 
@@ -12554,7 +12552,7 @@ Opens persistent connection to the server.
 
 
 Close
-Prototype: function Close ()
+**Prototype:**  function Close ()
 
 
 
@@ -13235,7 +13233,7 @@ Function name mustbe sphinx_snippets, you can not use an arbitrary name. Functio
 follows: 
 
 
-Prototype:function sphinx_snippets ( document, index, words, [options] ); 
+**Prototype:** function sphinx_snippets ( document, index, words, [options] ); 
 
 
 Document and words arguments can be either strings or table columns. Options must 
@@ -13816,7 +13814,7 @@ of values to index. (Added
 
 
 
-Joined fields let you avoid JOIN and/or GROUP_CONCAT statements in the main
+**Joined fields**  let you avoid JOIN and/or GROUP_CONCAT statements in the main
 document fetch query (sql_query). This can be useful when SQL-side JOIN is slow,
 or needs to be offloaded on Sphinx side, or simply to emulate MySQL-specific
 GROUP_CONCAT functionality in case your database server does not support it.
@@ -13825,7 +13823,7 @@ GROUP_CONCAT functionality in case your database server does not support it.
 
 
 The query must return exactly 2 columns: document ID, and text to append
-to a joined field. Document IDs can be duplicate, but they must be
+to a joined field. Document IDs can be duplicate, but they **must**  be
 in ascending order. All the text rows fetched for a given ID will be
 concatenated together, and the concatenation result will be indexed
 as the entire contents of a joined field. Rows will be concatenated
@@ -13857,7 +13855,7 @@ between joined fields and regular text fields.
 
 
 
-Starting with 2.0.1-beta, ranged queries can be used when
+Starting with 2.0.1-beta, **ranged queries**  can be used when
 a single query is not efficient enough or does not work because of
 the database driver limitations. It works similar to the ranged
 queries in the main indexing loop, see .
@@ -13869,7 +13867,7 @@ the actual data.
 
 
 
-Payloads let you create a special field in which, instead of
+**Payloads**  let you create a special field in which, instead of
 keyword positions, so-called user payloads are stored. Payloads are
 custom integer values attached to every keyword. They can then be used
 in search time to affect the ranking.
@@ -13878,7 +13876,7 @@ in search time to affect the ranking.
 
 
 The payload query must return exactly 3 columns: document ID; keyword;
-and integer payload value. Document IDs can be duplicate, but they must be
+and integer payload value. Document IDs can be duplicate, but they **must**  be
 in ascending order. Payloads must be unsigned integers within 24-bit range,
 ie. from 0 to 16777215. For reference, payloads are currently internally
 stored as in-field keyword positions, but that is not guaranteed
@@ -13942,7 +13940,7 @@ When ranged queries are enabled, sql_query
 will be required to contain *$start*  and *$end*  macros
 (because it obviously would be a mistake to index the whole table many times over).
 Note that the intervals specified by *$start* ..*$end* 
-will not overlap, so you should not remove document IDs that are
+will not overlap, so you should **not**  remove document IDs that are
 exactly equal to *$start*  or *$end*  from your query.
 The example in ) illustrates that; note how it
 uses greater-or-equal and less-or-equal comparisons.
@@ -14058,7 +14056,7 @@ And it will make it to the final result set unless something stops it.
 
 
 Kill-list, or K-list for short, is that something. Kill-list attached
-to 'delta' will suppress the specified rows from all the preceding
+to 'delta' will suppress the specified rows from **all**  the preceding
 indexes, in this case just 'main'. So to get the expected results,
 we should put all the updated and deleted
 document IDs into it.
@@ -14066,8 +14064,8 @@ document IDs into it.
 
 
 
-Note that in the distributed index setup, K-lists are local
-to every node in the cluster. They are not get transmitted
+Note that in the distributed index setup, K-lists are **local
+to every node in the cluster** . They are **not**  get transmitted
 over the network when sending queries. (Because that might be too much
 of an impact when the K-list is huge.) You will need to setup a
 separate per-server K-lists in that case.
@@ -14154,7 +14152,7 @@ sql_attr_bigint
 Multi-value (there might be multiple attributes declared), optional.
 Applies to SQL source types (*mysql* , *pgsql* , *mssql* ) only.
 Note that unlike sql_attr_uint,
-these values are signed.
+these values are **signed** .
 Introduced in version 0.9.9-rc1.
 
 
@@ -14192,7 +14190,7 @@ sorting mode, or day/week/month/year extraction for GROUP BY.
 
 
 
-Note that DATE or DATETIME column types in MySQL can not be directly
+Note that DATE or DATETIME column types in MySQL can **not**  be directly
 used as timestamp attributes in Sphinx; you need to explicitly convert such
 columns using UNIX_TIMESTAMP function (if data is in range).
 
@@ -14334,7 +14332,7 @@ will currently cache all the values in RAM, which is an additional implicit limi
 
 Starting from 2.0.1-beta string attributes can be used for sorting and
 grouping(ORDER BY, GROUP BY, WITHIN GROUP ORDER BY). Note that attributes
-declared using *sql_attr_string*  will not be full-text
+declared using *sql_attr_string*  will **not**  be full-text
 indexed; you can use sql_field_string
 directive for that.
 
@@ -14504,7 +14502,7 @@ This directive makes ``indexer``  interpret field contents
 as a file name, and load and index the referred file.  Files larger than
 max_file_field_buffer
 in size are skipped.  Any errors during the file loading (IO errors, missed
-limits, etc) will be reported as indexing warnings and will not early
+limits, etc) will be reported as indexing warnings and will **not**  early
 terminate the indexing.  No content will be indexed for such files.
 
 
@@ -14532,8 +14530,8 @@ Applies to SQL source types (*mysql* , *pgsql* , *mssql* ) only.
 
 This query is executed immediately after sql_query
 completes successfully. When post-fetch query produces errors,
-they are reported as warnings, but indexing is not terminated.
-It's result set is ignored. Note that indexing is not yet completed
+they are reported as warnings, but indexing is **not**  terminated.
+It's result set is ignored. Note that indexing is **not**  yet completed
 at the point when this query gets executed, and further indexing still may fail.
 Therefore, any permanent updates should not be done from here.
 For instance, updates on helper table that permanently change
@@ -14565,7 +14563,7 @@ Applies to SQL source types (*mysql* , *pgsql* , *mssql* ) only.
 
 This query is executed when indexing is fully and successfully completed.
 If this query produces errors, they are reported as warnings,
-but indexing is not terminated. It's result set is ignored.
+but indexing is **not**  terminated. It's result set is ignored.
 ``$maxid``  macro can be used in its text; it will be
 expanded to maximum document ID which was actually fetched
 from the database during indexing. If no documents were indexed,
@@ -15416,7 +15414,7 @@ lemmatizer can generate all the possible root forms.
 - Stemmer reduces a keyword form to a so-called stem
 by removing and/or replacing certain 
   well-known suffixes.
-The resulting stem is however notguaranteed to be
+The resulting stem is however **not** guaranteed to be
 a   valid word on itself. For instance, with a Porter English
 stemmers "running" would 
   still reduce to "run", which is fine,
@@ -15456,7 +15454,7 @@ implementations are:
 
 
 
-You can also link with libstemmer library for even more
+You can also link with **libstemmer**  library for even more
 stemmers (see details below). With libstemmer, Sphinx also supports
 morphological processing for more than 15 other languages. Binary
 packages should come prebuilt with libstemmer support, too.
@@ -15880,7 +15878,7 @@ results in "gp", which is not really the intent. *min_stemming_len*
 feature lets you suppress stemming based on the source word length,
 ie. to avoid stemming too short words. Keywords that are shorter than
 the given threshold will not be stemmed. Note that keywords that are
-exactly as long as specified will be stemmed. So in order to avoid
+exactly as long as specified **will**  be stemmed. So in order to avoid
 stemming 3-character keywords, you should specify 4 for the value.
 For more finely grained control, refer to wordforms feature.
 
@@ -16172,8 +16170,8 @@ Short summary of the differences is as follows:
 - exceptions are case sensitive, wordforms are not;
 
  
-- exceptions can use special characters that are not in charset_table, wordforms fully 
-  obey charset_table;
+- exceptions can use special characters that are **not**  in charset_table, wordforms 
+  fully obey charset_table;
 
  
 - exceptions can underperform on huge dictionaries, wordforms handle millions of entries 
@@ -16214,7 +16212,7 @@ Example file:
    
 
 
-All tokens here are case sensitive: they will not be processed by
+All tokens here are case sensitive: they will **not**  be processed by
 charset_table rules. Thus, with
 the example exceptions file above, "at&t" text will be tokenized as two
 keywords "at" and "t", because of lowercase letters. On the other hand,
@@ -16242,8 +16240,8 @@ as two separate keywords.)
 
 Whitespace in the map-from tokens list matters, but its amount does not.
 Any amount of the whitespace in the map-form list will match any other amount
-of whitespace in the indexed document or query. For instance, "ATÂ&nbsp;&Â&nbsp;T"
-map-from token will match "ATÂ&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;&Â&nbsp;Â&nbsp;T" text,
+of whitespace in the indexed document or query. For instance, "ATÂ &Â T"
+map-from token will match "ATÂ Â Â Â &Â Â T" text,
 whatever the amount of space in both map-from part and the indexed text.
 Such text will therefore be indexed as a special "AT&T" keyword,
 thanks to the very first entry from the sample.
@@ -16572,7 +16570,7 @@ Applies to dict=crc only.
 
 
 By default, substring (either prefix or infix) indexing in the
-dict=crc mode will index all
+dict=crc mode will index **all** 
 the possible substrings as separate keywords. That might result
 in an overly large index. So the ``max_substring_len`` 
 directive lets you limit the impact of substring indexing
@@ -16709,12 +16707,12 @@ will be split this way; other ones will not be affected.
 
 Note that if search query is segmented, ie. there are separators between
 individual words, then wrapping the words in quotes and using extended mode
-will result in proper matches being found even if the text was not
-segmented. For instance, assume that the original query is BCÂ&nbsp;DEF.
+will result in proper matches being found even if the text was **not** 
+segmented. For instance, assume that the original query is BCÂ DEF.
 After wrapping in quotes on the application side, it should look
-like "BC"Â&nbsp;"DEF" (with quotes). This query
+like "BC"Â "DEF" (with quotes). This query
 will be passed to Sphinx and internally split into 1-grams too,
-resulting in "BÂ&nbsp;C"Â&nbsp;"DÂ&nbsp;EÂ&nbsp;F" query, still with
+resulting in "BÂ C"Â "DÂ EÂ F" query, still with
 quotes that are the phrase matching operator. And it will match
 the text even though there were no separators in the text.
 
@@ -16941,7 +16939,7 @@ This feature allows to strip element contents, ie. everything that
 is between the opening and the closing tags. It is useful to remove
 embedded scripts, CSS, etc. Short tag form for empty elements
 (ie. <br />) is properly supported; ie. the text that
-follows such tag will not be removed.
+follows such tag will **not**  be removed.
 
 
 
@@ -16979,7 +16977,7 @@ in different distributed indexes.
 
 
 
-Note that by default all local indexes will be searched sequentially,
+Note that by default all local indexes will be searched **sequentially** ,
 utilizing only 1 CPU or core. To parallelize processing of the local parts
 in the distributed index, you should use *dist_threads*  directive,
 see .
@@ -17159,7 +17157,7 @@ Example:
 
 Agent mirrors
 
-New syntax added in 2.1.1-beta lets you define so-called agent mirrors
+New syntax added in 2.1.1-beta lets you define so-called **agent mirrors** 
 that can be used interchangeably when processing a search query. Master server
 keeps track of mirror status (alive or dead) and response times, and does
 automatic failover and load balancing based on that. For example, this line:
@@ -17263,7 +17261,7 @@ Introduced in version 2.1.1-beta.
 
 *agent_persistent*  directive syntax matches that of
 the agent directive. The only difference
-is that the master will not open a new connection to the agent for
+is that the master will **not**  open a new connection to the agent for
 every query and then close it. Rather, it will keep a connection open and
 attempt to reuse for the subsequent queries. The maximal number of such persistent connections per one agent host
 is limited by persistent_connections_limit option of searchd section.
@@ -17271,7 +17269,7 @@ is limited by persistent_connections_limit option of searchd section.
 
 
 
-Note, that you have to set the last one in something greater than 0 if you want to use persistent agent connections.
+Note, that you **have**  to set the last one in something greater than 0 if you want to use persistent agent connections.
 Otherwise - when persistent_connections_limit is not defined, it assumes
 the zero num of persistent connections, and 'agent_persistent' acts exactly as simple 'agent'.
 
@@ -17279,7 +17277,7 @@ the zero num of persistent connections, and 'agent_persistent' acts exactly as s
 
 
 Persistent master-agent connections reduce TCP port pressure, and
-save on connection handshakes. As of time of this writing, they are supported only
+save on connection handshakes. As of time of this writing, they are supported **only** 
 in workers=threads mode. In other modes, simple non-persistent connections
 (i.e., one connection per operation) will be used, and a warning will show
 up in the console.
@@ -17373,7 +17371,7 @@ After connection, ``searchd``  will wait at most this
 much time for remote queries to complete. This timeout is fully separate
 from connection timeout; so the maximum possible delay caused by
 a remote agent equals to the sum of ``agent_connection_timeout``  and
-``agent_query_timeout`` . Queries will not be retried
+``agent_query_timeout`` . Queries will **not**  be retried
 if this timeout is reached; a warning will be produced instead.
 
 
@@ -17400,7 +17398,7 @@ Optional, default is 0 (do not preopen).
 
 This option tells ``searchd``  that it should pre-open
 all index files on startup (or rotation) and keep them open while it runs.
-Currently, the default mode is not to pre-open the files (this may
+Currently, the default mode is **not**  to pre-open the files (this may
 change in the future). Preopened indexes take a few (currently 2) file
 descriptors per index. However, they save on per-query ``open()``  calls;
 and also they are invulnerable to subtle race conditions that may happen during
@@ -18257,7 +18255,7 @@ based on the actual query latencies observed by the master.
 
 
 
-The adaptive strategies based on latency-weighted probabilities
+The adaptive strategies based on **latency-weighted probabilities** 
 basically work as follows:
 
 
@@ -18308,8 +18306,8 @@ again, and so on.
 
 
 
-The rationale here is, once the observed latencies stabilize,
-the latency weighted probabilities stabilize as well. So all these
+The rationale here is, once the **observed latencies**  stabilize,
+the **latency weighted probabilities**  stabilize as well. So all these
 adjustment iterations are supposed to converge at a point where the average
 latencies are (roughly) equal over all mirrors.
 
@@ -18378,7 +18376,7 @@ matching.
 
 
 Some of the bigram indexing modes (see )
-require to define a list of frequent keywords. These are not to be
+require to define a list of frequent keywords. These are **not**  to be
 confused with stopwords! Stopwords are completely eliminated when both indexing
 and searching. Frequent keywords are only used by bigrams to determine whether
 to index a current word pair or not.
@@ -18441,12 +18439,12 @@ where the first word is in a list of frequent
 being stored as 
   bigrams, because they begin with a frequent keyword
 (either "in" or "the" respectively), 
-  but "alone in" would not
-be indexed, because "in" is a second word in that pair.
+  but "alone in" would **not** 
+be indexed, because "in" is a second word in that 
+  pair.
 
 
  
-  
 - ``both_freq`` , only index word pairs where
 both words are frequent. Continuing with 
   the same example, in this mode
@@ -18502,7 +18500,7 @@ accessible.
 BM25A() and BM25F() functions in the expression ranker are based
 on these lengths and require ``index_field_lengths``  to be enabled.
 Historically, Sphinx used a simplified, stripped-down variant of BM25 that,
-unlike the complete function, did not account for document length.
+unlike the complete function, did **not**  account for document length.
 (We later realized that it should have been called BM15 from the start.)
 Starting with 2.1.1-beta, we added support for both a complete variant of BM25,
 and its extension towards multiple fields, called BM25F. They require
@@ -19016,7 +19014,7 @@ irregardless of the phase and the ``on_file_field_error``  setting.
 
 Note that with *on_file_field_error = skip_document* 
 documents will only be ignored if problems are detected during
-an early check phase, and not during the actual file parsing
+an early check phase, and **not**  during the actual file parsing
 phase. ``indexer``  will open every referenced file
 and check its size before doing any work, and then open it again
 when doing actual parsing work. So in case a file goes away
@@ -19667,7 +19665,7 @@ This setting controls the size of the shared storage pool for updated MVA values
 Specifying 0 for the size disable MVA updates at all. Once the pool size limit
 is hit, MVA update attempts will result in an error. However, updates on regular
 (scalar) attributes will still work. Due to internal technical difficulties,
-currently it is not possible to store (flush) any updates on indexes
+currently it is **not**  possible to store (flush) **any**  updates on indexes
 where MVA were updated; though this might be implemented in the future.
 In the meantime, MVA updates are intended to be used as a measure to quickly
 catchup with latest changes in the database until the next index rebuild;
@@ -19799,7 +19797,7 @@ hit list size in not currently known in advance. This setting
 lest you control how much data to read in such cases. It will
 impact hit list IO time, reducing it for lists larger than
 unhinted read size, but raising it for smaller lists. It will
-not affect RAM use because read buffer will be already
+**not**  affect RAM use because read buffer will be already
 allocated. So it should be not greater than read_buffer.
 
 
@@ -20179,7 +20177,7 @@ This prefix can be used in distributed snippets generation along with
 
 
 
-Note how this is a prefix, and not a path! Meaning that if a prefix
+Note how this is a prefix, and **not**  a path! Meaning that if a prefix
 is set to "server1" and the request refers to "file23", ``searchd`` 
 will attempt to open "server1file23" (all of that without quotes). So if you
 need it to be a path, you have to mention the trailing slash.

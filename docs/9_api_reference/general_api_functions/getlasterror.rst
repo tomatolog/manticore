@@ -1,7 +1,7 @@
 GetLastError
 ~~~~~~~~~~~~
 
-<b>Prototype:</b> function GetLastError()
+Prototype: function GetLastError()
 
 Returns last error message, as a string, in human readable format. If
 there were no errors during the previous API call, empty string is

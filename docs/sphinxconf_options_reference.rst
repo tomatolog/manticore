@@ -1,6 +1,7 @@
-Chapter 12. ``sphinx.conf`` options reference
+Configuration reference
 =============================================
+
 .. toctree::
 
-   common_section_configuration_options
-   data_source_configuration_options
+   sphinxconf_options_reference/common_section_configuration_options
+   sphinxconf_options_reference/data_source_configuration_options

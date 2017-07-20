@@ -33,6 +33,7 @@ limitations on any platform.
 
 Compiling Manticore from source
 ----------------------------
+
 Required tools
 ~~~~~~~~~~~~~~
 
@@ -46,6 +47,7 @@ On Windows, you will need Microsoft Visual C/C++ Studio 2013 or above.
 Other compilers/environments will probably work as well, but for the
 time being, you will have to build makefile (or other environment
 specific project files) manually.
+
 Compiling on Linux
 ~~~~~~~~~~~~~~~~~~
 
@@ -169,6 +171,7 @@ latest version with the same command.
 Manticore ``searchd`` daemon can be started/stopped using service command:
 
 **``$ sudo service sphinxsearch start``**
+
 Installing Manticore packages on RedHat and CentOS
 -----------------------------------------------
 
@@ -189,6 +192,7 @@ installed on CentOS as well.
    daemon:
 
    **``$ service searchd start``**
+   
 Installing Manticore on Windows
 ----------------------------
 
@@ -231,6 +235,7 @@ the pre-compiled binary files from the Downloads area on the website.
    directory, or sometimes in Windows:raw-latex:`\System`32, or failing
    that in the MySQL core directories. If you do receive an error please
    copy libmysql.dll into the bin directory.
+   
 Manticore deprecations and changes in default configuration
 --------------------------------------------------------
 
@@ -290,6 +295,7 @@ someday so it would be a good idea to start using SphinxQL.
 -  The default matching mode for the API is now ‘extended’. Actually,
    all other modes are deprecated. We recommend using the `extended
    query syntax <../extended_query_syntax.md>`__ instead.
+   
 Quick Manticore usage tour
 -----------------------
 

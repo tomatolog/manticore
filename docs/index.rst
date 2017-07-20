@@ -1,5 +1,5 @@
 ===================================
- Manticore Server -  Documentation
+ Manticore Search -  Documentation
 ===================================
 
 

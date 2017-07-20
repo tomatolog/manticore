@@ -1,9 +1,7 @@
 Sphinx plugins
 --------------
 
-Starting with version 2.2.2-beta, we generalized our dynamic plugin
-system, and added a few more types of dynamic plugins. Here's the
-complete plugin type list.
+Here's the complete plugin type list.
 
 -  UDF plugins;
 
@@ -24,23 +22,25 @@ follows:
    C++;
 
 -  load that plugin into searchd using `CREATE
-   PLUGIN <../create_plugin_syntax.html>`__;
+   PLUGIN <../create_plugin_syntax.md>`__;
 
 -  invoke it using the plugin specific calls (typically using this or
    that OPTION).
 
 -  to unload or reload a plugin use `DROP
-   PLUGIN <../drop_plugin_syntax.html>`__ and `RELOAD
-   PLUGINS <../reload_plugins_syntax.html>`__ respectively.
+   PLUGIN <../drop_plugin_syntax.md>`__ and `RELOAD
+   PLUGINS <../reload_plugins_syntax.md>`__ respectively.
 
-Note that while UDFs are f.html-class plugins they are nevertheless
+Note that while UDFs are first-class plugins they are nevertheless
 installed using a separate `CREATE
-FUNCTION <../create_function_syntax.html>`__ statement. It lets you
+FUNCTION <../create_function_syntax.md>`__ statement. It lets you
 specify the return type neatly so there was especially little reason to
 ruin backwards compatibility *and* change the syntax.
 
-Dynamic plugins are supported in
-`workers=threads <../searchd_program_configuration_options/workers.html>`__
+Dynamic plugins are supported in `workers =
+threads <../searchd_program_configuration_options/workers.md>`__ and
+`workers =
+thread\_pool <../searchd_program_configuration_options/workers.md>`__
 mode only. Multiple plugins (and/or UDFs) may reside in a single library
 file. So you might choose to either put all your project-specific
 plugins in a single common uber-library; or you might choose to have a
@@ -50,13 +50,12 @@ Just as with UDFs, you want to include ``src/sphinxudf.h`` header file.
 At the very least, you will need the SPH\_UDF\_VERSION constant to
 implement a proper version function. Depending on the specific plugin
 type, you might or might not need to link your plugin with
-``src/sphinxudf.c``. However, as of 2.2.2-beta all the functions
-implemented in ``sphinxudf.c`` are about unpacking the PACKEDFACTORS()
-blob, and no plugin types are exposed to that kind of data. So
-currently, you would never need to link with the C-file, just the header
-would be sufficient. (In fact, if you copy over the UDF version number,
-then for some of the plugin types you would not even need the header
-file.)
+``src/sphinxudf.c``. However, all the functions implemented in
+``sphinxudf.c`` are about unpacking the PACKEDFACTORS() blob, and no
+plugin types are exposed to that kind of data. So currently, you would
+never need to link with the C-file, just the header would be sufficient.
+(In fact, if you copy over the UDF version number, then for some of the
+plugin types you would not even need the header file.)
 
 Formally, plugins are just sets of C functions that follow a certain
 naming parttern. You are typically required to define just one key

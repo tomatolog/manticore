@@ -2,7 +2,7 @@ binlog\_flush
 ~~~~~~~~~~~~~
 
 Binary log transaction flush/sync mode. Optional, default is 2 (flush
-every transaction, sync every second). Introduced in version 1.10-beta.
+every transaction, sync every second).
 
 This directive controls how frequently will binary log be flushed to OS
 and synced to disk. Three modes are supported:
@@ -11,7 +11,7 @@ and synced to disk. Three modes are supported:
    worth of committed transactions can be lost both on daemon crash, or
    OS/hardware crash.
 
--  1, flush and sync every transaction. W.html performance, but every
+-  1, flush and sync every transaction. Worst performance, but every
    committed transaction data is guaranteed to be saved.
 
 -  2, flush every transaction, sync every second. Good performance, and

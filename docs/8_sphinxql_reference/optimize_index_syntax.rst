@@ -6,8 +6,8 @@ OPTIMIZE INDEX syntax
 
     OPTIMIZE INDEX index_name
 
-Available since version 2.1.1-beta, OPTIMIZE statement enqueues a RT
-index for optimization in a background thread.
+OPTIMIZE statement enqueues a RT index for optimization in a background
+thread.
 
 Over time, RT indexes can grow fragmented into many disk chunks and/or
 tainted with deleted, but unpurged data, impacting search performance.
@@ -23,9 +23,9 @@ might be added in the future to the SHOW INDEX STATUS and SHOW STATUS
 statements respectively). The optimization thread can be IO-throttled,
 you can control the maximum number of IOs per second and the maximum IO
 size with
-`rt\_merge\_iops <../searchd_program_configuration_options/rtmerge_iops.html>`__
+`rt\_merge\_iops <../searchd_program_configuration_options/rtmerge_iops.md>`__
 and
-`rt\_merge\_maxiosize <../searchd_program_configuration_options/rtmerge_maxiosize.html>`__
+`rt\_merge\_maxiosize <../searchd_program_configuration_options/rtmerge_maxiosize.md>`__
 directives respectively. The optimization jobs queue is lost on daemon
 crash.
 

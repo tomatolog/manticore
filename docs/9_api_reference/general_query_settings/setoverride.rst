@@ -7,7 +7,7 @@ SetOverride
 
 Sets temporary (per-query) per-document attribute value overrides. Only
 supports scalar attributes. $values must be a hash that maps document
-IDs to overridden attribute values. Introduced in version 0.9.9-rc1.
+IDs to overridden attribute values.
 
 Override feature lets you “temporary” update attribute values for some
 documents within a single query, leaving all other queries unaffected.

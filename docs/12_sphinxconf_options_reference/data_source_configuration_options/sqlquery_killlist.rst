@@ -2,8 +2,7 @@ sql\_query\_killlist
 ~~~~~~~~~~~~~~~~~~~~
 
 Kill-list query. Optional, default is empty (no query). Applies to SQL
-source types (``mysql``, ``pgsql``, ``mssql``) only. Introduced in
-version 0.9.9-rc1.
+source types (``mysql``, ``pgsql``, ``mssql``) only.
 
 This query is expected to return a number of 1-column rows, each
 containing just the document ID. The returned document IDs are stored
@@ -27,7 +26,7 @@ proper (least to most recent) order:
 
     $res = $cl->Query ( "test", "main delta" );
 
-F.html, we need to properly handle deletions. The result set should not
+First, we need to properly handle deletions. The result set should not
 contain documents 2, 3, or 5. Second, we also need to avoid phantom
 results. Unless we do something about it, document 11 *will* appear in
 search results! It will be found in ‘main’ (but not ‘delta’). And it

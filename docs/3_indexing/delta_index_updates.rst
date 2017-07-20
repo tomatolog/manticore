@@ -69,7 +69,7 @@ Example 3.3. Fully automated live updates
 Note how we're overriding ``sql_query_pre`` in the delta source. We need
 to explicitly have that override. Otherwise ``REPLACE`` query would be
 run when indexing delta source too, effectively nullifying it. However,
-when we issue the directive in the inherited source for the f.html time,
+when we issue the directive in the inherited source for the first time,
 it removes *all* inherited values, so the encoding setup is also lost.
 So ``sql_query_pre`` in the delta can not just be empty; and we need to
 issue the encoding setup query explicitly once again.

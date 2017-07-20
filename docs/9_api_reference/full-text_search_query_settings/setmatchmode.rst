@@ -6,7 +6,7 @@ SetMatchMode
 <b>Prototype:</b> function SetMatchMode ( $mode )
 
 Sets full-text query matching mode, as described in `the section called
-“Matching modes” <../../matching_modes.html>`__. Parameter must be a
+“Matching modes” <../../matching_modes.md>`__. Parameter must be a
 constant specifying one of the known modes.
 
 <b>WARNING:</b> (PHP specific) you <b>must not</b> take the matching

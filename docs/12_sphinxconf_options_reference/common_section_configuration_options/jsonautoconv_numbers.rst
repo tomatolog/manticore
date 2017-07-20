@@ -3,7 +3,7 @@ json\_autoconv\_numbers
 
 Automatically detect and convert possible JSON strings that represent
 numbers, into numeric attributes. Optional, default value is 0 (do not
-convert strings into numbers). Added in 2.1.1-beta.
+convert strings into numbers).
 
 When this option is 1, values such as “1234” will be indexed as numbers
 instead of strings; if the option is 0, such values will be indexed as

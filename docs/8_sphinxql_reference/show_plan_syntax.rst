@@ -6,11 +6,10 @@ SHOW PLAN syntax
 
     SHOW PLAN
 
-SHOW PLAN statement, added in 2.1.2-release, displays the execution plan
-of the previous SELECT statement. The plan gets generated and stored
-during the actual execution, so profiling must be enabled in the current
-session <b>before</b> running that statement. That can be done with a
-``SET profiling=1`` statement.
+SHOW PLAN displays the execution plan of the previous SELECT statement.
+The plan gets generated and stored during the actual execution, so
+profiling must be enabled in the current session <b>before</b> running
+that statement. That can be done with a ``SET profiling=1`` statement.
 
 Here's a complete instrumentation example:
 

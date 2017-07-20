@@ -1,14 +1,13 @@
 SphinxQL log format
 ~~~~~~~~~~~~~~~~~~~
 
-This is a new log format introduced in 2.0.1-beta, with the goals begin
-logging everything and then some, and in a format easy to automate (for
-instance, automatically replay). New format can either be enabled via
-the
-`query\_log\_format <../../searchd_program_configuration_options/querylog_format.html>`__
+This new log format introduced with the goals begin logging everything
+and then some, and in a format easy to automate (for instance,
+automatically replay). SphinxQL log format can either be enabled via the
+`query\_log\_format <../../searchd_program_configuration_options/querylog_format.md>`__
 directive in the configuration file, or switched back and forth on the
 fly with the
-```SET GLOBAL query_log_format=...`` <../../set_syntax.html>`__ statement
+```SET GLOBAL query_log_format=...`` <../../set_syntax.md>`__ statement
 via SphinxQL. In the new format, the example from the previous section
 would look as follows. (Wrapped below for readability, but with just one
 query per line in the actual log.)
@@ -26,7 +25,7 @@ query per line in the actual log.)
 Note that <b>all</b> requests would be logged in this format, including
 those sent via SphinxAPI and SphinxSE, not just those sent via SphinxQL.
 Also note, that this kind of logging works only with plain log files and
-will not work if you use ‘syslog’ for logging.
+will not work if you use ‘syslog’ service for logging.
 
 The features of SphinxQL log format compared to the default text one are
 as follows.

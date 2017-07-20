@@ -3,12 +3,11 @@ sql\_attr\_json
 
 JSON attribute declaration. Multi-value (ie. there may be more than one
 such attribute declared), optional. Applies to SQL source types
-(``mysql``, ``pgsql``, ``mssql``) only. Introduced in version
-2.1.1-beta.
+(``mysql``, ``pgsql``, ``mssql``) only.
 
 When indexing JSON attributes, Sphinx expects a text field with JSON
-formatted data. As of 2.2.1-beta JSON attributes supports arbitrary JSON
-data with no limitation in nested levels or types.
+formatted data. JSON attributes supports arbitrary JSON data with no
+limitation in nested levels or types.
 
 ::
 

@@ -12,8 +12,8 @@ documents to existing index), but rather slow to search. Sphinx
 architecture allows internally for different *index types*, or
 *backends*, to be implemented comparatively easily.
 
-Starting with 1.10-beta, Sphinx provides 2 different backends: a <b>disk
-index</b> backend, and a <b>RT (realtime) index</b> backend.
+Sphinx provides 2 different backends: a <b>disk index</b> backend, and a
+<b>RT (realtime) index</b> backend.
 
 <b>Disk indexes</b> are designed to provide maximum indexing and
 searching speed, while keeping the RAM footprint as low as possible.
@@ -23,12 +23,12 @@ You only can batch rebuild the entire disk index from scratch. (Note
 that you still can update document's <b>attributes</b> on the fly, even
 with the disk indexes.)
 
-This “rebuild only” limitation might look as a big constraint at a f.html
+This “rebuild only” limitation might look as a big constraint at a first
 glance. But in reality, it can very frequently be worked around rather
 easily by setting up multiple disk indexes, searching through them all,
 and only rebuilding the one with a fraction of the most recently changed
 data. See `the section called “Live index
-updates” <../live_index_updates.html>`__ for details.
+updates” <../live_index_updates.md>`__ for details.
 
 <b>RT indexes</b> enable you to implement dynamic updates and
 incremental additions to the full text index. RT stands for Real Time
@@ -36,7 +36,7 @@ and they are indeed “soft realtime” in terms of writes, meaning that
 most index changes become available for searching as quick as 1
 millisecond or less, but could occasionally stall for seconds. (Searches
 will still work even during that occasional writing stall.) Refer to
-`Chapter 4, *Real-time indexes* <../4_real-time_indexes/README.html>`__
+`Chapter 4, *Real-time indexes* <../4_real-time_indexes/README.md>`__
 for details.
 
 Last but not least, Sphinx supports so-called <b>distributed
@@ -46,7 +46,7 @@ indexes that can be searched transparently to the application, with
 Sphinx doing all the chores of sending search requests to remote
 machines in the cluster, aggregating the result sets, retrying the
 failed requests, and even doing some load balancing. See `the section
-called “Distributed searching” <../distributed_searching.html>`__ for a
+called “Distributed searching” <../distributed_searching.md>`__ for a
 discussion of distributed indexes.
 
 There can be as many indexes per configuration file as necessary.

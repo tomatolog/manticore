@@ -34,8 +34,8 @@ to that per-field sum. Currently implemented field-level factors are:
 
 -  ``user_weight`` (integer), the user specified per-field weight (refer
    to
-   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.html>`__
-   in SphinxAPI and `OPTION field\_weights <../../select_syntax.html>`__
+   `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.md>`__
+   in SphinxAPI and `OPTION field\_weights <../../select_syntax.md>`__
    in SphinxQL respectively). The weights default to 1 if not specified
    explicitly.
 
@@ -59,10 +59,10 @@ to that per-field sum. Currently implemented field-level factors are:
    IDF over all matched occurrences. That's by construction equivalent
    to summing TF*\ IDF over all matched keywords.
 
--  ``min_hit_pos`` (integer), the position of the f.html matched keyword
+-  ``min_hit_pos`` (integer), the position of the first matched keyword
    occurrence, counted in words. Indexing begins from position 1.
 
--  ``min_best_span_pos`` (integer), the position of the f.html maximum
+-  ``min_best_span_pos`` (integer), the position of the first maximum
    LCS occurrences span. For example, assume that our query was ‘hello
    world program’ and ‘hello world’ subphrase was matched twice in the
    field, in positions 13 and 21. Assume that ‘hello’ and ‘world’
@@ -74,23 +74,21 @@ to that per-field sum. Currently implemented field-level factors are:
 -  ``exact_hit`` (boolean), whether a query was an exact match of the
    entire current field. Used in the SPH04 ranker.
 
--  ``min_idf``, ``max_idf``, and ``sum_idf`` (float), added in version
-   2.1.1-beta. These factors respectively represent the min(idf),
-   max(idf) and sum(idf) over all keywords that were matched in the
-   field.
+-  ``min_idf``, ``max_idf``, and ``sum_idf`` (float). These factors
+   respectively represent the min(idf), max(idf) and sum(idf) over all
+   keywords that were matched in the field.
 
--  ``exact_order`` (boolean), added in version 2.2.1-beta. Whether all
-   of the query keywords were matched in the field in the exact query
-   order. For example, ``(microsoft office)`` query would yield
-   exact\_order=1 in a field with the following contents:
+-  ``exact_order`` (boolean). Whether all of the query keywords were
+   matched in the field in the exact query order. For example,
+   ``(microsoft office)`` query would yield exact\_order=1 in a field
+   with the following contents:
    ``(We use Microsoft software in our office.)``. However, the very
    same query in a ``(Our office is Microsoft free.)`` field would yield
    exact\_order=0.
 
--  ``min_gaps`` (integer), added in version 2.2.1-beta, the minimum
-   number of positional gaps between (just) the keywords matched in
-   field. Always 0 when less than 2 keywords match; always greater or
-   equal than 0 otherwise.
+-  ``min_gaps`` (integer), the minimum number of positional gaps between
+   (just) the keywords matched in field. Always 0 when less than 2
+   keywords match; always greater or equal than 0 otherwise.
 
    For example, with a ``[big wolf]`` query, ``[big bad wolf]`` field
    would yield min\_gaps=1; ``[big bad hairy wolf]`` field would yield
@@ -106,15 +104,15 @@ to that per-field sum. Currently implemented field-level factors are:
    formula, but here are a few ideas you can start with: (a) any
    min\_gaps based boosts could be simply ignored when word\_count<2;
    (b) non-trivial min\_gaps values (i.e. when word\_count>=2) could be
-   clamped with a certain “w.html case” constant while trivial values
+   clamped with a certain “worst case” constant while trivial values
    (i.e. when min\_gaps=0 and word\_count<2) could be replaced by that
    constant; (c) a transfer function like 1/(1+min\_gaps) could be
    applied (so that better, smaller min\_gaps values would maximize it
    and worse, bigger min\_gaps values would fall off slowly); and so on.
 
--  ``lccs`` (integer), added in version 2.2.1-beta. Longest Common
-   Contiguous Subsequence. A length of the longest subphrase that is
-   common between the query and the document, computed in keywords.
+-  ``lccs`` (integer). Longest Common Contiguous Subsequence. A length
+   of the longest subphrase that is common between the query and the
+   document, computed in keywords.
 
    LCCS factor is rather similar to LCS but more restrictive, in a
    sense. While LCS could be greater than 1 though no two query words
@@ -129,9 +127,9 @@ to that per-field sum. Currently implemented field-level factors are:
    Note that LCCS still does not differentiate between the frequent and
    rare keywords; for that, see WLCCS.
 
--  ``wlccs`` (float), added in version 2.2.1-beta. Weighted Longest
-   Common Contiguous Subsequence. A sum of IDFs of the keywords of the
-   longest subphrase that is common between the query and the document.
+-  ``wlccs`` (float). Weighted Longest Common Contiguous Subsequence. A
+   sum of IDFs of the keywords of the longest subphrase that is common
+   between the query and the document.
 
    WLCCS is computed very similarly to LCCS, but every “suitable”
    keyword occurrence increases it by the keyword IDF rather than just
@@ -144,12 +142,12 @@ to that per-field sum. Currently implemented field-level factors are:
    somewhat more rare than the entire “bed and breakfast” phrase. WLCCS
    factor alleviates that problem by using the keyword frequencies.
 
--  ``atc`` (float), added in version 2.2.1-beta. Aggregate Term
-   Closeness. A proximity based measure that grows higher when the
-   document contains more groups of more closely located and more
-   important (rare) query keywords. <b>WARNING:</b> you should use ATC
-   with OPTION idf=‘plain,tfidf\_unnormalized’; otherwise you would get
-   unexpected results.
+-  ``atc`` (float). Aggregate Term Closeness. A proximity based measure
+   that grows higher when the document contains more groups of more
+   closely located and more important (rare) query keywords.
+   <b>WARNING:</b> you should use ATC with OPTION
+   idf=‘plain,tfidf\_unnormalized’; otherwise you would get unexpected
+   results.
 
    ATC basically works as follows. For every keyword *occurrence* in the
    document, we compute the so called *term closeness*. For that, we

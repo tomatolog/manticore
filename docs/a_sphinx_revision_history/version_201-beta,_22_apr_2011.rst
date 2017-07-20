@@ -5,67 +5,67 @@ New general features
 ~~~~~~~~~~~~~~~~~~~~
 
 -  added remapping support to
-   `blend\_chars <../index_configuration_options/blendchars.html>`__
+   `blend\_chars <../index_configuration_options/blendchars.md>`__
    directive
 
 -  added multi-threaded snippet batches support (requires a batch sent
    via API,
-   `dist\_threads <../searchd_program_configuration_options/distthreads.html>`__,
+   `dist\_threads <../searchd_program_configuration_options/distthreads.md>`__,
    and ``load_files``)
 
 -  added collations
-   (`collation\_server <../searchd_program_configuration_options/collationserver.html>`__,
+   (`collation\_server <../searchd_program_configuration_options/collationserver.md>`__,
    `collation\_libc\_locale
-   directives <../searchd_program_configuration_options/collationlibc_locale.html>`__)
+   directives <../searchd_program_configuration_options/collationlibc_locale.md>`__)
 
 -  added support for sorting and grouping on string attributes
    (``ORDER BY``, ``GROUP BY``, ``WITHIN GROUP ORDER BY``)
 
 -  added UDF support
-   (`plugin\_dir <../common_section_configuration_options/plugindir.html>`__
-   directive; `CREATE FUNCTION <../create_function_syntax.html>`__, `DROP
-   FUNCTION <../drop_function_syntax.html>`__ statements)
+   (`plugin\_dir <../common_section_configuration_options/plugindir.md>`__
+   directive; `CREATE FUNCTION <../create_function_syntax.md>`__, `DROP
+   FUNCTION <../drop_function_syntax.md>`__ statements)
 
 -  added
-   `query\_log\_format <../searchd_program_configuration_options/querylog_format.html>`__
+   `query\_log\_format <../searchd_program_configuration_options/querylog_format.md>`__
    directive, `SET GLOBAL query\_log\_format \| log\_level =
-   … <../set_syntax.html>`__ statements; and connection id tracking
+   … <../set_syntax.md>`__ statements; and connection id tracking
 
 -  added
-   `sql\_column\_buffers <../data_source_configuration_options/sqlcolumn_buffers.html>`__
+   `sql\_column\_buffers <../data_source_configuration_options/sqlcolumn_buffers.md>`__
    directive, fixed out-of-buffer column handling in ODBC/MS SQL sources
 
--  added `blend\_mode <../index_configuration_options/blendmode.html>`__
+-  added `blend\_mode <../index_configuration_options/blendmode.md>`__
    directive that enables indexing multiple variants of a blended
    sequence
 
 -  added UNIX socket support to C, Ruby APIs
 
 -  added ranged query support to
-   `sql\_joined\_field <../data_source_configuration_options/sqljoined_field.html>`__
+   `sql\_joined\_field <../data_source_configuration_options/sqljoined_field.md>`__
 
 -  added
-   `rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.html>`__
+   `rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.md>`__
    directive
 
 -  added
-   `thread\_stack <../searchd_program_configuration_options/threadstack.html>`__
+   `thread\_stack <../searchd_program_configuration_options/threadstack.md>`__
    directive
 
 -  added SENTENCE, PARAGRAPH, ZONE operators (and
-   `index\_sp <../index_configuration_options/indexsp.html>`__,
-   `index\_zones <../index_configuration_options/indexzones.html>`__
+   `index\_sp <../index_configuration_options/indexsp.md>`__,
+   `index\_zones <../index_configuration_options/indexzones.md>`__
    directives)
 
 -  added keywords dictionary support (and
-   `dict <../index_configuration_options/dict.html>`__,
-   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.html>`__
+   `dict <../index_configuration_options/dict.md>`__,
+   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.md>`__
    directives)
 
 -  added ``passage_boundary``, ``emit_zones`` options to snippets
 
 -  added `a watchdog
-   process <../searchd_program_configuration_options/watchdog.html>`__ in
+   process <../searchd_program_configuration_options/watchdog.md>`__ in
    threaded mode
 
 -  added persistent MVA updates
@@ -84,18 +84,18 @@ New SphinxQL features
    compat\_sphinxql\_magics directive
 
 -  added
-   `CRC32() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-crc32>`__,
-   `DAY() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.html#expr-func-day>`__,
-   `MONTH() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.html#expr-func-month>`__,
-   `YEAR() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.html#expr-func-year>`__,
-   `YEARMONTH() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.html#expr-func-yearmonth>`__,
-   `YEARMONTHDAY() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.html#expr-func-yearmonthday>`__
+   `CRC32() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.md#expr-func-crc32>`__,
+   `DAY() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.md#expr-func-day>`__,
+   `MONTH() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.md#expr-func-month>`__,
+   `YEAR() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.md#expr-func-year>`__,
+   `YEARMONTH() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.md#expr-func-yearmonth>`__,
+   `YEARMONTHDAY() <../5_searching/expressions,_functions,_and_operators/date_and_time_functions.md#expr-func-yearmonthday>`__
    functions
 
 -  added `DIV, MOD, and %
-   operators <../5_searching/expressions,_functions,_and_operators/operators.html#expr-ari-ops>`__
+   operators <../5_searching/expressions,_functions,_and_operators/operators.md#expr-ari-ops>`__
 
--  added `reverse\_scan=(0\|1) <../select_syntax.html>`__ option to SELECT
+-  added `reverse\_scan=(0\|1) <../select_syntax.md>`__ option to SELECT
 
 -  added support for MySQL packets over 16M
 
@@ -104,24 +104,24 @@ New SphinxQL features
    client libraries and frameworks)
 
 -  added
-   `mysql\_version\_string <../searchd_program_configuration_options/mysqlversion_string.html>`__
+   `mysql\_version\_string <../searchd_program_configuration_options/mysqlversion_string.md>`__
    directive (to workaround picky MySQL client libraries)
 
 -  added support for global filter variables, [SET GLOBAL
-   @uservar=(int\_list)](../set\_syntax.html)
+   @uservar=(int\_list)](../set\_syntax.md)
 
--  added `DELETE … IN (id\_list) <../delete_syntax.html>`__ syntax support
+-  added `DELETE … IN (id\_list) <../delete_syntax.md>`__ syntax support
 
 -  added C-style comments syntax (for example,
    ``SELECT /*!40000 some comment*/ id FROM test``)
 
--  added `UPDATE … WHERE id=X <../update_syntax.html>`__ syntax support
+-  added `UPDATE … WHERE id=X <../update_syntax.md>`__ syntax support
 
 -  added `SphinxQL multi-query
-   support <../multi-statement_queries.html>`__
+   support <../multi-statement_queries.md>`__
 
--  added `DESCRIBE <../describe_syntax.html>`__, `SHOW
-   TABLES <../show_tables_syntax.html>`__ statements
+-  added `DESCRIBE <../describe_syntax.md>`__, `SHOW
+   TABLES <../show_tables_syntax.md>`__ statements
 
 New command-line switches
 ~~~~~~~~~~~~~~~~~~~~~~~~~

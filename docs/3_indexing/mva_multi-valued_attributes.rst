@@ -7,17 +7,16 @@ values to every document. That is useful to implement article tags,
 product categories, etc. Filtering and group-by (but not sorting) on MVA
 attributes is supported.
 
-As of version 2.0.2-beta, MVA values can either be unsigned 32-bit
-integers (UNSIGNED INTEGER) or signed 64-bit integers (BIGINT). Up to
-version 2.0.1-beta, only the unsigned 32-bit values were supported.
+MVA values can either be unsigned 32-bit integers (UNSIGNED INTEGER) or
+signed 64-bit integers (BIGINT).
 
 The set size is not limited, you can have an arbitrary number of values
 attached to each document as long as RAM permits (``.spm`` file that
 contains the MVA values will be precached in RAM by ``searchd``). The
 source data can be taken either from a separate query, or from a
 document field; see source type in
-`sql\_attr\_multi <../data_source_configuration_options/sqlattr_multi.html>`__.
-In the f.html case the query will have to return pairs of document ID and
+`sql\_attr\_multi <../data_source_configuration_options/sqlattr_multi.md>`__.
+In the first case the query will have to return pairs of document ID and
 MVA values, in the second one the field will be parsed for integer
 values. There are absolutely no requirements as to incoming data order;
 the values will be automatically grouped by document ID (and internally
@@ -37,5 +36,5 @@ because each document can participate in many groups, it can be chosen
 as the best one in in more than one group, leading to duplicate IDs. PHP
 API historically uses ordered hash on the document ID for the resulting
 rows; so you'll also need to use
-`SetArrayResult() <../general_api_functions/setarrayresult.html>`__ in
+`SetArrayResult() <../general_api_functions/setarrayresult.md>`__ in
 order to employ group-by on MVA with PHP API.

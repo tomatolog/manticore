@@ -2,7 +2,7 @@ expansion\_limit
 ~~~~~~~~~~~~~~~~
 
 The maximum number of expanded keywords for a single wildcard. Optional,
-default is 0 (no limit). Introduced in version 2.0.1-beta.
+default is 0 (no limit).
 
 When doing substring searches against indexes built with
 ``dict = keywords`` enabled, a single wildcard may potentially result in

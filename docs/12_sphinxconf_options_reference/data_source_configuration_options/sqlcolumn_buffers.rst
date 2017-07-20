@@ -3,7 +3,6 @@ sql\_column\_buffers
 
 Per-column buffer sizes. Optional, default is empty (deduce the sizes
 automatically). Applies to ``odbc``, ``mssql`` source types only.
-Introduced in version 2.0.1-beta.
 
 ODBC and MS SQL drivers sometimes can not return the maximum actual
 column size to be expected. For instance, NVARCHAR(MAX) columns always

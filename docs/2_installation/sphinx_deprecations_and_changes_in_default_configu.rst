@@ -1,10 +1,6 @@
 Sphinx deprecations and changes in default configuration
 --------------------------------------------------------
 
-In 2.2.1-beta version we decided to start removing some old features.
-All of them was ‘unofficially’ deprecated for some time. And we're
-informing you now about it.
-
 Changes are as follows:
 
 -  32-bit document IDs are now deprecated. Our binary releases are now
@@ -29,25 +25,6 @@ Changes are as follows:
    introduced long before sort by expression became a reality and it has
    been deprecated for a very long time.
 
--  enable\_star is deprecated now. Previous default mode was
-   enable\_star=0 which was due to compatibility with a very old Sphinx
-   version. Such implicit star search isn't very intuitive. So, we've
-   decided to eventually remove it and have marked it as deprecated just
-   recently. We plan to totally remove this configuration key in the
-   2.2.X branch.
-
--  str2ordinal attributes are deprecated. This feature allows you to
-   perform sorting by a string. But it's also possible to do this with
-   ordinary string attributes, which is much easier to use. str2ordinal
-   only covers a small part of this functionality and is not needed now.
-
--  str2wordcount attributes are deprecated.
-   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.html>`__
-   will create an integer attribute with field length set automatically
-   and we recommend to use this configuration key when you need to store
-   field lengths. Also, index\_field\_lengths=1 allows you to use new
-   ranking formulas like BM25F().
-
 -  hit\_format is deprecated. This is a hidden configuration key - it's
    not mentioned in our documentation. But, it's there and it's possible
    that someone may use it. And now we're urging you: don't use it. The
@@ -55,8 +32,8 @@ Changes are as follows:
    hit\_format is obsolete and will be removed in the near future.
 
 -  docinfo=inline is deprecated. You can now use
-   `ondisk\_attrs <../index_configuration_options/ondiskattrs.html>`__ or
-   `ondisk\_attrs\_default <../searchd_program_configuration_options/ondiskattrs_default.html>`__
+   `ondisk\_attrs <../index_configuration_options/ondiskattrs.md>`__ or
+   `ondisk\_attrs\_default <../searchd_program_configuration_options/ondiskattrs_default.md>`__
    instead.
 
 -  workers=threads is a new default for all OS now. We're gonna get rid
@@ -70,54 +47,13 @@ Changes are as follows:
 
 -  ondisk\_dict\_default is deprecated. No need to save RAM this way.
 
--  compat\_sphinxql\_magics was removed. Now you can't use an old result
-   format and SphinxQL always looks more like ANSI SQL.
-
--  Completely removed xmlpipe. This was a very old ad hoc solution for a
-   particular customer. xmlpipe2 surpasses it in every single aspect.
-
-None of the different querying methods are deprecated, but as of version
-2.2.1-beta, SphinxQL is the most advanced method. We plan to remove
-SphinxAPI and Sphinx SE someday so it would be a good idea to start
-using SphinxQL.
+None of the different querying methods are deprecated, but SphinxQL is
+the most advanced method. We plan to remove SphinxAPI and Sphinx SE
+someday so it would be a good idea to start using SphinxQL.
 
 -  The SetWeights() API call has been deprecated for a long time and has
    now been removed from official APIs.
 
 -  The default matching mode for the API is now ‘extended’. Actually,
    all other modes are deprecated. We recommend using the `extended
-   query syntax <../extended_query_syntax.html>`__ instead.
-
-Changes for 2.2.2-beta:
-
--  Removed deprecated “address” and “port” directives. Use “listen”
-   instead.
-
--  Removed str2wordcount attributes. Use
-   `index\_field\_lengths=1 <../index_configuration_options/indexfield_lengths.html>`__
-   instead.
-
--  Removed str2ordinal attributes. Use string attributes for sorting.
-
--  ondisk\_dict and ondisk\_dict\_default was removed.
-
--  Removed charset\_type and mssql\_unicode - we now support only UTF-8
-   encoding.
-
--  Removed deprecated enable\_star. Now always work as with
-   enable\_star=1.
-
--  Removed CLI search which confused people instead of helping them and
-   sql\_query\_info.
-
--  Deprecated SetMatchMode() API call.
-
--  Changed default
-   `thread\_stack <../searchd_program_configuration_options/threadstack.html>`__
-   value to 1M.
-
--  Deprecated SetOverride() API call.
-
-Changes for 2.2.3-beta:
-
--  Removed unneeded max\_matches key from config file.
+   query syntax <../extended_query_syntax.md>`__ instead.

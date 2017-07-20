@@ -8,12 +8,11 @@ CREATE FUNCTION syntax
         RETURNS {INT | INTEGER | BIGINT | FLOAT | STRING}
         SONAME 'udf_lib_file'
 
-CREATE FUNCTION statement, introduced in version 2.0.1-beta, installs a
-`user-defined function
-(UDF) <../sphinx_udfs_user_defined_functions.html>`__ with the given name
+CREATE FUNCTION statement installs a `user-defined function
+(UDF) <../sphinx_udfs_user_defined_functions.md>`__ with the given name
 and type from the given library file. The library file must reside in a
 trusted
-`plugin\_dir <../common_section_configuration_options/plugindir.html>`__
+`plugin\_dir <../common_section_configuration_options/plugindir.md>`__
 directory. On success, the function is available for use in all
 subsequent queries that the server receives. Example:
 

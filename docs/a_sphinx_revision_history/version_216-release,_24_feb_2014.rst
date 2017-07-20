@@ -22,7 +22,7 @@ Bug fixes
 -  fixed #1864, ``indexer`` crash on badly formed JSON, e.g.
    ‘[,1,2,3,4,]’
 
--  fixed #1853, incomplete `ORDER BY JSON <../select_syntax.html>`__
+-  fixed #1853, incomplete `ORDER BY JSON <../select_syntax.md>`__
    attribute in distributed indexes
 
 -  fixed #1847, broken infix searches in RT indexes
@@ -30,23 +30,23 @@ Bug fixes
 -  fixed #1844, clash of mix cased attribute and field names at CSV
    source
 
--  fixed #1840, filter by [@uservar](../set\_syntax.html) in distributes
+-  fixed #1840, filter by [@uservar](../set\_syntax.md) in distributes
    indexes
 
 -  fixed #1832,#1833,#1834, some big endianess issues
 
 -  fixed #1830, loss of
-   `ondisk\_attrs <../index_configuration_options/ondiskattrs.html>`__
+   `ondisk\_attrs <../index_configuration_options/ondiskattrs.md>`__
    after rotation
 
 -  fixed #1762, memory leak in
-   `regexp\_filter <../index_configuration_options/regexpfilter.html>`__
+   `regexp\_filter <../index_configuration_options/regexpfilter.md>`__
 
 -  fixed #1759, ``indextool`` false positives on persistent MVA checking
 
--  fixed `GROUP BY <../select_syntax.html>`__ id
+-  fixed `GROUP BY <../select_syntax.md>`__ id
 
 -  fixed crash on sending empty snippet result
 
--  fixed index corruption in `UPDATE <../update_syntax.html>`__ queries
+-  fixed index corruption in `UPDATE <../update_syntax.md>`__ queries
    with non-existent attributes

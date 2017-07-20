@@ -16,36 +16,33 @@ SELECT syntax
         [OPTION opt_name = opt_value [, ...]]
         [FACET facet_options[ FACET facet_options][ ...]]
 
-<b>SELECT</b> statement was introduced in version 0.9.9-rc2. It's syntax
-is based upon regular SQL but adds several Sphinx-specific extensions
-and has a few omissions (such as (currently) missing support for JOINs).
-Specifically,
+<b>SELECT</b> statement's syntax is based upon regular SQL but adds
+several Sphinx-specific extensions and has a few omissions (such as
+(currently) missing support for JOINs). Specifically,
 
 -  Column list clause. Column names, arbitrary expressions, and star
    ('\*') are all allowed (ie.
    ``SELECT id, group_id*123+456 AS expr1 FROM test1`` will work).
    Unlike in regular SQL, all computed expressions must be aliased with
-   a valid identifier. Starting with version 2.0.1-beta, ``AS`` is
-   optional.
+   a valid identifier. ``AS`` is optional.
 
--  EXIST() function (added in version 2.1.1-beta) is supported. EXIST (
-   “attr-name”, default-value ) replaces non-existent columns with
-   default values. It returns either a value of an attribute specified
-   by ‘attr-name’, or ‘default-value’ if that attribute does not exist.
-   As of 2.1.1-beta it does not support STRING or MVA attributes. This
-   function is handy when you are searching through several indexes with
-   different schemas.
+-  EXIST() function is supported. EXIST ( “attr-name”, default-value )
+   replaces non-existent columns with default values. It returns either
+   a value of an attribute specified by ‘attr-name’, or ‘default-value’
+   if that attribute does not exist. It does not support STRING or MVA
+   attributes. This function is handy when you are searching through
+   several indexes with different schemas.
 
    ::
 
 
        SELECT *, EXIST('gid', 6) as cnd FROM i1, i2 WHERE cnd>5
 
--  SNIPPET() function (added in version 2.1.1-beta) is supported. This
-   is a wrapper around the snippets functionality, similar to what is
-   available via CALL SNIPPETS. The f.html two arguments are: the text to
-   highlight, and a query. Starting with 2.2-1-beta it's possible to
-   pass `options <../additional_functionality/buildexcerpts.html>`__ to
+-  SNIPPET() function is supported. This is a wrapper around the
+   snippets functionality, similar to what is available via CALL
+   SNIPPETS. The first two arguments are: the text to highlight, and a
+   query. It's possible to pass
+   `options <../additional_functionality/buildexcerpts.md>`__ to
    function. The intended use is as follows:
 
    ::
@@ -67,14 +64,14 @@ Specifically,
    10 times.
 
    Table functions is a mechanism of post-query result set processing.
-   It was added in 2.2.1-beta. Table functions take an arbitrary result
-   set as their input, and return a new, processed set as their output.
-   The f.html argument should be the input result set, but a table
-   function can optionally take and handle more arguments. Table
-   functions can completely change the result set, including the schema.
-   For now, only built in table functions are supported. UDFs are
-   planned when the internal call interface is stabilized. Table
-   functions work for both outer SELECT and nested SELECT.
+   Table functions take an arbitrary result set as their input, and
+   return a new, processed set as their output. The first argument
+   should be the input result set, but a table function can optionally
+   take and handle more arguments. Table functions can completely change
+   the result set, including the schema. For now, only built in table
+   functions are supported. UDFs are planned when the internal call
+   interface is stabilized. Table functions work for both outer SELECT
+   and nested SELECT.
 
    -  REMOVE\_REPEATS ( result\_set, column, offset, limit ) - removes
       repeated adjusted rows with the same ‘column’ value.
@@ -86,7 +83,7 @@ Specifically,
 
 -  FROM clause. FROM clause should contain the list of indexes to search
    through. Unlike in regular SQL, comma means enumeration of full-text
-   indexes as in `Query() <../querying/query.html>`__ API call rather than
+   indexes as in `Query() <../querying/query.md>`__ API call rather than
    JOIN. Index name should be according to the rules of a C identifier.
 
 -  WHERE clause. This clause will map both to fulltext query and
@@ -94,11 +91,11 @@ Specifically,
    and BETWEEN are all supported and map directly to filters. OR is not
    supported yet but will be in the future. MATCH(‘query’) is supported
    and maps to fulltext query. Query will be interpreted according to
-   `full-text query language rules <../extended_query_syntax.html>`__.
-   There must be at most one MATCH() in the clause. Starting with
-   version 2.0.1-beta, ``{col_name | expr_alias} [NOT] IN @uservar``
-   condition syntax is supported. (Refer to `the section called “SET
-   syntax” <../set_syntax.html>`__ for a discussion of global user
+   `full-text query language rules <../extended_query_syntax.md>`__.
+   There must be at most one MATCH() in the clause.
+   ``{col_name | expr_alias} [NOT] IN @uservar`` condition syntax is
+   supported. (Refer to `the section called “SET
+   syntax” <../set_syntax.md>`__ for a description of global user
    variables.)
 
 -  GROUP BY clause. Supports grouping by multiple columns or computed
@@ -138,13 +135,12 @@ Specifically,
        WHERE MATCH('ipod')
        GROUP BY vendorid
 
-   Starting with 2.0.1-beta, GROUP BY on a string attribute is
-   supported, with respect for current collation (see `the section
-   called “Collations” <../collations.html>`__).
+   GROUP BY on a string attribute is supported, with respect for current
+   collation (see `the section called
+   “Collations” <../collations.md>`__).
 
-   Starting with 2.2.1-beta, you can query Sphinx to return (no more
-   than) N top matches for each group accordingly to WITHIN GROUP ORDER
-   BY.
+   You can query Sphinx to return (no more than) N top matches for each
+   group accordingly to WITHIN GROUP ORDER BY.
 
    ::
 
@@ -160,11 +156,11 @@ Specifically,
        FROM my_index WHERE MATCH('the')
        GROUP BY group_id ORDER BY max_id DESC
 
--  GROUP\_CONCAT() function is supported, starting with version
-   2.1.1-beta. When you group by an attribute, the result set only shows
-   attributes from a single document representing the whole group.
-   GROUP\_CONCAT() produces a comma-separated list of the attribute
-   values of all documents in the group.
+-  GROUP\_CONCAT() function is supported. When you group by an
+   attribute, the result set only shows attributes from a single
+   document representing the whole group. GROUP\_CONCAT() produces a
+   comma-separated list of the attribute values of all documents in the
+   group.
 
    ::
 
@@ -176,9 +172,8 @@ Specifically,
    order number of the matched zone span. For example, if a document
    reads <b><i>text</i> the <i>text</i></b>, and you query for
    ‘ZONESPAN:(i,b) text’, then ZONESPANLIST() will return the string
-   “1:1 1:2 2:1” meaning that the f.html zone span matched “text” in
-   spans 1 and 2, and the second zone span in span 1 only. This was
-   added in version 2.1.1-beta.
+   “1:1 1:2 2:1” meaning that the first zone span matched “text” in
+   spans 1 and 2, and the second zone span in span 1 only.
 
 -  WITHIN GROUP ORDER BY clause. This is a Sphinx specific extension
    that lets you control how the best row within a group will to be
@@ -193,12 +188,12 @@ Specifically,
        WITHIN GROUP ORDER BY w DESC
        ORDER BY timeseg DESC, w DESC
 
-   Starting with 2.0.1-beta, WITHIN GROUP ORDER BY on a string attribute
-   is supported, with respect for current collation (see `the section
-   called “Collations” <../collations.html>`__).
+   WITHIN GROUP ORDER BY on a string attribute is supported, with
+   respect for current collation (see `the section called
+   “Collations” <../collations.md>`__).
 
--  HAVING clause. This is used to filter on GROUP BY values. It was
-   added in 2.2.1-beta. Currently supports only one filtering condition.
+-  HAVING clause. This is used to filter on GROUP BY values. Currently
+   supports only one filtering condition.
 
    ::
 
@@ -219,23 +214,23 @@ Specifically,
 
        SELECT *, WEIGHT()*10+docboost AS skey FROM example ORDER BY skey
 
-   Starting with 2.1.1-beta, you can use subqueries to speed up specific
-   searches, which involve reranking, by postponing hard (slow)
-   calculations as late as possible. For example, SELECT
-   id,a\_slow\_expression() AS cond FROM an\_index ORDER BY id ASC, cond
-   DESC LIMIT 100; could be better written as SELECT \* FROM (SELECT
-   id,a\_slow\_expression() AS cond FROM an\_index ORDER BY id ASC LIMIT
-   100) ORDER BY cond DESC; because in the f.html case the slow
-   expression would be evaluated for the whole set, while in the second
-   one it would be evaluated just for a subset of values.
+   You can use subqueries to speed up specific searches, which involve
+   reranking, by postponing hard (slow) calculations as late as
+   possible. For example, SELECT id,a\_slow\_expression() AS cond FROM
+   an\_index ORDER BY id ASC, cond DESC LIMIT 100; could be better
+   written as SELECT \* FROM (SELECT id,a\_slow\_expression() AS cond
+   FROM an\_index ORDER BY id ASC LIMIT 100) ORDER BY cond DESC; because
+   in the first case the slow expression would be evaluated for the
+   whole set, while in the second one it would be evaluated just for a
+   subset of values.
 
-   Starting with 2.0.1-beta, ORDER BY on a string attribute is
-   supported, with respect for current collation (see `the section
-   called “Collations” <../collations.html>`__).
+   ORDER BY on a string attribute is supported, with respect for current
+   collation (see `the section called
+   “Collations” <../collations.md>`__).
 
-   Starting with 2.0.2-beta, ORDER BY RAND() syntax is supported. Note
-   that this syntax is actually going to randomize the weight values and
-   then order matches by those randomized weights.
+   ORDER BY RAND() syntax is supported. Note that this syntax is
+   actually going to randomize the weight values and then order matches
+   by those randomized weights.
 
 -  LIMIT clause. Both LIMIT N and LIMIT M,N forms are supported. Unlike
    in regular SQL (but like in Sphinx API), an implicit LIMIT 0,20 is
@@ -253,7 +248,7 @@ Specifically,
 
    -  ‘agent\_query\_timeout’ - integer (max time in milliseconds to
       wait for remote queries to complete, see
-      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.html>`__
+      `agent\_query\_timeout <../searchd_program_configuration_options/agentquery_timeout.md>`__
       under Index configuration options for details)
 
    -  ‘boolean\_simplify’ - 0 or 1, enables simplifying the query to
@@ -268,23 +263,22 @@ Specifically,
       for ranking)
 
    -  ‘global\_idf’ - use global statistics (frequencies) from the
-      `global\_idf file <../index_configuration_options/globalidf.html>`__
+      `global\_idf file <../index_configuration_options/globalidf.md>`__
       for IDF computations, rather than the local index statistics.
-      Added in version 2.1.1-beta.
 
    -  ‘idf’ - a quoted, comma-separated list of IDF computation flags.
-      Added in version 2.1.1-beta. Known flags are:
+      Known flags are:
 
       -  normalized: BM25 variant, idf = log((N-n+1)/n), as per
          Robertson et al
 
       -  plain: plain variant, idf = log(N/n), as per Sparck-Jones
 
-      -  tfidf\_normalized (added in 2.2.1-beta): additionally divide
-         IDF by query word count, so that TF\*IDF fits into [0, 1] range
+      -  tfidf\_normalized: additionally divide IDF by query word count,
+         so that TF\*IDF fits into [0, 1] range
 
-      -  tfidf\_unnormalized (added in 2.2.1-beta): do not additionally
-         divide IDF by query word count
+      -  tfidf\_unnormalized: do not additionally divide IDF by query
+         word count
 
       where <b>N</b> is the collection size and <b>n</b> is the number
       of matched documents.
@@ -294,7 +288,7 @@ Specifically,
       ``OPTION idf=&#039;normalized,tfidf_normalized&#039;``, and those
       normalizations may cause several undesired effects.
 
-      F.html, idf=normalized causes keyword penalization. For instance,
+      First, idf=normalized causes keyword penalization. For instance,
       if you search for [the \| something] and [the] occurs in more than
       50% of the documents, then documents with both keywords [the] and
       [something] will get <b>less</b> weight than documents with just
@@ -321,9 +315,9 @@ Specifically,
       ``OPTION idf=plain`` is equivalent to a complete
       ``OPTION idf=&#039;plain,tfidf_normalized&#039;`` specification.
 
-   -  local\_df (added in 2.2.1-beta): 0 or 1,automatically sum DFs over
-      all the local parts of a distributed index, so that the IDF is
-      consistent (and precise) over a locally sharded index.
+   -  ‘local\_df’ - 0 or 1,automatically sum DFs over all the local
+      parts of a distributed index, so that the IDF is consistent (and
+      precise) over a locally sharded index.
 
    -  ‘index\_weights’ - a named integer list (per-index user weights
       for ranking)
@@ -345,7 +339,7 @@ Specifically,
       matches to the end user in pages of 20 to 100 matches. And
       tracking only the best 500 matches is much more RAM and CPU
       efficient than keeping all 2,000,000 matches, sorting them, and
-      then discarding everything but the f.html 20 needed to display the
+      then discarding everything but the first 20 needed to display the
       search results page. ``max_matches`` controls N in that “best N”
       amount.
 
@@ -361,12 +355,12 @@ Specifically,
 
    -  ‘max\_predicted\_time’ - integer (max predicted search time, see
       `the section called
-      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.html>`__)
+      “predicted\_time\_costs” <../searchd_program_configuration_options/predictedtime_costs.md>`__)
 
    -  ‘ranker’ - any of ‘proximity\_bm25’, ‘bm25’, ‘none’, ‘wordcount’,
       ‘proximity’, ‘matchany’, ‘fieldmask’, ‘sph04’, ‘expr’, or ‘export’
       (refer to `the section called “Search results
-      ranking” <../search_results_ranking/README.html>`__ for more details
+      ranking” <../search_results_ranking/README.md>`__ for more details
       on each ranker)
 
    -  ‘retry\_count’ - integer (distributed retries count)
@@ -380,15 +374,14 @@ Specifically,
       ‘kbuffer’ (gives faster sorting for already pre-sorted data,
       e.g. index data sorted by id). The result set is in both cases the
       same; picking one option or the other may just improve (or
-      worsen!) performance. This option was added in version 2.1.1-beta.
+      worsen!) performance.
 
    -  ‘rand\_seed’ - lets you specify a specific integer seed value for
       an ``ORDER BY RAND()`` query, for example: … OPTION
       ``rand_seed=1234``. By default, a new and different seed value is
       autogenerated for every query.
 
-   -  ‘low\_priority’ - runs the query with idle priority, introduced in
-      2.3.2-beta.
+   -  ‘low\_priority’ - runs the query with idle priority.
 
    Example:
 
@@ -402,7 +395,7 @@ Specifically,
 -  FACET clause. This Sphinx specific extension enables faceted search
    with subtree optimization. It is capable of returning multiple result
    sets with a single SQL statement, without the need for complicated
-   `multi-queries <../multi-statement_queries.html>`__. FACET clauses
+   `multi-queries <../multi-statement_queries.md>`__. FACET clauses
    should be written at the very end of SELECT statements with spaces
    between them.
 
@@ -479,7 +472,7 @@ Specifically,
        |         15 |      347 |
        +------------+----------+
 
--  subselects, starting with 2.2.1-beta, in format SELECT \* FROM
-   (SELECT … ORDER BY cond1 LIMIT X) ORDER BY cond2 LIMIT Y. The outer
-   select allows only ORDER BY and LIMIT clauses. See
+-  subselects, in format SELECT \* FROM (SELECT … ORDER BY cond1 LIMIT
+   X) ORDER BY cond2 LIMIT Y. The outer select allows only ORDER BY and
+   LIMIT clauses. See
    http://sphinxsearch.com/blog/2013/05/14/subselects/ for more details.

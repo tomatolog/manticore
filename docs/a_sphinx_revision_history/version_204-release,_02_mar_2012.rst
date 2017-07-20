@@ -17,7 +17,7 @@ Bug fixes
 
 -  fixed #1035, daemon doesn't properly handle FDs in case of socket
    overflow FD\_SETSIZE ( \*nix, ``preopen_indexes=0``,
-   ``worker=threads`` )
+   ``workers=threads`` )
 
 -  fixed #1038, quoted string for API select
 
@@ -29,22 +29,22 @@ Bug fixes
 
 -  fixed #1050, expression ranker vs agents
 
--  fixed #1051, added `MVA64 <../mva_multi-valued_attributes.html>`__
-   support to `UDFs <../sphinx_udfs_user_defined_functions.html>`__
+-  fixed #1051, added `MVA64 <../mva_multi-valued_attributes.md>`__
+   support to `UDFs <../sphinx_udfs_user_defined_functions.md>`__
 
--  fixed #1054, `max\_query\_time <../select_syntax.html>`__ not handled
+-  fixed #1054, `max\_query\_time <../select_syntax.md>`__ not handled
    properly on searching at `RT
-   index <../4_real-time_indexes/README.html>`__
+   index <../4_real-time_indexes/README.md>`__
 
 -  fixed #1055,
-   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.html>`__
+   `expansion\_limit <../searchd_program_configuration_options/expansionlimit.md>`__
    on searching at RT disk chunks
 
 -  fixed #1057, daemon crashes on generating snippet with 0 documents
    provided
 
 -  fixed #1060,
-   `load\_files\_scattered <../additional_functionality/buildexcerpts.html>`__
+   `load\_files\_scattered <../additional_functionality/buildexcerpts.md>`__
    don't work
 
 -  fixed #1065, libsphinxclient vs distribute index (agents)
@@ -71,7 +71,7 @@ Bug fixes
 -  fixed #1099, cleaning up temporary files on fail of indexing
 
 -  fixed #1100, missing
-   `xmlpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.html>`__
+   `xmlpipe\_attr\_bigint <../data_source_configuration_options/xmlpipeattr_bigint.md>`__
    config directive
 
 -  fixed #1101, now ignoring dashes within keywords when dash is not in
@@ -94,5 +94,5 @@ Bug fixes
 
 -  fixed #1119, missing expression ranker support in SphinxSE
 
--  fixed #1120, negative `total\_found <../querying/README.html>`__, docs
+-  fixed #1120, negative `total\_found <../querying/README.md>`__, docs
    and hits counter on huge indexes

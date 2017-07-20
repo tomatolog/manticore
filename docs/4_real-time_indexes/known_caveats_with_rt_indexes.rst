@@ -16,7 +16,7 @@ known usage quirks. Those quirks are listed in this section.
 -  No transaction size limits are currently imposed; too many concurrent
    INSERT/REPLACE transactions might therefore consume a lot of RAM.
 
--  In case of a damaged binlog, recovery will stop on the f.html damaged
+-  In case of a damaged binlog, recovery will stop on the first damaged
    transaction, even though it's technically possible to keep looking
    further for subsequent undamaged transactions, and recover those.
    This mid-file damage case (due to flaky HDD/CDD/tape?) is supposed to

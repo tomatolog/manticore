@@ -2,15 +2,14 @@ index\_sp
 ~~~~~~~~~
 
 Whether to detect and index sentence and paragraph boundaries. Optional,
-default is 0 (do not detect and index). Introduced in version
-2.0.1-beta.
+default is 0 (do not detect and index).
 
 This directive enables sentence and paragraph boundary indexing. It's
 required for the SENTENCE and PARAGRAPH operators to work. Sentence
 boundary detection is based on plain text analysis, so you only need to
 set ``index_sp = 1`` to enable it. Paragraph detection is however based
 on HTML markup, and happens in the `HTML
-stripper <../../index_configuration_options/htmlstrip.html>`__. So to
+stripper <../../index_configuration_options/htmlstrip.md>`__. So to
 index paragraph locations you also need to enable the stripper by
 specifying ``html_strip = 1``. Both types of boundaries are detected
 based on a few built-in rules enumerated just below.

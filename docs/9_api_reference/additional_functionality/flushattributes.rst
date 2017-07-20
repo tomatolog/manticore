@@ -5,11 +5,10 @@ FlushAttributes
 
 Forces ``searchd`` to flush pending attribute updates to disk, and
 blocks until completion. Returns a non-negative internal “flush tag” on
-success. Returns -1 and sets an error message on error. Introduced in
-version 1.10-beta.
+success. Returns -1 and sets an error message on error.
 
 Attribute values updated using
-`UpdateAttributes() <../../additional_functionality/updateattributes.html>`__
+`UpdateAttributes() <../../additional_functionality/updateattributes.md>`__
 API call are only kept in RAM until a so-called flush (which writes the
 current, possibly updated attribute values back to disk).
 FlushAttributes() call lets you enforce a flush. The call will block

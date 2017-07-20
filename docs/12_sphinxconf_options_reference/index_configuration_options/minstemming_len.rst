@@ -2,7 +2,7 @@ min\_stemming\_len
 ~~~~~~~~~~~~~~~~~~
 
 Minimum word length at which to enable stemming. Optional, default is 1
-(stem everything). Introduced in version 0.9.9-rc1.
+(stem everything).
 
 Stemmers are not perfect, and might sometimes produce undesired results.
 For instance, running “gps” keyword through Porter stemmer for English
@@ -13,7 +13,7 @@ given threshold will not be stemmed. Note that keywords that are exactly
 as long as specified <b>will</b> be stemmed. So in order to avoid
 stemming 3-character keywords, you should specify 4 for the value. For
 more finely grained control, refer to
-`wordforms <../../index_configuration_options/wordforms.html>`__ feature.
+`wordforms <../../index_configuration_options/wordforms.md>`__ feature.
 
 Example:
 ^^^^^^^^

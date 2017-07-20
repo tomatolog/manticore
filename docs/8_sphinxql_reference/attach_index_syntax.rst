@@ -6,8 +6,8 @@ ATTACH INDEX syntax
 
     ATTACH INDEX diskindex TO RTINDEX rtindex
 
-ATTACH INDEX statement, added in version 2.0.2-beta, lets you move data
-from a regular disk index to a RT index.
+ATTACH INDEX statement lets you move data from a regular disk index to a
+RT index.
 
 After a successful ATTACH, the data originally stored in the source disk
 index becomes a part of the target RT index, and the source disk index
@@ -23,14 +23,14 @@ from the *source* index are copied over and take effect. The respective
 parts of the RT index definition from the configuration file will be
 ignored.
 
-As of 2.0.2-beta, ATTACH INDEX comes with a number of restrictions. Most
-notably, the target RT index is currently required to be empty, making
-ATTACH INDEX a one-time conversion operation only. Those restrictions
-may be lifted in future releases, as we add the needed functionality to
-the RT indexes. The complete list is as follows.
+ATTACH INDEX comes with a number of restrictions. Most notably, the
+target RT index is currently required to be empty, making ATTACH INDEX a
+one-time conversion operation only. Those restrictions may be lifted in
+future releases, as we add the needed functionality to the RT indexes.
+The complete list is as follows.
 
 -  Target RT index needs to be empty. (See `the section called “TRUNCATE
-   RTINDEX syntax” <../truncate_rtindex_syntax.html>`__)
+   RTINDEX syntax” <../truncate_rtindex_syntax.md>`__)
 
 -  Source disk index needs to have index\_sp=0, boundary\_step=0,
    stopword\_step=1.

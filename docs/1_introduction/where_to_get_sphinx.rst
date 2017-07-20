@@ -17,10 +17,10 @@ Currently, Sphinx distribution tarball includes the following software:
 -  ``spelldump``: a simple command-line tool to extract the items from
    an ``ispell`` or ``MySpell`` (as bundled with OpenOffice) format
    dictionary to help customize your index, for use with
-   `wordforms <../index_configuration_options/wordforms.html>`__.
+   `wordforms <../index_configuration_options/wordforms.md>`__.
 
 -  ``indextool``: an utility to dump miscellaneous debug information
-   about the index, added in version 0.9.9-rc2.
+   about the index
 
 -  ``wordbreaker``: an utility to break down compound words into
-   separate words, added in version 2.1.1.
+   separate words

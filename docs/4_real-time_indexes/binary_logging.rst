@@ -12,12 +12,11 @@ when ``binlog_max_log_size`` limit is reached. Older, already closed
 binlog files are kept until all of the transactions stored in them (from
 all indexes) are flushed as a disk chunk. Setting the limit to 0 pretty
 much prevents binlog from being unlinked at all while ``searchd`` is
-running; however, it will still be unlinked on clean shutdown. (This is
-the default case as of 2.0.3-release, ``binlog_max_log_size`` defaults
-to 0.)
+running; however, it will still be unlinked on clean shutdown.
+(``binlog_max_log_size`` defaults to 0.)
 
 There are 3 different binlog flushing strategies, controlled by
-`binlog\_flush <../searchd_program_configuration_options/binlogflush.html>`__
+`binlog\_flush <../searchd_program_configuration_options/binlogflush.md>`__
 directive which takes the values of 0, 1, or 2. 0 means to flush the log
 to OS and sync it to disk every second; 1 means flush and sync every
 transaction; and 2 (the default mode) means flush every transaction but
@@ -36,7 +35,7 @@ with a magic marker and timestamped, so in case of binlog damage in the
 middle of the file, it's technically possible to skip broken
 transactions and keep replaying from the next good one, and/or it's
 possible to replay transactions until a given timestamp (point-in-time
-recovery), but none of that is implemented yet as of 1.10-beta.
+recovery), but none of that is implemented yet.
 
 One unwanted side effect of binlogs is that actively updating a small RT
 index that fully fits into a RAM chunk part will lead to an ever-growing
@@ -44,9 +43,9 @@ binlog that can never be unlinked until clean shutdown. Binlogs are
 essentially append-only deltas against the last known good saved state
 on disk, and unless RAM chunk gets saved, they can not be unlinked. An
 ever-growing binlog is not very good for disk use and crash recovery
-time. Starting with 2.0.1-beta you can configure ``searchd`` to perform
-a periodic RAM chunk flush to fix that problem using a
-`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.html>`__
+time. To avoid this, you can configure ``searchd`` to perform a periodic
+RAM chunk flush to fix that problem using a
+`rt\_flush\_period <../searchd_program_configuration_options/rtflush_period.md>`__
 directive. With periodic flushes enabled, ``searchd`` will keep a
 separate thread, checking whether RT indexes RAM chunks need to be
 written back to disk. Once that happens, the respective binlogs can be

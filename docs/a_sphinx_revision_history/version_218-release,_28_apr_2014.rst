@@ -4,7 +4,7 @@ Version 2.1.8-release, 28 apr 2014
 Bug fixes
 ~~~~~~~~~
 
--  fixed #1937, crash at `SENTENCE <../extended_query_syntax.html>`__
+-  fixed #1937, crash at `SENTENCE <../extended_query_syntax.md>`__
    operator
 
 -  fixed #1933, quorum operator works incorrectly if it's number is
@@ -18,12 +18,12 @@ Bug fixes
    operators which require hits
 
 -  fixed #1878, daemon doesn't reset
-   `regexp\_filter <../index_configuration_options/regexpfilter.html>`__
+   `regexp\_filter <../index_configuration_options/regexpfilter.md>`__
    after rotation with
-   `seamless\_rotate=0 <../searchd_program_configuration_options/seamlessrotate.html>`__
+   `seamless\_rotate=0 <../searchd_program_configuration_options/seamlessrotate.md>`__
 
 -  fixed #1769, crash after unsuccessful
-   `INSERT <../insert_and_replace_syntax.html>`__ at RT index
+   `INSERT <../insert_and_replace_syntax.md>`__ at RT index
 
 -  fixed #1682, field end modifier doesn't work with words containing
    blended chars

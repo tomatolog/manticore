@@ -4,13 +4,13 @@ Sorting modes
 There are the following result sorting modes available:
 
 -  SPH\_SORT\_RELEVANCE mode, that sorts by relevance in descending
-   order (best matches f.html);
+   order (best matches first);
 
 -  SPH\_SORT\_ATTR\_DESC mode, that sorts by an attribute in descending
-   order (bigger attribute values f.html);
+   order (bigger attribute values first);
 
 -  SPH\_SORT\_ATTR\_ASC mode, that sorts by an attribute in ascending
-   order (smaller attribute values f.html);
+   order (smaller attribute values first);
 
 -  SPH\_SORT\_TIME\_SEGMENTS mode, that sorts by time segments (last
    hour/day/week/month) in descending order, and then by relevance in
@@ -35,7 +35,7 @@ SPH\_SORT\_TIME\_SEGMENTS mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In SPH\_SORT\_TIME\_SEGMENTS mode, attribute values are split into
-so-called time segments, and then sorted by time segment f.html, and by
+so-called time segments, and then sorted by time segment first, and by
 relevance second.
 
 The segments are calculated according to the *current timestamp* at the
@@ -110,4 +110,4 @@ functions. Here's an example:
 
 The operators and functions supported in the expressions are discussed
 in a separate section, `the section called “Expressions, functions, and
-operators” <../expressions,_functions,_and_operators/README.html>`__.
+operators” <../expressions,_functions,_and_operators/README.md>`__.

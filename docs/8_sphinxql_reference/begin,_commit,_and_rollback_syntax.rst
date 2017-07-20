@@ -9,13 +9,12 @@ BEGIN, COMMIT, and ROLLBACK syntax
     ROLLBACK
     SET AUTOCOMMIT = {0 | 1}
 
-BEGIN, COMMIT, and ROLLBACK statements were introduced in version
-1.10-beta. BEGIN statement (or its START TRANSACTION alias) forcibly
-commits pending transaction, if any, and begins a new one. COMMIT
-statement commits the current transaction, making all its changes
-permanent. ROLLBACK statement rolls back the current transaction,
-canceling all its changes. SET AUTOCOMMIT controls the autocommit mode
-in the active session.
+BEGIN statement (or its START TRANSACTION alias) forcibly commits
+pending transaction, if any, and begins a new one. COMMIT statement
+commits the current transaction, making all its changes permanent.
+ROLLBACK statement rolls back the current transaction, canceling all its
+changes. SET AUTOCOMMIT controls the autocommit mode in the active
+session.
 
 AUTOCOMMIT is set to 1 by default, meaning that every statement that
 performs any changes on any index is implicitly wrapped in BEGIN and

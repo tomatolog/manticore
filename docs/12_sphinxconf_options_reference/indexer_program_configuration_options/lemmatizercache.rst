@@ -1,11 +1,10 @@
 lemmatizer\_cache
 ~~~~~~~~~~~~~~~~~
 
-Lemmatizer cache size. Optional, default is 256K. Added in version
-2.1.1-beta.
+Lemmatizer cache size. Optional, default is 256K.
 
 Our lemmatizer implementation (see `the section called
-“morphology” <../../index_configuration_options/morphology.html>`__ for a
+“morphology” <../../index_configuration_options/morphology.md>`__ for a
 discussion of what lemmatizers are) uses a compressed dictionary format
 that enables a space/speed tradeoff. It can either perform lemmatization
 off the compressed data, using more CPU but less RAM, or it can
@@ -14,8 +13,9 @@ using less CPU but more RAM. And the lemmatizer\_cache directive lets
 you control how much RAM exactly can be spent for that uncompressed
 dictionary cache.
 
-Currently, the only available dictionary is ru.pak, the Russian one. The
-compressed dictionary is approximately 10 MB in size. Note that the
+Currently, the only available dictionaries are ru.pak, en.pak, and
+de.pak. These are the russian, english and german dictionaries. The
+compressed dictionary is approximately 2 to 10 MB in size. Note that the
 dictionary stays in memory at all times, too. The default cache size is
 256 KB. The accepted cache sizes are 0 to 2047 MB. It's safe to raise
 the cache size too high; the lemmatizer will only use the needed memory.

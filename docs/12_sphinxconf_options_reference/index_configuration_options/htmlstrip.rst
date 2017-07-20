@@ -28,7 +28,7 @@ as HTML with stray <'s or unclosed >'s).
 
 Only the tags themselves, and also HTML comments, are stripped. To strip
 the contents of the tags too (eg. to strip embedded scripts), see
-`html\_remove\_elements <../../index_configuration_options/htmlremove_elements.html>`__
+`html\_remove\_elements <../../index_configuration_options/htmlremove_elements.md>`__
 option. There are no restrictions on tag names; ie. everything that
 looks like a valid tag start, or end, or a comment will be stripped.
 

@@ -3,20 +3,19 @@ predicted\_time\_costs
 
 Costs for the query time prediction model, in nanoseconds. Optional,
 default is “doc=64, hit=48, skip=2048, match=64” (without the quotes).
-Added in 2.1.1-beta.
 
 Terminating queries before completion based on their execution time (via
 either
-`SetMaxQueryTime() <../../general_query_settings/setmaxquerytime.html>`__
+`SetMaxQueryTime() <../../general_query_settings/setmaxquerytime.md>`__
 API call, or `SELECT … OPTION
-max\_query\_time <../../select_syntax.html>`__ SphinxQL statement) is a
+max\_query\_time <../../select_syntax.md>`__ SphinxQL statement) is a
 nice safety net, but it comes with an inborn drawback: indeterministic
 (unstable) results. That is, if you repeat the very same (complex)
 search query with a time limit several times, the time limit will get
 hit at different stages, and you will get *different* result sets.
 
-Starting with 2.1.1-beta, there is a new option, `SELECT … OPTION
-max\_predicted\_time <../../select_syntax.html>`__, that lets you limit
+There is a new option, `SELECT … OPTION
+max\_predicted\_time <../../select_syntax.md>`__, that lets you limit
 the query time *and* get stable, repeatable results. Instead of
 regularly checking the actual current time while evaluating the query,
 which is indeterministic, it predicts the current running time using a

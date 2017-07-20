@@ -50,25 +50,21 @@ You can also link with <b>libstemmer</b> library for even more stemmers
 processing for more than 15 other languages. Binary packages should come
 prebuilt with libstemmer support, too.
 
-Lemmatizer support was added in version 2.1.1-beta, starting with a
-Russian lemmatizer. English and German lemmatizers were then added in
-version 2.2.1-beta.
-
 Lemmatizers require a dictionary that needs to be additionally
 downloaded from the Sphinx website. That dictionary needs to be
 installed in a directory specified by
-`lemmatizer\_base <../../common_section_configuration_options/lemmatizerbase.html>`__
+`lemmatizer\_base <../../common_section_configuration_options/lemmatizerbase.md>`__
 directive. Also, there is a
-`lemmatizer\_cache <../../indexer_program_configuration_options/lemmatizercache.html>`__
+`lemmatizer\_cache <../../indexer_program_configuration_options/lemmatizercache.md>`__
 directive that lets you speed up lemmatizing (and therefore indexing) by
 spending more RAM for, basically, an uncompressed cache of a dictionary.
 
-Chinese segmentation using Rosette Linguistics Platform was added in
-2.2.1-beta. It is a much more precise but slower way (compared to
+Chinese segmentation using Rosette Linguistics Platform is also
+available. It is a much more precise but slower way (compared to
 n-grams) to segment Chinese documents.
-``[charset_table](../../index_configuration_options/charsettable.html)``
+``[charset_table](../../index_configuration_options/charsettable.md)``
 must contain all Chinese characters except Chinese punctuation marks
-because incoming documents are f.html processed by sphinx tokenizer and
+because incoming documents are first processed by sphinx tokenizer and
 then the result is processed by RLP. Sphinx performs per-token language
 detection on the incoming documents. If token language is identified as
 Chinese, it will only be processed the RLP, even if multiple morphology
@@ -76,18 +72,18 @@ processors are specified. Otherwise, it will be processed by all the
 morphology processors specified in the “morphology” option. Rosette
 Linguistics Platform must be installed and configured and sphinx must be
 built with a –with-rlp switch. See also
-``[rlp_root](../../common_section_configuration_options/rlproot.html)``,
-``[rlp_environment](../../common_section_configuration_options/rlpenvironment.html)``
-and ``[rlp_context](../../index_configuration_options/rlpcontext.html)``
+``[rlp_root](../../common_section_configuration_options/rlproot.md)``,
+``[rlp_environment](../../common_section_configuration_options/rlpenvironment.md)``
+and ``[rlp_context](../../index_configuration_options/rlpcontext.md)``
 options. A batched version of RLP segmentation is also available
 (``rlp_chinese_batched``). It provides the same functionality as the
 basic ``rlp_chinese`` segmentation, but enables batching documents
 before processing them by the RLP. Processing several documents at once
 can result in a substantial indexing speedup if the documents are small
 (for example, less than 1k). See also
-``[rlp_max_batch_size](../../common_section_configuration_options/rlpmax_batch_size.html)``
+``[rlp_max_batch_size](../../common_section_configuration_options/rlpmax_batch_size.md)``
 and
-``[rlp_max_batch_docs](../../common_section_configuration_options/rlpmax_batch_docs.html)``
+``[rlp_max_batch_docs](../../common_section_configuration_options/rlpmax_batch_docs.md)``
 options.
 
 Additional stemmers provided by
@@ -106,23 +102,20 @@ as follows:
 
 -  none - do not perform any morphology processing;
 
--  lemmatize\_ru - apply Russian lemmatizer and pick a single root form
-   (added in 2.1.1-beta);
+-  lemmatize\_ru - apply Russian lemmatizer and pick a single root form;
 
--  lemmatize\_en - apply English lemmatizer and pick a single root form
-   (added in 2.2.1-beta);
+-  lemmatize\_en - apply English lemmatizer and pick a single root form;
 
--  lemmatize\_de - apply German lemmatizer and pick a single root form
-   (added in 2.2.1-beta);
+-  lemmatize\_de - apply German lemmatizer and pick a single root form;
 
 -  lemmatize\_ru\_all - apply Russian lemmatizer and index all possible
-   root forms (added in 2.1.1-beta);
+   root forms;
 
 -  lemmatize\_en\_all - apply English lemmatizer and index all possible
-   root forms (added in 2.2.1-beta);
+   root forms;
 
 -  lemmatize\_de\_all - apply German lemmatizer and index all possible
-   root forms (added in 2.2.1-beta);
+   root forms;
 
 -  stem\_en - apply Porter's English stemmer;
 
@@ -132,7 +125,7 @@ as follows:
 
 -  stem\_cz - apply Czech stemmer;
 
--  stem\_ar - apply Arabic stemmer (added in 2.1.1-beta);
+-  stem\_ar - apply Arabic stemmer;
 
 -  soundex - replace keywords with their SOUNDEX code;
 
@@ -152,11 +145,11 @@ Several stemmers can be specified (comma-separated). They will be
 applied to incoming words in the order they are listed, and the
 processing will stop once one of the stemmers actually modifies the
 word. Also when
-`wordforms <../../index_configuration_options/wordforms.html>`__ feature
-is enabled the word will be looked up in word forms dictionary f.html,
+`wordforms <../../index_configuration_options/wordforms.md>`__ feature
+is enabled the word will be looked up in word forms dictionary first,
 and if there is a matching entry in the dictionary, stemmers will not be
 applied at all. Or in other words,
-`wordforms <../../index_configuration_options/wordforms.html>`__ can be
+`wordforms <../../index_configuration_options/wordforms.md>`__ can be
 used to implement stemming exceptions.
 
 Example:

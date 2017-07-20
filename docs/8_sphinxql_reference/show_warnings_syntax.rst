@@ -6,9 +6,9 @@ SHOW WARNINGS syntax
 
     SHOW WARNINGS
 
-<b>SHOW WARNINGS</b> statement, introduced in version 0.9.9-rc2, can be
-used to retrieve the warning produced by the latest query. The error
-message will be returned along with the query itself:
+<b>SHOW WARNINGS</b> statement can be used to retrieve the warning
+produced by the latest query. The error message will be returned along
+with the query itself:
 
 ::
 

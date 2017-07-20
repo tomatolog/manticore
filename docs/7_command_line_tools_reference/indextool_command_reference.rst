@@ -1,11 +1,11 @@
 ``indextool`` command reference
 -------------------------------
 
-``indextool`` is one of the helper tools within the Sphinx package,
-introduced in version 0.9.9-rc2. It is used to dump miscellaneous debug
-information about the physical index. (Additional functionality such as
-index verification is planned in the future, hence the indextool name
-rather than just indexdump.) Its general usage is:
+``indextool`` is one of the helper tools within the Sphinx package. It
+is used to dump miscellaneous debug information about the physical
+index. (Additional functionality such as index verification is planned
+in the future, hence the indextool name rather than just indexdump.) Its
+general usage is:
 
 ::
 
@@ -23,31 +23,28 @@ Options apply to all commands:
 The commands are as follows:
 
 -  ``--checkconfig`` just loads and verifies the config file to check if
-   it's valid, without syntax errors. This option was added in version
-   2.1.1-beta.
+   it's valid, without syntax errors.
 
 -  ``--build-infixes INDEXNAME`` build infixes for an existing
    dict=keywords index (upgrades .sph, .spi in place). You can use this
    option for legacy index files that already use dict=keywords, but now
    need to support infix searching too; updating the index files with
    indextool may prove easier or faster than regenerating them from
-   scratch with indexer. This option was added in version 2.1.1-beta.
+   scratch with indexer.
 
 -  ``--dumpheader FILENAME.sph`` quickly dumps the provided index header
    file without touching any other index files or even the configuration
    file. The report provides a breakdown of all the index settings, in
-   particular the entire attribute and field list. Prior to 0.9.9-rc2,
-   this command was present in now removed CLI search utility.
+   particular the entire attribute and field list.
 
 -  ``--dumpconfig FILENAME.sph`` dumps the index definition from the
    given index header file in (almost) compliant ``sphinx.conf`` file
-   format. Added in version 2.0.1-beta.
+   format.
 
 -  ``--dumpheader INDEXNAME`` dumps index header by index name with
    looking up the header path in the configuration file.
 
--  ``--dumpdict INDEXNAME`` dumps dictionary. This was added in version
-   2.1.1-beta.
+-  ``--dumpdict INDEXNAME`` dumps dictionary.
 
 -  ``--dumpdocids INDEXNAME`` dumps document IDs by index name. It takes
    the data from attribute (.spa) file and therefore requires
@@ -76,8 +73,8 @@ The commands are as follows:
 
 -  ``--check INDEXNAME`` checks the index data files for consistency
    errors that might be introduced either by bugs in ``indexer`` and/or
-   hardware faults. Starting with version 2.1.1-beta, ``--check`` also
-   works on RT indexes, RAM and disk chunks.
+   hardware faults. ``--check`` also works on RT indexes, RAM and disk
+   chunks.
 
 -  ``--strip-path`` strips the path names from all the file names
    referenced from the index (stopwords, wordforms, exceptions, etc).
@@ -86,8 +83,7 @@ The commands are as follows:
 
 -  ``--optimize-rt-klists`` optimizes the kill list memory use in the
    disk chunk of a given RT index. That is a one-off optimization
-   intended for rather old RT indexes, created by development versions
-   prior to 1.10-beta release. As of 1.10-beta releases, this kill list
+   intended for rather old RT indexes. In last releases this kill list
    optimization (purging) should happen automatically, and there should
    never be a need to use this option.
 

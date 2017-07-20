@@ -19,7 +19,7 @@ represent some CJK characters) and length is 1, in will be indexed as if
 it was “A B C D E F”. (With length equal to 2, it would produce “AB BC
 CD DE EF”; but only 1 is supported at the moment.) Only those characters
 that are listed in
-`ngram\_chars <../../index_configuration_options/ngramchars.html>`__ table
+`ngram\_chars <../../index_configuration_options/ngramchars.md>`__ table
 will be split this way; other ones will not be affected.
 
 Note that if search query is segmented, ie. there are separators between

@@ -4,13 +4,12 @@ Matching modes
 So-called matching modes are a legacy feature that used to provide
 (very) limited query syntax and ranking support. Currently, they are
 deprecated in favor of `full-text query
-language <../extended_query_syntax.html>`__ and so-called
-`rankers <../search_results_ranking/README.html>`__. Starting with version
-0.9.9-release, it is thus strongly recommended to use
-SPH\_MATCH\_EXTENDED and proper query syntax rather than any other
-legacy mode. All those other modes are actually internally converted to
-extended syntax anyway. SphinxAPI still defaults to SPH\_MATCH\_ALL but
-that is for compatibility reasons only.
+language <../extended_query_syntax.md>`__ and so-called
+`rankers <../search_results_ranking/README.md>`__. It is thus strongly
+recommended to use SPH\_MATCH\_EXTENDED and proper query syntax rather
+than any other legacy mode. All those other modes are actually
+internally converted to extended syntax anyway. SphinxAPI still defaults
+to SPH\_MATCH\_ALL but that is for compatibility reasons only.
 
 There are the following matching modes available:
 
@@ -23,11 +22,11 @@ There are the following matching modes available:
 
 -  SPH\_MATCH\_BOOLEAN, matches query as a boolean expression (see `the
    section called “Boolean query
-   syntax” <../boolean_query_syntax.html>`__);
+   syntax” <../boolean_query_syntax.md>`__);
 
 -  SPH\_MATCH\_EXTENDED, matches query as an expression in Sphinx
    internal query language (see `the section called “Extended query
-   syntax” <../extended_query_syntax.html>`__);
+   syntax” <../extended_query_syntax.md>`__);
 
 -  SPH\_MATCH\_EXTENDED2, an alias for SPH\_MATCH\_EXTENDED (default
    mode);
@@ -37,18 +36,12 @@ There are the following matching modes available:
    filters, filter-ranges and grouping will still be applied, but no
    text-matching.
 
-SPH\_MATCH\_EXTENDED2 was used during 0.9.8 and 0.9.9 development cycle,
-when the internal matching engine was being rewritten (for the sake of
-additional functionality and better performance). By 0.9.9-release, the
-older version was removed, and SPH\_MATCH\_EXTENDED and
-SPH\_MATCH\_EXTENDED2 are now just aliases.
-
 The SPH\_MATCH\_FULLSCAN mode will be automatically activated in place
 of the specified matching mode when the following conditions are met:
 
 1. The query string is empty (ie. its length is zero).
 
-2. `docinfo <../index_configuration_options/docinfo.html>`__ storage is
+2. `docinfo <../index_configuration_options/docinfo.md>`__ storage is
    set to ``extern``.
 
 In full scan mode, all the indexed documents will be considered as
@@ -62,4 +55,4 @@ be to find posts in a forum. By selecting the forum's user ID via
 match every document (i.e. every post) where ``SetFilter()`` would match
 - in this case providing every post from that user. By default this will
 be ordered by relevancy, followed by Sphinx document ID in ascending
-order (earliest f.html).
+order (earliest first).

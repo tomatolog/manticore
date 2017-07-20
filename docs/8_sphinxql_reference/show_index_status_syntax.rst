@@ -6,8 +6,7 @@ SHOW INDEX STATUS syntax
 
     SHOW INDEX index_name STATUS
 
-Added in version 2.1.1-beta. Displays various per-index statistics.
-Currently, those include:
+Displays various per-index statistics. Currently, those include:
 
 -  <b>indexed\_documents</b> and <b>indexed\_bytes</b>, number of the
    documents indexed and their text size in bytes, respectively.
@@ -19,12 +18,11 @@ Currently, those include:
    portion.
 -  queries time statistics of last 1 minute, 5 minutes, 15 minutes and
    total since daemon start;data is encapsulated as a JSON object which
-   includes number of queries, min,max,avg,95 and 99 percentile values;
-   introduced in 2.3.2-beta
+   includes number of queries, min,max,avg,95 and 99 percentile values.
 -  queries found rows statistics of last 1 minute, 5 minutes, 15 minutes
    and total since daemon start;data is encapsulated as a JSON object
    which includes number of queries, min,max,avg,95 and 99 percentile
-   values; introduced in 2.3.2-beta
+   values.
 
 ::
 

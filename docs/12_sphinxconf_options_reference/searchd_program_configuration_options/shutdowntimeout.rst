@@ -2,7 +2,6 @@ shutdown\_timeout
 ~~~~~~~~~~~~~~~~~
 
 searchd –stopwait wait time, in seconds. Optional, default is 3 seconds.
-Added in 2.2.1-beta.
 
 When you run searchd –stopwait your daemon needs to perform some
 activities before stopping like finishing queries, flushing RT RAM

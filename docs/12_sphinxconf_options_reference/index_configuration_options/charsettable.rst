@@ -60,8 +60,8 @@ in U+xxx form, where ‘xxx’ is hexadecimal codepoint number. This form
 can also be used for 7-bit ASCII characters to encode special ones: eg.
 use U+20 to encode space, U+2E to encode dot, U+2C to encode comma.
 
-Starting with 2.2.3-beta, aliases “english” and “russian” are allowed at
-control character mapping.
+Aliases “english” and “russian” are allowed at control character
+mapping.
 
 Example:
 ^^^^^^^^

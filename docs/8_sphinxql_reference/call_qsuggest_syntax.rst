@@ -6,14 +6,13 @@ CALL QSUGGEST syntax
 
     CALL QSUGGEST(word, index [,options])
 
-CALL QSUGGEST statement, introduced in version 2.3.2-beta, enumerates
-for a giving word all suggestions from the dictionary. This statement
-works only on indexes with infixing enabled and dict=keywords. It
-returns the suggested keywords, Levenshtein distance between the
-suggested and original keyword and the docs statistic of the suggested
-keyword. If the f.html parameter is a bag of words, the function will
-return suggestions only for the last word, ignoring the rest. Several
-options are supported for customization:
+CALL QSUGGEST statement enumerates for a giving word all suggestions
+from the dictionary. This statement works only on indexes with infixing
+enabled and dict=keywords. It returns the suggested keywords,
+Levenshtein distance between the suggested and original keyword and the
+docs statistic of the suggested keyword. If the first parameter is a bag
+of words, the function will return suggestions only for the last word,
+ignoring the rest. Several options are supported for customization:
 
 -  ``limit`` - returned N top matches, default is 5
 

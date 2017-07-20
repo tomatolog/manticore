@@ -9,7 +9,7 @@ string. Additionally if provided, the contents of ``$comment`` are sent
 to the query log, marked in square brackets, just before the search
 terms, which can be very useful for debugging. Currently, this is
 limited to 128 characters. Returns index to results array returned from
-`RunQueries() <../../querying/runqueries.html>`__.
+`RunQueries() <../../querying/runqueries.md>`__.
 
 Batch queries (or multi-queries) enable ``searchd`` to perform internal
 optimizations if possible. They also reduce network connection overheads
@@ -53,15 +53,15 @@ With the code above, 1st query will search for “hello world” in
 “documents” index and sort results by relevance, 2nd query will search
 for “ipod” in “products” index and sort results by price, and 3rd query
 will search for “harry potter” in “books” index while still sorting by
-price. Note that 2nd ``SetSortMode()`` call does not affect the f.html
+price. Note that 2nd ``SetSortMode()`` call does not affect the first
 query (because it's already added) but affects both other subsequent
 queries.
 
 Additionally, any filters set up before an ``AddQuery()`` will fall
 through to subsequent queries. So, if ``SetFilter()`` is called before
-the f.html query, the same filter will be in place for the second (and
+the first query, the same filter will be in place for the second (and
 subsequent) queries batched through ``AddQuery()`` unless you call
-``ResetFilters()`` f.html. Alternatively, you can add additional filters
+``ResetFilters()`` first. Alternatively, you can add additional filters
 as well.
 
 This would also be true for grouping options and sorting options; no
@@ -70,6 +70,6 @@ call; so subsequent queries will reuse current query settings.
 
 ``AddQuery()`` returns an index into an array of results that will be
 returned from ``RunQueries()`` call. It is simply a sequentially
-increasing 0-based integer, ie. f.html call will return 0, second will
+increasing 0-based integer, ie. first call will return 0, second will
 return 1, and so on. Just a small helper so you won't have to track the
 indexes manually if you need then.

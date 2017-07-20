@@ -3,8 +3,7 @@ unpack\_mysqlcompress
 
 Columns to unpack using MySQL UNCOMPRESS() algorithm. Multi-value,
 optional, default value is empty list of columns. Applies to SQL source
-types (``mysql``, ``pgsql``, ``mssql``) only. Introduced in version
-0.9.9-rc1.
+types (``mysql``, ``pgsql``, ``mssql``) only.
 
 Columns specified using this directive will be unpacked by ``indexer``
 using modified zlib algorithm used by MySQL COMPRESS() and UNCOMPRESS()

@@ -37,7 +37,7 @@ Example 3.2. xmlpipe2 document stream
 
     <sphinx:document id="1235">
     <subject>another subject</subject>
-    <content>here comes another document, and i am given to und.htmland,
+    <content>here comes another document, and i am given to understand,
     that in-document field order must not matter, sir</content>
     <published>1012325467</published>
     </sphinx:document>
@@ -61,7 +61,7 @@ before any document could be parsed. This can be done either in the
 configuration file using ``xmlpipe_field`` and ``xmlpipe_attr_XXX``
 settings, or right in the stream using <sphinx:schema> element.
 <sphinx:schema> is optional. It is only allowed to occur as the very
-f.html sub-element in <sphinx:docset>. If there is no in-stream schema
+first sub-element in <sphinx:docset>. If there is no in-stream schema
 definition, settings from the configuration file will be used.
 Otherwise, stream settings take precedence.
 
@@ -72,7 +72,7 @@ will be ignored. All embedded tags and their attributes (such as <b> in
 
 Support for incoming stream encodings depends on whether ``iconv`` is
 installed on the system. xmlpipe2 is parsed using ``libexpat`` parser
-that und.htmlands US-ASCII, ISO-8859-1, UTF-8 and a few UTF-16 variants
+that understands US-ASCII, ISO-8859-1, UTF-8 and a few UTF-16 variants
 natively. Sphinx ``configure`` script will also check for ``libiconv``
 presence, and utilize it to handle other encodings. ``libexpat`` also
 enforces the requirement to use UTF-8 charset on Sphinx side, because
@@ -86,7 +86,7 @@ applicable) are:
    set.
 
 -  sphinx:schema
--  Optional element, must either occur as the very f.html child of
+-  Optional element, must either occur as the very first child of
    sphinx:docset, or never occur at all. Declares the document schema.
    Contains field and attribute declarations. If present, overrides
    per-source settings from the configuration file.
@@ -99,7 +99,7 @@ applicable) are:
       full-text field in the subsequent documents.
 
    -  “attr”, specifies whether to also index this field as a string.
-      Possible value is “string”. Introduced in version 1.10-beta.
+      Possible value is “string”.
 
 -  sphinx:attr
 -  Optional element, child of sphinx:schema. Declares an attribute.
@@ -128,5 +128,5 @@ applicable) are:
 -  sphinx:killlist
 -  Optional element, child of sphinx:docset. Contains a number of “id”
    elements whose contents are document IDs to be put into a
-   `kill-list <../data_source_configuration_options/sqlquery_killlist.html>`__
+   `kill-list <../data_source_configuration_options/sqlquery_killlist.md>`__
    for this index.

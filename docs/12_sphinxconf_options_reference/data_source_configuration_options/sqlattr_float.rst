@@ -1,7 +1,7 @@
 sql\_attr\_float
 ~~~~~~~~~~~~~~~~
 
-Floating point `attribute <../../attributes.html>`__ declaration.
+Floating point `attribute <../../attributes.md>`__ declaration.
 Multi-value (there might be multiple attributes declared), optional.
 Applies to SQL source types (``mysql``, ``pgsql``, ``mssql``) only.
 

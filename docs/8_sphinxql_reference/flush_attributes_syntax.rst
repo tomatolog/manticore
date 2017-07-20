@@ -6,10 +6,10 @@ FLUSH ATTRIBUTES syntax
 
     FLUSH ATTRIBUTES
 
-Added in 2.3.1-beta. Flushes all in-memory attribute updates in all the
-active disk indexes to disk. Returns a tag that identifies the result
-on-disk state (basically, a number of actual disk attribute saves
-performed since the daemon startup).
+Flushes all in-memory attribute updates in all the active disk indexes
+to disk. Returns a tag that identifies the result on-disk state
+(basically, a number of actual disk attribute saves performed since the
+daemon startup).
 
 ::
 

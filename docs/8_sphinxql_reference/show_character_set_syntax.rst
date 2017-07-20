@@ -6,10 +6,10 @@ SHOW CHARACTER SET syntax
 
     SHOW CHARACTER SET
 
-Added in version 2.1.1-beta, this is currently a placeholder query that
-does nothing and reports that a UTF-8 character set is available. It was
-added in order to keep compatibility with frameworks and connectors that
-automatically execute this statement.
+This is currently a placeholder query that does nothing and reports that
+a UTF-8 character set is available. It was added in order to keep
+compatibility with frameworks and connectors that automatically execute
+this statement.
 
 ::
 

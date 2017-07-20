@@ -6,7 +6,7 @@ default is 0 (do not limit indexed substrings). Applies to dict=crc
 only.
 
 By default, substring (either prefix or infix) indexing in the `dict=crc
-mode <../../index_configuration_options/dict.html>`__ will index
+mode <../../index_configuration_options/dict.md>`__ will index
 <b>all</b> the possible substrings as separate keywords. That might
 result in an overly large index. So the ``max_substring_len`` directive
 lets you limit the impact of substring indexing by skipping too-long

@@ -11,10 +11,10 @@ query (``$max_matches``) and the threshold amount of matches to stop
 searching at (``$cutoff``). All parameters must be non-negative
 integers.
 
-F.html two parameters to SetLimits() are identical in behavior to MySQL
+First two parameters to SetLimits() are identical in behavior to MySQL
 LIMIT clause. They instruct ``searchd`` to return at most ``$limit``
 matches starting from match number ``$offset``. The default offset and
-limit settings are 0 and 20, that is, to return f.html 20 matches.
+limit settings are 0 and 20, that is, to return first 20 matches.
 
 ``max_matches`` setting controls how much matches ``searchd`` will keep
 in RAM while searching. <b>All</b> matching documents will be normally

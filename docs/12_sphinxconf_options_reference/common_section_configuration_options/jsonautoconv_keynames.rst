@@ -3,7 +3,7 @@ json\_autoconv\_keynames
 
 Whether and how to auto-convert key names within JSON attributes. Known
 value is ‘lowercase’. Optional, default value is unspecified (do not
-convert anything). Added in 2.1.1-beta.
+convert anything).
 
 When this directive is set to ‘lowercase’, key names within JSON
 attributes will be automatically brought to lower case when indexing.

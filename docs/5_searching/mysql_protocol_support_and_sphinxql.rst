@@ -1,10 +1,10 @@
 MySQL protocol support and SphinxQL
 -----------------------------------
 
-Starting with version 0.9.9-rc2, Sphinx searchd daemon supports MySQL
-binary network protocol and can be accessed with regular MySQL API. For
-instance, ‘mysql’ CLI client program works well. Here's an example of
-querying Sphinx using MySQL client:
+Sphinx searchd daemon supports MySQL binary network protocol and can be
+accessed with regular MySQL API. For instance, ‘mysql’ CLI client
+program works well. Here's an example of querying Sphinx using MySQL
+client:
 
 ::
 
@@ -35,7 +35,7 @@ all still work perfectly well. In fact, both access methods can be used
 at the same time. Also, native API is still the default access method.
 MySQL protocol support needs to be additionally configured. This is a
 matter of 1-line config change, adding a new
-`listener <../searchd_program_configuration_options/listen.html>`__ with
+`listener <../searchd_program_configuration_options/listen.md>`__ with
 mysql41 specified as a protocol:
 
 ::
@@ -48,4 +48,4 @@ Sphinx now also supports a subset of SQL that we dubbed SphinxQL. It
 supports the standard querying all the index types with SELECT,
 modifying RT indexes with INSERT, REPLACE, and DELETE, and much more.
 Full SphinxQL reference is available in `Chapter 8, *SphinxQL
-reference* <../8_sphinxql_reference/README.html>`__.
+reference* <../8_sphinxql_reference/README.md>`__.

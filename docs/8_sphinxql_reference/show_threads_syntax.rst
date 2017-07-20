@@ -6,9 +6,8 @@ SHOW THREADS syntax
 
     SHOW THREADS [ OPTION columns=width ]
 
-SHOW THREADS statement, introduced in version 2.2.2-beta, lists all
-currently active client threads, not counting system threads. It returns
-a table with columns that describe:
+SHOW THREADS lists all currently active client threads, not counting
+system threads. It returns a table with columns that describe:
 
 -  <b>thread id</b>
 -  <b>connection protocol</b>, possible values are sphinxapi and

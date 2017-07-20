@@ -6,16 +6,16 @@ With all the SQL drivers, indexing generally works as follows.
 -  connection to the database is established;
 
 -  pre-query (see `the section called
-   “sql\_query\_pre” <../data_source_configuration_options/sqlquery_pre.html>`__)
+   “sql\_query\_pre” <../data_source_configuration_options/sqlquery_pre.md>`__)
    is executed to perform any necessary initial setup, such as setting
    per-connection encoding with MySQL;
 
 -  main query (see `the section called
-   “sql\_query” <../data_source_configuration_options/sqlquery.html>`__)
+   “sql\_query” <../data_source_configuration_options/sqlquery.md>`__)
    is executed and the rows it returns are indexed;
 
 -  post-query (see `the section called
-   “sql\_query\_post” <../data_source_configuration_options/sqlquery_post.html>`__)
+   “sql\_query\_post” <../data_source_configuration_options/sqlquery_post.md>`__)
    is executed to perform any necessary cleanup;
 
 -  connection to the database is closed;
@@ -26,7 +26,7 @@ With all the SQL drivers, indexing generally works as follows.
 -  connection to the database is established again;
 
 -  post-index query (see `the section called
-   “sql\_query\_post\_index” <../data_source_configuration_options/sqlquery_post_index.html>`__)
+   “sql\_query\_post\_index” <../data_source_configuration_options/sqlquery_post_index.md>`__)
    is executed to perform any necessary final cleanup;
 
 -  connection to the database is closed again.
@@ -42,7 +42,7 @@ Main query, which needs to fetch all the documents, can impose a read
 lock on the whole table and stall the concurrent queries (eg. INSERTs to
 MyISAM table), waste a lot of memory for result set, etc. To avoid this,
 Sphinx supports so-called *ranged queries*. With ranged queries, Sphinx
-f.html fetches min and max document IDs from the table, and then
+first fetches min and max document IDs from the table, and then
 substitutes different ID intervals into main query text and runs the
 modified query to fetch another chunk of documents. Here's an example.
 

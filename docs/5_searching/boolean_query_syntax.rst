@@ -40,9 +40,8 @@ OR operator precedence is higher than AND, so “looking for cat \| dog \|
 mouse” means “looking for ( cat \| dog \| mouse )” and *not* “(looking
 for cat) \| dog \| mouse”.
 
-Since version 2.1.1-beta, queries may be automatically optimized if
-OPTION boolean\_simplify=1 is specified. Some transformations performed
-by this optimization include:
+Queries may be automatically optimized if OPTION boolean\_simplify=1 is
+specified. Some transformations performed by this optimization include:
 
 -  Excess brackets: ((A \| B) \| C) becomes ( A \| B \| C ); ((A B) C)
    becomes ( A B C )

@@ -5,21 +5,21 @@ Multi-queries, or query batches, let you send multiple queries to Sphinx
 in one go (more formally, one network request).
 
 Two API methods that implement multi-query mechanism are
-`AddQuery() <../querying/addquery.html>`__ and
-`RunQueries() <../querying/runqueries.html>`__. You can also run multiple
+`AddQuery() <../querying/addquery.md>`__ and
+`RunQueries() <../querying/runqueries.md>`__. You can also run multiple
 queries with SphinxQL, see `the section called “Multi-statement
-queries” <../multi-statement_queries.html>`__. (In fact, regular
-`Query() <../querying/addquery.html>`__ call is internally implemented as
+queries” <../multi-statement_queries.md>`__. (In fact, regular
+`Query() <../querying/addquery.md>`__ call is internally implemented as
 a single AddQuery() call immediately followed by RunQueries() call.)
 AddQuery() captures the current state of all the query settings set by
 previous API calls, and memorizes the query. RunQueries() actually sends
 all the memorized queries, and returns multiple result sets. There are
 no restrictions on the queries at all, except just a sanity check on a
 number of queries in a single batch (see `the section called
-“max\_batch\_queries” <../searchd_program_configuration_options/maxbatch_queries.html>`__).
+“max\_batch\_queries” <../searchd_program_configuration_options/maxbatch_queries.md>`__).
 
 Why use multi-queries? Generally, it all boils down to performance.
-F.html, by sending requests to ``searchd`` in a batch instead of one by
+First, by sending requests to ``searchd`` in a batch instead of one by
 one, you always save a bit by doing less network roundtrips. Second, and
 somewhat more important, sending queries in a batch enables ``searchd``
 to perform certain internal optimizations. As new types of optimizations
@@ -38,9 +38,8 @@ results found in a primary index. Or maybe just specify offset into 2nd
 result set based on the amount of matches in the 1st result set. In that
 case, you will have to use separate queries (or separate batches).
 
-As of 0.9.10, there are two major optimizations to be aware of: common
-query optimization (available since 0.9.8); and common subtree
-optimization (available since 0.9.10).
+There are two major optimizations to be aware of: common query
+optimization and common subtree optimization.
 
 <b>Common query optimization</b> means that ``searchd`` will identify
 all those queries in a batch where only the sorting and group-by
@@ -70,17 +69,17 @@ batch:
 ::
 
 
-    barack obama president
-    barack obama john mccain
-    barack obama speech
+    donald trump president
+    donald trump barack obama john mccain
+    donald trump speech
 
-There's a common two-word part (“barack obama”) that can be computed
+There's a common two-word part (“donald trump”) that can be computed
 only once, then cached and shared across the queries. And common subtree
 optimization does just that. Per-query cache size is strictly controlled
 by
-`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.html>`__
+`subtree\_docs\_cache <../searchd_program_configuration_options/subtreedocs_cache.md>`__
 and
-`subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.html>`__
+`subtree\_hits\_cache <../searchd_program_configuration_options/subtreehits_cache.md>`__
 directives (so that caching *all* sixteen gazillions of documents that
 match “i am” does not exhaust the RAM and instantly kill your server).
 

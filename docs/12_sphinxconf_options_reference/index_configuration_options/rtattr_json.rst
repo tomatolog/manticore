@@ -2,10 +2,10 @@ rt\_attr\_json
 ~~~~~~~~~~~~~~
 
 JSON attribute declaration. Multi-value (ie. there may be more than one
-such attribute declared), optional. Introduced in version 2.1.1-beta.
+such attribute declared), optional.
 
 Refer to `the section called
-“sql\_attr\_json” <../../data_source_configuration_options/sqlattr_json.html>`__
+“sql\_attr\_json” <../../data_source_configuration_options/sqlattr_json.md>`__
 for more details on the JSON attributes.
 
 Example:

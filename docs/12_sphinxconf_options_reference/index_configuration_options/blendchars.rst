@@ -1,8 +1,7 @@
 blend\_chars
 ~~~~~~~~~~~~
 
-Blended characters list. Optional, default is empty. Introduced in
-version 1.10-beta.
+Blended characters list. Optional, default is empty.
 
 Blended characters are indexed both as separators and valid characters.
 For instance, assume that & is configured as blended and AT&T occurs in
@@ -31,10 +30,10 @@ will automatically handle blended character as blended. For instance,
 within phrases. Otherwise, the character would be handled as an
 operator. So you might want to escape the keywords.
 
-Starting with version 2.0.1-beta, blended characters can be remapped, so
-that multiple different blended characters could be normalized into just
-one base form. This is useful when indexing multiple alternative Unicode
-codepoints with equivalent glyphs.
+Blended characters can be remapped, so that multiple different blended
+characters could be normalized into just one base form. This is useful
+when indexing multiple alternative Unicode codepoints with equivalent
+glyphs.
 
 Example:
 ^^^^^^^^
@@ -43,5 +42,5 @@ Example:
 
 
     blend_chars = +, &, U+23
-    blend_chars = +, &->+ # 2.0.1 and above
+    blend_chars = +, &->+
 

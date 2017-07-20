@@ -9,10 +9,9 @@ SET TRANSACTION syntax
         | REPEATABLE READ
         | SERIALIZABLE }
 
-SET TRANSACTION statement, introduced in version 2.0.2-beta, does
-nothing. It was implemented to maintain compatibility with 3rd party
-MySQL client libraries, connectors, and frameworks that may need to run
-this statement when connecting.
+SET TRANSACTION statement does nothing. It was implemented to maintain
+compatibility with 3rd party MySQL client libraries, connectors, and
+frameworks that may need to run this statement when connecting.
 
 Example:
 

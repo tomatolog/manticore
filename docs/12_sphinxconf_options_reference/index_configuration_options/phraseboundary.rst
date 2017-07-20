@@ -6,12 +6,12 @@ Phrase boundary characters list. Optional, default is empty.
 This list controls what characters will be treated as phrase boundaries,
 in order to adjust word positions and enable phrase-level search
 emulation through proximity search. The syntax is similar to
-`charset\_table <../../index_configuration_options/charsettable.html>`__.
+`charset\_table <../../index_configuration_options/charsettable.md>`__.
 Mappings are not allowed and the boundary characters must not overlap
 with anything else.
 
 On phrase boundary, additional word position increment (specified by
-`phrase\_boundary\_step <../../index_configuration_options/phraseboundary_step.html>`__)
+`phrase\_boundary\_step <../../index_configuration_options/phraseboundary_step.md>`__)
 will be added to current word position. This enables phrase-level
 searching through proximity queries: words in different phrases will be
 guaranteed to be more than phrase\_boundary\_step distance away from

@@ -4,8 +4,8 @@ Version 0.9.9-rc2, 08 apr 2009
 -  added IsConnectError(), Open(), Close() calls to Java API (bug #240)
 
 -  added
-   `read\_buffer <../searchd_program_configuration_options/readbuffer.html>`__,
-   `read\_unhinted <../searchd_program_configuration_options/readunhinted.html>`__
+   `read\_buffer <../searchd_program_configuration_options/readbuffer.md>`__,
+   `read\_unhinted <../searchd_program_configuration_options/readunhinted.md>`__
    directives
 
 -  added checks for build options returned by mysql\_config (builds on
@@ -17,33 +17,33 @@ Version 0.9.9-rc2, 08 apr 2009
    multi-queries
 
 -  added
-   `GEODIST() <../5_searching/sorting_modes.html#sph-sort-expr-mode>`__
+   `GEODIST() <../5_searching/sorting_modes.md#sph-sort-expr-mode>`__
    function
 
--  added `–status switch to searchd <../searchd_command_reference.html>`__
+-  added `–status switch to searchd <../searchd_command_reference.md>`__
 
 -  added MySpell (OpenOffice) affix file support (bug #281)
 
 -  added `ODBC
-   support <../data_source_configuration_options/odbcdsn.html>`__ (both
+   support <../data_source_configuration_options/odbcdsn.md>`__ (both
    Windows and UnixODBC)
 
 -  added support for @id in IN() (bug #292)
 
 -  added support for `aggregate
-   functions <../general_query_settings/setselect.html>`__ in GROUP BY
+   functions <../general_query_settings/setselect.md>`__ in GROUP BY
    (namely AVG, MAX, MIN, SUM)
 
 -  added `MySQL UDF that builds
-   snippets <../building_snippets_excerpts_via_mysql.html>`__ using
+   snippets <../building_snippets_excerpts_via_mysql.md>`__ using
    searchd
 
 -  added
-   `write\_buffer <../indexer_program_configuration_options/writebuffer.html>`__
+   `write\_buffer <../indexer_program_configuration_options/writebuffer.md>`__
    directive (defaults to 1M)
 
 -  added
-   `xmlpipe\_fixup\_utf8 <../data_source_configuration_options/xmlpipefixup_utf8.html>`__
+   `xmlpipe\_fixup\_utf8 <../data_source_configuration_options/xmlpipefixup_utf8.md>`__
    directive
 
 -  added suggestions sample
@@ -51,54 +51,54 @@ Version 0.9.9-rc2, 08 apr 2009
 -  added microsecond precision int64 timer (bug #282)
 
 -  added `listen\_backlog
-   directive <../searchd_program_configuration_options/listenbacklog.html>`__
+   directive <../searchd_program_configuration_options/listenbacklog.md>`__
 
 -  added
-   `max\_xmlpipe2\_field <../indexer_program_configuration_options/maxxmlpipe2_field.html>`__
+   `max\_xmlpipe2\_field <../indexer_program_configuration_options/maxxmlpipe2_field.md>`__
    directive
 
 -  added `initial SphinxQL
-   support <../mysql_protocol_support_and_sphinxql.html>`__ to mysql41
+   support <../mysql_protocol_support_and_sphinxql.md>`__ to mysql41
    handler, SELECT …/SHOW WARNINGS/STATUS/META are handled
 
 -  added support for different network protocols, and mysql41 protocol
 
 -  added `fieldmask
-   ranker <../full-text_search_query_settings/setrankingmode.html>`__,
+   ranker <../full-text_search_query_settings/setrankingmode.md>`__,
    updated SphinxSE list of rankers
 
 -  added
-   `mysql\_ssl\_xxx <../data_source_configuration_options/mysqlssl_cert_,_mysqlssl_key_,_mysqlssl_ca.html>`__
+   `mysql\_ssl\_xxx <../data_source_configuration_options/mysqlssl_cert_,_mysqlssl_key_,_mysqlssl_ca.md>`__
    directives
 
 -  added `–cpustats (requires clock\_gettime()) and –status
-   switches <../searchd_command_reference.html>`__ to searchd
+   switches <../searchd_command_reference.md>`__ to searchd
 
 -  added performance counters,
-   `Status() <../additional_functionality/status.html>`__ API call
+   `Status() <../additional_functionality/status.md>`__ API call
 
 -  added
-   `overshort\_step <../index_configuration_options/overshortstep.html>`__
+   `overshort\_step <../index_configuration_options/overshortstep.md>`__
    and
-   `stopword\_step <../index_configuration_options/stopwordstep.html>`__
+   `stopword\_step <../index_configuration_options/stopwordstep.md>`__
    directives
 
--  added `strict order operator <../extended_query_syntax.html>`__ (aka
+-  added `strict order operator <../extended_query_syntax.md>`__ (aka
    operator before, eg. “one << two << three”)
 
--  added `indextool <../indextool_command_reference.html>`__ utility,
+-  added `indextool <../indextool_command_reference.md>`__ utility,
    moved –dumpheader there, added –debugdocids, –dumphitlist options
 
 -  added own RNG, reseeded on @random sort query (bug #183)
 
 -  added `field-start and field-end modifiers
-   support <../extended_query_syntax.html>`__ (syntax is “^hello world$”;
+   support <../extended_query_syntax.md>`__ (syntax is “^hello world$”;
    field-end requires reindex)
 
 -  added MVA attribute support to IN() function
 
 -  added `AND, OR, and NOT
-   support <../5_searching/sorting_modes.html#sph-sort-expr-mode>`__ to
+   support <../5_searching/sorting_modes.md#sph-sort-expr-mode>`__ to
    expressions
 
 -  improved logging of (optimized) multi-queries (now logging chained

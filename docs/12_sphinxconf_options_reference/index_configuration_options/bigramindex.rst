@@ -1,7 +1,7 @@
 bigram\_index
 ~~~~~~~~~~~~~
 
-Bigram indexing mode. Optional, default is none. Added in 2.1.1-beta.
+Bigram indexing mode. Optional, default is none.
 
 Bigram indexing is a feature to accelerate phrase searches. When
 indexing, it stores a document list for either all or some of the
@@ -16,9 +16,9 @@ known modes are:
    worth it even on a moderately sized index, but added anyway for the
    sake of completeness.)
 
--  ``f.html_freq``, only index word pairs where the *f.html* word is in a
+-  ``first_freq``, only index word pairs where the *first* word is in a
    list of frequent words (see `the section called
-   “bigram\_freq\_words” <../../index_configuration_options/bigramfreq_words.html>`__).
+   “bigram\_freq\_words” <../../index_configuration_options/bigramfreq_words.md>`__).
    For example, with ``bigram_freq_words = the, in, i, a``, indexing
    “alone in the dark” text will result in “in the” and “the dark” pairs
    being stored as bigrams, because they begin with a frequent keyword
@@ -27,7 +27,7 @@ known modes are:
 
 -  ``both_freq``, only index word pairs where both words are frequent.
    Continuing with the same example, in this mode indexing “alone in the
-   dark” would only store “in the” (the very w.html of them all from
+   dark” would only store “in the” (the very worst of them all from
    searching perspective) as a bigram, but none of the other word pairs.
 
 For most usecases, ``both_freq`` would be the best mode, but your

@@ -30,9 +30,9 @@ will all be handled by an internal network thread, and only the 2
 actually active queries will be subject to max\_children limit. When the
 limit is reached, any additional incoming *connections* will still be
 accepted, and any additional *queries* will `get
-enqueued <../../searchd_program_configuration_options/queuemax_length.html>`__
+enqueued <../../searchd_program_configuration_options/queuemax_length.md>`__
 until there are free worker threads. The queries will only start failing
-with a temporary Thus, in thread\_pool mode it makes little sense to
+with a temporary. Thus, in thread\_pool mode it makes little sense to
 raise max\_children much higher than the amount of CPU cores. Usually
 that will only hurt CPU contention and *decrease* the general
 throughput.

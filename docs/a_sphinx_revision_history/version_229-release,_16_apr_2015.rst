@@ -7,10 +7,10 @@ Bug fixes
 -  fixed #2228, removed ``searchd`` shutdown behavior on failed
    connection
 
--  fixed #2208, `ZONESPANLIST() <../extended_query_syntax.html>`__ support
+-  fixed #2208, `ZONESPANLIST() <../extended_query_syntax.md>`__ support
    for RT indexes
 
--  fixed #2203, legacy API `SELECT <../9_api_reference/README.html>`__
+-  fixed #2203, legacy API `SELECT <../9_api_reference/README.md>`__
    list
 
 -  fixed #2201, ``indextool`` false positive error on RT index
@@ -21,13 +21,13 @@ Bug fixes
 -  fixed #2199, invalid packedfactors JSON output for index with
    stopwords
 
--  fixed #2197, `TRUNCATE <../truncate_rtindex_syntax.html>`__ fails to
+-  fixed #2197, `TRUNCATE <../truncate_rtindex_syntax.md>`__ fails to
    remove disk chunk files after calling
-   `OPTIMIZE <../optimize_index_syntax.html>`__
+   `OPTIMIZE <../optimize_index_syntax.md>`__
 
 -  fixed #2196, .NET connector issue (UTC\_TIMESTAMP() support)
 
--  fixed #2190, incorrect `GROUP BY <../group_by_settings/README.html>`__
+-  fixed #2190, incorrect `GROUP BY <../group_by_settings/README.md>`__
    outer JSON object
 
 -  fixed #2176, agent used ``ha_strategy=random`` instead of specified

@@ -14,7 +14,7 @@ Operators
    integers but one of them is 64-bit; or in floats otherwise. However,
    ``a/b`` or ``sqrt(a)`` will always be computed in floats, because
    these operations return a result of non-integer type. To avoid the
-   f.html, you can either use ``IDIV(a,b)`` or ``a DIV b`` form. Also,
+   first, you can either use ``IDIV(a,b)`` or ``a DIV b`` form. Also,
    ``a*b`` will not be automatically promoted to 64-bit when the
    arguments are 32-bit. To enforce 64-bit results, you can use
    BIGINT(). (But note that if there are non-integer operations,
@@ -30,13 +30,13 @@ Operators
    be considered equal.
 
 -  Boolean operators: AND, OR, NOT
--  Boolean operators (AND, OR, NOT) were introduced in 0.9.9-rc2 and
-   behave as usual. They are left-associative and have the least
-   priority compared to other operators. NOT has more priority than AND
-   and OR but nevertheless less than any other operator. AND and OR have
-   the same priority so brackets use is recommended to avoid confusion
-   in complex expressions.
+-  Boolean operators (AND, OR, NOT) behave as usual. They are
+   left-associative and have the least priority compared to other
+   operators. NOT has more priority than AND and OR but nevertheless
+   less than any other operator. AND and OR have the same priority so
+   brackets use is recommended to avoid confusion in complex
+   expressions.
 
 -  Bitwise operators: &, \|
 -  These operators perform bitwise AND and OR respectively. The operands
-   must be of an integer types. Introduced in version 1.10-beta.
+   must be of an integer types.

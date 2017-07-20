@@ -42,5 +42,5 @@ met in order to include the document in the resulting merged index. In
 the example above, the filter passes only those records where ‘deleted’
 is 0, eliminating all records that were flagged as deleted (for
 instance, using
-`UpdateAttributes() <../additional_functionality/updateattributes.html>`__
+`UpdateAttributes() <../additional_functionality/updateattributes.md>`__
 call).

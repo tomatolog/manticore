@@ -6,15 +6,15 @@ CALL SNIPPETS syntax
 
     CALL SNIPPETS(data, index, query[, opt_value AS opt_name[, ...]])
 
-CALL SNIPPETS statement, introduced in version 1.10-beta, builds a
-snippet from provided data and query, using specified index settings.
+CALL SNIPPETS statement builds a snippet from provided data and query,
+using specified index settings.
 
 ``data`` is the source data to extract a snippet from. It could be a
 single string, or the list of the strings enclosed in curly brackets.
 ``index`` is the name of the index from which to take the text
 processing settings. ``query`` is the full-text query to build snippets
 for. Additional options are documented in `the section called
-“BuildExcerpts” <../additional_functionality/buildexcerpts.html>`__. Usage
+“BuildExcerpts” <../additional_functionality/buildexcerpts.md>`__. Usage
 example:
 
 ::

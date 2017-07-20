@@ -2,7 +2,7 @@ stopwords\_unstemmed
 ~~~~~~~~~~~~~~~~~~~~
 
 Whether to apply stopwords before or after stemming. Optional, default
-is 0 (apply stopword filter after stemming). Added in 2.1.1-beta.
+is 0 (apply stopword filter after stemming).
 
 By default, stopwords are stemmed themselves, and applied to tokens
 *after* stemming (or any other morphology processing). In other words,

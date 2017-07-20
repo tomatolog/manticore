@@ -39,7 +39,7 @@ Match mode can take one of the following values:
 
 -  “scan” if the full scan mode was used, either by being specified with
    SPH\_MATCH\_FULLSCAN, or if the query was empty (as documented under
-   `Matching Modes <../../matching_modes.html>`__)
+   `Matching Modes <../../matching_modes.md>`__)
 
 Sort mode can take one of the following values:
 

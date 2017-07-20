@@ -1,8 +1,7 @@
 rlp\_context
 ~~~~~~~~~~~~
 
-RLP context configuration file. Mandatory if RLP is used. Added in
-2.2.1-beta.
+RLP context configuration file. Mandatory if RLP is used.
 
 Example:
 ^^^^^^^^

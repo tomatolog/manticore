@@ -9,109 +9,109 @@ supported operators and functions. Here's the complete reference list
 for quick access.
 
 -  `Arithmetic operators: +, -, \*, /, %, DIV,
-   MOD <operators.html#expr-ari-ops>`__
+   MOD <operators.md#expr-ari-ops>`__
 
 -  `Comparison operators: <, > <=, >=, =,
-   <> <operators.html#expr-comp-ops>`__
+   <> <operators.md#expr-comp-ops>`__
 
--  `Boolean operators: AND, OR, NOT <operators.html#expr-bool-ops>`__
+-  `Boolean operators: AND, OR, NOT <operators.md#expr-bool-ops>`__
 
--  `Bitwise operators: &, \| <operators.html#expr-bitwise-ops>`__
+-  `Bitwise operators: &, \| <operators.md#expr-bitwise-ops>`__
 
--  `ABS() <numeric_functions.html#expr-func-abs>`__
+-  `ABS() <numeric_functions.md#expr-func-abs>`__
 
--  `ALL() <miscellaneous_functions.html#expr-func-all>`__
+-  `ALL() <miscellaneous_functions.md#expr-func-all>`__
 
--  `ANY() <miscellaneous_functions.html#expr-func-any>`__
+-  `ANY() <miscellaneous_functions.md#expr-func-any>`__
 
--  `ATAN2() <miscellaneous_functions.html#expr-func-atan2>`__
+-  `ATAN2() <miscellaneous_functions.md#expr-func-atan2>`__
 
--  `BIGINT() <type_conversion_functions.html#expr-func-bigint>`__
+-  `BIGINT() <type_conversion_functions.md#expr-func-bigint>`__
 
--  `BITDOT() <numeric_functions.html#expr-func-bitdot>`__
+-  `BITDOT() <numeric_functions.md#expr-func-bitdot>`__
 
--  `CEIL() <numeric_functions.html#expr-func-ceil>`__
+-  `CEIL() <numeric_functions.md#expr-func-ceil>`__
 
--  `CONTAINS() <numeric_functions.html#expr-func-contains>`__
+-  `CONTAINS() <numeric_functions.md#expr-func-contains>`__
 
--  `COS() <numeric_functions.html#expr-func-cos>`__
+-  `COS() <numeric_functions.md#expr-func-cos>`__
 
--  `CRC32() <miscellaneous_functions.html#expr-func-crc32>`__
+-  `CRC32() <miscellaneous_functions.md#expr-func-crc32>`__
 
--  `DAY() <date_and_time_functions.html#expr-func-day>`__
+-  `DAY() <date_and_time_functions.md#expr-func-day>`__
 
--  `DOUBLE() <numeric_functions.html#expr-func-double>`__
+-  `DOUBLE() <numeric_functions.md#expr-func-double>`__
 
--  `EXP() <numeric_functions.html#expr-func-exp>`__
+-  `EXP() <numeric_functions.md#expr-func-exp>`__
 
--  `FIBONACCI() <numeric_functions.html#expr-func-fibonacci>`__
+-  `FIBONACCI() <numeric_functions.md#expr-func-fibonacci>`__
 
--  `FLOOR() <numeric_functions.html#expr-func-floor>`__
+-  `FLOOR() <numeric_functions.md#expr-func-floor>`__
 
--  `GEODIST() <miscellaneous_functions.html#expr-func-geodist>`__
+-  `GEODIST() <miscellaneous_functions.md#expr-func-geodist>`__
 
--  `GEOPOLY2D() <numeric_functions.html#expr-func-geopoly2d>`__
+-  `GEOPOLY2D() <numeric_functions.md#expr-func-geopoly2d>`__
 
--  `GREATEST() <miscellaneous_functions.html#expr-func-greatest>`__
+-  `GREATEST() <miscellaneous_functions.md#expr-func-greatest>`__
 
--  `HOUR() <date_and_time_functions.html#expr-func-hour>`__
+-  `HOUR() <date_and_time_functions.md#expr-func-hour>`__
 
--  `IDIV() <numeric_functions.html#expr-func-idiv>`__
+-  `IDIV() <numeric_functions.md#expr-func-idiv>`__
 
--  `IF() <comparison_functions.html#expr-func-if>`__
+-  `IF() <comparison_functions.md#expr-func-if>`__
 
--  `IN() <comparison_functions.html#expr-func-in>`__
+-  `IN() <comparison_functions.md#expr-func-in>`__
 
--  `INDEXOF() <miscellaneous_functions.html#expr-func-indexof>`__
+-  `INDEXOF() <miscellaneous_functions.md#expr-func-indexof>`__
 
--  `INTEGER() <type_conversion_functions.html#expr-func-integer>`__
+-  `INTEGER() <type_conversion_functions.md#expr-func-integer>`__
 
--  `INTERVAL() <comparison_functions.html#expr-func-interval>`__
+-  `INTERVAL() <comparison_functions.md#expr-func-interval>`__
 
--  `LEAST() <miscellaneous_functions.html#expr-func-least>`__
+-  `LEAST() <miscellaneous_functions.md#expr-func-least>`__
 
--  `LENGTH() <miscellaneous_functions.html#expr-func-length>`__
+-  `LENGTH() <miscellaneous_functions.md#expr-func-length>`__
 
--  `LN() <numeric_functions.html#expr-func-ln>`__
+-  `LN() <numeric_functions.md#expr-func-ln>`__
 
--  `LOG10() <numeric_functions.html#expr-func-log10>`__
+-  `LOG10() <numeric_functions.md#expr-func-log10>`__
 
--  `LOG2() <numeric_functions.html#expr-func-log2>`__
+-  `LOG2() <numeric_functions.md#expr-func-log2>`__
 
--  `MAX() <numeric_functions.html#expr-func-max>`__
+-  `MAX() <numeric_functions.md#expr-func-max>`__
 
--  `MIN() <numeric_functions.html#expr-func-min>`__
+-  `MIN() <numeric_functions.md#expr-func-min>`__
 
--  `MINUTE() <date_and_time_functions.html#expr-func-minute>`__
+-  `MINUTE() <date_and_time_functions.md#expr-func-minute>`__
 
--  `MIN\_TOP\_SORTVAL() <miscellaneous_functions.html#expr-func-min-top-sortval>`__
+-  `MIN\_TOP\_SORTVAL() <miscellaneous_functions.md#expr-func-min-top-sortval>`__
 
--  `MIN\_TOP\_WEIGHT() <miscellaneous_functions.html#expr-func-min-top-weight>`__
+-  `MIN\_TOP\_WEIGHT() <miscellaneous_functions.md#expr-func-min-top-weight>`__
 
--  `MONTH() <date_and_time_functions.html#expr-func-month>`__
+-  `MONTH() <date_and_time_functions.md#expr-func-month>`__
 
--  `NOW() <date_and_time_functions.html#expr-func-now>`__
+-  `NOW() <date_and_time_functions.md#expr-func-now>`__
 
--  `POLY2D() <numeric_functions.html#expr-func-poly2d>`__
+-  `POLY2D() <numeric_functions.md#expr-func-poly2d>`__
 
--  `POW() <numeric_functions.html#expr-func-pow>`__
+-  `POW() <numeric_functions.md#expr-func-pow>`__
 
--  `RAND() <miscellaneous_functions.html#expr-func-rand>`__
+-  `RAND() <miscellaneous_functions.md#expr-func-rand>`__
 
--  `REMAP() <miscellaneous_functions.html#expr-func-remap>`__
+-  `REMAP() <miscellaneous_functions.md#expr-func-remap>`__
 
--  `SECOND() <date_and_time_functions.html#expr-func-second>`__
+-  `SECOND() <date_and_time_functions.md#expr-func-second>`__
 
--  `SIN() <numeric_functions.html#expr-func-sin>`__
+-  `SIN() <numeric_functions.md#expr-func-sin>`__
 
--  `SINT() <type_conversion_functions.html#expr-func-sint>`__
+-  `SINT() <type_conversion_functions.md#expr-func-sint>`__
 
--  `SQRT() <numeric_functions.html#expr-func-sqrt>`__
+-  `SQRT() <numeric_functions.md#expr-func-sqrt>`__
 
--  `UINT() <numeric_functions.html#expr-func-uint>`__
+-  `UINT() <numeric_functions.md#expr-func-uint>`__
 
--  `YEAR() <date_and_time_functions.html#expr-func-year>`__
+-  `YEAR() <date_and_time_functions.md#expr-func-year>`__
 
--  `YEARMONTH() <date_and_time_functions.html#expr-func-yearmonth>`__
+-  `YEARMONTH() <date_and_time_functions.md#expr-func-yearmonth>`__
 
--  `YEARMONTHDAY() <date_and_time_functions.html#expr-func-yearmonthday>`__
+-  `YEARMONTHDAY() <date_and_time_functions.md#expr-func-yearmonthday>`__

@@ -3,8 +3,7 @@ unpack\_zlib
 
 Columns to unpack using zlib (aka deflate, aka gunzip). Multi-value,
 optional, default value is empty list of columns. Applies to SQL source
-types (``mysql``, ``pgsql``, ``mssql``) only. Introduced in version
-0.9.9-rc1.
+types (``mysql``, ``pgsql``, ``mssql``) only.
 
 Columns specified using this directive will be unpacked by ``indexer``
 using standard zlib algorithm (called deflate and also implemented by

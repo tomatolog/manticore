@@ -2,7 +2,7 @@ agent\_query\_timeout
 ~~~~~~~~~~~~~~~~~~~~~
 
 Remote agent query timeout, in milliseconds. Optional, default is 3000
-(ie. 3 seconds). Added in version 2.1.1-beta.
+(ie. 3 seconds).
 
 After connection, ``searchd`` will wait at most this much time for
 remote queries to complete. This timeout is fully separate from

@@ -6,10 +6,9 @@ SHOW STATUS syntax
 
     SHOW STATUS [ LIKE pattern ]
 
-<b>SHOW STATUS</b>, introduced in version 0.9.9-rc2, displays a number
-of useful performance counters. IO and CPU counters will only be
-available if searchd was started with –iostats and –cpustats switches
-respectively.
+<b>SHOW STATUS</b> displays a number of useful performance counters. IO
+and CPU counters will only be available if searchd was started with
+–iostats and –cpustats switches respectively.
 
 ::
 
@@ -50,6 +49,5 @@ respectively.
     +--------------------+-------+
     29 rows in set (0.00 sec)
 
-Starting from version 2.1.1-beta, an optional LIKE clause is supported.
-Refer to `the section called “SHOW META
-syntax” <../show_meta_syntax.html>`__ for its syntax details.
+An optional LIKE clause is supported. Refer to `the section called “SHOW
+META syntax” <../show_meta_syntax.md>`__ for its syntax details.

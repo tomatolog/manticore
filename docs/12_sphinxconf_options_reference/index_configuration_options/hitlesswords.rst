@@ -2,7 +2,7 @@ hitless\_words
 ~~~~~~~~~~~~~~
 
 Hitless words list. Optional, allowed values are ‘all’, or a list file
-name. Introduced in version 1.10-beta.
+name.
 
 By default, Sphinx full-text index stores not only a list of matching
 documents for every given keyword, but also a list of its in-document

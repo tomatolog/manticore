@@ -22,9 +22,6 @@ Example 4.1. RT index declaration
         rt_attr_uint = gid
     }
 
-As of 2.0.1-beta and above, RT indexes are production quality, despite a
-few missing features.
-
 RT index can be accessed using MySQL protocol. INSERT, REPLACE, DELETE,
 and SELECT statements against RT index are supported. For instance, this
 is an example session with the sample index above:
@@ -39,7 +36,7 @@ is an example session with the sample index above:
 
     Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
 
-    mysql> INSERT INTO rt VALUES ( 1, 'f.html record', 'test one', 123 );
+    mysql> INSERT INTO rt VALUES ( 1, 'first record', 'test one', 123 );
     Query OK, 1 row affected (0.05 sec)
 
     mysql> INSERT INTO rt VALUES ( 2, 'second record', 'test two', 234 );
@@ -100,10 +97,10 @@ supported, enabling you to implement updates.
     +------+--------+------+
     1 row in set (0.00 sec)
 
-    mysql> INSERT INTO rt VALUES ( 1, 'f.html record on steroids', 'test one', 123 );
+    mysql> INSERT INTO rt VALUES ( 1, 'first record on steroids', 'test one', 123 );
     ERROR 1064 (42000): duplicate id '1'
 
-    mysql> REPLACE INTO rt VALUES ( 1, 'f.html record on steroids', 'test one', 123 );
+    mysql> REPLACE INTO rt VALUES ( 1, 'first record on steroids', 'test one', 123 );
     Query OK, 1 row affected (0.01 sec)
 
     mysql> SELECT * FROM rt WHERE MATCH('steroids');

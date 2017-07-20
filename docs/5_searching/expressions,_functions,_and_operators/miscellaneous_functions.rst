@@ -2,11 +2,10 @@ Miscellaneous functions
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  ALL()
--  ALL(cond FOR var IN json.array) function was introduced in
-   2.2.1-beta. It applies to JSON arrays and returns 1 if condition is
-   true for all elements in array and 0 otherwise. ‘cond’ is a general
-   expression which additionally can use ‘var’ as current value of an
-   array element within itself.
+-  ALL(cond FOR var IN json.array) applies to JSON arrays and returns 1
+   if condition is true for all elements in array and 0 otherwise.
+   ‘cond’ is a general expression which additionally can use ‘var’ as
+   current value of an array element within itself.
 
    ::
 
@@ -14,32 +13,30 @@ Miscellaneous functions
        SELECT ALL(x>3 AND x<7 FOR x IN j.intarray) FROM test;
 
 -  ANY()
--  ANY(cond FOR var IN json.array) function was introduced in
-   2.2.1-beta. It works similar to `ALL() <#expr-func-all>`__ except for
-   it returns 1 if condition is true for any element in array.
+-  ANY(cond FOR var IN json.array) works similar to
+   `ALL() <#expr-func-all>`__ except for it returns 1 if condition is
+   true for any element in array.
 
 -  ATAN2()
 -  Returns the arctangent function of two arguments, expressed in
    <b>radians</b>.
 
 -  CRC32()
--  Returns the CRC32 value of a string argument. Introduced in version
-   2.0.1-beta.
+-  Returns the CRC32 value of a string argument.
 
 -  GEODIST()
--  GEODIST(lat1, lon1, lat2, lon2, […]) function, introduced in version
-   0.9.9-rc2, computes geosphere distance between two given points
-   specified by their coordinates. Note that by default both latitudes
-   and longitudes must be in <b>radians</b> and the result will be in
-   <b>meters</b>. You can use arbitrary expression as any of the four
-   coordinates. An optimized path will be selected when one pair of the
-   arguments refers directly to a pair attributes and the other one is
-   constant.
+-  GEODIST(lat1, lon1, lat2, lon2, […]) function computes geosphere
+   distance between two given points specified by their coordinates.
+   Note that by default both latitudes and longitudes must be in
+   <b>radians</b> and the result will be in <b>meters</b>. You can use
+   arbitrary expression as any of the four coordinates. An optimized
+   path will be selected when one pair of the arguments refers directly
+   to a pair attributes and the other one is constant.
 
-   Starting with version 2.2.1-beta, GEODIST() also takes an optional
-   5th argument that lets you easily convert between input and output
-   units, and pick the specific geodistance formula to use. The complete
-   syntax and a few examples are as follows:
+   GEODIST() also takes an optional 5th argument that lets you easily
+   convert between input and output units, and pick the specific
+   geodistance formula to use. The complete syntax and a few examples
+   are as follows:
 
    ::
 
@@ -55,24 +52,22 @@ Miscellaneous functions
       units;
    -  ``out = {m | meters | km | kilometers | ft | feet | mi | miles}``,
       specifies the output units;
-   -  ``method = {haversine | adaptive}``, specifies the geodistance
+   -  ``method = {adaptive | haversine}``, specifies the geodistance
       calculation method.
 
-   Upto version 2.1.x (inclusive), “haversine” method was the default.
-   Starting with 2.2.1-beta, the default method changed to “adaptive”, a
-   new, well optimized implementation that is both more precise *and*
-   much faster at all times.
+   The default method is “adaptive”. It is well optimized implementation
+   that is both more precise *and* much faster at all times than
+   “haversine”.
 
 -  GREATEST()
--  GREATEST(attr\_json.some\_array) was introduced in version
-   2.2.1-beta. F.html argument is JSON array and return value is the
-   greatest value in that array. Also works for MVA.
+-  GREATEST(attr\_json.some\_array) function takes JSON array as the
+   argument, and returns the greatest value in that array. Also works
+   for MVA.
 
 -  INDEXOF()
--  INDEXOF(cond FOR var IN json.array) function was introduced in
-   2.2.1-beta. It iterates through all elements in array and returns
-   index of f.html element for which ‘cond’ is true and -1 if ‘cond’ is
-   false for every element in array.
+-  INDEXOF(cond FOR var IN json.array) function iterates through all
+   elements in array and returns index of first element for which ‘cond’
+   is true and -1 if ‘cond’ is false for every element in array.
 
    ::
 
@@ -80,36 +75,33 @@ Miscellaneous functions
        SELECT INDEXOF(name='John' FOR name IN j.peoples) FROM test;
 
 -  LEAST()
--  LEAST(attr\_json.some\_array) was introduced in version 2.2.1-beta.
-   F.html argument is JSON array and return value is the least value in
-   that array. Also works for MVA.
+-  LEAST(attr\_json.some\_array) function takes JSON array as the
+   argument, and returns the least value in that array. Also works for
+   MVA.
 
 -  LENGTH()
--  LENGTH(attr\_mva) function, introduced in version 2.1.2-stable,
-   returns amount of elements in MVA set. It works with both 32-bit and
-   64-bit MVA attributes. LENGTH(attr\_json) was introduced in version
-   2.2.1-beta. It returns length of a field in JSON. Return value
-   depends on type of a field. For example LENGTH(json\_attr.some\_int)
-   always returns 1 and LENGTH(json\_attr.some\_array) returns number of
-   elements in array.
+-  LENGTH(attr\_mva) function returns amount of elements in MVA set. It
+   works with both 32-bit and 64-bit MVA attributes. LENGTH(attr\_json)
+   returns length of a field in JSON. Return value depends on type of a
+   field. For example LENGTH(json\_attr.some\_int) always returns 1 and
+   LENGTH(json\_attr.some\_array) returns number of elements in array.
 
 -  MIN\_TOP\_SORTVAL()
--  Returns sort key value of the w.html found element in the current
+-  Returns sort key value of the worst found element in the current
    top-N matches if sort key is float and 0 otherwise.
 
 -  MIN\_TOP\_WEIGHT()
--  Returns weight of the w.html found element in the current top-N
+-  Returns weight of the worst found element in the current top-N
    matches.
 
 -  PACKEDFACTORS()
--  PACKEDFACTORS(), introduced in version 2.1.1-beta, can be used in
-   queries, either to just see all the weighting factors calculated when
-   doing the matching, or to provide a binary attribute that can be used
-   to write a custom ranking UDF. This function works only if expression
-   ranker is specified and the query is not a full scan, otherwise it
-   will return an error. Starting with 2.2.2-beta PACKEDFACTORS() can
-   take an optional argument that disables ATC ranking factor
-   calculation:
+-  PACKEDFACTORS() can be used in queries, either to just see all the
+   weighting factors calculated when doing the matching, or to provide a
+   binary attribute that can be used to write a custom ranking UDF. This
+   function works only if expression ranker is specified and the query
+   is not a full scan, otherwise it will return an error.
+   PACKEDFACTORS() can take an optional argument that disables ATC
+   ranking factor calculation:
 
    ::
 
@@ -118,8 +110,8 @@ Miscellaneous functions
 
    Calculating ATC slows down query processing considerably, so this
    option can be useful if you need to see the ranking factors, but do
-   not need ATC. Starting with 2.2.3-beta PACKEDFACTORS() can also be
-   told to format its output as JSON:
+   not need ATC. PACKEDFACTORS() can also be told to format its output
+   as JSON:
 
    ::
 
@@ -266,10 +258,9 @@ Miscellaneous functions
 
 -  REMAP()
 -  REMAP(condition, expression, (cond1, cond2, …), (expr1, expr2, …))
-   function was added in 2.2.2-beta. It allows you to make some
-   exceptions of an expression values depending on condition values.
-   Condition expression should always result integer, expression can
-   result in integer or float.
+   function allows you to make some exceptions of an expression values
+   depending on condition values. Condition expression should always
+   result integer, expression can result in integer or float.
 
    ::
 
@@ -278,5 +269,5 @@ Miscellaneous functions
        SELECT REMAP(id%10, salary, (0), (0.0)) FROM employes;
 
 -  rand()
--  RAND(seed) function was added in 2.3.2-beta. Returns a random float
-   between 0..1. Optional, an integer seed value can be specified.
+-  RAND(seed) function returns a random float between 0..1. Optional, an
+   integer seed value can be specified.

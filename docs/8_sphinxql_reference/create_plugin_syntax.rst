@@ -6,9 +6,8 @@ CREATE PLUGIN syntax
 
     CREATE PLUGIN plugin_name TYPE 'plugin_type' SONAME 'plugin_library'
 
-Added in 2.2.2-beta. Loads the given library (if it is not loaded yet)
-and loads the specified plugin from it. As of 2.2.2-beta, the known
-plugin types are:
+Loads the given library (if it is not loaded yet) and loads the
+specified plugin from it. The known plugin types are:
 
 -  ranker
 
@@ -16,7 +15,7 @@ plugin types are:
 
 -  query\_token\_filter
 
-Refer to `the section called “Sphinx plugins” <../sphinx_plugins.html>`__
+Refer to `the section called “Sphinx plugins” <../sphinx_plugins.md>`__
 for more information regarding writing the plugins.
 
 ::

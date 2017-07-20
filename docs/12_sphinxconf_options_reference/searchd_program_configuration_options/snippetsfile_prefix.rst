@@ -2,7 +2,7 @@ snippets\_file\_prefix
 ~~~~~~~~~~~~~~~~~~~~~~
 
 A prefix to prepend to the local file names when generating snippets.
-Optional, default is empty. Introduced in version 2.1.1-beta.
+Optional, default is empty.
 
 This prefix can be used in distributed snippets generation along with
 ``load_files`` or ``load_files_scattered`` options.

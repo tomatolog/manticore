@@ -2,11 +2,11 @@ on\_file\_field\_error
 ~~~~~~~~~~~~~~~~~~~~~~
 
 How to handle IO errors in file fields. Optional, default is
-``ignore_field``. Introduced in version 2.0.2-beta.
+``ignore_field``.
 
 When there is a problem indexing a file referenced by a file field (`the
 section called
-“sql\_file\_field” <../../data_source_configuration_options/sqlfile_field.html>`__),
+“sql\_file\_field” <../../data_source_configuration_options/sqlfile_field.md>`__),
 ``indexer`` can either index the document, assuming empty content in
 this particular field, or skip the document, or fail indexing entirely.
 ``on_file_field_error`` directive controls that behavior. The values it

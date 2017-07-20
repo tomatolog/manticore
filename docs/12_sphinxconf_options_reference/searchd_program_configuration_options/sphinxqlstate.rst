@@ -2,7 +2,6 @@ sphinxql\_state
 ~~~~~~~~~~~~~~~
 
 Path to a file where current SphinxQL state will be serialized.
-Available since version 2.1.1-beta.
 
 On daemon startup, this file gets replayed. On eligible state changes
 (eg. SET GLOBAL), this file gets rewritten automatically. This can

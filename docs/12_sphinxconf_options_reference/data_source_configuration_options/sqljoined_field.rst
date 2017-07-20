@@ -21,7 +21,7 @@ where
 -  QUERY is an SQL query that must fetch values to index.
 
 -  RANGE-QUERY is an optional SQL query that fetches a range of values
-   to index. (Added in version 2.0.1-beta.)
+   to index.
 
 <b>Joined fields</b> let you avoid JOIN and/or GROUP\_CONCAT statements
 in the main document fetch query (sql\_query). This can be useful when
@@ -54,11 +54,11 @@ sphinx’ to document 2.
 Joined fields are only indexed differently. There are no other
 differences between joined fields and regular text fields.
 
-Starting with 2.0.1-beta, <b>ranged queries</b> can be used when a
-single query is not efficient enough or does not work because of the
-database driver limitations. It works similar to the ranged queries in
-the main indexing loop, see `the section called “Ranged
-queries” <../../3_indexing/sql_data_sources_mysql,_postgresql.html#ranged-queries>`__.
+When a single query is not efficient enough or does not work because of
+the database driver limitations, <b>ranged queries</b> can be used. It
+works similar to the ranged queries in the main indexing loop, see `the
+section called “Ranged
+queries” <../../3_indexing/sql_data_sources_mysql,_postgresql.md#ranged-queries>`__.
 The range will be queried for and fetched upfront once, then multiple
 queries with different ``$start`` and ``$end`` substitutions will be run
 to fetch the actual data.

@@ -2,8 +2,7 @@ rt\_merge\_iops
 ~~~~~~~~~~~~~~~
 
 A maximum number of I/O operations (per second) that the RT chunks merge
-thread is allowed to start. Optional, default is 0 (no limit). Added in
-2.1.1-beta.
+thread is allowed to start. Optional, default is 0 (no limit).
 
 This directive lets you throttle down the I/O impact arising from the
 ``OPTIMIZE`` statements. It is guaranteed that all the RT optimization

@@ -1,8 +1,7 @@
 rt\_field
 ~~~~~~~~~
 
-Full-text field declaration. Multi-value, mandatory Introduced in
-version 1.10-beta.
+Full-text field declaration. Multi-value, mandatory
 
 Full-text fields to be indexed are declared using ``rt_field``
 directive. The names must be unique. The order is preserved; and so

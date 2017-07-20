@@ -13,7 +13,7 @@ will only be available if searchd was started with –iostats and
 dist\_predicted\_time, [{local\|dist}]*fetched*\ [{docs\|hits\|skips}]
 counters will only be available if searchd was configured with
 `predicted time
-costs <../searchd_program_configuration_options/predictedtime_costs.html>`__
+costs <../searchd_program_configuration_options/predictedtime_costs.md>`__
 and query had predicted\_time in OPTION clause.
 
 ::
@@ -62,10 +62,10 @@ and query had predicted\_time in OPTION clause.
     +-----------------------+-------+
     12 rows in set (0.00 sec)
 
-Starting version 2.1.1-beta, you can also use the optional LIKE clause.
-It lets you pick just the variables that match a pattern. The pattern
-syntax is that of regular SQL wildcards, that is, ‘%’ means any number
-of any characters, and '\_' means a single character:
+You can also use the optional LIKE clause. It lets you pick just the
+variables that match a pattern. The pattern syntax is that of regular
+SQL wildcards, that is, ‘%’ means any number of any characters, and '\_'
+means a single character:
 
 ::
 

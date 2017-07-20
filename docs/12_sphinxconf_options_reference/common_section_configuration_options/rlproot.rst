@@ -1,8 +1,7 @@
 rlp\_root
 ~~~~~~~~~
 
-Path to the RLP root folder. Mandatory if RLP is used. Added in
-2.2.1-beta.
+Path to the RLP root folder. Mandatory if RLP is used.
 
 Example:
 ^^^^^^^^

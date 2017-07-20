@@ -6,18 +6,17 @@ CALL KEYWORDS syntax
 
     CALL KEYWORDS(text, index [, options])
 
-CALL KEYWORDS statement, introduced in version 1.10-beta, splits text
-into particular keywords. It returns tokenized and normalized forms of
-the keywords, and, optionally, keyword statistics. Since version
-2.2.2-beta it also returns the position of each keyword in the query and
-all forms of tokenized keywords in the case that lemmatizers were used.
+CALL KEYWORDS statement splits text into particular keywords. It returns
+tokenized and normalized forms of the keywords, and, optionally, keyword
+statistics. It also returns the position of each keyword in the query
+and all forms of tokenized keywords in the case that lemmatizers were
+used.
 
 ``text`` is the text to break down to keywords. ``index`` is the name of
-the index from which to take the text processing settings. ``options``
-prior 2.3.2-beta, is an optional boolean parameter that specifies
-whether to return document and hit occurrence statistics. ``options``
-starting with 2.3.2-beta, can also accept parameters for configuring
-folding depending on tokenization settings:
+the index from which to take the text processing settings. ``options``,
+is an optional boolean parameter that specifies whether to return
+document and hit occurrence statistics. ``options`` can also accept
+parameters for configuring folding depending on tokenization settings:
 
 -  ``stats`` - show statistics of keywords, default is 0
 

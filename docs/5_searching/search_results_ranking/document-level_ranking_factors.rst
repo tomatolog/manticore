@@ -3,8 +3,8 @@ Document-level ranking factors
 
 A <b>document-level factor</b> is a numeric value computed by the
 ranking engine for every matched document with regards to the current
-query. (So it differs from a plain document attribute in that the
-attribute do not depend on the full text query, while factors might.)
+query. So it differs from a plain document attribute in that the
+attribute do not depend on the full text query, while factors might.
 Those factors can be used anywhere in the ranking expression. Currently
 implemented document-level factors are:
 

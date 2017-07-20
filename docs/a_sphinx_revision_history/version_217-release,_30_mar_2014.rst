@@ -14,10 +14,10 @@ Bug fixes
    with large amount of documents
 
 -  fixed #1902, crash on JSON field in the
-   `IN() <../5_searching/expressions,_functions,_and_operators/comparison_functions.html#expr-func-in>`__
+   `IN() <../5_searching/expressions,_functions,_and_operators/comparison_functions.md#expr-func-in>`__
    function
 
--  fixed #1884, crash at `SNIPPET() <../select_syntax.html>`__ with local
+-  fixed #1884, crash at `SNIPPET() <../select_syntax.md>`__ with local
    indexes at distributed index
 
 -  fixed #1802, loading large keywords dictionary

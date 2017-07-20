@@ -1,8 +1,8 @@
 Sphinx UDFs (User Defined Functions)
 ------------------------------------
 
-Starting with 2.0.1-beta, our expression engine can be extended with
-user defined functions, or UDFs for short, like this:
+Our expression engine can be extended with user defined functions, or
+UDFs for short, like this:
 
 ::
 
@@ -34,17 +34,17 @@ UDFs have a wide variety of uses, for instance:
 UDFs reside in the external dynamic libraries (.so files on UNIX and
 .dll on Windows systems). Library files need to reside in a trusted
 folder specified by
-`plugin\_dir <../common_section_configuration_options/plugindir.html>`__
+`plugin\_dir <../common_section_configuration_options/plugindir.md>`__
 directive, for obvious security reasons: securing a single folder is
 easy; letting anyone install arbitrary code into ``searchd`` is a risk.
 You can load and unload them dynamically into searchd with `CREATE
-FUNCTION <../create_function_syntax.html>`__ and `DROP
-FUNCTION <../drop_function_syntax.html>`__ SphinxQL statements
+FUNCTION <../create_function_syntax.md>`__ and `DROP
+FUNCTION <../drop_function_syntax.md>`__ SphinxQL statements
 respectively. Also, you can seamlessly reload UDFs (and other plugins)
-with `RELOAD PLUGINS <../reload_plugins_syntax.html>`__ statement. Sphinx
+with `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ statement. Sphinx
 keeps track of the currently loaded functions, that is, every time you
 create or drop an UDF, ``searchd`` writes its state to the
-`sphinxql\_state <../searchd_program_configuration_options/sphinxqlstate.html>`__
+`sphinxql\_state <../searchd_program_configuration_options/sphinxqlstate.md>`__
 file as a plain good old SQL script.
 
 Once you successfully load an UDF, you can use it in your SELECT or
@@ -83,7 +83,7 @@ can copy around those files only; they do not depend on any other bits
 of Sphinx source code.
 
 Within your UDF, you <b>must</b> implement and export only a couple
-functions, literally. F.html, for UDF interface version control, you
+functions, literally. First, for UDF interface version control, you
 <b>must</b> define a function ``int LIBRARYNAME_ver()``, where
 LIBRARYNAME is the name of your library file, and you must return
 ``SPH_UDF_VERSION`` (a value defined in ``sphinxudf.h``) from it. Here's
@@ -117,7 +117,7 @@ the function, and they could crash the server and/or result in
 unexpected results. Last but not least, all the C functions you
 implement need to be thread-safe.
 
-The f.html argument, a pointer to SPH\_UDF\_INIT structure, is
+The first argument, a pointer to SPH\_UDF\_INIT structure, is
 essentially a pointer to our function state. It is option. In the
 example just above the function is stateless, it simply returns 123
 every time it gets called. So we do not have to define an initialization
@@ -130,7 +130,7 @@ whether your function gets called like ``SELECT id, testfunc(1)`` or
 like ``SELECT id, testfunc(&#039;abc&#039;, 1000*id+gid, WEIGHT())`` or
 anyhow else, it will receive the very same SPH\_UDF\_ARGS structure in
 all of these cases. However, the data passed in the ``args`` structure
-will be different. In the f.html example ``args-&gt;arg_count`` will be
+will be different. In the first example ``args-&gt;arg_count`` will be
 set to 1, in the second example it will be set to 3,
 ``args-&gt;arg_types`` array will contain different type data, and so
 on.
@@ -178,11 +178,11 @@ type. Refer to ``sphinx_udf_argtype`` enumeration in ``sphinxudf.h`` for
 a full list. Most of the types map straightforwardly to the respective C
 types. The most notable exception is the SPH\_UDF\_TYPE\_FACTORS
 argument type. You get that type by calling your UDF with a
-`PACKEDFACTOR() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.html#expr-func-packedfactors>`__
+`PACKEDFACTOR() <../5_searching/expressions,_functions,_and_operators/miscellaneous_functions.md#expr-func-packedfactors>`__
 argument. It's data is a binary blob in a certain internal format, and
 to extract individual ranking signals from that blob, you need to use
 either of the two ``sphinx_factors_XXX()`` or
-``sphinx_get_YYY_factor()`` families of functions. The f.html family
+``sphinx_get_YYY_factor()`` families of functions. The first family
 consists of just 3 functions, ``sphinx_factors_init()`` that initializes
 the unpacked SPH\_UDF\_FACTORS structure, ``sphinx_factors_unpack()``
 that unpacks a binary blob into it, and ``sphinx_factors_deinit()`` that
@@ -242,14 +242,14 @@ The calling sequence of the other functions is fixed, though. Namely,
 -  ``testfunc_deinit()`` is called once when the query processing (in a
    given index shard) ends.
 
-As of 2.2.2-beta, we do not yet support aggregation functions. In other
-words, your UDFs will be called for just a single document at a time and
-are expected to return some value for that document. Writing a function
-that can compute an aggregate value like AVG() over the entire group of
-documents that share the same GROUP BY key is not yet possible. However,
-you can use UDFs within the builtin aggregate functions: that is, even
-though MYCUSTOMAVG() is not supported yet, AVG(MYCUSTOMFUNC()) should
-work alright!
+We do not yet support aggregation functions. In other words, your UDFs
+will be called for just a single document at a time and are expected to
+return some value for that document. Writing a function that can compute
+an aggregate value like AVG() over the entire group of documents that
+share the same GROUP BY key is not yet possible. However, you can use
+UDFs within the builtin aggregate functions: that is, even though
+MYCUSTOMAVG() is not supported yet, AVG(MYCUSTOMFUNC()) should work
+alright!
 
 UDFs are local. In order to use them on a cluster, you have to put the
 same library on all its nodes and run CREATEs on all the nodes too. This

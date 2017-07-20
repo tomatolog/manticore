@@ -10,7 +10,7 @@ extended matching mode:
 
        hello | world
 
--  operator MAYBE (introduced in verion 2.2.3-beta):
+-  operator MAYBE:
 
    ::
 
@@ -30,7 +30,7 @@ extended matching mode:
 
        @title hello @body world
 
--  field position limit modifier (introduced in version 0.9.9-rc1):
+-  field position limit modifier:
 
    ::
 
@@ -86,38 +86,37 @@ extended matching mode:
 
        aaa << bbb << ccc
 
--  exact form modifier (introduced in version 0.9.9-rc1):
+-  exact form modifier:
 
    ::
 
        raining =cats and =dogs
 
--  field-start and field-end modifier (introduced in version 0.9.9-rc2):
+-  field-start and field-end modifier:
 
    ::
 
        ^hello world$
 
--  keyword IDF boost modifier (introduced in version 2.2.3-beta):
+-  keyword IDF boost modifier:
 
    ::
 
        boosted^1.234 boostedfieldend$^1.234
 
--  NEAR, generalized proximity operator (introduced in version
-   2.0.1-beta):
+-  NEAR, generalized proximity operator:
 
    ::
 
        hello NEAR/3 world NEAR/4 "my test"
 
--  SENTENCE operator (introduced in version 2.0.1-beta):
+-  SENTENCE operator:
 
    ::
 
        all SENTENCE words SENTENCE "in one sentence"
 
--  PARAGRAPH operator (introduced in version 2.0.1-beta):
+-  PARAGRAPH operator:
 
    ::
 
@@ -187,11 +186,10 @@ specifying “@@relaxed&quot; option at the very beginning of the query:
 This can be helpful when searching through heterogeneous indexes with
 different schemas.
 
-Field position limit, introduced in version 0.9.9-rc1, additionally
-restricts the searching to f.html N position within given field (or
-fields). For example, “@body [50] hello” will <b>not</b> match the
-documents where the keyword ‘hello’ occurs at position 51 and below in
-the body.
+Field position limit additionally restricts the searching to first N
+position within given field (or fields). For example, “@body [50] hello”
+will <b>not</b> match the documents where the keyword ‘hello’ occurs at
+position 51 and below in the body.
 
 Proximity distance is specified in words, adjusted for word count, and
 applies to all words within quotes. For instance, “cat dog mouse”~5
@@ -210,48 +208,48 @@ of given words. The same example above could also have been written “the
 world is a wonderful place”/0.5 and it would match documents with at
 least 50% of the 6 words.
 
-Strict order operator (aka operator “before”), introduced in version
-0.9.9-rc2, will match the document only if its argument keywords occur
-in the document exactly in the query order. For instance, “black << cat”
-query (without quotes) will match the document “black and white cat” but
-*not* the “that cat was black” document. Order operator has the lowest
-priority. It can be applied both to just keywords and more complex
-expressions, ie. this is a valid query:
+Strict order operator (aka operator “before”) will match the document
+only if its argument keywords occur in the document exactly in the query
+order. For instance, “black << cat” query (without quotes) will match
+the document “black and white cat” but *not* the “that cat was black”
+document. Order operator has the lowest priority. It can be applied both
+to just keywords and more complex expressions, ie. this is a valid
+query:
 
 ::
 
 
     (bag of words) << "exact phrase" << red|green|blue
 
-Exact form keyword modifier, introduced in version 0.9.9-rc1, will match
-the document only if the keyword occurred in exactly the specified form.
-The default behavior is to match the document if the stemmed keyword
-matches. For instance, “runs” query will match both the document that
-contains “runs” *and* the document that contains “running”, because both
-forms stem to just “run” - while “=runs” query will only match the f.html
-document. Exact form operator requires
-`index\_exact\_words <../index_configuration_options/indexexact_words.html>`__
+Exact form keyword modifier will match the document only if the keyword
+occurred in exactly the specified form. The default behavior is to match
+the document if the stemmed keyword matches. For instance, “runs” query
+will match both the document that contains “runs” *and* the document
+that contains “running”, because both forms stem to just “run” - while
+“=runs” query will only match the first document. Exact form operator
+requires
+`index\_exact\_words <../index_configuration_options/indexexact_words.md>`__
 option to be enabled. This is a modifier that affects the keyword and
 thus can be used within operators such as phrase, proximity, and quorum
-operators. Starting with 2.2.2-beta, it is possible to apply an exact
-form modifier to the phrase operator. It's really just syntax sugar - it
-adds an exact form modifier to all terms contained within the phrase.
+operators. It is possible to apply an exact form modifier to the phrase
+operator. It's really just syntax sugar - it adds an exact form modifier
+to all terms contained within the phrase.
 
 ::
 
 
     ="exact phrase"
 
-Field-start and field-end keyword modifiers, introduced in version
-0.9.9-rc2, will make the keyword match only if it occurred at the very
-start or the very end of a fulltext field, respectively. For instance,
-the query “^hello world$” (with quotes and thus combining phrase
-operator and start/end modifiers) will only match documents that contain
-at least one field that has exactly these two keywords.
+Field-start and field-end keyword modifiers will make the keyword match
+only if it occurred at the very start or the very end of a fulltext
+field, respectively. For instance, the query “^hello world$” (with
+quotes and thus combining phrase operator and start/end modifiers) will
+only match documents that contain at least one field that has exactly
+these two keywords.
 
-Starting with 0.9.9-rc1, arbitrarily nested brackets and negations are
-allowed. However, the query must be possible to compute without
-involving an implicit list of all documents:
+Arbitrarily nested brackets and negations are allowed. However, the
+query must be possible to compute without involving an implicit list of
+all documents:
 
 ::
 
@@ -263,21 +261,21 @@ involving an implicit list of all documents:
     -aaa
     aaa | -bbb
 
-Starting with 2.2.2-beta, the phrase search operator may include a
-‘match any term’ modifier. Terms within the phrase operator are position
-significant. When the ‘match any term’ modifier is implemented, the
-position of the subsequent terms from that phrase query will be shifted.
-Therefore, ‘match any’ has no impact on search performance.
+The phrase search operator may include a ‘match any term’ modifier.
+Terms within the phrase operator are position significant. When the
+‘match any term’ modifier is implemented, the position of the subsequent
+terms from that phrase query will be shifted. Therefore, ‘match any’ has
+no impact on search performance.
 
 ::
 
 
     "exact * phrase * * for terms"
 
-<b>NEAR operator</b>, added in 2.0.1-beta, is a generalized version of a
-proximity operator. The syntax is ``NEAR/N``, it is case-sensitive, and
-no spaces are allowed between the NEAR keyword, the slash sign, and the
-distance value.
+<b>NEAR operator</b> is a generalized version of a proximity operator.
+The syntax is ``NEAR/N``, it is case-sensitive, and no spaces are
+allowed between the NEAR keyword, the slash sign, and the distance
+value.
 
 The original proximity operator only worked on sets of keywords. NEAR is
 more generic and can accept arbitrary subexpressions as its two
@@ -293,11 +291,10 @@ proximity operator allows for up to 6 non-matching words between all the
 would allow for up to 6 words between ‘one’ and ‘two’ and then for up to
 6 more between that two-word matching and a ‘three’ keyword.
 
-<b>SENTENCE and PARAGRAPH operators</b>, added in 2.0.1-beta, matches
-the document when both its arguments are within the same sentence or the
-same paragraph of text, respectively. The arguments can be either
-keywords, or phrases, or the instances of the same operator. Here are a
-few examples:
+<b>SENTENCE and PARAGRAPH operators</b> matches the document when both
+its arguments are within the same sentence or the same paragraph of
+text, respectively. The arguments can be either keywords, or phrases, or
+the instances of the same operator. Here are a few examples:
 
 ::
 
@@ -308,17 +305,17 @@ few examples:
 
 The order of the arguments within the sentence or paragraph does not
 matter. These operators only work on indexes built with
-`index\_sp <../index_configuration_options/indexsp.html>`__ (sentence and
+`index\_sp <../index_configuration_options/indexsp.md>`__ (sentence and
 paragraph indexing feature) enabled, and revert to a mere AND otherwise.
 Refer to the ``index_sp`` directive documentation for the notes on
 what's considered a sentence and a paragraph.
 
-<b>ZONE limit operator</b>, added in 2.0.1-beta, is quite similar to
-field limit operator, but restricts matching to a given in-field zone or
-a list of zones. Note that the subsequent subexpressions are *not*
-required to match in a single contiguous span of a given zone, and may
-match in multiple spans. For instance, ``(ZONE:th hello world)`` query
-*will* match this example document:
+<b>ZONE limit operator</b> is quite similar to field limit operator, but
+restricts matching to a given in-field zone or a list of zones. Note
+that the subsequent subexpressions are *not* required to match in a
+single contiguous span of a given zone, and may match in multiple spans.
+For instance, ``(ZONE:th hello world)`` query *will* match this example
+document:
 
 ::
 
@@ -330,15 +327,13 @@ match in multiple spans. For instance, ``(ZONE:th hello world)`` query
 ZONE operator affects the query until the next field or ZONE limit
 operator, or the closing parenthesis. It only works on the indexes built
 with zones support (see `the section called
-“index\_zones” <../index_configuration_options/indexzones.html>`__) and
+“index\_zones” <../index_configuration_options/indexzones.md>`__) and
 will be ignored otherwise.
 
-<b>ZONESPAN limit operator</b>, added in 2.1.1-beta, is similar to the
-ZONE operator, but requires the match to occur in a single contiguous
-span. In the example above, ``(ZONESPAN:th hello world)&gt;`` would not
-match the document, since “hello” and “world” do not occur within the
-same span.
+<b>ZONESPAN limit operator</b> is similar to the ZONE operator, but
+requires the match to occur in a single contiguous span. In the example
+above, ``(ZONESPAN:th hello world)&gt;`` would not match the document,
+since “hello” and “world” do not occur within the same span.
 
-<b>MAYBE</b> operator was added in 2.2.3-beta. It works much like \|
-operator but doesn't return documents which match only right subtree
-expression.
+<b>MAYBE</b> operator works much like \| operator but doesn't return
+documents which match only right subtree expression.

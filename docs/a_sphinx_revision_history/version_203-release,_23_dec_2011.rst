@@ -12,12 +12,12 @@ Bug fixes
 -  fixed #1026, daemon crash on malformed API command
 
 -  fixed #1021, ``max_children`` option has been ignored with
-   ``worker=threads``
+   ``workers =threads``
 
 -  fixed #1020, crash on large attribute files loading
 
 -  fixed #1014, crash on rotation when index has been removed from
-   config file (``worker=threads``, \*nix box)
+   config file (``workers=threads``, \*nix box)
 
 -  fixed #1001, broken MVA files in RT index while saving disk chunk
 

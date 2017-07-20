@@ -16,9 +16,9 @@ To do that properly, Sphinx needs to know
 -  what letters should be folded to what letters.
 
 This should be configured on a per-index basis using
-``[charset_table](../index_configuration_options/charsettable.html)``
+``[charset_table](../index_configuration_options/charsettable.md)``
 option.
-``[charset_table](../index_configuration_options/charsettable.html)``
+``[charset_table](../index_configuration_options/charsettable.md)``
 specifies the table that maps letter characters to their case folded
 versions. The characters that are not in the table are considered to be
 non-letters and will be treated as word separators when indexing or
@@ -27,8 +27,8 @@ searching through this index.
 Default tables currently include English and Russian characters. Please
 do submit your tables for other languages!
 
-As of version 2.1.1-beta, you can also specify text pattern replacement
-rules. For example, given the rules
+You can also specify text pattern replacement rules. For example, given
+the rules
 
 ::
 

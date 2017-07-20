@@ -8,9 +8,8 @@ INSERT and REPLACE syntax
         VALUES (value, ...)
         [, (...)]
 
-INSERT statement, introduced in version 1.10-beta, is only supported for
-RT indexes. It inserts new rows (documents) into an existing index, with
-the provided column values.
+INSERT statement is only supported for RT indexes. It inserts new rows
+(documents) into an existing index, with the provided column values.
 
 ID column must be present in all cases. Rows with duplicate IDs will
 <b>not</b> be overwritten by INSERT; use REPLACE to do that. REPLACE

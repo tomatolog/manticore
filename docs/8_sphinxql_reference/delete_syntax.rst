@@ -6,14 +6,14 @@ DELETE syntax
 
     DELETE FROM index WHERE where_condition
 
-DELETE statement, introduced in version 1.10-beta, is only supported for
-RT indexes and for distributed which contains only RT indexes as agents
-It deletes existing rows (documents) from an existing index based on ID.
+DELETE statement is only supported for RT indexes and for distributed
+which contains only RT indexes as agents It deletes existing rows
+(documents) from an existing index based on ID.
 
 ``index`` is the name of RT index from which the row should be deleted.
 
 ``where_condition`` has the same syntax as in the SELECT statement (see
-`the section called “SELECT syntax” <../select_syntax.html>`__ for
+`the section called “SELECT syntax” <../select_syntax.md>`__ for
 details).
 
 ::

@@ -4,15 +4,15 @@ SHOW AGENT STATUS
 ::
 
 
-    SHOW AGENT ['agent'|'index'|index] STATUS [ LIKE pattern ]
+    SHOW AGENT ['agent'|'index'] STATUS [ LIKE pattern ]
 
 Displays the statistic of `remote
-agents <../index_configuration_options/agent.html>`__ or distributed
+agents <../index_configuration_options/agent.md>`__ or distributed
 index. It includes the values like the age of the last request, last
 answer, the number of different kind of errors and successes, etc. The
 statistic is shown for every agent for last 1, 5 and 15 intervals, each
 of them of
-`ha\_period\_karma <../searchd_program_configuration_options/haperiod_karma.html>`__
+`ha\_period\_karma <../searchd_program_configuration_options/haperiod_karma.md>`__
 seconds. The command exists only in sphinxql.
 
 ::
@@ -75,9 +75,8 @@ seconds. The command exists only in sphinxql.
     +------------------------------------+----------------------------+
     50 rows in set (0.01 sec)
 
-Starting from version 2.1.1-beta, an optional LIKE clause is supported.
-Refer to `the section called “SHOW META
-syntax” <../show_meta_syntax.html>`__ for its syntax details.
+An optional LIKE clause is supported. Refer to `the section called “SHOW
+META syntax” <../show_meta_syntax.md>`__ for its syntax details.
 
 ::
 
@@ -116,12 +115,12 @@ instead of ‘ag\_N\_’:
     9 rows in set (0.00 sec)
 
 Finally, you can check the status of the agents in a specific
-distributed index. It can be done with a SHOW AGENT index STATUS
+distributed index. It can be done with a SHOW AGENT ‘index’ STATUS
 statement. That statement shows the index HA status (ie. whether or not
 it uses agent mirrors at all), and then the mirror information
 (specifically: address, blackhole and persistent flags, and the mirror
 selection probability used when one of the `weighted-probability
-strategies <../index_configuration_options/hastrategy.html>`__ is in
+strategies <../index_configuration_options/hastrategy.md>`__ is in
 effect).
 
 ::

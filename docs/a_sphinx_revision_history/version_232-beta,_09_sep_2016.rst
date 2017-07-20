@@ -14,12 +14,12 @@ New functions and options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  added RAND(),HOUR(),MINUTE(),SECOND() functions
--  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.html>`__ SphinxQL
+-  added\ `FLUSH HOSTNAMES <../flush_hostnames_syntax.md>`__ SphinxQL
    statement and hostname\_lookup directive
--  added `RELOAD INDEX <../reload_index_syntax.html>`__ SphinxQL statement
+-  added `RELOAD INDEX <../reload_index_syntax.md>`__ SphinxQL statement
 
 -  added
-   `sphinxql\_timeout <../searchd_program_configuration_options/sphinxqltimeout.html>`__
+   `sphinxql\_timeout <../searchd_program_configuration_options/sphinxqltimeout.md>`__
    directive
 
 Changes and improvements
@@ -178,8 +178,8 @@ Bug fixes
    over ANY/ALL(mva); and added missing “ident NOT BETWEEN x AND y”
    syntax
 
--  fixed #2277 network connection timeout overflow for agent with worker
-   = thread\_pool added test 243
+-  fixed #2277 network connection timeout overflow for agent with
+   workers = thread\_pool added test 243
 
 -  fixed mantis-2156 (COUNT(DISTINCT attr) does not work with strings)
 
@@ -206,7 +206,7 @@ Bug fixes
 -  Eliminated gcc warnings in http\_parser.c. Eliminated msvc warning in
    sphinxquery.cpp.
 
--  Windows yy..html synced with bash yy.sh script
+-  Windows yy.cmd synced with bash yy.sh script
 
 -  lex/bison files and rules fixed for bison >1.875
 
@@ -230,7 +230,7 @@ Bug fixes
 -  fixed CSphMatchVariant::ToDocid conversion to match plain index
    behavior (fixes test 047 –rt)
 
--  fixed duplicates handling vs RT INSERT (f.html row wins now, not the
+-  fixed duplicates handling vs RT INSERT (first row wins now, not the
    last one)
 
 -  added fetched\_\* counters collection to rt (fixes test\_209 in –rt

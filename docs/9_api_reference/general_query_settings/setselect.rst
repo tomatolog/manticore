@@ -4,9 +4,8 @@ SetSelect
 <b>Prototype:</b> function SetSelect ( $clause )
 
 Sets the select clause, listing specific attributes to fetch, and
-`expressions <../../5_searching/sorting_modes.html#sph-sort-expr-mode>`__
-to compute and fetch. Clause syntax mimics SQL. Introduced in version
-0.9.9-rc1.
+`expressions <../../5_searching/sorting_modes.md#sph-sort-expr-mode>`__
+to compute and fetch. Clause syntax mimics SQL.
 
 SetSelect() is very similar to the part of a typical SQL query between
 SELECT and FROM. It lets you choose what attributes (columns) to fetch,
@@ -22,13 +21,13 @@ Functions are supported. Arbitrary amount of expressions is supported.
 Computed expressions can be used for sorting, filtering, and grouping,
 just as the regular attributes.
 
-Starting with version 0.9.9-rc2, aggregate functions (AVG(), MIN(),
-MAX(), SUM()) are supported when using GROUP BY.
+When using GROUP BY agregate functions (AVG(), MIN(), MAX(), SUM()) are
+supported.
 
 Expression sorting (`the section called “SPH\_SORT\_EXPR
-mode” <../../5_searching/sorting_modes.html#sph-sort-expr-mode>`__) and
+mode” <../../5_searching/sorting_modes.md#sph-sort-expr-mode>`__) and
 geodistance functions (`the section called
-“SetGeoAnchor” <../../result_set_filtering_settings/setgeoanchor.html>`__)
+“SetGeoAnchor” <../../result_set_filtering_settings/setgeoanchor.md>`__)
 are now internally implemented using this computed expressions
 mechanism, using magic names ‘@expr’ and ‘@geodist’ respectively.
 

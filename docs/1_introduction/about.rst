@@ -23,19 +23,18 @@ lightweight so porting it to a new language is known to take a few hours
 or days. Third party API ports and plugins exist for Perl, C#, Haskell,
 Ruby-on-Rails, and possibly other languages and frameworks.
 
-Starting from version 1.10-beta, Sphinx supports two different indexing
-backends: “disk” index backend, and “realtime” (RT) index backend. Disk
-indexes support online full-text index rebuilds, but online updates can
-only be done on non-text (attribute) data. RT indexes additionally allow
-for online full-text index updates. Previous versions only supported
-disk indexes.
+Sphinx supports two different indexing backends: “disk” index backend,
+and “realtime” (RT) index backend. Disk indexes support online full-text
+index rebuilds, but online updates can only be done on non-text
+(attribute) data. RT indexes additionally allow for online full-text
+index updates. Previous versions only supported disk indexes.
 
 Data can be loaded into disk indexes using a so-called data source.
 Built-in sources can fetch data directly from MySQL, PostgreSQL, MSSQL,
 ODBC compliant database (Oracle, etc) or a pipe in TSV or a custom XML
 format. Adding new data sources drivers (eg. to natively support other
-DBMSes) is designed to be as easy as possible. RT indexes, as of
-1.10-beta, can only be populated using SphinxQL.
+DBMSes) is designed to be as easy as possible. RT indexes can only be
+populated using SphinxQL.
 
 As for the name, Sphinx is an acronym which is officially decoded as SQL
 Phrase Index. Yes, I know about CMU's Sphinx project.

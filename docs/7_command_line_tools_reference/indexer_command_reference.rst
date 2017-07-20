@@ -1,7 +1,7 @@
 ``indexer`` command reference
 -----------------------------
 
-``indexer`` is the f.html of the two principal tools as part of Sphinx.
+``indexer`` is the first of the two principal tools as part of Sphinx.
 Invoked from either the command line directly, or as part of a larger
 script, ``indexer`` is solely responsible for gathering the data that
 will be searchable.
@@ -78,13 +78,13 @@ operation is performed. These options are:
    situation where you can take the search function offline without
    troubling users, you will almost certainly need to keep search
    running whilst indexing new documents. ``--rotate`` creates a second
-   index, parallel to the f.html (in the same place, simply including
+   index, parallel to the first (in the same place, simply including
    ``.new`` in the filenames). Once complete, ``indexer`` notifies
    ``searchd`` via sending the ``SIGHUP`` signal, and ``searchd`` will
    attempt to rename the indexes (renaming the existing ones to include
    ``.old`` and renaming the ``.new`` to replace them), and then start
    serving from the newer files. Depending on the setting of
-   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.html>`__,
+   `seamless\_rotate <../searchd_program_configuration_options/seamlessrotate.md>`__,
    there may be a slight delay in being able to search the newer
    indexes. Example usage:
 
@@ -122,7 +122,7 @@ operation is performed. These options are:
    data ‘as if’ it were indexing, including running queries defined with
    ``sql_query_pre`` or ``sql_query_post``. ``outputfile.txt`` will
    contain the list of words, one per line, sorted by frequency with
-   most frequent f.html, and ``N`` specifies the maximum number of words
+   most frequent first, and ``N`` specifies the maximum number of words
    that will be listed; if sufficiently large to encompass every word in
    the index, only that many words will be returned. Such a dictionary
    list could be used for client application features around “Did you
@@ -136,7 +136,7 @@ operation is performed. These options are:
 
    This would produce a document in the current directory,
    ``word_freq.txt`` with the 1,000 most common words in ‘myindex’,
-   ordered by most common f.html. Note that the file will pertain to the
+   ordered by most common first. Note that the file will pertain to the
    last index indexed when specified with multiple indexes or ``--all``
    (i.e. the last one listed in the configuration file)
 
@@ -208,17 +208,15 @@ operation is performed. These options are:
    list will be used to suppress rows from a destination (main) index at
    all times.
 
--  ``--keep-attrs`` (added in version 2.1.1-beta) allows to reuse
-   existing attributes on reindexing. Whenever the index is rebuilt,
-   each new document id is checked for presence in the “old” index, and
-   if it already exists, its attributes are transferred to the “new”
-   index; if not found, attributes from the new index are used. If the
-   user has updated attributes in the index, but not in the actual
-   source used for the index, all updates will be lost when reindexing;
-   using –keep-attrs enables saving the updated attribute values from
-   the previous index. Starting with 2.3.2-beta it is possible to
-   specify a path for index files to used instead of reference path from
-   config:
+-  ``--keep-attrs`` allows to reuse existing attributes on reindexing.
+   Whenever the index is rebuilt, each new document id is checked for
+   presence in the “old” index, and if it already exists, its attributes
+   are transferred to the “new” index; if not found, attributes from the
+   new index are used. If the user has updated attributes in the index,
+   but not in the actual source used for the index, all updates will be
+   lost when reindexing; using –keep-attrs enables saving the updated
+   attribute values from the previous index. It is possible to specify a
+   path for index files to used instead of reference path from config:
 
    ::
 

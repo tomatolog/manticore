@@ -1,15 +1,14 @@
 ``wordbreaker`` command reference
 ---------------------------------
 
-``wordbreaker`` is one of the helper tools within the Sphinx package,
-introduced in version 2.1.1-beta. It is used to split compound words, as
-usual in URLs, into its component words. For example, this tool can
-split “lordoftherings” into its four component words, or
-“http://manofsteel.warnerbros.com” into “man of steel warner bros”. This
-helps searching, without requiring prefixes or infixes: searching for
-“sphinx” wouldn't match “sphinxsearch” but if you break the compound
-word and index the separate components, you'll get a match without the
-costs of prefix and infix larger index files.
+``wordbreaker`` is one of the helper tools within the Sphinx package. It
+is used to split compound words, as usual in URLs, into its component
+words. For example, this tool can split “lordoftherings” into its four
+component words, or “http://manofsteel.warnerbros.com” into “man of
+steel warner bros”. This helps searching, without requiring prefixes or
+infixes: searching for “sphinx” wouldn't match “sphinxsearch” but if you
+break the compound word and index the separate components, you'll get a
+match without the costs of prefix and infix larger index files.
 
 Examples of its usage are:
 

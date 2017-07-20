@@ -2,7 +2,6 @@ blend\_mode
 ~~~~~~~~~~~
 
 Blended tokens indexing mode. Optional, default is ``trim_none``.
-Introduced in version 2.0.1-beta.
 
 By default, tokens that mix blended and non-blended characters get
 indexed in there entirety. For instance, when both at-sign and an

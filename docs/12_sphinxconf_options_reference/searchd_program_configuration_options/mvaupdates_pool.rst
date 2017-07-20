@@ -2,7 +2,7 @@ mva\_updates\_pool
 ~~~~~~~~~~~~~~~~~~
 
 Shared pool size for in-memory MVA updates storage. Optional, default
-size is 1M. Introduced in version 0.9.9-rc1.
+size is 1M.
 
 This setting controls the size of the shared storage pool for updated
 MVA values. Specifying 0 for the size disable MVA updates at all. Once

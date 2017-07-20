@@ -7,9 +7,9 @@ compile and run Sphinx without any modifications.
 
 Currently known systems Sphinx has been successfully running on are:
 
--  Linux 2.4.x, 2.6.x, 3.x (many various distributions)
+-  Linux 2.4.x, 2.6.x, 3.x, 4.x (many various distributions)
 
--  Windows 2000, XP, 7, 8
+-  Windows 7, 8, 10
 
 -  FreeBSD 4.x, 5.x, 6.x, 7.x, 8.x
 
@@ -19,7 +19,7 @@ Currently known systems Sphinx has been successfully running on are:
 
 -  Mac OS X
 
-CPU architectures known to work include i386 (aka x86), .html64 (aka
+CPU architectures known to work include i386 (aka x86), amd64 (aka
 x86\_64), SPARC64, and ARM.
 
 Chances are good that Sphinx should work on other Unix platforms and/or

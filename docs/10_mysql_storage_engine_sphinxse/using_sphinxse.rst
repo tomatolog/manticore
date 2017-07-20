@@ -21,7 +21,7 @@ Let's begin with an example create statement and search query:
 
     SELECT * FROM t1 WHERE query='test it;mode=any';
 
-F.html 3 columns of search table *must* have a types of
+First 3 columns of search table *must* have a types of
 ``INTEGER UNSINGED`` or ``BIGINT`` for the 1st column (document id),
 ``INTEGER`` or ``BIGINT`` for the 2nd column (match weight), and
 ``VARCHAR`` or ``TEXT`` for the 3rd column (your query), respectively.
@@ -143,7 +143,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;floatrange=@geodist,0,1000;';
 
 -  maxmatches - per-query max matches value, as in max\_matches
-   parameter to `SetLimits() <../general_query_settings/setlimits.html>`__
+   parameter to `SetLimits() <../general_query_settings/setlimits.md>`__
    API call:
 
    ::
@@ -152,7 +152,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;maxmatches=2000;';
 
 -  cutoff - maximum allowed matches, as in cutoff parameter to
-   `SetLimits() <../general_query_settings/setlimits.html>`__ API call:
+   `SetLimits() <../general_query_settings/setlimits.md>`__ API call:
 
    ::
 
@@ -160,7 +160,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;cutoff=10000;';
 
 -  maxquerytime - maximum allowed query time (in milliseconds), as in
-   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.html>`__
+   `SetMaxQueryTime() <../general_query_settings/setmaxquerytime.md>`__
    API call:
 
    ::
@@ -169,7 +169,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;maxquerytime=1000;';
 
 -  groupby - group-by function and attribute, corresponding to
-   `SetGroupBy() <../group_by_settings/setgroupby.html>`__ API call:
+   `SetGroupBy() <../group_by_settings/setgroupby.md>`__ API call:
 
    ::
 
@@ -186,7 +186,7 @@ sign. Any number of options can be specified. Available options are:
 
 -  distinct - an attribute to compute COUNT(DISTINCT) for when doing
    group-by, as in
-   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.html>`__ API
+   `SetGroupDistinct() <../group_by_settings/setgroupdistinct.md>`__ API
    call:
 
    ::
@@ -211,7 +211,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;fieldweights=title,10,abstract,3,content,1;';
 
 -  comment - a string to mark this query in query log (mapping to
-   $comment parameter in `Query() <../querying/query.html>`__ API call):
+   $comment parameter in `Query() <../querying/query.md>`__ API call):
 
    ::
 
@@ -219,7 +219,7 @@ sign. Any number of options can be specified. Available options are:
        ... WHERE query='test;comment=marker001;';
 
 -  select - a string with expressions to compute (mapping to
-   `SetSelect() <../general_query_settings/setselect.html>`__ API call):
+   `SetSelect() <../general_query_settings/setselect.md>`__ API call):
 
    ::
 
@@ -235,14 +235,13 @@ sign. Any number of options can be specified. Available options are:
 
 -  ranker - a ranking function to use with “extended” matching mode, as
    in
-   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.html>`__
+   `SetRankingMode() <../full-text_search_query_settings/setrankingmode.md>`__
    API call (the only mode that supports full query syntax). Known
    values are “proximity\_bm25”, “bm25”, “none”, “wordcount”,
-   “proximity”, “matchany”, “fieldmask”, “sph04” (starting with
-   1.10-beta), “expr:EXPRESSION” (starting with 2.0.4-release) syntax to
-   support expression-based ranker (where EXPRESSION should be replaced
-   with your specific ranking formula), and “export:EXPRESSION”
-   (starting with 2.1.1-beta):
+   “proximity”, “matchany”, “fieldmask”, “sph04”, “expr:EXPRESSION”
+   syntax to support expression-based ranker (where EXPRESSION should be
+   replaced with your specific ranking formula), and
+   “export:EXPRESSION”:
 
    ::
 
@@ -256,9 +255,8 @@ sign. Any number of options can be specified. Available options are:
    to be used but rarely, only to train a ML (machine learning) function
    or to define your own ranking function by hand, and never in actual
    production. When using this ranker, you'll probably want to examine
-   the output of the RANKFACTORS() function (added in version
-   2.1.1-beta) that produces a string with all the field level factors
-   for each document.
+   the output of the RANKFACTORS() function that produces a string with
+   all the field level factors for each document.
 
    ::
 
@@ -302,7 +300,7 @@ sign. Any number of options can be specified. Available options are:
        idf=0.259532)
 
 -  geoanchor - geodistance anchor, as in
-   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.html>`__
+   `SetGeoAnchor() <../result_set_filtering_settings/setgeoanchor.md>`__
    API call. Takes 4 parameters which are latitude and longitude
    attribute names, and anchor point coordinates respectively:
 
@@ -314,13 +312,13 @@ sign. Any number of options can be specified. Available options are:
 One **very important** note that it is **much** more efficient to allow
 Sphinx to perform sorting, filtering and slicing the result set than to
 raise max matches count and use WHERE, ORDER BY and LIMIT clauses on
-MySQL side. This is for two reasons. F.html, Sphinx does a number of
+MySQL side. This is for two reasons. First, Sphinx does a number of
 optimizations and performs better than MySQL on these tasks. Second,
 less data would need to be packed by searchd, transferred and unpacked
 by SphinxSE.
 
-Starting with version 0.9.9-rc1, additional query info besides result
-set could be retrieved with ``SHOW ENGINE SPHINX STATUS`` statement:
+Additional query info besides result set could be retrieved with
+``SHOW ENGINE SPHINX STATUS`` statement:
 
 ::
 

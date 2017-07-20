@@ -2,7 +2,7 @@ binlog\_path
 ~~~~~~~~~~~~
 
 Binary log (aka transaction log) files path. Optional, default is
-build-time configured data directory. Introduced in version 1.10-beta.
+build-time configured data directory.
 
 Binary logs are used for crash recovery of RT index data, and also of
 attributes updates of plain disk indices that would otherwise only be

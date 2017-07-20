@@ -2,14 +2,14 @@ expand\_keywords
 ~~~~~~~~~~~~~~~~
 
 Expand keywords with exact forms and/or stars when possible. Optional,
-default is 0 (do not expand keywords). Introduced in version 1.10-beta.
+default is 0 (do not expand keywords).
 
 Queries against indexes with ``expand_keywords`` feature enabled are
 internally expanded as follows. If the index was built with prefix or
 infix indexing enabled, every keyword gets internally replaced with a
 disjunction of keyword itself and a respective prefix or infix (keyword
 with stars). If the index was built with both stemming and
-`index\_exact\_words <../../index_configuration_options/indexexact_words.html>`__
+`index\_exact\_words <../../index_configuration_options/indexexact_words.md>`__
 enabled, exact form is also added. Here's an example that shows how
 internal expansion works when all of the above (infixes, stemming, and
 exact words) are combined:

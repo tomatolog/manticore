@@ -20,16 +20,14 @@ Numeric functions
    500 km (300 miles) a side, and it doesn't take into account the
    Earth's curvature for speed. For larger distances, you should use
    GEOPOLY2D, which tessellates the given polygon in smaller parts,
-   accounting for the Earth's curvature. These functions were added in
-   version 2.1.1-beta.
+   accounting for the Earth's curvature.
 
 -  COS()
 -  Returns the cosine of the argument.
 
 -  DOUBLE()
 -  Forcibly promotes given argument to floating point type. Intended to
-   help enforce evaluation of numeric JSON fields. Introduced in version
-   2.2.1-beta.
+   help enforce evaluation of numeric JSON fields.
 
 -  EXP()
 -  Returns the exponent of the argument (e=2.718… to the power of the
@@ -55,7 +53,7 @@ Numeric functions
    result as POLY2D().
 
 -  IDIV()
--  Returns the result of an integer division of the f.html argument by
+-  Returns the result of an integer division of the first argument by
    the second argument. Both arguments must be of an integer type.
 
 -  LN()
@@ -81,7 +79,7 @@ Numeric functions
    `POLY2D() <#expr-func-poly2d>`__ function.
 
 -  POW()
--  Returns the f.html argument raised to the power of the second
+-  Returns the first argument raised to the power of the second
    argument.
 
 -  SIN()
@@ -92,4 +90,3 @@ Numeric functions
 
 -  UINT()
 -  Forcibly reinterprets given argument to 64-bit unsigned type.
-   Introduced in version 2.2.1-beta.

@@ -6,14 +6,14 @@ RELOAD PLUGINS syntax
 
     RELOAD PLUGINS FROM SONAME 'plugin_library'
 
-Added in 2.3.1-beta. Reloads all plugins (UDFs, rankers, etc) from a
-given library. Reload is, in a sense, transactional: a succesful reload
-guarantees that a) all the plugins were succesfully updated with their
-new versions; b) the update was atomic, all the plugins were replaced at
-once. Atomicity means that queries using multiple functions from a
-reloaded library will never mix the old and new versions. The set of
-plugins is guaranteed to always be consistent during the RELOAD, it will
-be either all old, or all new.
+Reloads all plugins (UDFs, rankers, etc) from a given library. Reload
+is, in a sense, transactional: a successful reload guarantees that a)
+all the plugins were successfully updated with their new versions; b)
+the update was atomic, all the plugins were replaced at once. Atomicity
+means that queries using multiple functions from a reloaded library will
+never mix the old and new versions. The set of plugins is guaranteed to
+always be consistent during the RELOAD, it will be either all old, or
+all new.
 
 Reload also is seamless, meaning that some version of a reloaded plugin
 will be available to concurrent queries at all times, and there will be

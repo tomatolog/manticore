@@ -6,13 +6,12 @@ SHOW PROFILE syntax
 
     SHOW PROFILE
 
-SHOW PROFILE statement, added in version 2.1.1-beta, shows a detailed
-execution profile of the previous SQL statement executed in the current
-SphinxQL session. Also, profiling must be enabled in the current session
-<b>before</b> running the statement to be instrumented. That can be done
-with a ``SET profiling=1`` statement. By default, profiling is disabled
-to avoid potential performance implications, and therefore the profile
-will be empty.
+SHOW PROFILE shows a detailed execution profile of the previous SQL
+statement executed in the current SphinxQL session. Also, profiling must
+be enabled in the current session <b>before</b> running the statement to
+be instrumented. That can be done with a ``SET profiling=1`` statement.
+By default, profiling is disabled to avoid potential performance
+implications, and therefore the profile will be empty.
 
 Here's a complete instrumentation example:
 

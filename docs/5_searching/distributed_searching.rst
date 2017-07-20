@@ -47,9 +47,7 @@ From the application's point of view, there are no differences between
 searching through a regular index, or a distributed index at all. That
 is, distributed indexes are fully transparent to the application, and
 actually there's no way to tell whether the index you queried was
-distributed or local. (Even though as of 0.9.9 Sphinx does not allow to
-combine searching through distributed indexes with anything else, this
-constraint will be lifted in the future.)
+distributed or local.
 
 Any ``searchd`` instance could serve both as a master (which aggregates
 the results) and a slave (which only does local searching) at the same

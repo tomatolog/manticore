@@ -1,8 +1,7 @@
 rt\_mem\_limit
 ~~~~~~~~~~~~~~
 
-RAM chunk size limit. Optional, default is 128M. Introduced in version
-1.10-beta.
+RAM chunk size limit. Optional, default is 128M.
 
 RT index keeps some data in memory (so-called RAM chunk) and also
 maintains a number of on-disk indexes (so-called disk chunks). This

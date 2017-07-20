@@ -11,6 +11,7 @@
    introduction
    installation
    indexing
+   searching
    sphinxql_reference
    9_api_reference/api
 

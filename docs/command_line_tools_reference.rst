@@ -10,4 +10,4 @@ This section covers these tools and how to use them.
 .. toctree::
    :glob:
 
-   7_command_line_tools_reference/*
+   command_line_tools_reference/*

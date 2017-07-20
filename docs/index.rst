@@ -19,5 +19,5 @@ Contents:
    command_line_tools_reference
    sphinxql_reference
    9_api_reference/api
-
+   sphinxconf_options_reference
    	

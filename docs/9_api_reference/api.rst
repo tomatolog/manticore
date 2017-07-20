@@ -18,17 +18,12 @@ conventions or specific data structures used. But the provided
 functionality must not differ across languages.
 
 .. toctree::
-   :glob:
-   :maxdepth: 2
+   :maxdepth: 4
    
-   general_api_functions/*
+   general_api_functions
+   general_query_settings
    
-.. toctree::
-   :glob:
-   :maxdepth: 2
-   
-   general_query_settings/*
-   
+ 
 .. toctree::
    :glob:
    :maxdepth: 2

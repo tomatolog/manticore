@@ -33,10 +33,18 @@
    :caption: Indexing
    
    3_indexing/*
+   	
+.. toctree::
+   :glob:
+   :caption: SphinxQL
+   
+   sphinxql_reference
 
+   
 .. toctree::
    :glob:
    :caption: API reference
    
    9_api_reference/api
+
    	

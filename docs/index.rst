@@ -22,6 +22,7 @@
    :maxdepth: 2
    :glob:
    :caption: Installation
+   
    2_installation/installation
 
 .. _indexing:
@@ -30,6 +31,7 @@
    :maxdepth: 2
    :glob:
    :caption: Indexing
+   
    3_indexing/*
    	
  Indices and tables

@@ -1,6 +1,9 @@
 Summary
 =======
 .. toctree::
+	:maxdepth: 4
+	:glob:
+	
     1_introduction/*
 	2_installation/*
 	3_indexing/*

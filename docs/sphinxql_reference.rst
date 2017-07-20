@@ -11,4 +11,4 @@ statements syntax.
 .. toctree::
    :glob:
 
-   8_sphinxql_reference/*
+   sphinxql_reference/*

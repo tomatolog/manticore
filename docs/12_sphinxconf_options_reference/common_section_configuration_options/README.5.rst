@@ -1,2 +1,0 @@
-Common section configuration options
-------------------------------------

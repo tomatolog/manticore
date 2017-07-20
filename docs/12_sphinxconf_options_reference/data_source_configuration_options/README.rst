@@ -1,2 +1,0 @@
-Data source configuration options
----------------------------------

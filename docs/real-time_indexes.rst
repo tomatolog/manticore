@@ -5,7 +5,7 @@ Real-time indexes (or RT indexes for brevity) are a backend that lets
 you insert, update, or delete documents (rows) on the fly. While
 querying of RT indexes is possible using any of the ManticoreAPI, SphinxQL,
 or ManticoreSE, updating them is only possible via SphinxQL at the moment.
-Full SphinxQL reference is available in  `sphinxql_reference`__.
+Full SphinxQL reference is available in  `SphinxQL reference <sphinxql_reference>`__.
 
 
 RT indexes overview

@@ -1,8 +1,9 @@
 ===================================
- Manticore Search -  Documentation
+ Welcome to Manticore Search's  Documentation
 ===================================
 
 
+Contents:
 
 .. toctree::
    :glob:

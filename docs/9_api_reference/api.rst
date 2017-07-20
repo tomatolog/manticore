@@ -19,7 +19,6 @@ functionality must not differ across languages.
 
 .. toctree::
 
-   
    general_api_functions
    general_query_settings
    

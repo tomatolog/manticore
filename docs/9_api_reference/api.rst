@@ -18,25 +18,8 @@ conventions or specific data structures used. But the provided
 functionality must not differ across languages.
 
 .. toctree::
-   :maxdepth: 4
+
    
    general_api_functions
    general_query_settings
    
- 
-.. toctree::
-   :glob:
-   :maxdepth: 2
-   
-   full-text_search_query_settings/*
-   
-
-.. toctree::
-   :glob:
-   :maxdepth: 2
-   
-   result_set_filtering_settings/*
-   group_by_settings/*
-   querying/*
-   additional_functionality/*
-   persistent_connections/*

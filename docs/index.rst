@@ -35,7 +35,6 @@
    3_indexing/*
 
 .. toctree::
-   :maxdepth: 4
    :glob:
    :caption: API reference
    

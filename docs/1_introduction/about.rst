@@ -38,3 +38,12 @@ populated using SphinxQL.
 
 As for the name, Sphinx is an acronym which is officially decoded as SQL
 Phrase Index. Yes, I know about CMU's Sphinx project.
+
+
+.. toctree::
+	:maxdepth: 4
+	sphinx_features
+	where_to_get_sphinx
+	license
+	credits
+	history

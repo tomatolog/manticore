@@ -41,7 +41,9 @@ Phrase Index. Yes, I know about CMU's Sphinx project.
 
 
 .. toctree::
-	:maxdepth: 4
+	:maxdepth: 1
+	:glob:
+	
 	sphinx_features
 	where_to_get_sphinx
 	license

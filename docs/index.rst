@@ -28,16 +28,10 @@
 .. _indexing:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :glob:
    :caption: Indexing
    
    3_indexing/*
+   9_api_reference/api
    	
- Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-* :ref:`glossary`
-  

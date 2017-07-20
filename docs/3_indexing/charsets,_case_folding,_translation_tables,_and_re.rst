@@ -1,5 +1,5 @@
 Charsets, case folding, translation tables, and replacement rules
------------------------------------------------------------------
+=======================
 
 When indexing some index, Sphinx fetches documents from the specified
 sources, splits the text into words, and does case folding so that

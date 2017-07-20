@@ -1,5 +1,5 @@
 Indexes
--------
+=======================
 
 To be able to answer full-text search queries fast, Sphinx needs to
 build a special data structure optimized for such queries from your text

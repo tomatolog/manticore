@@ -1,7 +1,9 @@
 Searching
 ====================
+
 .. toctree::
    :glob:	
+   
    searching/matching_modes
    searching/boolean_query_syntax
    searching/extended_query_syntax

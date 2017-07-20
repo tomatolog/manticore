@@ -96,7 +96,7 @@ New features
    `max\_filter\_values <../searchd_program_configuration_options/maxfilter_values.md>`__
    sanity check to 10M values
 
-New ManticoreQL features
+New SphinxQL features
 ~~~~~~~~~~~~~~~~~~~~~
 
 -  added `FLUSH RTINDEX <../flush_rtindex_syntax.md>`__ statement
@@ -118,7 +118,7 @@ New ManticoreQL features
    variables (like @@tx\_isolation) in `SET <../set_syntax.md>`__
    statement (better MySQL frameworks/connectors support)
 
--  added complete `ManticoreQL error
+-  added complete `SphinxQL error
    logging <../searchd_query_log_formats/sphinxql_log_format.md>`__ (all
    errors are logged now, not just ``SELECT``\ s)
 
@@ -145,7 +145,7 @@ Bug fixes
 
 -  fixed #951, UTF-8 snippets could hang on malformed data
 
--  fixed #947, bad float column type was reported via ManticoreQL, breaking
+-  fixed #947, bad float column type was reported via SphinxQL, breaking
    some clients
 
 -  fixed #940, group-by with a small enough ``max_matches`` limit could
@@ -245,7 +245,7 @@ Bug fixes
 -  fixed that empty result set returned the full schema (rather than
    ``SELECT``-ed columns)
 
--  fixed that ManticoreQL did not have a sanity check for (currently
+-  fixed that SphinxQL did not have a sanity check for (currently
    unsupported) result set schemas over 250 attributes
 
 -  fixed that updates on regular indexes were not binlogged
@@ -272,7 +272,7 @@ Bug fixes
 -  fixed that Java API did not let specify a connection timeout
 
 -  fixed that ordinal and wordcount attributes could not be fetched via
-   ManticoreQL
+   SphinxQL
 
 -  fixed that in a rare edge case ``OR/ORDER`` would not match properly
 

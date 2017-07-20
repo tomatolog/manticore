@@ -7,7 +7,7 @@ in one go (more formally, one network request).
 Two API methods that implement multi-query mechanism are
 `AddQuery() <../querying/addquery.md>`__ and
 `RunQueries() <../querying/runqueries.md>`__. You can also run multiple
-queries with ManticoreQL, see `the section called “Multi-statement
+queries with SphinxQL, see `the section called “Multi-statement
 queries” <../multi-statement_queries.md>`__. (In fact, regular
 `Query() <../querying/addquery.md>`__ call is internally implemented as
 a single AddQuery() call immediately followed by RunQueries() call.)

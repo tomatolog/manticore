@@ -28,7 +28,7 @@ Bug fixes
    (eg. to report index load time crashes)
 
 -  fixed #1410, bad numerics like ‘123abc’ now result in a proper
-   ManticoreQL error message
+   SphinxQL error message
 
 -  fixed #1404, a tiny memory leak in shared mutex
 

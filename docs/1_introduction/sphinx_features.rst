@@ -14,7 +14,7 @@ Key Manticore features are:
 -  proven scalability up to billions of documents, terabytes of data,
    and thousands of queries per second;
 
--  easy integration with SQL and XML data sources, and ManticoreQL,
+-  easy integration with SQL and XML data sources, and SphinxQL,
    ManticoreAPI, or ManticoreSE search interfaces;
 
 -  easy scaling with distributed searches.
@@ -38,7 +38,7 @@ To expand a bit, Manticore:
 
 -  provides document excerpts (snippets) generation;
 
--  provides searching from within application with ManticoreQL or ManticoreAPI
+-  provides searching from within application with SphinxQL or ManticoreAPI
    interfaces, and from within MySQL with pluggable ManticoreSE storage
    engine;
 

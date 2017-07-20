@@ -56,15 +56,15 @@ Version 0.9.9-release, 02 dec 2009
 
 -  fixed #376 (minor error message mismatch)
 
--  fixed #413 (minus in ManticoreQL)
+-  fixed #413 (minus in SphinxQL)
 
--  fixed #417 (floats w/o leading digit in ManticoreQL)
+-  fixed #417 (floats w/o leading digit in SphinxQL)
 
 -  fixed #403 (typo in SetFieldWeights name in Java API)
 
 -  fixed index rotation vs persistent connections
 
--  fixed backslash handling in ManticoreQL parser
+-  fixed backslash handling in SphinxQL parser
 
 -  fixed uint unpacking vs. PHP 5.2.9 (possibly other versions)
 
@@ -97,11 +97,11 @@ Version 0.9.9-release, 02 dec 2009
 
 -  fixed #338 (added missing fullscan to mode check in Java API)
 
--  fixed #323 (added floats support to ManticoreQL)
+-  fixed #323 (added floats support to SphinxQL)
 
 -  fixed #340 (support listen=port:proto syntax too)
 
--  fixed #332 (:raw-latex:`\r `is legal ManticoreQL space now)
+-  fixed #332 (:raw-latex:`\r `is legal SphinxQL space now)
 
 -  fixed xmlpipe2 K-lists
 

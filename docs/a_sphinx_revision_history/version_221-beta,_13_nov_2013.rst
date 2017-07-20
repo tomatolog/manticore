@@ -106,7 +106,7 @@ General features
    check index files before rotating them
 -  added scientific notation support for JSON attributes (as per `RFC
    4627 <http://www.ietf.org/rfc/rfc4627.txt>`__)
--  added several ManticoreQL statements to fix MySQL Workbench connection
+-  added several SphinxQL statements to fix MySQL Workbench connection
    issues (LIKE for session variables, etc.)
 -  added
    `shutdown\_timeout <../searchd_program_configuration_options/shutdowntimeout.md>`__
@@ -119,7 +119,7 @@ General features
 -  added snippet generation options to
    `SNIPPET() <../select_syntax.md>`__ function
 -  added string filter support in distributed queries, ManticoreAPI,
-   ManticoreQL query log
+   SphinxQL query log
 -  added support for mixed distributed and local index queries (SELECT
    \* FROM dist1,dist2,local3), and ``index_weights`` option for that
    case
@@ -150,7 +150,7 @@ Optimizations, behavior changes, and removals
 -  changed the default ManticoreAPI matching mode to
    `SPH\_MATCH\_EXTENDED2 <../matching_modes.md>`__
 -  disallowed dashes in index names in API requests (just like in
-   ManticoreQL)
+   SphinxQL)
 -  removed legacy ``xmlpipe`` data source v1, ``compat_sphinxql_magics``
    directive, ``SetWeights()`` ManticoreAPI call, and SPH\_SORT\_CUSTOM
    ManticoreAPI mode
@@ -170,7 +170,7 @@ Bug fixes
    ignored for distributed queries
 -  fixed that `ORDER BY RAND() <../select_syntax.md>`__ was not affected
    by ``index_weights``
--  fixed that float updates with integer values in ManticoreQL mistakenly
+-  fixed that float updates with integer values in SphinxQL mistakenly
    set the float to 0
 -  fixed that ``predicted_time`` was not accumulated with
    `dist\_threads <../searchd_program_configuration_options/distthreads.md>`__

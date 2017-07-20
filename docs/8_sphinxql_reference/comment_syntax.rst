@@ -1,7 +1,7 @@
 Comment syntax
 --------------
 
-ManticoreQL supports C-style comment syntax. Everything from an opening
+SphinxQL supports C-style comment syntax. Everything from an opening
 ``/*`` sequence to a closing ``*/`` sequence is ignored. Comments can
 span multiple lines, can not nest, and should not get logged. MySQL
 specific ``/*! ... */`` comments are also currently ignored. (As the

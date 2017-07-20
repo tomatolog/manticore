@@ -57,7 +57,7 @@ Version 0.9.9-rc2, 08 apr 2009
    `max\_xmlpipe2\_field <../indexer_program_configuration_options/maxxmlpipe2_field.md>`__
    directive
 
--  added `initial ManticoreQL
+-  added `initial SphinxQL
    support <../mysql_protocol_support_and_sphinxql.md>`__ to mysql41
    handler, SELECT …/SHOW WARNINGS/STATUS/META are handled
 

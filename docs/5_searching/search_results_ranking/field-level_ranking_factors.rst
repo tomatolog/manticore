@@ -36,7 +36,7 @@ to that per-field sum. Currently implemented field-level factors are:
    to
    `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.md>`__
    in ManticoreAPI and `OPTION field\_weights <../../select_syntax.md>`__
-   in ManticoreQL respectively). The weights default to 1 if not specified
+   in SphinxQL respectively). The weights default to 1 if not specified
    explicitly.
 
 -  ``hit_count`` (integer), the number of keyword occurrences that

@@ -28,7 +28,7 @@ Supported endpoints:
        curl -X POST 'http://sphinxsearch:9308/search/' 
        -d 'index=forum&match=@subject php sphinx&select=id,subject,author_id&limit=5'
 
--  / sql - allows running a SELECT ManticoreQL, set as query parameter
+-  / sql - allows running a SELECT SphinxQL, set as query parameter
 
    ::
 

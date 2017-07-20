@@ -13,7 +13,7 @@ does not depend on nor require any specific database to function.
 
 Applications can access Manticore search daemon (searchd) using any of the
 three different access methods: a) via Manticore own implementation of
-MySQL network protocol (using a small SQL subset called ManticoreQL, this
+MySQL network protocol (using a small SQL subset called SphinxQL, this
 is recommended way), b) via native search API (ManticoreAPI) or c) via
 MySQL server with a pluggable storage engine (ManticoreSE).
 
@@ -34,7 +34,7 @@ Built-in sources can fetch data directly from MySQL, PostgreSQL, MSSQL,
 ODBC compliant database (Oracle, etc) or a pipe in TSV or a custom XML
 format. Adding new data sources drivers (eg. to natively support other
 DBMSes) is designed to be as easy as possible. RT indexes can only be
-populated using ManticoreQL.
+populated using SphinxQL.
 
 As for the name, Manticore is an acronym which is officially decoded as SQL
 Phrase Index. Yes, I know about CMU's Manticore project.

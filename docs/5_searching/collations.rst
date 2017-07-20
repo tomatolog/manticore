@@ -86,8 +86,8 @@ first one is a generic collation for UTF-8 data (without any so-called
 language tailoring); it should behave similar to ``utf8_general_ci``
 collation in MySQL. The second one is a simple bytewise comparison.
 
-Collation can be overridden via ManticoreQL on a per-session basis using
-``SET collation_connection`` statement. All subsequent ManticoreQL queries
+Collation can be overridden via SphinxQL on a per-session basis using
+``SET collation_connection`` statement. All subsequent SphinxQL queries
 will use this collation. ManticoreAPI and ManticoreSE queries will use the
 server default collation, as specified in
 `collation\_server <../searchd_program_configuration_options/collationserver.md>`__

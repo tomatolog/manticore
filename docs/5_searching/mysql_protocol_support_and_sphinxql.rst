@@ -1,4 +1,4 @@
-MySQL protocol support and ManticoreQL
+MySQL protocol support and SphinxQL
 -----------------------------------
 
 Manticore searchd daemon supports MySQL binary network protocol and can be
@@ -44,8 +44,8 @@ mysql41 specified as a protocol:
     listen = localhost:9306:mysql41
 
 Just supporting the protocol and not the SQL syntax would be useless so
-Manticore now also supports a subset of SQL that we dubbed ManticoreQL. It
+Manticore now also supports a subset of SQL that we dubbed SphinxQL. It
 supports the standard querying all the index types with SELECT,
 modifying RT indexes with INSERT, REPLACE, and DELETE, and much more.
-Full ManticoreQL reference is available in `Chapter 8, *ManticoreQL
+Full SphinxQL reference is available in `Chapter 8, *SphinxQL
 reference* <../8_sphinxql_reference/README.md>`__.

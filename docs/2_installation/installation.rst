@@ -280,9 +280,9 @@ Changes are as follows:
 
 -  ondisk\_dict\_default is deprecated. No need to save RAM this way.
 
-None of the different querying methods are deprecated, but ManticoreQL is
+None of the different querying methods are deprecated, but SphinxQL is
 the most advanced method. We plan to remove ManticoreAPI and Manticore SE
-someday so it would be a good idea to start using ManticoreQL.
+someday so it would be a good idea to start using SphinxQL.
 
 -  The SetWeights() API call has been deprecated for a long time and has
    now been removed from official APIs.

@@ -8,7 +8,7 @@ Terminating queries before completion based on their execution time (via
 either
 `SetMaxQueryTime() <../../general_query_settings/setmaxquerytime.md>`__
 API call, or `SELECT … OPTION
-max\_query\_time <../../select_syntax.md>`__ ManticoreQL statement) is a
+max\_query\_time <../../select_syntax.md>`__ SphinxQL statement) is a
 nice safety net, but it comes with an inborn drawback: indeterministic
 (unstable) results. That is, if you repeat the very same (complex)
 search query with a time limit several times, the time limit will get

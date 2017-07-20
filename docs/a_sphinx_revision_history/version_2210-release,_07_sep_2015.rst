@@ -23,9 +23,9 @@ New features and changes
 -  fixed #2207, unified ``min_prefix_len``, ``min_infix_len`` behavior
    between RT and plain indexes
 
--  fixed #2020, unified (and greatly shortened) the list of ManticoreQL
+-  fixed #2020, unified (and greatly shortened) the list of SphinxQL
    `reserved keywords <../list_of_sphinxql_reserved_keywords.md>`__
-   between indexer checks, ManticoreQL parser checks, and the documentation
+   between indexer checks, SphinxQL parser checks, and the documentation
 
 Major bug fixes
 ~~~~~~~~~~~~~~~
@@ -74,7 +74,7 @@ Minor bug fixes
    highlighting
 
 -  fixed #2290, error in the middle of a multi-query batch did not abort
-   ManticoreQL packet, causing problems with some MySQL drivers like PHP
+   SphinxQL packet, causing problems with some MySQL drivers like PHP
    mysqlnd
 
 -  fixed #2286, multi-quries with different string filters were
@@ -126,7 +126,7 @@ Minor bug fixes
 
 -  fixed #2088, NEAR operator with NOT argument could crash
 
--  fixed #1929, allowed ``123abc`` column names in ManticoreQL SELECT
+-  fixed #1929, allowed ``123abc`` column names in SphinxQL SELECT
    (alas, they are still allowed in ``indexer``)
 
 -  fixed #1889, #1890, #1891, a few typo-style bugs in
@@ -137,7 +137,7 @@ Minor bug fixes
    characters like EOF, and UTF BOM marks
 
 -  fixed #1815, a number of ManticoreSE issues (inet adress endpoint, too
-   big numbers at MVA, and MVA inserts/replaces via ManticoreQL)
+   big numbers at MVA, and MVA inserts/replaces via SphinxQL)
 
 -  fixed #1704,
    `CONTAINS() <../5_searching/expressions,_functions,_and_operators/numeric_functions.md#expr-func-contains>`__
@@ -157,7 +157,7 @@ Minor bug fixes
    crashed with a buffer overflow
 
 -  fixed #1510, added an unknown field warning to SetFieldWeights() API
-   call and ManticoreQL OPTION field\_weights
+   call and SphinxQL OPTION field\_weights
 
 -  fixed #1367, remote agents (in distributed index) could not be
    accessed via UNIX sockets

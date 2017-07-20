@@ -39,7 +39,7 @@ directive, for obvious security reasons: securing a single folder is
 easy; letting anyone install arbitrary code into ``searchd`` is a risk.
 You can load and unload them dynamically into searchd with `CREATE
 FUNCTION <../create_function_syntax.md>`__ and `DROP
-FUNCTION <../drop_function_syntax.md>`__ ManticoreQL statements
+FUNCTION <../drop_function_syntax.md>`__ SphinxQL statements
 respectively. Also, you can seamlessly reload UDFs (and other plugins)
 with `RELOAD PLUGINS <../reload_plugins_syntax.md>`__ statement. Manticore
 keeps track of the currently loaded functions, that is, every time you
@@ -106,7 +106,7 @@ UDF interface version into a newer or older ``searchd``. Second, yout
 <b>must</b> implement the actual function, too.
 ``sphinx_int64_t testfunc ( SPH_UDF_INIT * init, SPH_UDF_ARGS * args, char * error_flag ) { return 123; }``
 
-UDF function names in ManticoreQL are case insensitive. However, the
+UDF function names in SphinxQL are case insensitive. However, the
 respective C function names are not, they need to be all
 <b>lower-case</b>, or the UDF will not load. More importantly, it is
 vital that a) the calling convention is C (aka \_\_cdecl), b) arguments

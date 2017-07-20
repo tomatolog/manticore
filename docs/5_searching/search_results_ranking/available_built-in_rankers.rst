@@ -61,7 +61,7 @@ You should specify the ``SPH_RANK_`` prefix and use capital letters only
 when using the
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
 call from the ManticoreAPI. The API ports expose these as global constants.
-Using ManticoreQL syntax, the prefix should be omitted and the ranker name
+Using SphinxQL syntax, the prefix should be omitted and the ranker name
 is case insensitive. Example:
 
 ::
@@ -70,7 +70,7 @@ is case insensitive. Example:
     // ManticoreAPI
     $client->SetRankingMode ( SPH_RANK_SPH04 );
 
-    // ManticoreQL
+    // SphinxQL
     mysql_query ( "SELECT ... OPTION ranker=sph04" );
 
 Legacy matching modes rankers

@@ -75,12 +75,12 @@ New general features
 
 -  added id32 index support in id64 binaries (EXPERIMENTAL)
 
--  added ManticoreSE support for DELETE and REPLACE on ManticoreQL tables
+-  added ManticoreSE support for DELETE and REPLACE on SphinxQL tables
 
-New ManticoreQL features
+New SphinxQL features
 ~~~~~~~~~~~~~~~~~~~~~
 
--  added new, more SQL compliant ManticoreQL syntax; and a
+-  added new, more SQL compliant SphinxQL syntax; and a
    compat\_sphinxql\_magics directive
 
 -  added
@@ -117,7 +117,7 @@ New ManticoreQL features
 
 -  added `UPDATE … WHERE id=X <../update_syntax.md>`__ syntax support
 
--  added `ManticoreQL multi-query
+-  added `SphinxQL multi-query
    support <../multi-statement_queries.md>`__
 
 -  added `DESCRIBE <../describe_syntax.md>`__, `SHOW
@@ -148,7 +148,7 @@ Major changes and optimizations
 
 -  optimized snippets, 1.6x general speedup
 
--  optimized const-list parsing in ManticoreQL
+-  optimized const-list parsing in SphinxQL
 
 -  optimized full-document highlighting CPU/RAM use
 
@@ -182,7 +182,7 @@ Bug fixes
 
 -  fixed #739, occasional crashes in MT mode on result set send
 
--  fixed #746, crash with a named list in ManticoreQL option
+-  fixed #746, crash with a named list in SphinxQL option
 
 -  fixed #674, AVG vs group order
 
@@ -314,7 +314,7 @@ Bug fixes
 
 -  fixed multi wordforms vs blend\_chars
 
--  fixed broken MVA output in ManticoreQL
+-  fixed broken MVA output in SphinxQL
 
 -  fixed a few RT leaks
 
@@ -322,7 +322,7 @@ Bug fixes
 
 -  fixed an issue with repeated queries vs dist\_threads
 
--  fixed an issue with string attributes vs buffer overrun in ManticoreQL
+-  fixed an issue with string attributes vs buffer overrun in SphinxQL
 
 -  fixed unexpected character data warnings within ignored xmlpipe tags
 

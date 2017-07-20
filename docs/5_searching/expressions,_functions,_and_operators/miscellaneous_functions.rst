@@ -251,7 +251,7 @@ Miscellaneous functions
    technically feasible to implement additional re-ranking pass (or
    passes) on the master node, if needed.
 
-   If used with ManticoreQL but not called from any UDFs, the result of
+   If used with SphinxQL but not called from any UDFs, the result of
    PACKEDFACTORS() is simply formatted as plain text, which can be used
    to manually assess the ranking factors. Note that this feature is not
    currently supported by the Manticore API.

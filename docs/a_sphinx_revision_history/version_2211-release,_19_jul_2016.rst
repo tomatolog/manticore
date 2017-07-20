@@ -26,7 +26,7 @@ Bug fixes
 -  fixed #2485 client failed to parse reply with string\_ptr attribute
    via API; added regression to test 159
 
--  fixed #2462 added OPTION statements to ManticoreQL log fixed string
+-  fixed #2462 added OPTION statements to SphinxQL log fixed string
    split buffer overrun
 
 -  fixed #2458 expression with escaped quote was cut at distributed

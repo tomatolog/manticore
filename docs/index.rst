@@ -36,15 +36,9 @@
    	
 .. toctree::
    :glob:
-   :caption: SphinxQL
+   :caption: Reference
    
    sphinxql_reference
-
-   
-.. toctree::
-   :glob:
-   :caption: API reference
-   
    9_api_reference/api
 
    	

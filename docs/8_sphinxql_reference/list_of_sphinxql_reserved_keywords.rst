@@ -1,8 +1,8 @@
-List of ManticoreQL reserved keywords
+List of SphinxQL reserved keywords
 ----------------------------------
 
 A complete alphabetical list of keywords that are currently reserved in
-ManticoreQL syntax (and therefore can not be used as identifiers).
+SphinxQL syntax (and therefore can not be used as identifiers).
 
 ::
 

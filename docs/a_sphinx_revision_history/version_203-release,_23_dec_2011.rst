@@ -4,7 +4,7 @@ Version 2.0.3-release, 23 dec 2011
 Bug fixes
 ~~~~~~~~~
 
--  fixed #1031, ManticoreQL parsing syntax for MVA at insert  replace
+-  fixed #1031, SphinxQL parsing syntax for MVA at insert  replace
    statements
 
 -  fixed #1027, stalls on attribute update in high-concurrency load
@@ -42,7 +42,7 @@ Bug fixes
 
 -  fixed #971, absent error message at master on agent “maxed out”
 
--  fixed #695, #815, #835, #866, malformed warnings in ManticoreQL
+-  fixed #695, #815, #835, #866, malformed warnings in SphinxQL
 
 -  fixed build of ManticoreSE with MySQL 5.1
 

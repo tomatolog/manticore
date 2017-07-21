@@ -15,7 +15,7 @@ Key Manticore features are:
    and thousands of queries per second;
 
 -  easy integration with SQL and XML data sources, and SphinxQL,
-   ManticoreAPI, or ManticoreSE search interfaces;
+   SphinxAPI, or ManticoreSE search interfaces;
 
 -  easy scaling with distributed searches.
 
@@ -38,7 +38,7 @@ To expand a bit, Manticore:
 
 -  provides document excerpts (snippets) generation;
 
--  provides searching from within application with SphinxQL or ManticoreAPI
+-  provides searching from within application with SphinxQL or SphinxAPI
    interfaces, and from within MySQL with pluggable ManticoreSE storage
    engine;
 

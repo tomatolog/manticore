@@ -2,7 +2,7 @@ Expressions, functions, and operators
 -------------------------------------
 
 Manticore lets you use arbitrary arithmetic expressions both via SphinxQL
-and ManticoreAPI, involving attribute values, internal attributes (document
+and SphinxAPI, involving attribute values, internal attributes (document
 ID and relevance weight), arithmetic operations, a number of built-in
 functions, and user-defined functions. This section documents the
 supported operators and functions. Here's the complete reference list

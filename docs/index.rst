@@ -7,7 +7,6 @@ Contents:
 
 .. toctree::
    :glob:
-   :hidden:
    :caption: Manticore Documentation
    
    introduction

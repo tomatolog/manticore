@@ -60,14 +60,14 @@ Currently implemented rankers are:
 You should specify the ``SPH_RANK_`` prefix and use capital letters only
 when using the
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-call from the ManticoreAPI. The API ports expose these as global constants.
+call from the SphinxAPI. The API ports expose these as global constants.
 Using SphinxQL syntax, the prefix should be omitted and the ranker name
 is case insensitive. Example:
 
 ::
 
 
-    // ManticoreAPI
+    // SphinxAPI
     $client->SetRankingMode ( SPH_RANK_SPH04 );
 
     // SphinxQL

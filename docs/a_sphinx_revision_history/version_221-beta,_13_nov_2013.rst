@@ -118,7 +118,7 @@ General features
    function
 -  added snippet generation options to
    `SNIPPET() <../select_syntax.md>`__ function
--  added string filter support in distributed queries, ManticoreAPI,
+-  added string filter support in distributed queries, SphinxAPI,
    SphinxQL query log
 -  added support for mixed distributed and local index queries (SELECT
    \* FROM dist1,dist2,local3), and ``index_weights`` option for that
@@ -147,13 +147,13 @@ Optimizations, behavior changes, and removals
    to ``id64``, ``dict=keywords``, ``charset_type=utf-8``,
    ``enable_star=1``, ``workers=threads``, ``mem_limit=128M``,
    ``rt_mem_limit=128M``
--  changed the default ManticoreAPI matching mode to
+-  changed the default SphinxAPI matching mode to
    `SPH\_MATCH\_EXTENDED2 <../matching_modes.md>`__
 -  disallowed dashes in index names in API requests (just like in
    SphinxQL)
 -  removed legacy ``xmlpipe`` data source v1, ``compat_sphinxql_magics``
-   directive, ``SetWeights()`` ManticoreAPI call, and SPH\_SORT\_CUSTOM
-   ManticoreAPI mode
+   directive, ``SetWeights()`` SphinxAPI call, and SPH\_SORT\_CUSTOM
+   SphinxAPI mode
 
 Bug fixes
 ~~~~~~~~~

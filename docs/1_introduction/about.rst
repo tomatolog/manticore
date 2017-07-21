@@ -14,10 +14,10 @@ does not depend on nor require any specific database to function.
 Applications can access Manticore search daemon (searchd) using any of the
 three different access methods: a) via Manticore own implementation of
 MySQL network protocol (using a small SQL subset called SphinxQL, this
-is recommended way), b) via native search API (ManticoreAPI) or c) via
+is recommended way), b) via native search API (SphinxAPI) or c) via
 MySQL server with a pluggable storage engine (ManticoreSE).
 
-Official native ManticoreAPI implementations for PHP, Perl, Python, Ruby
+Official native SphinxAPI implementations for PHP, Perl, Python, Ruby
 and Java are included within the distribution package. API is very
 lightweight so porting it to a new language is known to take a few hours
 or days. Third party API ports and plugins exist for Perl, C#, Haskell,

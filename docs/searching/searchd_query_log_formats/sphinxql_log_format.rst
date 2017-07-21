@@ -23,7 +23,7 @@ query per line in the actual log.)
     OPTION ranker=proximity;
 
 Note that <b>all</b> requests would be logged in this format, including
-those sent via ManticoreAPI and ManticoreSE, not just those sent via SphinxQL.
+those sent via SphinxAPI and ManticoreSE, not just those sent via SphinxQL.
 Also note, that this kind of logging works only with plain log files and
 will not work if you use ‘syslog’ service for logging.
 
@@ -44,7 +44,7 @@ as follows.
 Use sphinxql:compact\_in to shorten your IN() clauses in log if you have
 too much values in it.
 
-Every request (including both ManticoreAPI and SphinxQL) request must
+Every request (including both SphinxAPI and SphinxQL) request must
 result in exactly one log line. All request types, including INSERT,
 CALL SNIPPETS, etc will eventually get logged, though as of time of this
 writing, that is a work in progress). Every log line must be a valid

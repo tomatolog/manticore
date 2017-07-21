@@ -17,10 +17,10 @@ does not depend on nor require any specific database to function.
 Applications can access Manticore search daemon (searchd) using any of the
 three different access methods: a) via Manticore own implementation of
 MySQL network protocol (using a small SQL subset called SphinxQL, this
-is recommended way), b) via native search API (ManticoreAPI) or c) via
+is recommended way), b) via native search API (SphinxAPI) or c) via
 MySQL server with a pluggable storage engine (ManticoreSE).
 
-Official native ManticoreAPI implementations for PHP, Perl, Python, Ruby
+Official native SphinxAPI implementations for PHP, Perl, Python, Ruby
 and Java are included within the distribution package. API is very
 lightweight so porting it to a new language is known to take a few hours
 or days. Third party API ports and plugins exist for Perl, C#, Haskell,
@@ -60,7 +60,7 @@ Key Manticore features are:
    and thousands of queries per second;
 
 -  easy integration with SQL and XML data sources, and SphinxQL,
-   ManticoreAPI, or ManticoreSE search interfaces;
+   SphinxAPI, or ManticoreSE search interfaces;
 
 -  easy scaling with distributed searches.
 
@@ -83,7 +83,7 @@ To expand a bit, Manticore:
 
 -  provides document excerpts (snippets) generation;
 
--  provides searching from within application with SphinxQL or ManticoreAPI
+-  provides searching from within application with SphinxQL or SphinxAPI
    interfaces, and from within MySQL with pluggable ManticoreSE storage
    engine;
 

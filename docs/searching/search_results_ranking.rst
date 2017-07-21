@@ -29,9 +29,9 @@ mode. So in the legacy matching modes (that is, SPH\_MATCH\_ALL,
 SPH\_MATCH\_ANY, SPH\_MATCH\_PHRASE, and SPH\_MATCH\_BOOLEAN) you can
 not choose the ranker. You can only do that in the SPH\_MATCH\_EXTENDED
 mode. (Which is the only mode in SphinxQL and the suggested mode in
-ManticoreAPI anyway.) To choose a non-default ranker you can either use
+SphinxAPI anyway.) To choose a non-default ranker you can either use
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-with ManticoreAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
+with SphinxAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
 ``SELECT`` statement when using SphinxQL.
 
 As a sidenote, legacy matching modes are internally implemented via the
@@ -101,14 +101,14 @@ Currently implemented rankers are:
 You should specify the ``SPH_RANK_`` prefix and use capital letters only
 when using the
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-call from the ManticoreAPI. The API ports expose these as global constants.
+call from the SphinxAPI. The API ports expose these as global constants.
 Using SphinxQL syntax, the prefix should be omitted and the ranker name
 is case insensitive. Example:
 
 ::
 
 
-    // ManticoreAPI
+    // SphinxAPI
     $client->SetRankingMode ( SPH_RANK_SPH04 );
 
     // SphinxQL
@@ -549,7 +549,7 @@ to that per-field sum. Currently implemented field-level factors are:
 -  ``user_weight`` (integer), the user specified per-field weight (refer
    to
    `SetFieldWeights() <../../full-text_search_query_settings/setfieldweights.md>`__
-   in ManticoreAPI and `OPTION field\_weights <../../select_syntax.md>`__
+   in SphinxAPI and `OPTION field\_weights <../../select_syntax.md>`__
    in SphinxQL respectively). The weights default to 1 if not specified
    explicitly.
 

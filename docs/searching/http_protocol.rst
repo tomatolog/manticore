@@ -38,4 +38,4 @@ Supported endpoints:
         author_id order by id desc limit 0,5'
 
 The result for /sql/ and /search/ endpoints is an array of attrs,matches
-and meta, same as for ManticoreAPI, encoded as a JSON object.
+and meta, same as for SphinxAPI, encoded as a JSON object.

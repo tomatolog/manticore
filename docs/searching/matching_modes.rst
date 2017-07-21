@@ -8,7 +8,7 @@ language <../extended_query_syntax.md>`__ and so-called
 `rankers <../search_results_ranking/README.md>`__. It is thus strongly
 recommended to use SPH\_MATCH\_EXTENDED and proper query syntax rather
 than any other legacy mode. All those other modes are actually
-internally converted to extended syntax anyway. ManticoreAPI still defaults
+internally converted to extended syntax anyway. SphinxAPI still defaults
 to SPH\_MATCH\_ALL but that is for compatibility reasons only.
 
 There are the following matching modes available:

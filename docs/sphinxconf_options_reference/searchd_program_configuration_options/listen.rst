@@ -45,7 +45,7 @@ Examples:
 There can be multiple listen directives, ``searchd`` will listen for
 client connections on all specified ports and sockets. If no ``listen``
 directives are found then the server will listen on all available
-interfaces using the default ManticoreAPI port 9312, and also on default
+interfaces using the default SphinxAPI port 9312, and also on default
 SphinxQL port 9306. Both port numbers are assigned by IANA (see
 http://www.iana.org/assignments/port-numbers for details) and should
 therefore be available.

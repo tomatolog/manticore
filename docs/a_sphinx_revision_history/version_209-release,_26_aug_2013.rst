@@ -29,7 +29,7 @@ Bug fixes
    eventually prevented ``searchd`` to reload indexes)
 
 -  fixed #1537, ``COUNT(*)`` and compat\_sphinxql\_magics=0 via
-   ManticoreAPI caused an incorrect error message
+   SphinxAPI caused an incorrect error message
 
 -  fixed #1531, #1589, several matching and highlighting issues when
    using both

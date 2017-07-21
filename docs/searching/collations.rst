@@ -88,7 +88,7 @@ collation in MySQL. The second one is a simple bytewise comparison.
 
 Collation can be overridden via SphinxQL on a per-session basis using
 ``SET collation_connection`` statement. All subsequent SphinxQL queries
-will use this collation. ManticoreAPI and ManticoreSE queries will use the
+will use this collation. SphinxAPI and ManticoreSE queries will use the
 server default collation, as specified in
 `collation\_server <../searchd_program_configuration_options/collationserver.md>`__
 configuration directive. Manticore currently defaults to ``libc_ci``

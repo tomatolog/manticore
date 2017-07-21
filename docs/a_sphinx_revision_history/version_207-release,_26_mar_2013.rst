@@ -86,7 +86,7 @@ Bug fixes
    in the FROM clause docs
 
 -  fixed #1221, incorrect results when using @groupby in select list via
-   ManticoreAPI with compat\_sphinxql\_magics=0
+   SphinxAPI with compat\_sphinxql\_magics=0
 
 -  fixed #1180, special SPZ chars occasionally leaking into snippets
 

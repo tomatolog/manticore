@@ -27,9 +27,9 @@ mode. So in the legacy matching modes (that is, SPH\_MATCH\_ALL,
 SPH\_MATCH\_ANY, SPH\_MATCH\_PHRASE, and SPH\_MATCH\_BOOLEAN) you can
 not choose the ranker. You can only do that in the SPH\_MATCH\_EXTENDED
 mode. (Which is the only mode in SphinxQL and the suggested mode in
-ManticoreAPI anyway.) To choose a non-default ranker you can either use
+SphinxAPI anyway.) To choose a non-default ranker you can either use
 `SetRankingMode() <../../full-text_search_query_settings/setrankingmode.md>`__
-with ManticoreAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
+with SphinxAPI, or `OPTION ranker <../../select_syntax.md>`__ clause in
 ``SELECT`` statement when using SphinxQL.
 
 As a sidenote, legacy matching modes are internally implemented via the
